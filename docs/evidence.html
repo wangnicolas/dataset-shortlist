@@ -342,7 +342,7 @@ verified 3 of 7 (checked 2026-11-11T17:01:29Z)
     problem: the link exists but describes a different resource: the physionet record is titled &quot;MIT-BIH Polysomnographic Database&quot;, not &quot;Sleep Apnea Smartwatch Dataset&quot;</pre>
 
 <h2>Install</h2>
-<p>In Claude Code:</p><div class="cmd"><pre id="c1">/plugin marketplace add wangnicolas/dataset-shortlist</pre><button type="button" data-copy="c1">Copy</button></div><div class="cmd"><pre id="c2">/plugin install dataset-shortlist@dataset-shortlist-marketplace</pre><button type="button" data-copy="c2">Copy</button></div>
+<p>In a terminal (Claude Code 2.1.292 or newer):</p><div class="cmd"><pre id="c1">claude plugin install dataset-shortlist --marketplace wangnicolas/dataset-shortlist</pre><button type="button" data-copy="c1">Copy</button></div><p class="small">It adds this repository as a marketplace and installs the plugin; start Claude Code afterwards, or run <code>/reload-plugins</code> in an open session.</p>
 <p>Then ask your question in plain words. It needs Python 3.9 or newer and outbound HTTPS, no packages and no API keys. The skill follows the open Agent Skills format, so other agents that load <code>SKILL.md</code> folders should be able to use it; it has been tested only in Claude Code.</p>
 
 <h2>Limits</h2>

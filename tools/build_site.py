@@ -592,9 +592,10 @@ def install_section(owner, local_path):
                  '<div class="cmd"><pre id="c0">claude --plugin-dir %s</pre><button type="button" data-copy="c0">Copy</button></div>'
                  % esc(os.path.join(local_path, "plugins", "dataset-shortlist")))
     if owner and owner != "OWNER":
-        market = ('<p>In Claude Code:</p>'
-                  '<div class="cmd"><pre id="c1">/plugin marketplace add %s/dataset-shortlist</pre><button type="button" data-copy="c1">Copy</button></div>'
-                  '<div class="cmd"><pre id="c2">/plugin install dataset-shortlist@dataset-shortlist-marketplace</pre><button type="button" data-copy="c2">Copy</button></div>'
+        market = ('<p>In a terminal (Claude Code 2.1.292 or newer):</p>'
+                  '<div class="cmd"><pre id="c1">claude plugin install dataset-shortlist --marketplace %s/dataset-shortlist</pre><button type="button" data-copy="c1">Copy</button></div>'
+                  '<p class="small">It adds this repository as a marketplace and installs the plugin; start Claude Code afterwards, '
+                  'or run <code>/reload-plugins</code> in an open session.</p>'
                   % esc(owner))
     else:
         market = ('<p class="small">The repository is not published yet. Once it is, the two marketplace commands '

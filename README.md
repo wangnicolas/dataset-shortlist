@@ -92,12 +92,16 @@ restrict passing records to online AI services.
 
 ## Install
 
-In Claude Code:
+In a terminal:
 
-```text
-/plugin marketplace add wangnicolas/dataset-shortlist
-/plugin install dataset-shortlist@dataset-shortlist-marketplace
+```bash
+claude plugin install dataset-shortlist --marketplace wangnicolas/dataset-shortlist
 ```
+
+This one command adds the repository as a marketplace and installs the plugin (Claude Code 2.1.292 or newer).
+Start Claude Code afterwards, or run `/reload-plugins` in a session that is already open. On an older version, or
+from inside Claude Code, use the two steps instead: `/plugin marketplace add wangnicolas/dataset-shortlist`, then
+`/plugin install dataset-shortlist@dataset-shortlist-marketplace`.
 
 Then ask your question in plain words. The skill needs Python 3.9 or newer and
 outbound HTTPS. It uses no packages and needs no API key. When idle it adds about

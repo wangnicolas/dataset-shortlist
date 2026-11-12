@@ -90,9 +90,9 @@ def main():
     data["version"] = load("plugins/dataset-shortlist/.claude-plugin/plugin.json").get("version")
     if args.owner and args.owner != "OWNER":
         data["repo_url"] = "https://github.com/%s/dataset-shortlist" % args.owner
-        data["install"] = {"where": "In Claude Code, type:", "prompt": "",
-                           "lines": ["/plugin marketplace add %s/dataset-shortlist" % args.owner,
-                                     "/plugin install dataset-shortlist@dataset-shortlist-marketplace"]}
+        # one command that adds the marketplace and installs the plugin (Claude Code 2.1.292 or newer)
+        data["install"] = {"where": "In a terminal:", "prompt": "$",
+                           "lines": ["claude plugin install dataset-shortlist --marketplace %s/dataset-shortlist" % args.owner]}
     elif args.local_path:
         data["install"] = {"where": "In a terminal, from a local copy (one session, nothing is installed):", "prompt": "$",
                            "lines": ["claude --plugin-dir %s" % os.path.join(args.local_path, "plugins", "dataset-shortlist")]}
