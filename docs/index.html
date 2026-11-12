@@ -711,7 +711,9 @@ footer p{margin:0;max-width:70ch}
   var BENCH = DATA.benchmark || {}, ALLMODELS = BENCH.models || [], UNIT = BENCH.unit_cost_usd;
   var MODELS = ALLMODELS.filter(function(m){ return m.n >= EV.n; }), PARTIAL = ALLMODELS.filter(function(m){ return m.n < EV.n; });
   if (MODELS.length && UNIT) {
-    var chart = $('chart'), CW = 760, CH = 400, ML = 56, MR = 190, MT = 30, MB = 58, pts = [];
+    // Where the whole chart shows, the plot sits in the middle of the page; on a phone the chart scrolls sideways, so the plot starts at the left.
+    var WIDE = !!(window.matchMedia && window.matchMedia('(min-width: 600px)').matches);
+    var chart = $('chart'), CW = 760, CH = 400, ML = WIDE ? 110 : 56, MR = WIDE ? 110 : 190, MT = 30, MB = 58, pts = [];
     MODELS.forEach(function(m){ pts.push([m['with'].cost_usd / UNIT, m['with'].accuracy], [m.without.cost_usd / UNIT, m.without.accuracy]); if (m.prompted) pts.push([m.prompted.cost_usd / UNIT, m.prompted.accuracy]); });
     var lowest = Math.min.apply(null, pts.map(function(p){ return p[1]; })), widest = Math.max.apply(null, pts.map(function(p){ return p[0]; }));
     var yLo = lowest >= 0.805 ? 0.8 : (lowest >= 0.605 ? 0.6 : 0.2), yHi = 1, yStep = (yHi - yLo) / 4, xLo = Math.log(0.75), xHi = Math.log(Math.max(100, widest * 1.4));
