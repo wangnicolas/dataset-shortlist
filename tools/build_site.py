@@ -465,7 +465,7 @@ JS = r"""
 """
 
 
-def second_model_section(data, label):
+def second_model_section(data, label, note=""):
     if not data:
         return ""
     main = decide(data.get("per_case", []), "without")
@@ -476,7 +476,7 @@ def second_model_section(data, label):
         summary = ("Mean score with the skill %s, without it %s (difference %s) on %d questions; higher on %d, the same "
                    "on %d, lower on %d." % (pct(main["with"], 1), pct(main["other"], 1), points(main["mean_diff"]), main["n"],
                                            main["better"], main["same"], main["worse"]))
-    note = failed_judge_note(data)
+    failed = failed_judge_note(data)
     effort, links = data.get("effort") or {}, data.get("links") or {}
     cost = ""
     if effort.get("with") and effort.get("without"):
@@ -485,11 +485,11 @@ def second_model_section(data, label):
                     effort["with"]["minutes"], effort["with"]["cost_usd"], effort["without"]["minutes"],
                     effort["without"]["cost_usd"], (links.get("with") or {}).get("per_answer") or 0,
                     (links.get("without") or {}).get("per_answer") or 0))
-    return ('<h4>On a stronger model</h4><p class="runlabel">%s</p><p>%s The lift from a skill can shrink as the model '
-            'itself gets better, so the same comparison was repeated on a stronger model. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.</p>%s<div class="scroll"><table><thead><tr>'
+    return ('<h4>On another model</h4><p class="runlabel">%s</p><p>%s The lift from a skill can change with the model '
+            'itself, so the same comparison was repeated on this one. %s</p>%s<div class="scroll"><table><thead><tr>'
             '<th scope="col">Question</th><th scope="col">Stratum</th><th scope="col">With the skill</th>'
             '<th scope="col">No skill</th></tr></thead><tbody>%s</tbody></table></div>%s'
-            % (esc(label), esc(summary), ('<p class="note">%s</p>' % esc(note)) if note else "", rows,
+            % (esc(label), esc(summary), esc(note), ('<p class="note">%s</p>' % esc(failed)) if failed else "", rows,
                ('<p class="small">%s</p>' % esc(cost)) if cost else ""))
 
 
@@ -608,7 +608,8 @@ def page(arms_data, audit, label, preview, verify_demo, shots, owner, second=Non
     results = results_section(arms_data, audit, label, preview) if arms_data else \
         '<p class="note">The comparison has not been run yet.</p>'
     results += pipeline_section(pipeline)
-    results += second_model_section(second, second_label)
+    for extra, extra_label, extra_note in (second if isinstance(second, list) else ([(second, second_label, "")] if second else [])):
+        results += second_model_section(extra, extra_label, extra_note)
     results += trigger_section(trigger)
     demo = ""
     if verify_demo:
@@ -720,8 +721,9 @@ def main():
     parser.add_argument("--preview", action="store_true")
     parser.add_argument("--verify-demo", help="text file with captured verifier output")
     parser.add_argument("--owner", default="OWNER", help="GitHub owner shown in the install command")
-    parser.add_argument("--second", help="three_arms.json of the run on the second model")
-    parser.add_argument("--second-label", default="")
+    parser.add_argument("--second", action="append", default=[], help="three_arms.json of a further model; repeatable")
+    parser.add_argument("--second-label", action="append", default=[])
+    parser.add_argument("--second-note", action="append", default=[])
     parser.add_argument("--pipeline", help="pipeline_use.json from tools/pipeline_use.py")
     parser.add_argument("--titles", help="JSON object: case name -> short description of the question")
     parser.add_argument("--trigger", help="trigger_summary.json from tools/trigger_test.py")
@@ -748,7 +750,8 @@ def main():
                       ("rule", "assets/example-rule.png"), ("best", "assets/example-best.png")):
         if os.path.isfile(os.path.join(args.out_dir, name)):
             shots[key] = name
-    second = load(args.second) if args.second and os.path.isfile(args.second) else None
+    second = [(load(path), (args.second_label + [""] * len(args.second))[i], (args.second_note + [""] * len(args.second))[i])
+              for i, path in enumerate(args.second) if os.path.isfile(path)]
     example = {"href": args.example_href, "question": args.example_question, "caption": args.example_caption} \
         if args.example_href else None
     pipeline = load(args.pipeline) if args.pipeline and os.path.isfile(args.pipeline) else None

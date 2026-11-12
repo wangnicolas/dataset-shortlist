@@ -1130,6 +1130,30 @@
     }
    },
    {
+    "model": "opus",
+    "n": 10,
+    "with": {
+     "accuracy": 0.974404761904762,
+     "cost_usd": 1.28151533,
+     "runs": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "accuracy": 0.9183201058201057,
+     "cost_usd": 0.27207646,
+     "runs": [
+      3,
+      3
+     ]
+    },
+    "higher": 5,
+    "lower": 1,
+    "judge_failures": 0,
+    "same": 4
+   },
+   {
     "model": "fable",
     "n": 10,
     "with": {

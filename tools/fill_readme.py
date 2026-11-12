@@ -231,23 +231,28 @@ def results_block(arms, label, audit=None, second=None, second_label="", records
         out += table(["Question", "Stratum"] + [name for _, name in present] + ["Skill minus no skill, points"], rows)
         out += ["", "</details>", ""]
 
-    if second and second.get("per_case"):
-        outcome = decide(second["per_case"], "without")
-        if outcome:
-            out += [("On a stronger model (%s): %s with the skill and %s without it, a difference of %s points; higher on "
-                     "%d, the same on %d, lower on %d. " % (
-                         second_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
-                         points(outcome["mean_diff"]), outcome["better"], outcome["same"], outcome["worse"])) + SECOND_NOTE, ""]
-            note = failed_judge_note(second)
-            if note:
-                out += [note, ""]
-            effort, links = second.get("effort") or {}, second.get("links") or {}
-            if effort.get("with") and effort.get("without"):
-                out += ["On that model an answer with the skill took %.1f minutes and $%.2f at list price, against %.1f "
-                        "minutes and $%.2f without it, and carried %.1f links against %.1f." % (
-                            effort["with"]["minutes"], effort["with"]["cost_usd"], effort["without"]["minutes"],
-                            effort["without"]["cost_usd"], (links.get("with") or {}).get("per_answer") or 0,
-                            (links.get("without") or {}).get("per_answer") or 0), ""]
+    extras = second if isinstance(second, list) else ([(second, second_label, SECOND_NOTE)] if second else [])
+    for extra, extra_label, extra_note in extras:
+        if not (extra and extra.get("per_case")):
+            continue
+        outcome = decide(extra["per_case"], "without")
+        if not outcome:
+            continue
+        out += [("On another model (%s): %s with the skill and %s without it, a difference of %s points; higher on "
+                 "%d, the same on %d, lower on %d. " % (
+                     extra_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
+                     points(outcome["mean_diff"]), outcome["better"], outcome["same"], outcome["worse"]))
+                + (extra_note or SECOND_NOTE), ""]
+        note = failed_judge_note(extra)
+        if note:
+            out += [note, ""]
+        effort, links = extra.get("effort") or {}, extra.get("links") or {}
+        if effort.get("with") and effort.get("without"):
+            out += ["On that model an answer with the skill took %.1f minutes and $%.2f at list price, against %.1f "
+                    "minutes and $%.2f without it, and carried %.1f links against %.1f." % (
+                        effort["with"]["minutes"], effort["with"]["cost_usd"], effort["without"]["minutes"],
+                        effort["without"]["cost_usd"], (links.get("with") or {}).get("per_answer") or 0,
+                        (links.get("without") or {}).get("per_answer") or 0), ""]
 
     if trigger and trigger.get("should"):
         out += ["Does it start when it should: each of %d requests was sent once to a fresh session with only this plugin "
@@ -266,8 +271,9 @@ def main():
     parser.add_argument("--arms", required=True)
     parser.add_argument("--label", required=True)
     parser.add_argument("--audit")
-    parser.add_argument("--second")
-    parser.add_argument("--second-label", default="")
+    parser.add_argument("--second", action="append", default=[], help="three_arms.json of a further model; repeatable")
+    parser.add_argument("--second-label", action="append", default=[])
+    parser.add_argument("--second-note", action="append", default=[])
     parser.add_argument("--records", default="", help="path of the run records, linked from the README")
     parser.add_argument("--pipeline", help="pipeline_use.json from tools/pipeline_use.py")
     parser.add_argument("--titles", help="JSON object: case name -> short description of the question")
@@ -278,8 +284,10 @@ def main():
 
     block = results_block(load(args.arms), args.label,
                           load(args.audit) if args.audit and os.path.isfile(args.audit) else None,
-                          load(args.second) if args.second and os.path.isfile(args.second) else None,
-                          args.second_label, args.records,
+                          [(load(path), (args.second_label + [""] * len(args.second))[i],
+                            (args.second_note + [""] * len(args.second))[i])
+                           for i, path in enumerate(args.second) if os.path.isfile(path)],
+                          "", args.records,
                           load(args.pipeline) if args.pipeline and os.path.isfile(args.pipeline) else None,
                           load(args.titles) if args.titles and os.path.isfile(args.titles) else None,
                           load(args.trigger) if args.trigger and os.path.isfile(args.trigger) else None)

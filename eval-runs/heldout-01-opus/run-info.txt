@@ -1,0 +1,7 @@
+started: 2026-11-12T10:42:12Z
+skill commit: e9ccc72dfcb4cdb420098d395e77f9aaef7236f1 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals-heldout
+extra options: --model opus --runs 3 -j 2 --max-cost-usd 90
+claude plugin eval exit status: 1 (1 only means some case scored below the threshold)
+finished: 2026-11-12T12:51:44Z

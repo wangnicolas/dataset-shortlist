@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "model": "opus",
+    "judge": "sonnet",
+    "cost_usd": 57.30590370000001
+  },
+  "score": {
+    "health": {
+      "with": 0.9791666666666666,
+      "without": 0.9521604938271605
+    },
+    "other fields": {
+      "with": 0.9672619047619048,
+      "without": 0.8675595238095238
+    }
+  },
+  "score_by_run": {
+    "health": {
+      "with": [
+        0.9791666666666666,
+        0.9791666666666666,
+        0.9791666666666666
+      ],
+      "without": [
+        0.9583333333333334,
+        0.8981481481481483,
+        1.0
+      ]
+    },
+    "other fields": {
+      "with": [
+        1.0,
+        0.9330357142857143,
+        0.96875
+      ],
+      "without": [
+        0.9017857142857143,
+        0.8348214285714286,
+        0.8660714285714286
+      ]
+    },
+    "all": {
+      "with": [
+        0.9875,
+        0.9607142857142857,
+        0.975
+      ],
+      "without": [
+        0.9357142857142857,
+        0.8728174603174603,
+        0.9464285714285714
+      ]
+    }
+  },
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 0.9666666666666667
+    },
+    "health / access": {
+      "with": 0.9411764705882353,
+      "without": 0.9215686274509803
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 0.9444444444444444
+    },
+    "other fields / recall": {
+      "with": 1.0,
+      "without": 0.8611111111111112
+    },
+    "other fields / access": {
+      "with": 0.9666666666666667,
+      "without": 0.7666666666666667
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "other fields / long tail": {
+      "with": 0.8333333333333334,
+      "without": 1.0
+    }
+  },
+  "family_n": {
+    "health / recall": 60,
+    "health / access": 51,
+    "health / trap": 15,
+    "health / long tail": 18,
+    "other fields / recall": 36,
+    "other fields / access": 30,
+    "other fields / trap": 12,
+    "other fields / long tail": 12
+  },
+  "links": {
+    "with": {
+      "per_answer": 12.533333333333333,
+      "total": 376,
+      "ok": 316,
+      "dead": 24,
+      "blocked": 36
+    },
+    "without": {
+      "per_answer": 3.433333333333333,
+      "total": 103,
+      "ok": 94,
+      "dead": 5,
+      "blocked": 4
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 21.633333333333333,
+      "minutes": 5.769938888888888,
+      "cost_usd": 1.2815153299999997,
+      "tool_calls": 19.633333333333333
+    },
+    "without": {
+      "turns": 3.033333333333333,
+      "minutes": 1.0089800000000002,
+      "cost_usd": 0.27207645999999996,
+      "tool_calls": 2.033333333333333
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0
+    },
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          0.875,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 0.9583333333333334
+    },
+    {
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0
+    },
+    {
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          0.8888888888888888,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 0.9629629629629629
+    },
+    {
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          0.875,
+          0.875,
+          0.875
+        ],
+        "without": [
+          0.75,
+          0.625,
+          1.0
+        ]
+      },
+      "with": 0.875,
+      "without": 0.7916666666666666
+    },
+    {
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0
+    },
+    {
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0
+    },
+    {
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          0.875,
+          0.875
+        ],
+        "without": [
+          1.0,
+          0.875,
+          1.0
+        ]
+      },
+      "with": 0.9166666666666666,
+      "without": 0.9583333333333334
+    },
+    {
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          0.75,
+          0.75,
+          0.75
+        ]
+      },
+      "with": 1.0,
+      "without": 0.75
+    },
+    {
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          0.8571428571428571,
+          1.0
+        ],
+        "without": [
+          0.8571428571428571,
+          0.7142857142857143,
+          0.7142857142857143
+        ]
+      },
+      "with": 0.9523809523809524,
+      "without": 0.7619047619047619
+    }
+  ],
+  "decision": {
+    "without": {
+      "one_sided_cases": [],
+      "verdict": "mixed",
+      "statement": "Mixed: the per-question table is the result.",
+      "against": "without",
+      "n": 10,
+      "with": 0.974404761904762,
+      "other": 0.9183201058201057,
+      "mean_diff": 0.05608465608465609,
+      "better": 5,
+      "worse": 1,
+      "same": 4,
+      "needed_better": 7,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 6,
+          "with": 0.9791666666666666,
+          "other": 0.9521604938271605,
+          "diff": 0.027006172839506126
+        },
+        "other fields": {
+          "n": 4,
+          "with": 0.9672619047619048,
+          "other": 0.8675595238095238,
+          "diff": 0.09970238095238093
+        }
+      },
+      "diff_by_run": [
+        0.051785714285714324,
+        0.08789682539682542,
+        0.02857142857142858
+      ]
+    }
+  },
+  "score_all": {
+    "with": 0.974404761904762,
+    "without": 0.9183201058201057
+  },
+  "judge_failures": [],
+  "checks": {
+    "skill_triggered": 30,
+    "with_runs": 30,
+    "invalid_runs": 0,
+    "error_runs": 0,
+    "runs_without_verdicts": 0,
+    "runs_per_arm": {
+      "with": 30,
+      "without": 30
+    }
+  }
+}

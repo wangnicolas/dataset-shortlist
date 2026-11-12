@@ -166,8 +166,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--main", required=True, help="output directory of the main run (with and without the skill)")
     parser.add_argument("--prompted", help="output directory of the prompted arm, for the judge agreement count")
-    parser.add_argument("--second", help="output directory of the run on the second model")
-    parser.add_argument("--second-label", default="")
+    parser.add_argument("--second", action="append", default=[], help="output directory of the run on a further model; repeatable")
+    parser.add_argument("--second-label", action="append", default=[])
+    parser.add_argument("--second-note", action="append", default=[])
     parser.add_argument("--trigger", help="output directory of tools/trigger_test.py")
     parser.add_argument("--titles")
     parser.add_argument("--label", required=True)
@@ -233,11 +234,15 @@ def main():
                         "and still leave those facts out.", ""]
             section += 1
 
-    if args.second and os.path.isfile(os.path.join(args.second, "three_arms.md")):
-        second = load(os.path.join(args.second, "three_arms.json"))
+    for index, folder in enumerate(args.second):
+        if not os.path.isfile(os.path.join(folder, "three_arms.md")):
+            continue
+        second = load(os.path.join(folder, "three_arms.json"))
+        second_label = (args.second_label + [""] * len(args.second))[index]
+        second_note = (args.second_note + [""] * len(args.second))[index]
         second_outcome = decide(second["per_case"], "without")
-        out += ["## %d. The same comparison on a stronger model" % section, "",
-                "%s. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description." % args.second_label.rstrip("."), ""]
+        out += ["## %d. The same comparison on another model" % section, "",
+                "%s. %s" % (second_label.rstrip("."), second_note), ""]
         if second_outcome:
             out += ["Mean case score %.1f%% with the skill and %.1f%% without it (difference %+.1f points); higher on %d "
                     "questions, the same on %d, lower on %d." % (100 * second_outcome["with"], 100 * second_outcome["other"],
@@ -250,7 +255,7 @@ def main():
                         " Counted as passes instead, the scores are %.1f%% with the skill and %.1f%% without it "
                         "(difference %+.1f points)." % (100 * other["with"], 100 * other["other"], 100 * other["mean_diff"]))
                         if other else ""), ""]
-        out += [demote(read(os.path.join(args.second, "three_arms.md")), 2), ""]
+        out += [demote(read(os.path.join(folder, "three_arms.md")), 2), ""]
         section += 1
 
     if args.trigger and os.path.isfile(os.path.join(args.trigger, "trigger_summary.md")):
