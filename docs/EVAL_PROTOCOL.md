@@ -345,7 +345,7 @@ made after its results were known. None of them alters a score.
    those seven questions (`eval-runs/heldout-01-fable-plain3`) is kept beside
    the later one and is not part of its means.
 10. **Where the notes are shown (12 November 2026).** To keep the landing page
-    short it now carries the chart, one sentence of result and the links. The
+    short it now carries the chart and the links. The
     limits are repeated in the README and on the evidence page; the failed
     judge calls are listed there too; which version each run used, when the
     further models were run and the earlier run named in note 9 are recorded

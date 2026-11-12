@@ -374,7 +374,6 @@ footer p{margin:0;max-width:70ch}
       <p class="lead" id="benchlead"></p>
       <figure class="chartbox"><svg id="chart" viewBox="0 0 760 400" role="img"></svg><figcaption id="chartcap"></figcaption></figure>
       <p class="tiny" style="text-align:center;margin-top:10px" id="benchnote"></p>
-      <p class="tiny" style="text-align:center;margin-top:6px" id="ruleline"></p>
       <p class="more" id="morelinks"><a href="evidence.html">Full evidence</a></p>
     </section>
 
@@ -772,12 +771,12 @@ footer p{margin:0;max-width:70ch}
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/blob/main/docs/EVAL_PROTOCOL.md', text: 'Protocol' }));
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/tree/main/eval-runs', text: 'Every recorded run' }));
   }
-  $('ruleline').textContent = 'On ' + DATA.model_label + ' the skill scored higher on ' + EV.higher + ' of ' + EV.n + ' questions, the same on ' + EV.same + ' and lower on ' + EV.lower + '.';
 
   // ---------------------------------------------------------------- faq
+  var STRONGER = ALLMODELS.filter(function(m){ return m.model !== EV.model && m.n >= EV.n; })[0];
   var faqs = [
     ['Why not just ask Claude?', 'Alone, ' + DATA.model_label + ' answered from memory with no links; told to search and verify it gave ' + Math.round(((EV.links || {}).prompted || {}).per_answer || 0) + ' links an answer but scored ' + pct(EV.prompted.mean) + ' against ' + pct(EV['with']) + ' with the skill.'],
-    ['Does it save usage or time?', 'No: about ' + EV.effort['with'].minutes.toFixed(0) + ' minutes against ' + Math.round(60 * EV.effort.without.minutes) + ' seconds, and about $' + EV.effort['with'].cost_usd.toFixed(2) + ' an answer at API list prices against $' + EV.effort.without.cost_usd.toFixed(2) + '.'],
+    ['Why not just use a stronger model?', STRONGER ? 'You can, and the skill lifts that one too: ' + STRONGER.label + ' scored ' + pct(STRONGER.without.accuracy) + ' alone and ' + pct(STRONGER['with'].accuracy) + ' with the skill.' : 'You can, and the skill adds the same checking on top of it.'],
     ['Does it download the data or apply for me?', 'No: it finds and checks, and the answer lists the steps that stay with you.'],
     ['Which registries does it search?', 'OpenAIRE, DataCite, Zenodo, Hugging Face Hub and PhysioNet directly, and others through web search.'],
     ['Does it work outside Claude Code?', 'It follows the open Agent Skills format; it has been tested only in Claude Code.']
