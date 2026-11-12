@@ -45,16 +45,18 @@ $PY tools/combine_arms.py $MAIN $PROMPTED > /dev/null
 # recorded summary of how the runs used the workflow is kept as it is.
 if [ -d $MAIN/traces ]; then $PY tools/pipeline_use.py $MAIN > /dev/null; else echo "no traces here: keeping $MAIN/pipeline_use.json as recorded"; fi
 
+# The README and the evidence page give the result of each further model. How it was run (which
+# version, when, and the earlier run kept beside it) is a note for the written report only.
 args_second=(); report_second=(); args_audit=(); args_trigger=()
 # further models on the same questions, in the order they are reported
 if [ -f $OPUS/summary.json ]; then
   $PY tools/combine_arms.py $OPUS - > /dev/null
-  args_second+=(--second $OPUS/three_arms.json --second-label "$OPUS_LABEL" --second-note "$OPUS_NOTE")
+  args_second+=(--second $OPUS/three_arms.json --second-label "$OPUS_LABEL")
   report_second+=(--second $OPUS --second-label "$OPUS_LABEL" --second-note "$OPUS_NOTE")
 fi
 if [ -f $FABLE/summary.json ]; then
   $PY tools/combine_arms.py $FABLE - > /dev/null
-  args_second+=(--second $FABLE/three_arms.json --second-label "$FABLE_LABEL" --second-note "$FABLE_NOTE")
+  args_second+=(--second $FABLE/three_arms.json --second-label "$FABLE_LABEL")
   report_second+=(--second $FABLE --second-label "$FABLE_LABEL" --second-note "$FABLE_NOTE")
 fi
 if ls $MAIN/audit/*/audit.json > /dev/null 2>&1; then

@@ -344,3 +344,10 @@ made after its results were known. None of them alters a score.
    questions ran 0.1.0. A first run of Fable 5.2 without the skill on three of
    those seven questions (`eval-runs/heldout-01-fable-plain3`) is kept beside
    the later one and is not part of its means.
+10. **Where the notes are shown (12 November 2026).** To keep the landing page
+    short it now carries the chart, one sentence of result and the links. The
+    limits are repeated in the README and on the evidence page; the failed
+    judge calls are listed there too; which version each run used, when the
+    further models were run and the earlier run named in note 9 are recorded
+    in the written report (`docs/eval/heldout_report.md`) and in this file
+    only. No number changed.

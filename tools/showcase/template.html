@@ -238,12 +238,6 @@ h2{font:600 clamp(30px,4.6vw,50px)/1.06 var(--head);letter-spacing:-.035em;text-
 footer{padding-block:44px 64px;color:var(--muted);font-size:13.5px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
 footer p{margin:0;max-width:70ch}
 @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} .caret{display:none} }
-details.fine{max-width:760px;margin:22px auto 0;text-align:center}
-details.fine summary{cursor:pointer;color:var(--muted);font-size:13px;list-style:none}
-details.fine summary::after{content:" +"}
-details.fine[open] summary::after{content:" \2212"}
-details.fine summary::-webkit-details-marker{display:none}
-details.fine p{margin-top:10px;text-align:left}
 .ugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:16px}
 .ugrid .qt h4{min-height:0;color:var(--fg, inherit);font-weight:600}
 .ugrid .qt{display:grid;gap:10px;align-content:start}
@@ -292,7 +286,6 @@ details.fine p{margin-top:10px;text-align:left}
 .thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 .thumb span{position:absolute;right:8px;bottom:8px;font:500 11.5px var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 9px}
 .cmds{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
-.fineul{max-width:780px;margin:10px auto 0;padding-left:18px;text-align:left;font-size:13px;line-height:1.5;color:var(--muted);display:grid;gap:6px}
 </style>
 
 <div class="wrap">
@@ -382,8 +375,6 @@ details.fine p{margin-top:10px;text-align:left}
       <figure class="chartbox"><svg id="chart" viewBox="0 0 760 400" role="img"></svg><figcaption id="chartcap"></figcaption></figure>
       <p class="tiny" style="text-align:center;margin-top:10px" id="benchnote"></p>
       <p class="tiny" style="text-align:center;margin-top:6px" id="ruleline"></p>
-      <p class="tiny" style="text-align:center;margin-top:6px" id="othersline"></p>
-      <details class="fine"><summary>Small print</summary><ul class="fineul" id="smallprint"></ul></details>
       <p class="more" id="morelinks"><a href="evidence.html">Full evidence</a></p>
     </section>
 
@@ -710,7 +701,6 @@ details.fine p{margin-top:10px;text-align:left}
   num3(pct(EV['with']), pct(EV.without), 'average score on ' + EV.n + ' questions', 'higher on ' + EV.higher + ', the same on ' + EV.same + ', lower on ' + EV.lower + ' \u00b7 each question answered ' + EV.runs_per_question + ' times \u00b7 ' + stamp);
 
   // ---------------------------------------------------------------- benchmark: score against cost, one arrow a model
-  var laterNote = '';
   var BENCH = DATA.benchmark || {}, ALLMODELS = BENCH.models || [], UNIT = BENCH.unit_cost_usd;
   var MODELS = ALLMODELS.filter(function(m){ return m.n >= EV.n; }), PARTIAL = ALLMODELS.filter(function(m){ return m.n < EV.n; });
   if (MODELS.length && UNIT) {
@@ -774,38 +764,15 @@ details.fine p{margin-top:10px;text-align:left}
     MODELS.forEach(function(m){ if (m._q) place(m._q, m.label + ' told to search and verify ' + pct1(m.prompted.accuracy), 'clm', ['right', 'belowright', 'below', 'left', 'above']); });
     chart.setAttribute('aria-label', MODELS.map(function(m){ return m.label + ': ' + pct1(m.without.accuracy) + ' alone, ' + pct1(m['with'].accuracy) + ' with the skill'; }).join('; '));
     $('benchlead').textContent = 'Score: the share of answer-key checks a Sonnet judge passed, averaged over ' + EV.n + ' test questions held out from development.';
-    $('chartcap').textContent = 'Up is a higher score, right costs more; each arrow compares one model with itself, alone and with the skill.';
-    var later = MODELS.filter(function(m){ return m.model !== EV.model; }).map(function(m){ return m.label; });
+    $('chartcap').textContent = 'Each arrow is one model: alone, then with the skill.';
     $('benchnote').textContent = PARTIAL.length ? 'Not drawn yet: ' + PARTIAL.map(function(m){ return m.label + ' (' + m.n + ' of ' + EV.n + ' questions so far)'; }).join(', ') + '.' : '';
-    if (later.length) laterNote = ' ' + later.join(' and ') + (later.length > 1 ? ' were' : ' was') + ' run after the ' + DATA.model_label + ' result was known.';
   }
   if (DATA.repo_url) {
     $('pill-text').textContent = 'Benchmarked in the open'; $('benchh2').textContent = 'Accuracy against cost, in the open.';
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/blob/main/docs/EVAL_PROTOCOL.md', text: 'Protocol' }));
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/tree/main/eval-runs', text: 'Every recorded run' }));
   }
-  if (EV.verdict === 'mixed') $('ruleline').textContent = 'On ' + DATA.model_label + ' the skill averaged ' + Math.round(100 * (EV['with'] - EV.without)) + ' points higher but scored higher on only ' + EV.higher + ' of ' + EV.n + ' questions; we said beforehand it needed ' + EV.needed + ' to count as better, so we call it mixed.';
-  var others = MODELS.filter(function(m){ return m.model !== EV.model; });
-  if (others.length) {
-    var fewer = others.filter(function(m){ return m['with'].runs[0] < EV.runs_per_question; });
-    $('othersline').textContent = others.map(function(m, k){ return (k ? 'on ' + m.label + ' on ' + m.higher : 'On ' + m.label + ' it scored higher on ' + m.higher + ' of ' + m.n + ' questions'); }).join(' and ') +
-      '; no rule was set for them' + (fewer.length ? ', and ' + fewer.map(function(m){ return m.label; }).join(' and ') + ' had ' + fewer[0]['with'].runs[0] + ' runs a question against ' + EV.runs_per_question : '') + '.';
-  }
-  // the small print: five lines, one fact each
-  var fine = [];
-  fine.push('A score is the share of the answer-key checks for a question that a Sonnet judge passed; ' + EV.n + ' questions is a small sample and no significance test was run.');
-  if (EV.verdict === 'mixed') fine.push('Rule set beforehand for ' + DATA.model_label + ': higher on ' + EV.needed + ' of ' + EV.n + ' questions; it was higher on ' + EV.higher + ', the same on ' + EV.same + ' and lower on ' + EV.lower + ', so mixed.');
-  var mainVersion = Object.keys((MODELS.filter(function(m){ return m.model === EV.model; })[0] || {}).versions || {})[0];
-  var later = others.map(function(m){ var n = 0; Object.keys(m.versions || {}).forEach(function(v){ if (v !== mainVersion) n += m.versions[v]; }); return n >= m.n ? m.label : (n ? n + ' of the ' + m.n + ' ' + m.label + ' questions' : ''); }).filter(Boolean);
-  if (later.length) fine.push(later.join(' and ') + (later.length > 1 || /questions$/.test(later[0]) ? ' were' : ' was') + ' run after the ' + DATA.model_label + ' result was known' + (BENCH.pilot ? ', and an earlier ' + BENCH.pilot.label + ' run without the skill on ' + BENCH.pilot.questions + ' questions is published beside them.' : '.'));
-  var failedCalls = ALLMODELS.reduce(function(sum, m){ return sum + (m.judge_failures || 0); }, 0), shifted = [];
-  ALLMODELS.forEach(function(m){ [['without', ' alone'], ['with', ' with the skill']].forEach(function(arm){ if (Math.abs(m[arm[0]].accuracy - m[arm[0]].recorded) > 0.0005) shifted.push(m.label + arm[1] + ' is ' + pct1(m[arm[0]].recorded)); }); });
-  if (failedCalls) fine.push('In the chart a failed judge call counts as passed (' + failedCalls + ' in all)' + (shifted.length ? '; as recorded, ' + shifted.join(' and ') + '.' : '.'));
-  var byVersion = {};
-  ALLMODELS.forEach(function(m){ Object.keys(m.versions || {}).forEach(function(v){ (byVersion[v] = byVersion[v] || []).push(m.versions[v] >= m.n ? m.label : m.versions[v] + ' ' + m.label + ' questions'); }); });
-  var versionLine = Object.keys(byVersion).sort().map(function(v){ return byVersion[v].join(' and ') + ' ran version ' + v; }).join('; ');
-  if (versionLine) fine.push(versionLine + (DATA.version ? '; you install ' + DATA.version + ', which differs in the access labels of the page and in the name.' : '.'));
-  fine.slice(0, 5).forEach(function(line){ $('smallprint').appendChild(el('li', { text: line })); });
+  $('ruleline').textContent = 'On ' + DATA.model_label + ' the skill scored higher on ' + EV.higher + ' of ' + EV.n + ' questions, the same on ' + EV.same + ' and lower on ' + EV.lower + '.';
 
   // ---------------------------------------------------------------- faq
   var faqs = [

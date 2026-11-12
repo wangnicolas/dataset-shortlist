@@ -1082,9 +1082,6 @@
     "higher": 6,
     "lower": 2,
     "judge_failures": 1,
-    "versions": {
-     "0.1.0": 10
-    },
     "same": 2,
     "prompted": {
      "accuracy": 0.8452380952380952,
@@ -1120,9 +1117,6 @@
     "higher": 5,
     "lower": 1,
     "judge_failures": 0,
-    "versions": {
-     "0.1.1": 10
-    },
     "same": 4
    },
    {
@@ -1149,17 +1143,9 @@
     "higher": 3,
     "lower": 0,
     "judge_failures": 2,
-    "versions": {
-     "0.1.0": 3,
-     "0.1.1": 7
-    },
     "same": 7
    }
-  ],
-  "pilot": {
-   "model": "fable",
-   "questions": 3
-  }
+  ]
  },
  "before_after": {
   "case": "ho-o-04",

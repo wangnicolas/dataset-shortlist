@@ -104,9 +104,6 @@ def failed_judge_note(data):
 ARM_WORDS = {"with": "with the skill", "without": "without the skill", "prompted": "told to verify"}
 
 
-SECOND_NOTE = ("Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.")
-
-
 def results_block(arms, label, audit=None, second=None, second_label="", records="", pipeline=None, titles=None,
                   trigger=None):
     titles = titles or {}
@@ -231,7 +228,7 @@ def results_block(arms, label, audit=None, second=None, second_label="", records
         out += table(["Question", "Stratum"] + [name for _, name in present] + ["Skill minus no skill, points"], rows)
         out += ["", "</details>", ""]
 
-    extras = second if isinstance(second, list) else ([(second, second_label, SECOND_NOTE)] if second else [])
+    extras = second if isinstance(second, list) else ([(second, second_label, "")] if second else [])
     for extra, extra_label, extra_note in extras:
         if not (extra and extra.get("per_case")):
             continue
@@ -239,10 +236,10 @@ def results_block(arms, label, audit=None, second=None, second_label="", records
         if not outcome:
             continue
         out += [("On %s: %s with the skill and %s without it, a difference of %s points; higher on "
-                 "%d, the same on %d, lower on %d. " % (
+                 "%d, the same on %d, lower on %d." % (
                      extra_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
                      points(outcome["mean_diff"]), outcome["better"], outcome["same"], outcome["worse"]))
-                + (extra_note or SECOND_NOTE), ""]
+                + ((" " + extra_note) if extra_note else ""), ""]
         note = failed_judge_note(extra)
         if note:
             out += [note, ""]

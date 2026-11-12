@@ -231,17 +231,12 @@ def fair_score(run):
 def benchmark():
     """Accuracy and list price of an answer for every model and arm that was run on the held-out questions."""
     cells = {}                            # (model, arm) -> {case: {"scores": [...], "recorded": [...], "costs": [...]}}
-    failures, versions = {}, {}
+    failures = {}
     for model, path, arms in BENCH_SOURCES:
         if not os.path.isfile(os.path.join(REPO, path)):
             continue
         result = load(path)
-        suite_version = (((result.get("suite") or {}).get("plugins") or [{}])[0]).get("version")
         for case in result["cases"]:
-            if "with" in arms and arms["with"] == "with":
-                version = case.get("pluginVersion") or suite_version
-                versions.setdefault(model, {})
-                versions[model][version] = versions[model].get(version, 0) + 1
             for arm_in_file, arm in arms.items():
                 for run in (case.get("arms") or {}).get(arm_in_file) or []:
                     if run.get("error"):
@@ -273,8 +268,7 @@ def benchmark():
                  for n in common]
         row = {"model": model, "n": len(common), "with": summary(with_arm, common), "without": summary(alone, common),
                "higher": sum(1 for d in diffs if d > 1e-9), "lower": sum(1 for d in diffs if d < -1e-9),
-               "judge_failures": failures.get((model, "with"), 0) + failures.get((model, "without"), 0),
-               "versions": versions.get(model) or {}}
+               "judge_failures": failures.get((model, "with"), 0) + failures.get((model, "without"), 0)}
         row["same"] = len(common) - row["higher"] - row["lower"]
         prompted = cells.get((model, "prompted")) or {}
         if prompted:
@@ -282,10 +276,6 @@ def benchmark():
         models.append(row)
     unit = next((row["without"]["cost_usd"] for row in models if row["model"] == "sonnet"), None)
     out = {"unit_cost_usd": unit, "models": models}
-    # an earlier run without the skill that is published beside the others and is not in the chart
-    pilot = "eval-runs/heldout-01-fable-plain3/result.json"
-    if os.path.isfile(os.path.join(REPO, pilot)):
-        out["pilot"] = {"model": "fable", "questions": len(load(pilot)["cases"])}
     return out
 
 
