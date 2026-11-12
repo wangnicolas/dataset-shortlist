@@ -238,7 +238,7 @@ def results_block(arms, label, audit=None, second=None, second_label="", records
         outcome = decide(extra["per_case"], "without")
         if not outcome:
             continue
-        out += [("On another model (%s): %s with the skill and %s without it, a difference of %s points; higher on "
+        out += [("On %s: %s with the skill and %s without it, a difference of %s points; higher on "
                  "%d, the same on %d, lower on %d. " % (
                      extra_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
                      points(outcome["mean_diff"]), outcome["better"], outcome["same"], outcome["worse"]))

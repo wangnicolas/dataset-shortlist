@@ -273,9 +273,9 @@ The auditors were ten agents started on the model alias `opus`, which their tran
 
 The audit and the checks of section 2 measure different things. The audit asks whether what an answer says about a dataset is right. The access checks ask whether the answer states the particular facts a researcher needs in order to decide. An answer can be right in what it says and still leave those facts out.
 
-## 8. The same comparison on another model
+## 8. The same comparison on Opus 5.5
 
-The ten questions, Opus 5.5 (claude-opus-5-5), three runs per arm, 12 November 2026. This run was made after the result above was known. The rule was set for the main comparison only, so this is reported as a description.
+Opus 5.5 (claude-opus-5-5), the ten questions, three runs per arm, 12 November 2026. This run was made after the result above was known, with version 0.1.1 of the skill. The rule was set for the main comparison only, so this is reported as a description.
 
 Mean case score 97.4% with the skill and 91.8% without it (difference +5.6 points); higher on 5 questions, the same on 4, lower on 1.
 
@@ -328,7 +328,6 @@ Mean over the runs of the case; in brackets, each run.
 - With the skill against "No skill", 10 cases: mean case score 0.974 against 0.918, difference +0.056 (by run: +0.052, +0.088, +0.029). The skill scored higher on 5 cases, the same on 4, lower on 1.
   - health (6 cases): 0.979 against 0.952, difference +0.027.
   - other fields (4 cases): 0.967 against 0.868, difference +0.100.
-  - **Statement under the rule: Mixed: the per-question table is the result.**
 
 #### Links in the final answers (checked by script)
 
@@ -352,9 +351,9 @@ Mean over the runs of the case; in brackets, each run.
 - Runs without grader verdicts, scored 0 and kept in every mean: 0
 - Runs per arm: With the skill 30, No skill 30.
 
-## 9. The same comparison on another model
+## 9. The same comparison on Fable 5.2
 
-The ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.
+Fable 5.2 (claude-fable-5-2), the ten questions, two runs per arm, 11 and 12 November 2026. Three of these questions were run as the protocol planned, with version 0.1.0 of the skill; the other seven were added after the result above was known, with version 0.1.1. The rule was set for the main comparison only, so this is reported as a description. An earlier run of Fable 5.2 without the skill on three of the seven (eval-runs/heldout-01-fable-plain3, three runs each: skin tone 1.00, linked employer-employee data 0.92, galaxy images 0.62) is kept beside this one and is not part of these means; counted in, the skin-tone question would read the same instead of higher.
 
 Mean case score 97.5% with the skill and 90.0% without it (difference +7.5 points); higher on 4 questions, the same on 6, lower on 0.
 
@@ -409,7 +408,6 @@ Mean over the runs of the case; in brackets, each run.
 - With the skill against "No skill", 10 cases: mean case score 0.975 against 0.900, difference +0.075 (by run: +0.083, +0.068). The skill scored higher on 4 cases, the same on 6, lower on 0.
   - health (6 cases): 0.979 against 0.937, difference +0.042.
   - other fields (4 cases): 0.969 against 0.844, difference +0.125.
-  - **Statement under the rule: Mixed: the per-question table is the result.**
 
 #### Links in the final answers (checked by script)
 
@@ -432,7 +430,7 @@ Mean over the runs of the case; in brackets, each run.
 - ho-o-01, No skill, run 1, check `03-recall-sf-cabspotting` (grader threw: judge call failed: API Error: No response from API (waited 3m, then 10m on the retry). If a prox)
 - ho-o-01, No skill, run 2, check `03-recall-sf-cabspotting` (grader threw: judge call failed: API Error: No response from API (waited 3m, then 10m on the retry). If a prox)
 
-Had they been passes: mean case score 0.975 with the skill against 0.914 without, difference +0.061; higher on 3 cases, the same on 7, lower on 0; statement under the rule: Mixed: the per-question table is the result.
+Had they been passes: mean case score 0.975 with the skill against 0.914 without, difference +0.061; higher on 3 cases, the same on 7, lower on 0.
 
 #### Checks
 

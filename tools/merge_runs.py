@@ -31,7 +31,10 @@ def main(argv):
             merged["costUsd"] = 0.0
             merged["durationSeconds"] = 0
             merged["mergedFrom"] = []
+        version = (((result.get("suite") or {}).get("plugins") or [{}])[0]).get("version")
         for case in result["cases"]:
+            case["pluginVersion"] = version          # the runs may have used different versions of the plugin
+            case["fromRun"] = os.path.basename(os.path.normpath(folder))
             if case["name"] in seen:
                 raise SystemExit("case %s is in %s and in %s" % (case["name"], seen[case["name"]], folder))
             seen[case["name"]] = folder
@@ -40,13 +43,19 @@ def main(argv):
         merged["durationSeconds"] += result.get("durationSeconds") or 0
         merged["partial"] = bool(merged.get("partial")) or bool(result.get("partial"))
         merged["mergedFrom"].append({"folder": os.path.basename(os.path.normpath(folder)), "cases": len(result["cases"]),
-                                     "startedAt": result.get("startedAt")})
+                                     "startedAt": result.get("startedAt"), "pluginVersion": version})
         for sub in ("traces", "answers"):
             if os.path.isdir(os.path.join(folder, sub)):
                 os.makedirs(os.path.join(out_dir, sub), exist_ok=True)
                 for name in sorted(os.listdir(os.path.join(folder, sub))):
                     shutil.copyfile(os.path.join(folder, sub, name), os.path.join(out_dir, sub, name))
     merged["cases"].sort(key=lambda case: case["name"])
+    versions = {}
+    for case in merged["cases"]:
+        versions[case.get("pluginVersion")] = versions.get(case.get("pluginVersion"), 0) + 1
+    merged.setdefault("suite", {})["pluginVersions"] = versions
+    if merged["suite"].get("plugins"):
+        merged["suite"]["plugins"][0]["version"] = ", ".join(sorted(v for v in versions if v))
     merged.pop("aggregates", None)          # the tool's own totals belong to the separate runs
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "result.json"), "w", encoding="utf-8") as handle:

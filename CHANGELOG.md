@@ -22,10 +22,12 @@
   cannot show. Nothing but the exact word `open` is ever read as open.
 - The shortlist format reference lists the six tier words.
 
-Not re-evaluated: the graders of the evaluation read the text answer only and
-never the page, so the scores reported for 0.1.0 describe this version's
-answers as well. The pages kept in `eval-runs/heldout-01/pages/` are those
-written by 0.1.0, unchanged.
+The main held-out run was not repeated: its graders read the text answer only
+and never the page. The list of tier words is in a reference file the model
+reads, though, so 0.1.1 is not identical to 0.1.0 in what the model sees. The
+runs made later (Opus 5.5, and seven of the ten Fable 5.2 questions) used
+0.1.1 and are marked as such wherever they are reported. The pages kept in
+`eval-runs/heldout-01/pages/` are those written by 0.1.0, unchanged.
 
 ## 0.1.0 (2026-11-12)
 

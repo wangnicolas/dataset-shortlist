@@ -37,12 +37,12 @@ from decision_rule import decide, conditions  # noqa: E402
 # The runs replayed on the page. Labels are the only hand-written text; everything else is read.
 REPLAYS = [
     {"id": "meetings", "label": "Meeting audio", "base": "eval-runs/heldout-01",
-     "run": "ho-o-03__with__2", "page": "examples/heldout/ho-o-03__with__2.html", "origin": "a held-out question"},
+     "run": "ho-o-03__with__2", "page": "examples/heldout/ho-o-03__with__2.html", "origin": "a held-out test question"},
     {"id": "payroll", "label": "Employer and employee records", "base": "eval-runs/heldout-01",
-     "run": "ho-o-02__with__1", "page": "examples/heldout/ho-o-02__with__1.html", "origin": "a held-out question"},
+     "run": "ho-o-02__with__1", "page": "examples/heldout/ho-o-02__with__1.html", "origin": "a held-out test question"},
     {"id": "hard", "label": "A hard case", "base": "eval-runs/heldout-01",
      "run": "ho-h-checkpoint-response-rnaseq__with__1", "page": "examples/heldout/ho-h-checkpoint-response-rnaseq__with__1.html",
-     "origin": "a held-out question"},
+     "origin": "a held-out test question"},
 ]
 SOURCE_ORDER = ["physionet", "zenodo", "huggingface", "openaire", "datacite", "manual"]
 SOURCE_NAMES = {"physionet": "PhysioNet", "zenodo": "Zenodo", "huggingface": "Hugging Face", "openaire": "OpenAIRE",
@@ -196,21 +196,6 @@ def evidence():
     if os.path.isfile(path):
         trigger = load("eval-runs/trigger-01/trigger_summary.json")
         data["trigger"] = {key: trigger[key] for key in ("fired_when_it_should", "should", "fired_when_it_should_not", "should_not")}
-    path = os.path.join(REPO, "eval-runs/heldout-01-fable/three_arms.json")
-    if os.path.isfile(path):
-        second = load("eval-runs/heldout-01-fable/three_arms.json")
-        fair = (second.get("if_judge_failures_passed") or {}).get("per_case") or second["per_case"]
-        recorded = decide(second["per_case"], "without")
-        adjusted = decide(fair, "without")
-        data["second_model"] = {
-            "model": second["meta"].get("model"), "judge_failures": len(second.get("judge_failures") or []),
-            "cases": [{"case": row["case"], "title": titles.get(row["case"], row["case"]), "with": row.get("with"),
-                       "without": row.get("without")} for row in fair],
-            "recorded_diff": recorded["mean_diff"], "diff": adjusted["mean_diff"],
-            "higher": adjusted["better"], "same": adjusted["same"], "lower": adjusted["worse"],
-            "effort": {arm: {"minutes": (second["effort"].get(arm) or {}).get("minutes"),
-                             "cost_usd": (second["effort"].get(arm) or {}).get("cost_usd")} for arm in ("with", "without")},
-        }
     return data
 
 
@@ -245,12 +230,18 @@ def fair_score(run):
 
 def benchmark():
     """Accuracy and list price of an answer for every model and arm that was run on the held-out questions."""
-    cells = {}                            # (model, arm) -> {case: {"scores": [...], "costs": [...]}}
-    failures = {}
+    cells = {}                            # (model, arm) -> {case: {"scores": [...], "recorded": [...], "costs": [...]}}
+    failures, versions = {}, {}
     for model, path, arms in BENCH_SOURCES:
         if not os.path.isfile(os.path.join(REPO, path)):
             continue
-        for case in load(path)["cases"]:
+        result = load(path)
+        suite_version = (((result.get("suite") or {}).get("plugins") or [{}])[0]).get("version")
+        for case in result["cases"]:
+            if "with" in arms and arms["with"] == "with":
+                version = case.get("pluginVersion") or suite_version
+                versions.setdefault(model, {})
+                versions[model][version] = versions[model].get(version, 0) + 1
             for arm_in_file, arm in arms.items():
                 for run in (case.get("arms") or {}).get(arm_in_file) or []:
                     if run.get("error"):
@@ -259,14 +250,16 @@ def benchmark():
                     failures[(model, arm)] = failures.get((model, arm), 0) + failed
                     if score is None:
                         continue
-                    entry = cells.setdefault((model, arm), {}).setdefault(case["name"], {"scores": [], "costs": []})
+                    entry = cells.setdefault((model, arm), {}).setdefault(case["name"], {"scores": [], "recorded": [], "costs": []})
                     entry["scores"].append(score)
+                    entry["recorded"].append(run.get("score") if run.get("score") is not None else score)
                     entry["costs"].append(run["costUsd"] - (run.get("judgeCostUsd") or 0))
 
     def summary(per_case, names):
         if not names:
             return None
         return {"accuracy": sum(sum(per_case[n]["scores"]) / len(per_case[n]["scores"]) for n in names) / len(names),
+                "recorded": sum(sum(per_case[n]["recorded"]) / len(per_case[n]["recorded"]) for n in names) / len(names),
                 "cost_usd": sum(sum(per_case[n]["costs"]) / len(per_case[n]["costs"]) for n in names) / len(names),
                 "runs": [min(len(per_case[n]["scores"]) for n in names), max(len(per_case[n]["scores"]) for n in names)]}
 
@@ -280,14 +273,20 @@ def benchmark():
                  for n in common]
         row = {"model": model, "n": len(common), "with": summary(with_arm, common), "without": summary(alone, common),
                "higher": sum(1 for d in diffs if d > 1e-9), "lower": sum(1 for d in diffs if d < -1e-9),
-               "judge_failures": failures.get((model, "with"), 0) + failures.get((model, "without"), 0)}
+               "judge_failures": failures.get((model, "with"), 0) + failures.get((model, "without"), 0),
+               "versions": versions.get(model) or {}}
         row["same"] = len(common) - row["higher"] - row["lower"]
         prompted = cells.get((model, "prompted")) or {}
         if prompted:
             row["prompted"] = summary(prompted, sorted(set(prompted) & set(common)) or sorted(prompted))
         models.append(row)
     unit = next((row["without"]["cost_usd"] for row in models if row["model"] == "sonnet"), None)
-    return {"unit_cost_usd": unit, "models": models}
+    out = {"unit_cost_usd": unit, "models": models}
+    # an earlier run without the skill that is published beside the others and is not in the chart
+    pilot = "eval-runs/heldout-01-fable-plain3/result.json"
+    if os.path.isfile(os.path.join(REPO, pilot)):
+        out["pilot"] = {"model": "fable", "questions": len(load(pilot)["cases"])}
+    return out
 
 
 def before_after(data):

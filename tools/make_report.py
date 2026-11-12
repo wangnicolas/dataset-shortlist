@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -241,7 +242,7 @@ def main():
         second_label = (args.second_label + [""] * len(args.second))[index]
         second_note = (args.second_note + [""] * len(args.second))[index]
         second_outcome = decide(second["per_case"], "without")
-        out += ["## %d. The same comparison on another model" % section, "",
+        out += ["## %d. The same comparison on %s" % (section, second_label.split(" (")[0]), "",
                 "%s. %s" % (second_label.rstrip("."), second_note), ""]
         if second_outcome:
             out += ["Mean case score %.1f%% with the skill and %.1f%% without it (difference %+.1f points); higher on %d "
@@ -255,7 +256,11 @@ def main():
                         " Counted as passes instead, the scores are %.1f%% with the skill and %.1f%% without it "
                         "(difference %+.1f points)." % (100 * other["with"], 100 * other["other"], 100 * other["mean_diff"]))
                         if other else ""), ""]
-        out += [demote(read(os.path.join(folder, "three_arms.md")), 2), ""]
+        table = read(os.path.join(folder, "three_arms.md"))
+        # the rule was set for the main comparison only: its verdict is not printed for a further model
+        table = "\n".join(line for line in table.split("\n") if "Statement under the rule" not in line)
+        table = re.sub(r";\s*statement under the rule[^\n]*", ".", table)
+        out += [demote(table, 2), ""]
         section += 1
 
     if args.trigger and os.path.isfile(os.path.join(args.trigger, "trigger_summary.md")):

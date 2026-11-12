@@ -485,11 +485,11 @@ def second_model_section(data, label, note=""):
                     effort["with"]["minutes"], effort["with"]["cost_usd"], effort["without"]["minutes"],
                     effort["without"]["cost_usd"], (links.get("with") or {}).get("per_answer") or 0,
                     (links.get("without") or {}).get("per_answer") or 0))
-    return ('<h4>On another model</h4><p class="runlabel">%s</p><p>%s The lift from a skill can change with the model '
+    return ('<h4>On %s</h4><p class="runlabel">%s</p><p>%s The lift from a skill can change with the model '
             'itself, so the same comparison was repeated on this one. %s</p>%s<div class="scroll"><table><thead><tr>'
             '<th scope="col">Question</th><th scope="col">Stratum</th><th scope="col">With the skill</th>'
             '<th scope="col">No skill</th></tr></thead><tbody>%s</tbody></table></div>%s'
-            % (esc(label), esc(summary), esc(note), ('<p class="note">%s</p>' % esc(failed)) if failed else "", rows,
+            % (esc(label.split(" (")[0]), esc(label), esc(summary), esc(note), ('<p class="note">%s</p>' % esc(failed)) if failed else "", rows,
                ('<p class="small">%s</p>' % esc(cost)) if cost else ""))
 
 

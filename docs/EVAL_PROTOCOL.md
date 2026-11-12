@@ -4,8 +4,8 @@
 > renamed `dataset-shortlist` afterwards (version 0.1.2, no change in behaviour). The public repository starts from
 > a single commit, so the commit hashes quoted below refer to the private development history and cannot be checked
 > here; the run records under `eval-runs/` are the ones produced by those commits. Runs added after the first
-> held-out run (the trigger test under the new name, and Opus 5.5 and Fable 5.2 on the same questions) are
-> exploratory and are listed with the changes at the end.
+> held-out run (the trigger test under the new name, Opus 5.5 on the ten questions, and Fable 5.2 on the seven
+> questions outside its planned subset) are exploratory and are listed with the changes at the end.
 
 Date: 2026-11-11. This file fixes how the claim is tested before the results exist.
 Changes after the first held-out run are listed at the bottom with their date and
@@ -334,8 +334,13 @@ made after its results were known. None of them alters a score.
    requests and on 0 of 10 near misses, as before. The held-out runs were not
    repeated; their records keep the old name.
 9. **More models on the same questions (exploratory).** After the result above
-   was known, Opus 5.5 and Fable 5.2 were run on the held-out questions with and
-   without the skill. These runs are outside the single held-out run this
-   protocol fixes: the questions were no longer unseen by the author, and no
-   rule was set for them beforehand. They are reported as a description, with
-   the checks whose judge call failed left out.
+   was known, Opus 5.5 was run on the ten held-out questions and Fable 5.2 on
+   the seven that were not in its planned subset, with and without the skill.
+   These runs are outside the single held-out run this protocol fixes: the
+   questions were no longer unseen by the author, and no rule was set for them
+   beforehand. They are reported as a description, with failed judge calls
+   counted as recorded and, beside that, as passes. They ran version 0.1.1 of
+   the skill; the main run, the prompted arm and the three planned Fable 5.2
+   questions ran 0.1.0. A first run of Fable 5.2 without the skill on three of
+   those seven questions (`eval-runs/heldout-01-fable-plain3`) is kept beside
+   the later one and is not part of its means.

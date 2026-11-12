@@ -78,10 +78,11 @@ def main():
     sources_dir = os.path.join(REPO, "plugins", "dataset-shortlist", "skills", "dataset-shortlist", "scripts", "scoutlib", "sources")
     data["registries"] = len([name for name in os.listdir(sources_dir) if name.endswith(".py") and not name.startswith("_")])
     data["model_label"] = MODEL_LABELS.get(data["evidence"].get("model"), data["evidence"].get("model") or "")
-    second = data["evidence"].get("second_model") or {}
-    data["second_label"] = MODEL_LABELS.get(second.get("model"), second.get("model") or "")
     for row in (data.get("benchmark") or {}).get("models") or []:
         row["label"] = MODEL_LABELS.get(row["model"], row["model"])
+    pilot = (data.get("benchmark") or {}).get("pilot")
+    if pilot:
+        pilot["label"] = MODEL_LABELS.get(pilot["model"], pilot["model"])
     started = load("eval-runs/heldout-01/result.json").get("startedAt") or ""
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
               "November", "December"]
@@ -91,7 +92,7 @@ def main():
     if args.owner and args.owner != "OWNER":
         data["repo_url"] = "https://github.com/%s/dataset-shortlist" % args.owner
         # one command that adds the marketplace and installs the plugin (Claude Code 2.1.292 or newer)
-        data["install"] = {"where": "In a terminal:", "prompt": "$",
+        data["install"] = {"where": "In a terminal (Claude Code 2.1.292 or newer):", "prompt": "$",
                            "lines": ["claude plugin install dataset-shortlist --marketplace %s/dataset-shortlist" % args.owner]}
     elif args.local_path:
         data["install"] = {"where": "In a terminal, from a local copy (one session, nothing is installed):", "prompt": "$",

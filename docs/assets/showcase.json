@@ -3,7 +3,7 @@
   {
    "id": "meetings",
    "label": "Meeting audio",
-   "origin": "a held-out question",
+   "origin": "a held-out test question",
    "page": "examples/heldout/ho-o-03__with__2.html",
    "question": "We're a small startup building meeting transcription with speaker diarization. I'm looking for recordings of real multi-party conversations (not simulated mixtures), ideally business-style meetings, with speaker-turn annotations (who spoke when), preferably including far-field or microphone-array audio. English only. It's for a commercial product, so the licence has to allow commercial use. We can pay a reasonable licence fee if needed, but research-only or non-commercial data is out. What should we use?",
    "requirements": [
@@ -269,7 +269,7 @@
   {
    "id": "payroll",
    "label": "Employer and employee records",
-   "origin": "a held-out question",
+   "origin": "a held-out test question",
    "page": "examples/heldout/ho-o-02__with__1.html",
    "question": "I'm a second-year PhD student in labor economics. I want to decompose the rise in wage inequality into within-firm and between-firm parts with an AKM-style model (worker and firm fixed effects), so I need linked employer-employee microdata where I can follow individual workers as they move between employers over at least ten years. Any country is fine. I already know most data like this is restricted, so please be honest about what it would actually take to get access to each option, and tell me if there is anything I could start working with right away.",
    "requirements": [
@@ -536,7 +536,7 @@
   {
    "id": "hard",
    "label": "A hard case",
-   "origin": "a held-out question",
+   "origin": "a held-out test question",
    "page": "examples/heldout/ho-h-checkpoint-response-rnaseq__with__1.html",
    "question": "I'm a bioinformatics postdoc building a classifier that predicts response to immune checkpoint inhibitors (anti-PD-1/PD-L1 or anti-CTLA-4) from pre-treatment tumour RNA-seq. I need cohorts of patients who actually received checkpoint inhibitors, with bulk expression data and a recorded clinical response (RECIST or clinical benefit), ideally several independent cohorts so I can validate across studies. Any cancer type is fine. Where can I get these, and which ones can I download right away versus having to apply for?",
    "requirements": [
@@ -1053,45 +1053,6 @@
    "should": 10,
    "fired_when_it_should_not": 0,
    "should_not": 10
-  },
-  "second_model": {
-   "model": "fable",
-   "judge_failures": 2,
-   "cases": [
-    {
-     "case": "ho-h-checkpoint-response-rnaseq",
-     "title": "Checkpoint-inhibitor response from tumour RNA-seq",
-     "with": 1.0,
-     "without": 1.0
-    },
-    {
-     "case": "ho-h-cxr-free-text-reports",
-     "title": "Chest X-rays with free-text reports",
-     "with": 0.9375,
-     "without": 0.9375
-    },
-    {
-     "case": "ho-o-01",
-     "title": "Taxi GPS trajectories",
-     "with": 1.0,
-     "without": 1.0
-    }
-   ],
-   "recorded_diff": 0.04761904761904764,
-   "diff": 0.0,
-   "higher": 0,
-   "same": 3,
-   "lower": 0,
-   "effort": {
-    "with": {
-     "minutes": 8.547816666666668,
-     "cost_usd": 4.1099036
-    },
-    "without": {
-     "minutes": 1.9727638888888888,
-     "cost_usd": 0.8547705
-    }
-   }
   }
  },
  "benchmark": {
@@ -1102,6 +1063,7 @@
     "n": 10,
     "with": {
      "accuracy": 0.9109126984126984,
+     "recorded": 0.9067460317460316,
      "cost_usd": 0.44293751666666664,
      "runs": [
       3,
@@ -1110,6 +1072,7 @@
     },
     "without": {
      "accuracy": 0.8104497354497354,
+     "recorded": 0.8104497354497354,
      "cost_usd": 0.06839846666666667,
      "runs": [
       3,
@@ -1119,9 +1082,13 @@
     "higher": 6,
     "lower": 2,
     "judge_failures": 1,
+    "versions": {
+     "0.1.0": 10
+    },
     "same": 2,
     "prompted": {
      "accuracy": 0.8452380952380952,
+     "recorded": 0.8452380952380952,
      "cost_usd": 0.34544176666666665,
      "runs": [
       3,
@@ -1134,6 +1101,7 @@
     "n": 10,
     "with": {
      "accuracy": 0.974404761904762,
+     "recorded": 0.974404761904762,
      "cost_usd": 1.28151533,
      "runs": [
       3,
@@ -1142,6 +1110,7 @@
     },
     "without": {
      "accuracy": 0.9183201058201057,
+     "recorded": 0.9183201058201057,
      "cost_usd": 0.27207646,
      "runs": [
       3,
@@ -1151,6 +1120,9 @@
     "higher": 5,
     "lower": 1,
     "judge_failures": 0,
+    "versions": {
+     "0.1.1": 10
+    },
     "same": 4
    },
    {
@@ -1158,6 +1130,7 @@
     "n": 10,
     "with": {
      "accuracy": 0.975,
+     "recorded": 0.975,
      "cost_usd": 3.793430605,
      "runs": [
       2,
@@ -1166,6 +1139,7 @@
     },
     "without": {
      "accuracy": 0.913888888888889,
+     "recorded": 0.8996031746031745,
      "cost_usd": 1.1355626950000002,
      "runs": [
       2,
@@ -1175,9 +1149,17 @@
     "higher": 3,
     "lower": 0,
     "judge_failures": 2,
+    "versions": {
+     "0.1.0": 3,
+     "0.1.1": 7
+    },
     "same": 7
    }
-  ]
+  ],
+  "pilot": {
+   "model": "fable",
+   "questions": 3
+  }
  },
  "before_after": {
   "case": "ho-o-04",

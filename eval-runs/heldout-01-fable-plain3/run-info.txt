@@ -1,0 +1,7 @@
+started: 2026-11-12T07:57:05Z
+skill commit: 7b19a9e6965bfc9ff16b28b235cce8ddc9b78831 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals-heldout-plain3
+extra options: --ablation none --model fable --runs 3 -j 3 --max-cost-usd 25
+claude plugin eval exit status: 1 (1 only means some case scored below the threshold)
+finished: 2026-11-12T08:07:23Z

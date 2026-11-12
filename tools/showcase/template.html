@@ -292,6 +292,7 @@ details.fine p{margin-top:10px;text-align:left}
 .thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 .thumb span{position:absolute;right:8px;bottom:8px;font:500 11.5px var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 9px}
 .cmds{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
+.fineul{max-width:780px;margin:10px auto 0;padding-left:18px;text-align:left;font-size:13px;line-height:1.5;color:var(--muted);display:grid;gap:6px}
 </style>
 
 <div class="wrap">
@@ -332,7 +333,7 @@ details.fine p{margin-top:10px;text-align:left}
                 <div class="side">
                   <div class="idle"><span class="label">Registries</span><span id="idletext"></span></div>
                   <div class="qs"><span class="label">Searches it ran</span><ul id="qs"></ul></div>
-                  <div class="vs"><span class="label">The verifier said</span><ul id="vs"></ul></div>
+                  <div class="vs"><span class="label">Does the record exist?</span><ul id="vs"></ul></div>
                 </div>
               </div>
               <div class="panel p-access"><div class="lanes" id="lanes"></div></div>
@@ -376,12 +377,13 @@ details.fine p{margin-top:10px;text-align:left}
 
     <section id="benchmark">
       <p class="eyebrow">Benchmark</p>
-      <h2 id="benchh2">Accuracy against usage.</h2>
+      <h2 id="benchh2">Accuracy against cost.</h2>
       <p class="lead" id="benchlead"></p>
       <figure class="chartbox"><svg id="chart" viewBox="0 0 760 400" role="img"></svg><figcaption id="chartcap"></figcaption></figure>
       <p class="tiny" style="text-align:center;margin-top:10px" id="benchnote"></p>
       <p class="tiny" style="text-align:center;margin-top:6px" id="ruleline"></p>
-      <details class="fine"><summary>Small print</summary><p class="cap" id="smallprint"></p></details>
+      <p class="tiny" style="text-align:center;margin-top:6px" id="othersline"></p>
+      <details class="fine"><summary>Small print</summary><ul class="fineul" id="smallprint"></ul></details>
       <p class="more" id="morelinks"><a href="evidence.html">Full evidence</a></p>
     </section>
 
@@ -423,6 +425,7 @@ details.fine p{margin-top:10px;text-align:left}
   function svg(tag, attrs){ var n = document.createElementNS(SVGNS, tag), k; for (k in attrs) n.setAttribute(k, attrs[k]); return n; }
   function clear(n){ while (n.firstChild) n.removeChild(n.firstChild); return n; }
   function pct(x){ return Math.round(100 * x) + '%'; }
+  function pct1(x){ return (100 * x).toFixed(1) + '%'; }
   function plural(n, one, many){ return n + ' ' + (n === 1 ? one : many); }
 
   var ICONS = {
@@ -544,7 +547,7 @@ details.fine p{margin-top:10px;text-align:left}
     run.datasets.slice(0, 5).forEach(function(d, i){ var row = el('div', { cls: 'arow' }, [el('span', { cls: 'rk', text: String(d.rank || i + 1) }), el('span', { cls: 'nm', text: d.title }), el('span', { cls: 'fitword ' + d.fit, text: d.fit.charAt(0).toUpperCase() + d.fit.slice(1) + ' fit' }), badge(d.tier, d.tier_label)]); row.style.setProperty('--i', i); ans.appendChild(row); });
     var bits = [];
     if (run.datasets.length > 5) bits.push('And ' + (run.datasets.length - 5) + ' more on the page');
-    if (run.set_aside.length) bits.push('Set aside: ' + run.set_aside[0].name + ' (' + String(run.set_aside[0].reason).replace(/\.\s*$/, '') + ').');
+    if (run.set_aside.length) bits.push('Set aside: ' + run.set_aside[0].name + ' (' + String(run.set_aside[0].reason).replace(/\.\s*$/, '') + ')' + (run.set_aside.length > 1 ? ', and ' + (run.set_aside.length - 1) + ' more' : '') + '.');
     else if (run.note) bits.push(run.note);
     var foot = el('div', { cls: 'afoot' }, [el('p', { text: bits.join(' · ') }), el('a', { cls: 'linkbtn', href: run.page, text: 'Open the page this run wrote ↗' })]);
     foot.style.setProperty('--i', 7); ans.appendChild(foot);
@@ -693,20 +696,20 @@ details.fine p{margin-top:10px;text-align:left}
   if (BA) {
     $('baq').textContent = '“' + BA.question + '”';
     var today = checkedToday(BA.skill.text);
-    $('ba').appendChild(answerCard('plain', 'Claude alone', [BA.plain.links ? plural(BA.plain.links, 'link', 'links') : 'no links', /from memory/i.test(BA.plain.text) ? 'from memory' : ''], BA.plain.text, '', BA.plain));
-    $('ba').appendChild(answerCard('skill', 'With the skill', [plural(BA.skill.links, 'source link', 'source links'), today ? today + ' rows checked on the run date' : ''], BA.skill.text, /^## Shortlist/m.test(BA.skill.text) ? '## Shortlist' : '', BA.skill));
+    $('ba').appendChild(answerCard('plain', DATA.model_label + ' alone', [BA.plain.links ? plural(BA.plain.links, 'link', 'links') : 'no links', /from memory/i.test(BA.plain.text) ? 'from memory' : ''], BA.plain.text, '', BA.plain));
+    $('ba').appendChild(answerCard('skill', DATA.model_label + ' with the skill', [plural(BA.skill.links, 'source link', 'source links'), today ? today + ' rows checked on the run date' : ''], BA.skill.text, /^## Shortlist/m.test(BA.skill.text) ? '## Shortlist' : '', BA.skill));
     $('banote').textContent = 'The question with the widest gap of the ' + EV.n + '; both answers are recorded, run ' + BA.run + ' of each.';
   }
 
   // ---------------------------------------------------------------- three numbers
   var fam = {}; EV.families.forEach(function(f){ fam[f.key] = f; });
   var stamp = DATA.model_label + (DATA.run_month ? ' · ' + DATA.run_month : '');
-  function num3(big, versus, label, small){ $('nums').appendChild(el('div', { cls: 'num3' }, [el('strong', { text: big }), el('em', { text: 'against ' + versus + ' for Claude alone' }), el('b', { text: label }), el('small', { text: small })])); }
+  function num3(big, versus, label, small){ $('nums').appendChild(el('div', { cls: 'num3' }, [el('strong', { text: big }), el('em', { text: 'against ' + versus + ' without the skill' }), el('b', { text: label }), el('small', { text: small })])); }
   if (fam.access) num3(pct(fam.access['with'].passed / fam.access['with'].total), pct(fam.access.without.passed / fam.access.without.total), 'access conditions stated correctly', fam.access['with'].passed + ' of ' + fam.access['with'].total + ' checks against ' + fam.access.without.passed + ' \u00b7 ' + stamp);
   if (EV.links && EV.links['with'] && EV.links.without) num3(String(Math.round(EV.links['with'].per_answer)), String(Math.round(EV.links.without.per_answer)), 'source links an answer', (EV.n * EV.runs_per_question) + ' answers each · ' + stamp);
-  num3(pct(EV['with']), pct(EV.without), 'average score on ' + EV.n + ' questions', 'higher on ' + EV.higher + ', level on ' + EV.same + ', lower on ' + EV.lower + ' · ' + EV.runs_per_question + ' runs each · ' + stamp);
+  num3(pct(EV['with']), pct(EV.without), 'average score on ' + EV.n + ' questions', 'higher on ' + EV.higher + ', the same on ' + EV.same + ', lower on ' + EV.lower + ' \u00b7 each question answered ' + EV.runs_per_question + ' times \u00b7 ' + stamp);
 
-  // ---------------------------------------------------------------- benchmark: accuracy against usage, one arrow a model
+  // ---------------------------------------------------------------- benchmark: score against cost, one arrow a model
   var laterNote = '';
   var BENCH = DATA.benchmark || {}, ALLMODELS = BENCH.models || [], UNIT = BENCH.unit_cost_usd;
   var MODELS = ALLMODELS.filter(function(m){ return m.n >= EV.n; }), PARTIAL = ALLMODELS.filter(function(m){ return m.n < EV.n; });
@@ -714,86 +717,97 @@ details.fine p{margin-top:10px;text-align:left}
     var chart = $('chart'), CW = 760, CH = 400, ML = 56, MR = 190, MT = 30, MB = 58, pts = [];
     MODELS.forEach(function(m){ pts.push([m['with'].cost_usd / UNIT, m['with'].accuracy], [m.without.cost_usd / UNIT, m.without.accuracy]); if (m.prompted) pts.push([m.prompted.cost_usd / UNIT, m.prompted.accuracy]); });
     var lowest = Math.min.apply(null, pts.map(function(p){ return p[1]; })), widest = Math.max.apply(null, pts.map(function(p){ return p[0]; }));
-    var yLo = Math.min(0.7, Math.floor((lowest - 0.02) * 10) / 10), yHi = 1, xLo = Math.log(0.75), xHi = Math.log(Math.max(100, widest * 1.4));
+    var yLo = lowest >= 0.805 ? 0.8 : (lowest >= 0.605 ? 0.6 : 0.2), yHi = 1, yStep = (yHi - yLo) / 4, xLo = Math.log(0.75), xHi = Math.log(Math.max(100, widest * 1.4));
     var PX = function(mult){ return ML + (CW - ML - MR) * (Math.log(mult) - xLo) / (xHi - xLo); };
     var PY = function(acc){ return MT + (CH - MT - MB) * (1 - (acc - yLo) / (yHi - yLo)); };
     var text = function(x, y, cls, str, anchor){ var t = svg('text', { x: x, y: y, 'class': cls, 'text-anchor': anchor || 'start' }); t.textContent = str; chart.appendChild(t); return t; };
     var defs = svg('defs', {}), marker = svg('marker', { id: 'arrowhead', markerWidth: 9, markerHeight: 9, refX: 8, refY: 4.5, orient: 'auto', markerUnits: 'userSpaceOnUse' });
     marker.appendChild(svg('path', { d: 'M0,0 L9,4.5 L0,9 z', style: 'fill:var(--accent)' })); defs.appendChild(marker); chart.appendChild(defs);
-    for (var tick = Math.round(yLo * 10); tick <= 10; tick++) {
-      chart.appendChild(svg('line', { x1: ML, y1: PY(tick / 10), x2: CW - MR, y2: PY(tick / 10), style: 'stroke:var(--line)', 'stroke-width': 1 }));
-      text(ML - 8, PY(tick / 10) + 4, 'cx', (tick * 10) + '%', 'end');
+    for (var tick = 0; tick <= 4; tick++) {
+      var tv = yLo + tick * yStep;
+      chart.appendChild(svg('line', { x1: ML, y1: PY(tv), x2: CW - MR, y2: PY(tv), style: 'stroke:var(--line)', 'stroke-width': 1 }));
+      text(ML - 8, PY(tv) + 4, 'cx', Math.round(100 * tv) + '%', 'end');
     }
     [1, 3, 10, 30, 100, 300].forEach(function(mult){ if (Math.log(mult) <= xHi) { chart.appendChild(svg('line', { x1: PX(mult), y1: CH - MB, x2: PX(mult), y2: CH - MB + 5, style: 'stroke:var(--line)', 'stroke-width': 1 })); text(PX(mult), CH - MB + 19, 'cx', mult + '×', 'middle'); } });
-    text(ML - 44, 14, 'cx', 'Accuracy (checks passed)', 'start');
+    text(ML - 44, 14, 'cx', 'Score (answer-key checks passed)', 'start');
     text((ML + CW - MR) / 2, CH - 12, 'cx', 'Cost of one answer at API list prices (1\u00d7 = a plain ' + DATA.model_label + ' answer, about $' + UNIT.toFixed(2) + ') \u2192 more', 'middle');
-    // every point first, so that a label can keep clear of the other marks
-    var marks = [], boxes = [[0, 0, ML - 2, CH]];      // the column of the axis labels is taken
+    // every mark first, so that a label can keep clear of the points, the arrows and the other labels
+    var ends = [], lines = [], boxes = [[0, 0, ML - 2, CH]];      // the column of the axis labels is taken
     MODELS.forEach(function(m){
       m._t = [PX(m.without.cost_usd / UNIT), PY(m.without.accuracy)]; m._h = [PX(m['with'].cost_usd / UNIT), PY(m['with'].accuracy)];
-      marks.push(m._t, m._h);
-      if (m.prompted) { m._q = [PX(m.prompted.cost_usd / UNIT), PY(m.prompted.accuracy)]; marks.push(m._q); }
+      ends.push(m._t, m._h);
+      for (var step = 1; step < 24; step++) lines.push([m._t[0] + (m._h[0] - m._t[0]) * step / 24, m._t[1] + (m._h[1] - m._t[1]) * step / 24]);
+      if (m.prompted) { m._q = [PX(m.prompted.cost_usd / UNIT), PY(m.prompted.accuracy)]; ends.push(m._q); }
     });
     function place(point, str, cls, order){
-      var w = 7.3 * str.length, spots = {
-        above: [point[0] - w / 2, point[1] - 24, 'middle', point[0], point[1] - 13],
-        below: [point[0] - w / 2, point[1] + 10, 'middle', point[0], point[1] + 21],
-        right: [point[0] + 12, point[1] - 8, 'start', point[0] + 12, point[1] + 4],
-        left: [point[0] - 12 - w, point[1] - 8, 'end', point[0] - 12, point[1] + 4],
-        belowright: [point[0] - 4, point[1] + 10, 'start', point[0] - 4, point[1] + 21] }, chosen = null;
-      order.forEach(function(name){
-        if (chosen) return;
-        var c = spots[name], box = [c[0] - 3, c[1] - 2, c[0] + w + 3, c[1] + 16];
-        if (box[0] < 2 || box[2] > CW - 2 || box[1] < 2 || box[3] > CH - MB + 4) return;
-        var clash = boxes.some(function(o){ return box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]; }) ||
-          marks.some(function(q){ return q !== point && q[0] > box[0] - 8 && q[0] < box[2] + 8 && q[1] > box[1] - 8 && q[1] < box[3] + 8; });
-        if (!clash) chosen = [c, box];
+      var w = 7.3 * str.length, x = point[0], y = point[1], spots = {
+        above: [x - w / 2, y - 24, 'middle', x, y - 13], below: [x - w / 2, y + 10, 'middle', x, y + 21],
+        right: [x + 12, y - 8, 'start', x + 12, y + 4], left: [x - 12 - w, y - 8, 'end', x - 12, y + 4],
+        aboveright: [x - 4, y - 24, 'start', x - 4, y - 13], aboveleft: [x + 4 - w, y - 24, 'end', x + 4, y - 13],
+        belowright: [x - 4, y + 10, 'start', x - 4, y + 21], belowleft: [x + 4 - w, y + 10, 'end', x + 4, y + 21] }, best = null;
+      order.forEach(function(name, rank){
+        var c = spots[name], box = [c[0] - 3, c[1] - 2, c[0] + w + 3, c[1] + 16], cost = rank * 0.1;
+        if (box[0] < 2 || box[2] > CW - 2 || box[1] < 2 || box[3] > CH - MB + 4) cost += 100;
+        boxes.forEach(function(o){ if (box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]) cost += 20; });
+        ends.forEach(function(q){ if (q !== point && q[0] > box[0] - 8 && q[0] < box[2] + 8 && q[1] > box[1] - 8 && q[1] < box[3] + 8) cost += 10; });
+        lines.forEach(function(q){ if (q[0] > box[0] - 2 && q[0] < box[2] + 2 && q[1] > box[1] - 2 && q[1] < box[3] + 2) cost += 2; });
+        if (!best || cost < best[0]) best = [cost, c, box];
       });
-      if (!chosen) { var f = spots[order[0]]; chosen = [f, [f[0] - 3, f[1] - 2, f[0] + w + 3, f[1] + 16]]; }
-      boxes.push(chosen[1]); text(chosen[0][3], chosen[0][4], cls, str, chosen[0][2]);
+      boxes.push(best[2]); text(best[1][3], best[1][4], cls, str, best[1][2]);
     }
     MODELS.forEach(function(m){
       var tx = m._t[0], ty = m._t[1], hx = m._h[0], hy = m._h[1];
       var len = Math.sqrt((hx - tx) * (hx - tx) + (hy - ty) * (hy - ty)) || 1, ex = hx - 9 * (hx - tx) / len, ey = hy - 9 * (hy - ty) / len;
       chart.appendChild(svg('line', { x1: tx, y1: ty, x2: ex, y2: ey, style: 'stroke:var(--accent)', 'stroke-width': 2, 'stroke-linecap': 'round', 'marker-end': 'url(#arrowhead)' }));
       var tail = svg('circle', { cx: tx, cy: ty, r: 5.5, style: 'fill:var(--dot);stroke:var(--bg);stroke-width:2' }), head = svg('circle', { cx: hx, cy: hy, r: 6.5, style: 'fill:var(--accent);stroke:var(--bg);stroke-width:2' });
-      var tip = svg('title', {}); tip.textContent = m.label + ' alone: ' + pct(m.without.accuracy) + ' at ' + (m.without.cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; tail.appendChild(tip);
-      tip = svg('title', {}); tip.textContent = m.label + ' with the skill: ' + pct(m['with'].accuracy) + ' at ' + (m['with'].cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; head.appendChild(tip);
+      var tip = svg('title', {}); tip.textContent = m.label + ' alone: ' + pct1(m.without.accuracy) + ' at ' + (m.without.cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; tail.appendChild(tip);
+      tip = svg('title', {}); tip.textContent = m.label + ' with the skill: ' + pct1(m['with'].accuracy) + ' at ' + (m['with'].cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; head.appendChild(tip);
       chart.appendChild(tail); chart.appendChild(head);
       if (m._q) {
         var ring = svg('circle', { cx: m._q[0], cy: m._q[1], r: 5, style: 'fill:var(--bg);stroke:var(--dot);stroke-width:2' });
-        tip = svg('title', {}); tip.textContent = m.label + ' told to search and verify: ' + pct(m.prompted.accuracy) + ' at ' + (m.prompted.cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; ring.appendChild(tip);
+        tip = svg('title', {}); tip.textContent = m.label + ' told to search and verify: ' + pct1(m.prompted.accuracy) + ' at ' + (m.prompted.cost_usd / UNIT).toFixed(1) + ' times the cost of a plain ' + DATA.model_label + ' answer'; ring.appendChild(tip);
         chart.appendChild(ring);
       }
     });
-    MODELS.forEach(function(m){ place(m._h, m.label + ' + skill ' + pct(m['with'].accuracy), 'cl', ['above', 'right', 'left', 'below']); });
-    MODELS.forEach(function(m){ place(m._t, m.label + ' alone ' + pct(m.without.accuracy), 'clm', ['below', 'belowright', 'left', 'right', 'above']); });
-    MODELS.forEach(function(m){ if (m._q) place(m._q, 'told to search and verify ' + pct(m.prompted.accuracy), 'clm', ['right', 'below', 'left', 'above']); });
-    chart.setAttribute('aria-label', MODELS.map(function(m){ return m.label + ': ' + pct(m.without.accuracy) + ' alone, ' + pct(m['with'].accuracy) + ' with the skill'; }).join('; '));
-    $('benchlead').textContent = 'Accuracy is the share of checks an answer passes, on ' + EV.n + ' unseen questions.';
-    $('chartcap').textContent = 'Up is more accurate, right costs more; each arrow is one model, from Claude alone to the same model with the skill.';
+    MODELS.forEach(function(m){ place(m._h, m.label + ' + skill ' + pct1(m['with'].accuracy), 'cl', ['above', 'aboveleft', 'aboveright', 'right', 'left', 'below', 'belowright', 'belowleft']); });
+    MODELS.forEach(function(m){ place(m._t, m.label + ' alone ' + pct1(m.without.accuracy), 'clm', ['below', 'belowright', 'belowleft', 'left', 'right', 'above', 'aboveleft', 'aboveright']); });
+    MODELS.forEach(function(m){ if (m._q) place(m._q, m.label + ' told to search and verify ' + pct1(m.prompted.accuracy), 'clm', ['right', 'belowright', 'below', 'left', 'above']); });
+    chart.setAttribute('aria-label', MODELS.map(function(m){ return m.label + ': ' + pct1(m.without.accuracy) + ' alone, ' + pct1(m['with'].accuracy) + ' with the skill'; }).join('; '));
+    $('benchlead').textContent = 'Score: the share of answer-key checks a Sonnet judge passed, averaged over ' + EV.n + ' test questions held out from development.';
+    $('chartcap').textContent = 'Up is a higher score, right costs more; each arrow compares one model with itself, alone and with the skill.';
     var later = MODELS.filter(function(m){ return m.model !== EV.model; }).map(function(m){ return m.label; });
     $('benchnote').textContent = PARTIAL.length ? 'Not drawn yet: ' + PARTIAL.map(function(m){ return m.label + ' (' + m.n + ' of ' + EV.n + ' questions so far)'; }).join(', ') + '.' : '';
     if (later.length) laterNote = ' ' + later.join(' and ') + (later.length > 1 ? ' were' : ' was') + ' run after the ' + DATA.model_label + ' result was known.';
   }
   if (DATA.repo_url) {
-    $('pill-text').textContent = 'Benchmarked in the open'; $('benchh2').textContent = 'Accuracy against usage, in the open.';
+    $('pill-text').textContent = 'Benchmarked in the open'; $('benchh2').textContent = 'Accuracy against cost, in the open.';
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/blob/main/docs/EVAL_PROTOCOL.md', text: 'Protocol' }));
     $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/tree/main/eval-runs', text: 'Every recorded run' }));
   }
-  if (EV.verdict === 'mixed') $('ruleline').textContent = 'On ' + DATA.model_label + ' the skill averaged ' + Math.round(100 * (EV['with'] - EV.without)) + ' points higher but scored higher on only ' + EV.higher + ' of ' + EV.n + ' questions; our bar set beforehand was ' + EV.needed + ', so we call it mixed.';
-  var sp = 'A score is the share of a question’s content checks that passed. ' + EV.n + ' questions on ' + DATA.model_label + ', judged by Sonnet, with answer keys built by agents from published sources: a small sample, no significance test, and access rules and links as of ' + (DATA.run_month || 'November 2026') + '. All arms had the same tools, web search included.';
-  if (EV.verdict === 'mixed') sp += ' The rule fixed before the run asked for a higher score on ' + EV.needed + ' questions, so by that rule the result counts as mixed (higher on ' + EV.higher + ', the same on ' + EV.same + ', lower on ' + EV.lower + ').';
-  else sp += ' By the rule fixed before the run: ' + EV.statement;
-  if (EV.prompted) sp += ' Against Claude told to search the web and verify, the skill averaged ' + Math.round(100 * EV.prompted.diff) + ' points higher.';
-  var failedCalls = MODELS.reduce(function(sum, m){ return sum + (m.judge_failures || 0); }, 0);
-  if (failedCalls) sp += ' In the chart a check whose judge call failed is counted as passed (' + failedCalls + ' in all); the evidence page gives both readings.';
-  sp += laterNote;
-  sp += ' Cost is counted at API list prices; an answer with the skill takes about ' + Math.round(EV.effort['with'].minutes) + ' minutes. The evaluation measured version 0.1.0 under the working name dataset-scout; what you install' + (DATA.version ? ' (' + DATA.version + ')' : '') + ' differs in the access labels of the page and in the name. The replay and the example pages use the current labels; the replay runs were chosen by hand, and the two answers shown side by side are the question with the widest gap, run 1 of each.';
-  $('smallprint').textContent = sp;
+  if (EV.verdict === 'mixed') $('ruleline').textContent = 'On ' + DATA.model_label + ' the skill averaged ' + Math.round(100 * (EV['with'] - EV.without)) + ' points higher but scored higher on only ' + EV.higher + ' of ' + EV.n + ' questions; we said beforehand it needed ' + EV.needed + ' to count as better, so we call it mixed.';
+  var others = MODELS.filter(function(m){ return m.model !== EV.model; });
+  if (others.length) {
+    var fewer = others.filter(function(m){ return m['with'].runs[0] < EV.runs_per_question; });
+    $('othersline').textContent = others.map(function(m, k){ return (k ? 'on ' + m.label + ' on ' + m.higher : 'On ' + m.label + ' it scored higher on ' + m.higher + ' of ' + m.n + ' questions'); }).join(' and ') +
+      '; no rule was set for them' + (fewer.length ? ', and ' + fewer.map(function(m){ return m.label; }).join(' and ') + ' had ' + fewer[0]['with'].runs[0] + ' runs a question against ' + EV.runs_per_question : '') + '.';
+  }
+  // the small print: five lines, one fact each
+  var fine = [];
+  fine.push('A score is the share of the answer-key checks for a question that a Sonnet judge passed; ' + EV.n + ' questions is a small sample and no significance test was run.');
+  if (EV.verdict === 'mixed') fine.push('Rule set beforehand for ' + DATA.model_label + ': higher on ' + EV.needed + ' of ' + EV.n + ' questions; it was higher on ' + EV.higher + ', the same on ' + EV.same + ' and lower on ' + EV.lower + ', so mixed.');
+  var mainVersion = Object.keys((MODELS.filter(function(m){ return m.model === EV.model; })[0] || {}).versions || {})[0];
+  var later = others.map(function(m){ var n = 0; Object.keys(m.versions || {}).forEach(function(v){ if (v !== mainVersion) n += m.versions[v]; }); return n >= m.n ? m.label : (n ? n + ' of the ' + m.n + ' ' + m.label + ' questions' : ''); }).filter(Boolean);
+  if (later.length) fine.push(later.join(' and ') + (later.length > 1 || /questions$/.test(later[0]) ? ' were' : ' was') + ' run after the ' + DATA.model_label + ' result was known' + (BENCH.pilot ? ', and an earlier ' + BENCH.pilot.label + ' run without the skill on ' + BENCH.pilot.questions + ' questions is published beside them.' : '.'));
+  var failedCalls = ALLMODELS.reduce(function(sum, m){ return sum + (m.judge_failures || 0); }, 0), shifted = [];
+  ALLMODELS.forEach(function(m){ [['without', ' alone'], ['with', ' with the skill']].forEach(function(arm){ if (Math.abs(m[arm[0]].accuracy - m[arm[0]].recorded) > 0.0005) shifted.push(m.label + arm[1] + ' is ' + pct1(m[arm[0]].recorded)); }); });
+  if (failedCalls) fine.push('In the chart a failed judge call counts as passed (' + failedCalls + ' in all)' + (shifted.length ? '; as recorded, ' + shifted.join(' and ') + '.' : '.'));
+  var byVersion = {};
+  ALLMODELS.forEach(function(m){ Object.keys(m.versions || {}).forEach(function(v){ (byVersion[v] = byVersion[v] || []).push(m.versions[v] >= m.n ? m.label : m.versions[v] + ' ' + m.label + ' questions'); }); });
+  var versionLine = Object.keys(byVersion).sort().map(function(v){ return byVersion[v].join(' and ') + ' ran version ' + v; }).join('; ');
+  if (versionLine) fine.push(versionLine + (DATA.version ? '; you install ' + DATA.version + ', which differs in the access labels of the page and in the name.' : '.'));
+  fine.slice(0, 5).forEach(function(line){ $('smallprint').appendChild(el('li', { text: line })); });
 
   // ---------------------------------------------------------------- faq
-  var second = EV.second_model;
   var faqs = [
     ['Why not just ask Claude?', 'Alone, ' + DATA.model_label + ' answered from memory with no links; told to search and verify it gave ' + Math.round(((EV.links || {}).prompted || {}).per_answer || 0) + ' links an answer but scored ' + pct(EV.prompted.mean) + ' against ' + pct(EV['with']) + ' with the skill.'],
     ['Does it save usage or time?', 'No: about ' + EV.effort['with'].minutes.toFixed(0) + ' minutes against ' + Math.round(60 * EV.effort.without.minutes) + ' seconds, and about $' + EV.effort['with'].cost_usd.toFixed(2) + ' an answer at API list prices against $' + EV.effort.without.cost_usd.toFixed(2) + '.'],

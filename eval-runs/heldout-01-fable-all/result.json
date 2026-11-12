@@ -15,10 +15,14 @@
   "plugins": [
    {
     "name": "dataset-scout",
-    "version": "0.1.0",
+    "version": "0.1.0, 0.1.1",
     "path": "<repo>/plugins/dataset-scout"
    }
-  ]
+  ],
+  "pluginVersions": {
+   "0.1.0": 3,
+   "0.1.1": 7
+  }
  },
  "cases": [
   {
@@ -652,7 +656,9 @@
     "scoreWithout": 1,
     "passRateWithout": 1,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.0",
+   "fromRun": "heldout-01-fable"
   },
   {
    "name": "ho-h-cxr-free-text-reports",
@@ -1285,7 +1291,9 @@
     "scoreWithout": 0.9375,
     "passRateWithout": 0.5,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.0",
+   "fromRun": "heldout-01-fable"
   },
   {
    "name": "ho-h-derm-skin-tone",
@@ -1852,7 +1860,9 @@
     "scoreWithout": 0.8571428571428572,
     "passRateWithout": 0.5,
     "delta": 0.1428571428571428
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-h-ecg-rhythm-labels",
@@ -2551,7 +2561,9 @@
     "scoreWithout": 0.8888888888888888,
     "passRateWithout": 0,
     "delta": 0.11111111111111116
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-h-measured-bp-surveys",
@@ -3184,7 +3196,9 @@
     "scoreWithout": 0.9375,
     "passRateWithout": 0.5,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-h-wrist-activity-outcomes",
@@ -3817,7 +3831,9 @@
     "scoreWithout": 1,
     "passRateWithout": 1,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-o-01",
@@ -4372,7 +4388,9 @@
     "scoreWithout": 0.8571428571428571,
     "passRateWithout": 0,
     "delta": 0.1428571428571429
-   }
+   },
+   "pluginVersion": "0.1.0",
+   "fromRun": "heldout-01-fable"
   },
   {
    "name": "ho-o-02",
@@ -5005,7 +5023,9 @@
     "scoreWithout": 0.875,
     "passRateWithout": 0,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-o-03",
@@ -5638,7 +5658,9 @@
     "scoreWithout": 1,
     "passRateWithout": 1,
     "delta": 0
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   },
   {
    "name": "ho-o-04",
@@ -6205,19 +6227,23 @@
     "scoreWithout": 0.6428571428571428,
     "passRateWithout": 0,
     "delta": 0.3571428571428572
-   }
+   },
+   "pluginVersion": "0.1.1",
+   "fromRun": "heldout-01-fable-rest7"
   }
  ],
  "mergedFrom": [
   {
    "folder": "heldout-01-fable",
    "cases": 3,
-   "startedAt": "2026-11-11T19:02:39.735Z"
+   "startedAt": "2026-11-11T19:02:39.735Z",
+   "pluginVersion": "0.1.0"
   },
   {
    "folder": "heldout-01-fable-rest7",
    "cases": 7,
-   "startedAt": "2026-11-12T10:42:13.537Z"
+   "startedAt": "2026-11-12T10:42:13.537Z",
+   "pluginVersion": "0.1.1"
   }
  ]
 }

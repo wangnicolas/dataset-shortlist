@@ -202,11 +202,11 @@ The audit and the checks measure different things. The audit asks whether what a
 
 </details>
 
-On another model (The ten questions, Opus 5.5 (claude-opus-5-5), three runs per arm, 12 November 2026): 97.4% with the skill and 91.8% without it, a difference of +5.6 points; higher on 5, the same on 4, lower on 1. This run was made after the result above was known. The rule was set for the main comparison only, so this is reported as a description.
+On Opus 5.5 (claude-opus-5-5), the ten questions, three runs per arm, 12 November 2026: 97.4% with the skill and 91.8% without it, a difference of +5.6 points; higher on 5, the same on 4, lower on 1. This run was made after the result above was known, with version 0.1.1 of the skill. The rule was set for the main comparison only, so this is reported as a description.
 
 On that model an answer with the skill took 5.8 minutes and $1.28 at list price, against 1.0 minutes and $0.27 without it, and carried 12.5 links against 3.4.
 
-On another model (The ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026): 97.5% with the skill and 90.0% without it, a difference of +7.5 points; higher on 4, the same on 6, lower on 0. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.
+On Fable 5.2 (claude-fable-5-2), the ten questions, two runs per arm, 11 and 12 November 2026: 97.5% with the skill and 90.0% without it, a difference of +7.5 points; higher on 4, the same on 6, lower on 0. Three of these questions were run as the protocol planned, with version 0.1.0 of the skill; the other seven were added after the result above was known, with version 0.1.1. The rule was set for the main comparison only, so this is reported as a description. An earlier run of Fable 5.2 without the skill on three of the seven (eval-runs/heldout-01-fable-plain3, three runs each: skin tone 1.00, linked employer-employee data 0.92, galaxy images 0.62) is kept beside this one and is not part of these means; counted in, the skin-tone question would read the same instead of higher.
 
 2 of the verdicts are failed calls to the judge, recorded by the evaluation tool as fails (2 in the arm without the skill). Nothing was judged again. Counted as passes instead, the scores are 97.5% with the skill and 91.4% without it (difference +6.1 points; higher on 3 questions, the same on 7, lower on 0).
 

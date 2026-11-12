@@ -34,11 +34,11 @@ FABLE=eval-runs/heldout-01-fable-all      # joined by tools/merge_runs.py from h
 TRIGGER=eval-runs/trigger-01
 TITLES=docs/eval/heldout_case_titles.json
 LABEL="Ten sealed questions, Sonnet 5.5 (claude-sonnet-5-5), three runs per arm, 12 November 2026"
-FABLE_LABEL="The ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026"
-FABLE_NOTE="Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description."
+FABLE_LABEL="Fable 5.2 (claude-fable-5-2), the ten questions, two runs per arm, 11 and 12 November 2026"
+FABLE_NOTE="Three of these questions were run as the protocol planned, with version 0.1.0 of the skill; the other seven were added after the result above was known, with version 0.1.1. The rule was set for the main comparison only, so this is reported as a description. An earlier run of Fable 5.2 without the skill on three of the seven (eval-runs/heldout-01-fable-plain3, three runs each: skin tone 1.00, linked employer-employee data 0.92, galaxy images 0.62) is kept beside this one and is not part of these means; counted in, the skin-tone question would read the same instead of higher."
 OPUS=eval-runs/heldout-01-opus
-OPUS_LABEL="The ten questions, Opus 5.5 (claude-opus-5-5), three runs per arm, 12 November 2026"
-OPUS_NOTE="This run was made after the result above was known. The rule was set for the main comparison only, so this is reported as a description."
+OPUS_LABEL="Opus 5.5 (claude-opus-5-5), the ten questions, three runs per arm, 12 November 2026"
+OPUS_NOTE="This run was made after the result above was known, with version 0.1.1 of the skill. The rule was set for the main comparison only, so this is reported as a description."
 
 $PY tools/combine_arms.py $MAIN $PROMPTED > /dev/null
 # The session traces are large and stay on the machine that ran the evaluation; without them the

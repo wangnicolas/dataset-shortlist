@@ -1,0 +1,887 @@
+{
+  "source": "<repo>/eval-runs/heldout-01-fable-plain3/result.json",
+  "model": "fable",
+  "judge": "sonnet",
+  "cost_usd": 13.845242000000002,
+  "n_cases": 3,
+  "strata": {
+    "health": {
+      "cases": 1,
+      "with": 1.0,
+      "without": null,
+      "delta": null,
+      "better": 0,
+      "same": 0,
+      "worse": 0
+    },
+    "other fields": {
+      "cases": 2,
+      "with": 0.7678571428571428,
+      "without": null,
+      "delta": null,
+      "better": 0,
+      "same": 0,
+      "worse": 0
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "with": 1.0,
+      "without": null,
+      "delta": null
+    },
+    {
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "with": 0.9166666666666666,
+      "without": null,
+      "delta": null
+    },
+    {
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "with": 0.619047619047619,
+      "without": null,
+      "delta": null
+    }
+  ],
+  "runs": [
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 23,
+      "cost_usd": 2.657814000000001,
+      "seconds": 293.058,
+      "cost_with_judge_usd": 2.805930000000001,
+      "error": null,
+      "tokens": 440511,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "WebFetch": 6,
+        "Bash": 7
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://arxiv.org/abs/2104.09957",
+        "https://github.com/mattgroh/fitzpatrick17k",
+        "https://arxiv.org/pdf/2203.08807",
+        "https://ddi-dataset.github.io",
+        "https://github.com/google-research-datasets/scin",
+        "https://arxiv.org/pdf/2402.18545",
+        "https://www.arxiv.org/pdf/2411.04584",
+        "https://passionderm.github.io/",
+        "https://arxiv.org/html/2506.06099",
+        "https://doi.org/10.7910/DVN/W7OUZM",
+        "https://api.isic-archive.com/collections/413/",
+        "https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer",
+        "https://api.isic-archive.com/doi/milk10k/"
+      ],
+      "answer_chars": 4518,
+      "links": {
+        "total": 13,
+        "ok": 12,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 13,
+      "cost_usd": 1.5909652999999997,
+      "seconds": 97.28,
+      "cost_with_judge_usd": 1.6823632999999996,
+      "error": null,
+      "tokens": 141000,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 5,
+        "WebFetch": 6
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://ddi-dataset.github.io/",
+        "https://www.nature.com/articles/s41597-025-04382-5",
+        "https://arxiv.org/html/2505.11034",
+        "https://github.com/notjeffff/skin-tone-gap-fitzpatrick17k",
+        "https://github.com/google-research-datasets/scin",
+        "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2826506",
+        "https://arxiv.org/html/2510.00055",
+        "https://passionderm.github.io/",
+        "https://www.arxiv.org/pdf/2411.04584",
+        "https://arxiv.org/html/2506.06099",
+        "https://ai.nejm.org/doi/full/10.1056/AIdbp2400732",
+        "https://github.com/AxDante/skin-lesion-dataset-analysis"
+      ],
+      "answer_chars": 4402,
+      "links": {
+        "total": 12,
+        "ok": 10,
+        "dead": 0,
+        "blocked": 2,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "with",
+      "run": 3,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 16,
+      "cost_usd": 2.2147985,
+      "seconds": 156.842,
+      "cost_with_judge_usd": 2.3316825000000003,
+      "error": null,
+      "tokens": 158512,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 7,
+        "WebFetch": 7
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://arxiv.org/pdf/2203.08807",
+        "https://proceedings.nips.cc/paper_files/paper/2022/file/7318b51b52078e3af28197e725f5068a-Paper-Datasets_and_Benchmarks.pdf",
+        "https://openaccess.thecvf.com/content/CVPR2021W/ISIC/papers/Groh_Evaluating_Deep_Neural_Networks_Trained_on_Clinical_Images_in_Dermatology_CVPRW_2021_paper.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11343783/",
+        "https://arxiv.org/pdf/2401.14497",
+        "https://arxiv.org/html/2411.04584",
+        "https://github.com/Digital-Dermatology/PASSION_project",
+        "https://arxiv.org/html/2506.06099",
+        "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/W7OUZM",
+        "https://arxiv.org/html/2402.18545v1",
+        "https://github.com/google-research-datasets/scin",
+        "https://api.isic-archive.com/doi/milk10k/",
+        "https://www.jidonline.org/article/S0022-202X(25",
+        "https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer",
+        "https://ai.nejm.org/doi/full/10.1056/AIdbp2400732"
+      ],
+      "answer_chars": 4739,
+      "links": {
+        "total": 15,
+        "ok": 12,
+        "dead": 0,
+        "blocked": 3,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 2.5033339000000003,
+      "seconds": 164.209,
+      "cost_with_judge_usd": 2.8287239000000004,
+      "error": null,
+      "tokens": 159731,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 9,
+        "WebFetch": 3
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://fdz.iab.de/en/int_bd_pd/the-sample-of-integrated-employer-employee-data-sieed-sieed-7523-version-1/",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://fdz.iab.de/en/appointment-locations-and-fdz-online-calendar/",
+        "https://doku.iab.de/fdz/reporte/2025/MR_03-25_EN.pdf",
+        "https://www.spensiones.cl/portal/institucional/594/w3-article-12931.html",
+        "https://www.spensiones.cl/portal/institucional/594/w3-article-7521.html",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://www.lavoro.gov.it/documenti-e-norme/studi-e-statistiche/Documents/Microdati%20per%20la%20ricerca/ALLEGATO3-microdati.pdf",
+        "https://www.disuguaglianzesociali.it/glossario/?idg=71"
+      ],
+      "answer_chars": 6565,
+      "links": {
+        "total": 10,
+        "ok": 10,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 11,
+      "cost_usd": 1.6350194,
+      "seconds": 115.409,
+      "cost_with_judge_usd": 1.8946054,
+      "error": null,
+      "tokens": 111178,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 5,
+        "WebFetch": 4
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://www.jarellanobover.com/veneto-workers-histories-dataset-additional-resources",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://fdz.iab.de/en/data-access/scientific-use-files/",
+        "https://fdz.iab.de/en/our-data-products/overview-of-available-data/central-fdz-data-products/",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://www.gov.br/pt-br/servicos/solicitar-acesso-aos-dados-identificados-rais-e-caged",
+        "https://www.inps.it/content/dam/inps-site/pdf/gare/avvisi/visitinps-scholars/4848KEY-all-a_banche_dati_visitinps_scholars_iselezione.pdf"
+      ],
+      "answer_chars": 5219,
+      "links": {
+        "total": 8,
+        "ok": 8,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 3,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.32276079999999996,
+      "seconds": 49.044,
+      "cost_with_judge_usd": 0.4922028000000002,
+      "error": null,
+      "tokens": 22401,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 5026,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 0.8571428571428571,
+      "graders": [
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 9,
+      "cost_usd": 0.42785850000000014,
+      "seconds": 61.261,
+      "cost_with_judge_usd": 0.5699065000000003,
+      "error": null,
+      "tokens": 89570,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 7
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/3565489",
+        "https://data.galaxyzoo.org/",
+        "https://zenodo.org/records/4573248"
+      ],
+      "answer_chars": 3049,
+      "links": {
+        "total": 3,
+        "ok": 3,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 0.42857142857142855,
+      "graders": [
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 8,
+      "cost_usd": 0.5862912,
+      "seconds": 53.486,
+      "cost_with_judge_usd": 0.7225052000000002,
+      "error": null,
+      "tokens": 157423,
+      "tools": {
+        "Bash": 6,
+        "ToolSearch": 1
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 2404,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 3,
+      "score": 0.5714285714285714,
+      "graders": [
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 9,
+      "cost_usd": 0.4464004000000001,
+      "seconds": 69.987,
+      "cost_with_judge_usd": 0.5173224000000001,
+      "error": null,
+      "tokens": 113797,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 6,
+        "Bash": 1
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://huggingface.co/datasets/mwalmsley/gz2",
+        "https://zenodo.org/records/4573248",
+        "https://github.com/mwalmsley/galaxy-datasets"
+      ],
+      "answer_chars": 2789,
+      "links": {
+        "total": 3,
+        "ok": 3,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    }
+  ],
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": null,
+      "n": 9
+    },
+    "health / access": {
+      "with": 1.0,
+      "without": null,
+      "n": 6
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": null,
+      "n": 3
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": null,
+      "n": 3
+    },
+    "other fields / recall": {
+      "with": 0.8333333333333334,
+      "without": null,
+      "n": 18
+    },
+    "other fields / access": {
+      "with": 0.8666666666666667,
+      "without": null,
+      "n": 15
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": null,
+      "n": 6
+    },
+    "other fields / long tail": {
+      "with": 0.16666666666666666,
+      "without": null,
+      "n": 6
+    }
+  },
+  "links": {
+    "with": {
+      "total": 64,
+      "ok": 58,
+      "dead": 0,
+      "blocked": 6
+    },
+    "without": {
+      "total": 0,
+      "ok": 0,
+      "dead": 0,
+      "blocked": 0
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 11.555555555555555,
+      "seconds": 117.84177777777775,
+      "cost_usd": 1.376138,
+      "tokens": 154902.55555555556
+    },
+    "without": {
+      "turns": null,
+      "seconds": null,
+      "cost_usd": null,
+      "tokens": null
+    }
+  },
+  "runs_without_verdicts": [],
+  "runs_never_started": {},
+  "partial": false,
+  "trigger_rate": 0.0,
+  "suspicious_reads": [],
+  "run_errors": []
+}
