@@ -1,0 +1,532 @@
+{
+ "question": "Datasets of chest X-rays paired with the radiologist's free-text report, for report generation (English preferred, non-English acceptable)",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Each image/study has the actual free-text report, not only extracted labels",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "English reports (non-English acceptable for a secondary experiment)",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "physionet",
+   "zenodo",
+   "datacite",
+   "openaire",
+   "huggingface",
+   "europepmc/openalex",
+   "web"
+  ],
+  "queries": [
+   "chest X-ray radiology reports",
+   "chest radiograph free-text report",
+   "MIMIC-CXR",
+   "radiology report generation",
+   "PadChest",
+   "BIMCV chest radiography reports",
+   "CheXpert Plus",
+   "Indiana University chest X-ray Open-i"
+  ],
+  "n_candidates": 211
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "physionet:mimic-cxr",
+    "source": "physionet",
+    "title": "MIMIC-CXR Database",
+    "url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+    "access": {
+     "tier": "gated",
+     "evidence": "access_policy=Credentialed (credentialed users who complete training and sign the agreement)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA. The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support.",
+    "doi": "10.13026/4jqj-jw95",
+    "publisher": "PhysioNet",
+    "creators": [],
+    "year": 2024,
+    "version": "2.1.0",
+    "updated": "2024-07-23",
+    "licence": {
+     "id": null,
+     "name": "PhysioNet Credentialed Health Data License 1.5.0",
+     "url": null,
+     "commercial_use": null,
+     "share_alike": null
+    },
+    "size": {
+     "bytes": 5129964521754,
+     "text": "5.1 TB"
+    },
+    "formats": [],
+    "subjects": [
+     "machine learning",
+     "mimic",
+     "computer vision",
+     "chest x-rays",
+     "radiology",
+     "natural language processing"
+    ],
+    "usage": {},
+    "extra": {
+     "access_policy": "Credentialed",
+     "resource_type": "Database",
+     "slug": "mimic-cxr",
+     "data_use_agreement": "PhysioNet Credentialed Health Data Use Agreement 1.5.0",
+     "project_doi": "10.13026/s5dg-6s42"
+    },
+    "also_found_in": [
+     {
+      "source": "datacite",
+      "id": "datacite:10.13026/4jqj-jw95",
+      "url": "https://doi.org/10.13026/4jqj-jw95"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+     "checked_at": "2026-11-11T17:53:09Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the physionet registry record physionet:mimic-cxr"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "physionet",
+     "found_title": "MIMIC-CXR Database",
+     "access_text": {
+      "url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+      "sentences": [
+       "Use of the dataset is free to all researchers after signing of a data use agreement which stipulates, among other items, that (1) the user will not share the data, (2) the user will make no attempt to reidentify individuals, and (3) any publication which makes use of the data will also make the relevant code available.",
+       "Only credentialed users who sign the DUA can access the files.",
+       "PhysioNet Credentialed Health Data Use Agreement 1.5.0",
+       "sign the data use agreement for the project"
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "~377k images / ~227k studies with the original free-text reports (findings + impression) from Beth Israel; the de facto benchmark for report generation.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Report text files per study (from memory: ~227k studies; size not re-checked today)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "English"
+    }
+   },
+   "access_steps": [
+    "Create a PhysioNet account",
+    "Complete CITI 'Data or Specimens Only Research' training",
+    "Submit credentialing application (references needed)",
+    "Sign the credentialed data use agreement for the project, then download (wget/GCP)"
+   ],
+   "time_to_access": "days to weeks",
+   "caveats": [
+    "Registry page says: 'Only credentialed users who sign the DUA can access the files.' and the DUA forbids sharing the data",
+    "DUA restricts passing data to third-party/online AI services; check before using hosted LLM APIs",
+    "Many reports reference prior studies the model never sees; see CXR-PRO (prior references omitted)"
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "datacite:10.71718/6nvz-pm34",
+    "source": "datacite",
+    "title": "CheXpert Plus",
+    "url": "https://doi.org/10.71718/6nvz-pm34",
+    "access": {
+     "tier": "unknown",
+     "evidence": "no standard access statement in rightsList"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The CheXpert Plus dataset is a comprehensive collection that brings together text and images in the medical field, featuring a total of 223,462 unique pairs of radiology reports and chest X-rays across 187,711 studies from 64,725 patients. This dataset is notable for its organization and depth, with each patient potentially linked to multiple studies, and each study possibly including several chest X-rays. The X-rays are provided in DICOM format, including 47 DICOM metadata elements to support detailed analysis. Accompanying these images are 187,711 radiology reports, each meticulously divided into 11 subsections for thorough examination. Finally, the dataset is enriched with annotations fo\u2026",
+    "doi": "10.71718/6nvz-pm34",
+    "publisher": "Center for Artificial Intelligence in Medicine and Imaging",
+    "creators": [
+     "Chambon, Pierre",
+     "Delbrouck, Jean-Benoit",
+     "Sounack, Thomas",
+     "Huang, Shih-Cheng",
+     "Chen, Zhihong"
+    ],
+    "year": 2024,
+    "version": null,
+    "updated": "2024-11-20",
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [
+     "computation and language",
+     "artificial intelligence",
+     "computer vision and pattern recognition",
+     "machine learning",
+     "stanford aimi",
+     "aimi dataset",
+     "open data"
+    ],
+    "usage": {
+     "downloads": 0,
+     "views": 0,
+     "citations": 1
+    },
+    "extra": {
+     "landing_page": "https://aimi.stanford.edu/datasets/chexpert-plus",
+     "state": "findable",
+     "client": "sul.aimi"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_________::8038cc5efc7cd85974c652b79968d775",
+      "url": "https://doi.org/10.71718/6nvz-pm34"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": 200,
+     "final_url": "https://aimi.stanford.edu/datasets/chexpert-plus",
+     "checked_at": "2026-11-11T17:53:14Z",
+     "problems": [],
+     "notes": [
+      "the DOI 10.71718/6nvz-pm34 is registered and resolves to https://aimi.stanford.edu/datasets/chexpert-plus",
+      "access tier unknown (no standard access statement in rightsList); read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "datacite",
+     "found_title": "CheXpert Plus",
+     "access_text": {
+      "url": "https://aimi.stanford.edu/datasets/chexpert-plus",
+      "sentences": [
+       "Student & Trainee Registration"
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "CheXpert images paired with 187,711 reports split into 11 subsections; large and from a different institution (Stanford) than MIMIC.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "AIMI page: '223,462 unique pairs of radiology reports and chest X-rays'",
+     "url": "https://aimi.stanford.edu/datasets/chexpert-plus"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "English (from memory)"
+    }
+   },
+   "access_steps": [
+    "Open the AIMI page and follow 'Download here' to the Redivis dataset",
+    "Register/log in to Redivis and accept the terms (the Terms/Licence sections on the AIMI page were empty when fetched)",
+    "Contact aimicenter@stanford.edu if terms are unclear"
+   ],
+   "time_to_access": "unknown (from memory: days; research-use agreement)",
+   "caveats": [
+    "Licence and exact access tier not stated on the pages I could read; confirm on Redivis before planning",
+    "From memory: non-commercial research-use terms"
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "manual:https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+    "source": "manual",
+    "title": "rajpurkarlab/ReXGradient-160K",
+    "url": "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+    "access": {
+     "tier": "account",
+     "evidence": "huggingface: gated=\"auto\" (login and automatic acceptance of terms); the Hub detected data files (format:csv)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Overview ReXGradient-160K is the largest publicly available multi-site chest X-ray dataset, containing 273,004 unique chest X-ray images from 160,000 radiological studies, collected from 109,487 unique patients across 3 U.S. health systems (79 medical sites). This comprehensive dataset includes multiple images per study and detailed radiology reports, making it particularly valuable for the development and evaluation of AI systems for medical imaging and automated report\u2026",
+    "doi": null,
+    "publisher": "Hugging Face Hub",
+    "creators": [
+     "rajpurkarlab"
+    ],
+    "year": 2025,
+    "version": "b9277dd929",
+    "updated": "2025-12-08",
+    "licence": {
+     "id": null,
+     "name": "other",
+     "url": null,
+     "commercial_use": null,
+     "share_alike": null
+    },
+    "size": {
+     "text": "100K<n<1M"
+    },
+    "formats": [
+     "text",
+     "csv"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 3133,
+     "likes": 109
+    },
+    "extra": {
+     "gated": "auto",
+     "repo_id": "rajpurkarlab/ReXGradient-160K",
+     "licence_declared_by": "uploader"
+    },
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+     "checked_at": "2026-11-11T17:54:25Z",
+     "problems": [],
+     "notes": [
+      "access tier 'account' taken from the huggingface registry record (gated=\"auto\" (login and automatic acceptance of terms); the Hub detected data files (format:csv))",
+      "description, publisher, creators, year, version, updated, licence, size, formats, usage, extra filled from the huggingface registry record",
+      "confirmed by the huggingface registry record huggingface:rajpurkarlab/ReXGradient-160K"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "huggingface",
+     "found_title": "rajpurkarlab/ReXGradient-160K",
+     "access_text": {
+      "url": "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+      "sentences": [
+       "ReXGradient-160K Non-Commercial Data Access and Use Agreement",
+       "By downloading or otherwise accessing the data available from the ReXGradient-160K Data Repository (\"Data\"), which Data is available for non-commercial research and non-clinical purposes only, YOU (i) accept and agree to the terms of this Agreement, and (ii) further acknowledge that YOU may have an obligation to confirm that YOUR use of the Data under these\u2026",
+       "YOU will access and use the Data in compliance with all applicable laws, rules, and regulations, as well as all professional and ethical standards applicable to scientific research and YOUR research project, including without limitation, all applicable requirements pertaining to human subjects research and animal research;",
+       "YOU will only share the Data with those authorized employees, fellows, students and agents who have a need to access such Data for purposes of working on YOUR research project, and whose obligations of use are consistent with the terms of this Agreement."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "160k studies / 273k images, unaltered free-text reports with section segmentation, multi-site US; newest large English set.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Search/paper: each study paired with report apart from PHI removal",
+     "url": "https://arxiv.org/abs/2505.00228"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "English"
+    }
+   },
+   "access_steps": [
+    "Log in to Hugging Face",
+    "Open the dataset page and accept the Non-Commercial Data Access and Use Agreement (gated, automatic approval per registry)",
+    "Download"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Non-commercial, non-clinical research only; no redistribution",
+    "Sources disagree on number of sites and studies (160k vs 170k); a 10k private test set is held for the ReXrank leaderboard"
+   ]
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "manual:https://bimcv.cipf.es/bimcv-projects/padchest/",
+    "source": "manual",
+    "title": "PADCHEST \u2013 BIMCV",
+    "url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+    "access": {
+     "tier": "unknown",
+     "evidence": ""
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+     "checked_at": "2026-11-11T17:54:28Z",
+     "problems": [],
+     "notes": [
+      "title read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "PADCHEST \u2013 BIMCV",
+     "access_text": {
+      "url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+      "sentences": [
+       "Por favor, lea PADCHEST Dataset Research Use Agreement antes de descargarlo."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Best choice for a non-English secondary experiment: >160k images from ~67k patients with Spanish reports (Hospital San Juan, Alicante).",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "BIMCV page: reports in Spanish"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "Spanish, not English (what you wanted for the secondary set)"
+    }
+   },
+   "access_steps": [
+    "Read the PadChest Dataset Research Use Agreement",
+    "Submit the Google Form linked as 'Descargar Dataset completo'",
+    "Wait for approval and download link (1.02 TB full; a 167 MB sample is on Kaggle)"
+   ],
+   "time_to_access": "days to weeks (from memory)",
+   "caveats": [
+    "Page names no open licence; the agreement governs: no sharing, no re-identification",
+    "Only part of the reports are expert-labelled; the rest were labelled automatically (from memory); the text itself is all radiologist-written"
+   ]
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "zenodo:21781842",
+    "source": "zenodo",
+    "title": "Naija-CXR dataset-JPG-A Nigerian Chest X-ray Dataset for Equitable AI and Vision-Language Research",
+    "url": "https://zenodo.org/records/21781842",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Naija-CXR is a curated chest X-ray (CXR) dataset collected from Nigerian healthcare institutions to support the development and evaluation of artificial intelligence (AI) models for medical imaging in low-resource settings. The dataset was created to address the underrepresentation of African populations in publicly available chest X-ray datasets and to facilitate research on domain adaptation, fairness, and equitable AI for medical diagnosis. The dataset contains de-identified frontal chest X-ray images paired with expert radiologist annotations and diagnostic reports. Where available, accompanying demographic and clinical metadata have been anonymized in accordance with institutional ethi\u2026",
+    "doi": "10.5281/zenodo.21781842",
+    "publisher": "Zenodo",
+    "creators": [
+     "Musa, Aminu",
+     "JIBO, UMAR",
+     "Lawan Salisu, Maryam"
+    ],
+    "year": 2026,
+    "version": "V1.1",
+    "updated": "2026-08-03",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 389267318,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 179,
+     "views": 243
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "21781842",
+     "concept_record_id": "21781841",
+     "concept_doi": "10.5281/zenodo.21781841",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::6338b73f52f1dbdf4bf4c6193acfbbb5",
+      "url": "https://doi.org/10.5281/zenodo.21781841"
+     },
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.21781842",
+      "url": "https://doi.org/10.5281/zenodo.21781842"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/21781842",
+     "checked_at": "2026-11-11T17:53:12Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:21781842"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Naija-CXR dataset-JPG-A Nigerian Chest X-ray Dataset for Equitable AI and Vision-Language Research"
+    }
+   },
+   "fit": "partial",
+   "why": "Open CC-BY set from Nigerian hospitals with diagnostic reports; no application. Small and new.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Description: images 'paired with expert radiologist annotations and diagnostic reports'; report length/format not checked"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record and download (~390 MB)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Small; I did not inspect the report files, so check they are free text and not just labels"
+   ]
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "NIH ChestX-ray14",
+   "url": "https://huggingface.co/datasets/timm/nih-chest-xray-14",
+   "reason": "Labels mined from reports; the reports themselves are not released"
+  },
+  {
+   "name": "MIMIC-CXR-JPG",
+   "url": "https://physionet.org/content/mimic-cxr-jpg/2.1.0/",
+   "reason": "Images plus structured labels only; get reports from MIMIC-CXR"
+  },
+  {
+   "name": "BRAX",
+   "url": "https://physionet.org/content/brax/1.1.0/",
+   "reason": "Brazilian CXR with labels; no free-text reports (from memory)"
+  },
+  {
+   "name": "FMCEB-CXR",
+   "url": "https://zenodo.org/records/20750284",
+   "reason": "5,517 reports but the record is a 42 KB file of text and NLP labels with no images"
+  }
+ ],
+ "gaps": [
+  "IU X-Ray (Open-i) could not be verified by the tool (JavaScript site); described from web search only",
+  "Did not check BIMCV-COVID19, Chinese-language or other non-English sets beyond PadChest"
+ ],
+ "notes": "Registries searched 2026-11-11/12; access rules change, confirm before applying."
+}

@@ -1,0 +1,301 @@
+{
+  "must_haves": [
+    "Patients actually treated with an immune checkpoint inhibitor (anti-PD-1, anti-PD-L1 or anti-CTLA-4); any cancer type",
+    "Bulk tumour RNA-seq from pre-treatment samples",
+    "A recorded per-patient clinical response (RECIST or clinical benefit)"
+  ],
+  "A": [
+    {
+      "dataset": "Riaz 2017 melanoma nivolumab (GEO GSE91061)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE91061",
+      "exists": true,
+      "access_stated": "Open on GEO; response labels from paper supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GEO series is public with FPKM/raw-count/rlog files; 109 RNA-seq samples from 65 patients (51 'Pre', 58 'On' treatment) with per-sample response PD/SD/PRCR/UNK in the sample characteristics; linked paper PMID 29033130 is the CA209-038 nivolumab study."
+    },
+    {
+      "dataset": "Hugo 2016 melanoma pembrolizumab (GEO GSE78220)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78220",
+      "exists": true,
+      "access_stated": "Open on GEO; response labels from paper supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GEO series is public (GSE78220_PatientFPKM.xlsx); 28 samples, 27 'biopsy time: pre-treatment' and 1 on-treatment, all 'treatment: Pembrolizumab', with per-sample 'anti-pd-1 response' (Complete/Partial Response, Progressive Disease)."
+    },
+    {
+      "dataset": "Gide 2019 melanoma anti-PD-1 +/- anti-CTLA-4 (ENA PRJEB23709)",
+      "official_url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB23709",
+      "exists": true,
+      "access_stated": "Probably open via ENA, plus paper supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "ENA lists 91 RNA-Seq runs (73 _PRE, 18 _EDT samples from 75 patients, anti-PD-1 or ipilimumab+anti-PD-1), every run with public FASTQ links; the paper (PMID 30753825) analyses responders vs non-responders, but per-patient labels are in the paper, not ENA; it is not open access, so the supplement's contents were not checked."
+    },
+    {
+      "dataset": "IMvigor210 / Mariathasan 2018 urothelial atezolizumab",
+      "official_url": "http://research-pub.gene.com/IMvigor210CoreBiologies/",
+      "exists": true,
+      "access_stated": "Processed data in open R package; raw data by EGA application (EGAS00001002556)",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "EGA dataset EGAD00001003977 holds RNA 'collected before anti-PD-L1 treatment' (348 samples) and access goes through the IMvigor210 DAC 'Request Access'; the Genentech page says the package includes 'all sample annotations reported in the manuscript' and that raw data 'will be availabe at the European Genome-phenome archive (EGA) under the accession number EGAS00001002556'; the tarball link on the page returns 404 but current versions download without login from /packageVersions/ (the first HTTPS fetch was refused; read over HTTP)."
+    },
+    {
+      "dataset": "Kim 2018 gastric pembrolizumab (ENA PRJEB25780)",
+      "official_url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB25780",
+      "exists": true,
+      "access_stated": "Likely open (ENA)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "ENA study is PUBLIC with 78 RNA-Seq runs (45 tumour and 33 '-N' samples) plus WXS, all with FASTQ links, for pembrolizumab-treated metastatic gastric cancer with ORR-based response; neither ENA nor the abstract says whether the tumour RNA was collected before treatment, and the full text is paywalled, so pre-treatment status is unverified."
+    },
+    {
+      "dataset": "Liu 2019 / Van Allen 2015 melanoma (dbGaP phs000452)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452",
+      "exists": true,
+      "access_stated": "dbGaP Data Access Request approved by institutional signing official; weeks to months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "dbGaP study 'Melanoma Genome Sequencing Project' is controlled (Authorized Access plus Data Use Certification), and the page states 'Versions 1-4 contain whole exome and bulk RNA sequencing data for patients with melanoma'; Liu 2019's data statement gives 'Raw sequencing data are available in dbGaP (accession number phs000452.v3.p1)', with RNA-seq on pre-treatment tumours from 121 anti-PD-1 patients and RECIST v1.1 best response; Van Allen 2015's inclusion could not be confirmed (its PMC page returned a captcha twice)."
+    },
+    {
+      "dataset": "Braun 2020 ccRCC nivolumab (CheckMate 009/010/025)",
+      "official_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7499153/",
+      "exists": true,
+      "access_stated": "dbGaP application (accession unconfirmed; recalled as phs002277)",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "Paper data statement (PMC7499153): 'Normalized RNA-seq expression data ... are available in Supplementary Table 4' (clinical data in Supplementary Table 1) and 'WES data ... have been submitted to the European Genome-phenome Archive (Accession numbers EGAS00001004290, EGAS00001004291...)', where EGA access goes through the BMS FastTrack DAC; no dbGaP accession is given; RNA-seq covers 311 patients sampled 'prior to PD-1 blockade (or mTOR inhibition)' with clinical-benefit categories, and the everolimus arm has to be excluded; the stated dbGaP route is wrong, and dbGaP phs002277 redirected to the dbGaP home page on both attempts."
+    },
+    {
+      "dataset": "Cho 2020 / Jung 2019 NSCLC (GEO GSE126044)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126044",
+      "exists": true,
+      "access_stated": "Open on GEO",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GSE126044 (Cho et al. 2020, PMID 32879421) is public, with 16 NSCLC biopsies all 'treatment status: pre-treatment' and 'patient response' responder/non-responder in the sample characteristics, from anti-PD-1 therapy, plus a counts file; the Jung 2019 cohort is a separate series (GSE135222), not part of GSE126044."
+    },
+    {
+      "dataset": "Lee et al. melanoma ICB RNA-seq (EGA EGAD00001005738)",
+      "official_url": "https://ega-archive.org/datasets/EGAD00001005738",
+      "exists": true,
+      "access_stated": "Held at EGA (no access route stated)",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "EGA dataset '20191204_EGA_MELA_Rizos' has '79 RNAseq samples from 56 patients with melanoma who have undergone immune checkpoint blockade immunotherapy' under DAC EGAC00001000010 with an ethics-approval-required policy (DUO:0000021); Lee et al. 2020 Nat Commun (PMC7171183) cites this dataset and reports 53 pre-treatment biopsies from PD-1 inhibitor monotherapy patients classified CR/PR vs SD/PD by irRC."
+    },
+    {
+      "dataset": "Miao 2018 ccRCC (dbGaP phs001519)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001519",
+      "exists": false,
+      "access_stated": "Held at dbGaP phs001519 (no access route stated)",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": false,
+      "note": "phs001519 is 'A Phase I Study With a Personalized Neoantigen Cancer Vaccine in Glioblastoma Multiforme' (11 subjects), not a checkpoint-inhibitor renal cohort; the Miao 2018 paper (PMC6035749) states 'The sequencing data are deposited in dbGap (accession number phs001493.v1.p1)'."
+    },
+    {
+      "dataset": "ICBatlas (curated ICB transcriptome resource)",
+      "official_url": "https://guolab.wchscu.cn/static/ICBatlas/ICBatlas.pdf",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The paper on the owner's site reports 1,515 ICB-treated samples (1,388 RNA-seq, 127 microarray) from 25 studies in nine cancer types, under PD-1/PD-L1 and/or CTLA-4 blockade, with responder vs non-responder and pre vs on-treatment modules and sources listed in Supplementary Table S1; the portal could not be opened on two attempts (bioinfo.life.hust.edu.cn did not resolve; guolab.wchscu.cn/ICBatlas/ returned an empty JavaScript shell), so download options are unconfirmed."
+    },
+    {
+      "dataset": "2023 ICB transcriptomic biomarker benchmark (PMC10452274) / ICB-Portal",
+      "official_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10452274/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "Kang et al. 2023 Cancers, 'A Comprehensive Benchmark of Transcriptomic Biomarkers for Immune Checkpoint Blockades', curates 29 ICB-treated transcriptomic datasets (>1,400 patients), including 15 pre-treatment-only datasets (n = 1,337) with responders defined as CR/PR/SD with PFS > 6 months, and says processed data can be downloaded from ICB-Portal (ngdc.cncb.ac.cn/icb/resources)."
+    },
+    {
+      "dataset": "IOhub (ICB transcriptome portal)",
+      "official_url": "https://shiny.crc.pitt.edu/iohub/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "IOhub states 'we have collected 1,806 ICB-treated tumor samples from 36 bulk datasets' (16 cancer types; 1,496 pre-treatment samples), bulk RNA-seq in TPM, with responders/non-responders by RECIST v1.1; normalized expression is 'available upon request' rather than a direct download."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "Riaz 2017 melanoma nivolumab (GEO GSE91061)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE91061",
+      "exists": true,
+      "access_stated": "Download now (open access): GEO counts/FPKM; clinical in paper supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GEO series is public with FPKM/raw-count/rlog files; 109 RNA-seq samples from 65 patients (51 'Pre', 58 'On' treatment) with per-sample response PD/SD/PRCR/UNK in the sample characteristics; linked paper PMID 29033130 is the CA209-038 nivolumab study."
+    },
+    {
+      "dataset": "Hugo 2016 melanoma pembrolizumab (GEO GSE78220)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78220",
+      "exists": true,
+      "access_stated": "Download now (open access): GEO FPKM",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GEO series is public (GSE78220_PatientFPKM.xlsx); 28 samples, 27 'biopsy time: pre-treatment' and 1 on-treatment, all 'treatment: Pembrolizumab', with per-sample 'anti-pd-1 response' (Complete/Partial Response, Progressive Disease)."
+    },
+    {
+      "dataset": "Gide 2019 melanoma anti-PD-1 +/- anti-CTLA-4 (ENA PRJEB23709)",
+      "official_url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB23709",
+      "exists": true,
+      "access_stated": "Download now (open access): ENA, processed tables in supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "ENA lists 91 RNA-Seq runs (73 _PRE, 18 _EDT samples from 75 patients, anti-PD-1 or ipilimumab+anti-PD-1), every run with public FASTQ links; the paper (PMID 30753825) analyses responders vs non-responders, but per-patient labels are in the paper, not ENA; it is not open access, so the supplement's contents were not checked."
+    },
+    {
+      "dataset": "Kim 2018 gastric pembrolizumab (ENA PRJEB25780)",
+      "official_url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB25780",
+      "exists": true,
+      "access_stated": "Download now (open access): ENA, clinical in supplement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "ENA study is PUBLIC with 78 RNA-Seq runs (45 tumour and 33 '-N' samples) plus WXS, all with FASTQ links, for pembrolizumab-treated metastatic gastric cancer with ORR-based response; neither ENA nor the abstract says whether the tumour RNA was collected before treatment, and the full text is paywalled, so pre-treatment status is unverified."
+    },
+    {
+      "dataset": "IMvigor210 / Mariathasan 2018 urothelial atezolizumab",
+      "official_url": "http://research-pub.gene.com/IMvigor210CoreBiologies/",
+      "exists": true,
+      "access_stated": "Download now: Genentech R package with counts and clinical data; raw data on EGA (EGAS00001002556)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "EGA dataset EGAD00001003977 holds RNA 'collected before anti-PD-L1 treatment' (348 samples) and access goes through the IMvigor210 DAC 'Request Access'; the Genentech page says the package includes 'all sample annotations reported in the manuscript' and that raw data 'will be availabe at the European Genome-phenome archive (EGA) under the accession number EGAS00001002556'; the tarball link on the page returns 404 but current versions download without login from /packageVersions/ (the first HTTPS fetch was refused; read over HTTP)."
+    },
+    {
+      "dataset": "Jung 2019 NSCLC anti-PD-(L)1 (GEO GSE135222)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135222",
+      "exists": true,
+      "access_stated": "Download now (open access): GEO",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GSE135222 is public (expression table) and covers 27 advanced NSCLC patients on anti-PD-1/PD-L1, but GEO records only PFS event/time; the linked Jung et al. 2019 paper (PMC6753140) says 'Tumour samples were obtained before anti-PD1/PD-L1 treatment', with RECIST 1.1-based durable clinical benefit vs no durable benefit in Supplementary Table 3."
+    },
+    {
+      "dataset": "Cho 2020 NSCLC anti-PD-1 (GEO GSE126044)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126044",
+      "exists": true,
+      "access_stated": "Download now (open access): GEO",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "GSE126044 (Cho et al. 2020, PMID 32879421) is public, with 16 NSCLC biopsies all 'treatment status: pre-treatment' and 'patient response' responder/non-responder in the sample characteristics, from anti-PD-1 therapy, plus a counts file."
+    },
+    {
+      "dataset": "Zhao 2019 glioblastoma anti-PD-1 (SRA PRJNA482620)",
+      "official_url": "https://www.ebi.ac.uk/ena/browser/view/PRJNA482620",
+      "exists": true,
+      "access_stated": "Download now (open access): SRA",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "PRJNA482620 ('Longitudinal genomic study of response to anti-PD-1 immunotherapy in GBM') is public, with 34 RNA-Seq and 57 WXS runs carrying FASTQ links (ENA mirror of SRA); the abstract reports 66 nivolumab/pembrolizumab-treated patients including 17 long-term responders, but the full text (PMC captcha, Nature paywall) could not be read, so pre-treatment status of the RNA-seq samples and the response criteria are unverified."
+    },
+    {
+      "dataset": "Van Allen 2015 / Liu 2019 melanoma (dbGaP phs000452)",
+      "official_url": "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452",
+      "exists": true,
+      "access_stated": "Controlled: dbGaP, eRA Commons account and data access request co-signed by signing official; weeks to a couple of months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "dbGaP study 'Melanoma Genome Sequencing Project' is controlled (Authorized Access plus Data Use Certification), and the page states 'Versions 1-4 contain whole exome and bulk RNA sequencing data for patients with melanoma'; Liu 2019's data statement gives 'Raw sequencing data are available in dbGaP (accession number phs000452.v3.p1)', with RNA-seq on pre-treatment tumours from 121 anti-PD-1 patients and RECIST v1.1 best response; Van Allen 2015's inclusion could not be confirmed (its PMC page returned a captcha twice)."
+    },
+    {
+      "dataset": "Braun 2020 ccRCC nivolumab (CheckMate 009/010/025)",
+      "official_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7499153/",
+      "exists": true,
+      "access_stated": "Controlled: EGA behind a Data Access Committee; some processed matrices may be in supplements",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Paper data statement (PMC7499153): 'Normalized RNA-seq expression data ... are available in Supplementary Table 4' (clinical data in Supplementary Table 1) and 'WES data ... have been submitted to the European Genome-phenome Archive (Accession numbers EGAS00001004290, EGAS00001004291...)', where EGA access goes through the BMS FastTrack DAC; no dbGaP accession is given; RNA-seq covers 311 patients sampled 'prior to PD-1 blockade (or mTOR inhibition)' with clinical-benefit categories, and the everolimus arm has to be excluded; the EGA/DAC statement matches the raw data, and the answer's note that processed matrices may be in the supplements matches Supplementary Table 4."
+    },
+    {
+      "dataset": "IMmotion150 RCC atezolizumab +/- bevacizumab (EGA)",
+      "official_url": "https://ega-archive.org/datasets/EGAD00001004183",
+      "exists": true,
+      "access_stated": "Controlled: EGA behind a Data Access Committee",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "EGA dataset EGAD00001004183 (study EGAS00001002928) holds tumour transcriptome and exome data plus 'key phenotypic information' for 589 samples, with requests reviewed by 'Genentech's IMmotion150 data access committee'; the McDermott 2018 paper (PMC6721896) assessed 'ORR per RECIST v1.1', ran RNA-seq on '263 pretreatment tumors', and says extra patient-level clinical data come through Roche's clinical study data request platform; the sunitinib arm is not ICI-treated and has to be excluded."
+    },
+    {
+      "dataset": "CRI iAtlas ICI cohorts",
+      "official_url": "https://www.cri-iatlas.org/resources/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "iAtlas reports 23 Immune Checkpoint Inhibitor datasets; its resources page lists the sources for the 'Molecular Response to Immune Checkpoint Inhibitor' modules, including Gide 2019, Hugo 2016, Riaz 2017, Van Allen 2015 and the IMvigor210 study group (plus Liu, Kim, Miao, McDermott, Zhao and others), and ISB's release note describes responder vs non-responder comparisons; download terms are not described (a Synapse project syn10337516 is linked)."
+    },
+    {
+      "dataset": "TIDE curated ICB cohorts",
+      "official_url": "http://tide.dfci.harvard.edu/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The site could not be reached on two attempts (certificate mismatch, then a redirect to cide.ccr.cancer.gov/tide returning HTTP 403); the platform paper (Fu et al. 2020 Genome Med, PMC7045518) describes '998 tumors from 12 ICB clinical studies' with RNA-seq, clinical and response outcomes, used in a biomarker-evaluation module."
+    },
+    {
+      "dataset": "TIGER tumour immunotherapy gene expression resource",
+      "official_url": "http://tiger.canceromics.org/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The portal loads only as a JavaScript shell; the paper (PMC10626175) reports 'bulk transcriptome gene expression data of 1508 tumor samples of 8 cancer types with clinical immunotherapy information from 20 published studies' (RNA-seq and microarray), with responder/non-responder analyses, and says TIGER 'is freely accessible'."
+    },
+    {
+      "dataset": "ICBatlas (curated ICB transcriptome resource)",
+      "official_url": "https://guolab.wchscu.cn/static/ICBatlas/ICBatlas.pdf",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The paper on the owner's site reports 1,515 ICB-treated samples (1,388 RNA-seq, 127 microarray) from 25 studies in nine cancer types, under PD-1/PD-L1 and/or CTLA-4 blockade, with responder vs non-responder and pre vs on-treatment modules and sources listed in Supplementary Table S1; the portal could not be opened on two attempts (bioinfo.life.hust.edu.cn did not resolve; guolab.wchscu.cn/ICBatlas/ returned an empty JavaScript shell), so download options are unconfirmed."
+    },
+    {
+      "dataset": "Kaplan-Meier Plotter immunotherapy module",
+      "official_url": "https://kmplot.com/analysis/index.php?p=service&cancer=immunotherapy",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The module covers checkpoint-inhibitor-treated patients (anti-PD-1 n=520, anti-PD-L1 n=486, anti-CTLA-4 n=121) with a pre/on-treatment filter, but offers only 'Overall survival' and 'PFS' endpoints, does not state the expression platform, and describes no patient-level data download; the answer itself calls it useful for exploration rather than training, and it is included here because it is listed among the recommended collections."
+    }
+  ]
+}

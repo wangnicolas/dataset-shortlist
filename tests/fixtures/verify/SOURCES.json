@@ -1,0 +1,80 @@
+{
+ "zenodo_404.html": {
+  "url": "https://zenodo.org/records/99999999999",
+  "status": 404,
+  "final_url": "https://zenodo.org/records/99999999999",
+  "bytes_original": 14509,
+  "bytes_saved": 14509,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "huggingface_missing_401.html": {
+  "url": "https://huggingface.co/datasets/nonexistent-user-xyz/nonexistent-dataset-abc",
+  "status": 401,
+  "final_url": "https://huggingface.co/datasets/nonexistent-user-xyz/nonexistent-dataset-abc",
+  "bytes_original": 52795,
+  "bytes_saved": 38000,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "openneuro_shell.html": {
+  "url": "https://openneuro.org/datasets/ds003715",
+  "status": 200,
+  "final_url": "https://openneuro.org/datasets/ds003715",
+  "bytes_original": 993,
+  "bytes_saved": 993,
+  "content_type": "text/html"
+ },
+ "kaggle_dataset.html": {
+  "url": "https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection",
+  "status": 200,
+  "final_url": "https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection",
+  "bytes_original": 12266,
+  "bytes_saved": 12266,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "physionet_project.html": {
+  "url": "https://physionet.org/content/challenge-2012/1.0.0/",
+  "status": 200,
+  "final_url": "https://physionet.org/content/challenge-2012/1.0.0/",
+  "bytes_original": 83860,
+  "bytes_saved": 38000,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "physionet_credentialed.html": {
+  "url": "https://physionet.org/content/mimiciv/3.1/",
+  "status": 200,
+  "final_url": "https://physionet.org/content/mimiciv/3.1/",
+  "bytes_original": 89188,
+  "bytes_saved": 38000,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "zenodo_home.html": {
+  "url": "https://zenodo.org/",
+  "status": 200,
+  "final_url": "https://zenodo.org/",
+  "bytes_original": 71560,
+  "bytes_saved": 38000,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "physionet_404.html": {
+  "url": "https://physionet.org/content/no-such-project-xyz/1.0.0/",
+  "status": 404,
+  "final_url": "https://physionet.org/content/no-such-project-xyz/1.0.0/",
+  "bytes_original": 12136,
+  "bytes_saved": 12136,
+  "content_type": "text/html; charset=utf-8"
+ },
+ "handle_registered.json": {
+  "url": "https://doi.org/api/handles/10.13026/kpb9-mt58",
+  "status": 200
+ },
+ "handle_missing.json": {
+  "url": "https://doi.org/api/handles/10.5281/zenodo.99999999999",
+  "status": 404
+ },
+ "csl_dataset.json": {
+  "url": "https://doi.org/10.13026/kpb9-mt58 (Accept csl+json)",
+  "status": 200,
+  "final_url": "https://data.crosscite.org/10.13026%2Fkpb9-mt58"
+ },
+ "_recorded": "2026-11-11T14:30:19Z"
+}

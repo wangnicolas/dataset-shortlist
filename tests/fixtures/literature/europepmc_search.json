@@ -1,0 +1,192 @@
+{
+ "version": "6.9",
+ "hitCount": 14944,
+ "request": {
+  "queryString": "early sepsis prediction intensive care AND PUB_YEAR:[2022 TO 3000]",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 3,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "42964416",
+    "source": "MED",
+    "pmid": "42964416",
+    "doi": "10.5409/wjcp.120054",
+    "title": "Performance of PIM, PRISM, and PELOD scores in a resource-limited North Indian paediatric intensive care unit.",
+    "authorString": "Sood M, Modi S, Sood I.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Sood M",
+       "firstName": "Mangla",
+       "lastName": "Sood",
+       "initials": "M"
+      },
+      {
+       "fullName": "Modi S",
+       "firstName": "Shreya",
+       "lastName": "Modi",
+       "initials": "S"
+      },
+      {
+       "fullName": "Sood I",
+       "firstName": "Ishaan",
+       "lastName": "Sood",
+       "initials": "I"
+      }
+     ]
+    },
+    "journalInfo": {
+     "yearOfPublication": 2026,
+     "dateOfPublication": "2026 Dec",
+     "volume": "15",
+     "issue": "4",
+     "journal": {
+      "title": "World journal of clinical pediatrics",
+      "medlineAbbreviation": "World J Clin Pediatr"
+     }
+    },
+    "pubYear": "2026",
+    "pubTypeList": {
+     "pubType": [
+      "Journal Article"
+     ]
+    },
+    "citedByCount": 0,
+    "abstractText": "<h4>Background</h4>Pediatric mortality prediction models are widely used in high-income nations but remain under-validated in resource-limited settings with different disease profiles and care resources. This study evaluated the performance of pediatric risk of mortality score III (PRISM-III), pediatric index of mortality-3 (PIM-3), and pediatric logistic organ dysfunction score-2 (PELOD-2) in predicting mortality in a resource limited paediatric intensive care unit.<h4>Aim</h4>To determine the discriminative ability and calibration of PRISM III, PIM-3, and PELOD-2 for predicting 30-day mortality.<h4>Methods</h4>This was an observational study over 15 months and included 175 children aged 1 month to 18 years. Physiological variables were recorded within the first hour (PIM-3) and the first 24 hours (PRISM III, PELOD-2). Performance was measured using the area under the receiver operating characteristic curve for discrimination and the Hosmer-Lemeshow goodness-of-fit test for calibration.<h4>Results</h4>The observed mortality rate in the cohort was 13.7% (24 deaths). Mortality was significantly associated with sepsis and the early requirement for mechanical ventilation or inotropes. All scores showed high negative predictive values (> 95%) and excellent calibration (Hosmer-Lemeshow <i>P</i> values: PRISM-III = 0.952, PIM-3 = 0.692, PELOD-2 = 0.518), with standardized mortality ratio of 1.04, indicating accurate overall mortality prediction. PIM-3 achieved the highest discrimination (area under the receiver operating characteristic 0.951), followed closely by PELOD-2 (0.939), while PRISM III performed lowest (0.884). PELOD-2 offered the highest sensitivity (87.5%).<h4>Conclusion</h4>All three scores fit the observed risk distribution well, demonstrating clinically acceptable discrimination and calibration for predicting mortality in the local patient population. However, the small number of mortality events limits the precision of these estimates and precludes claims of broader applicability.",
+    "isOpenAccess": "N",
+    "firstPublicationDate": "2026-12-09"
+   },
+   {
+    "id": "42940427",
+    "source": "MED",
+    "pmid": "42940427",
+    "pmcid": "PMC13704668",
+    "doi": "10.3390/healthcare14203382",
+    "title": "Artificial Intelligence in Intensive Care: From Clinical Applications to Ethical and Medico-Legal Challenges.",
+    "authorString": "de Lazzaro F, Barletta G, Magnanimi E, Cirillo B, Frati P, Marinelli E, Pugliese F, De Paola L, Giordano G.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "de Lazzaro F",
+       "firstName": "Francesco",
+       "lastName": "de Lazzaro",
+       "initials": "F"
+      },
+      {
+       "fullName": "Barletta G",
+       "firstName": "Giovanna",
+       "lastName": "Barletta",
+       "initials": "G"
+      },
+      {
+       "fullName": "Magnanimi E",
+       "firstName": "Eugenia",
+       "lastName": "Magnanimi",
+       "initials": "E"
+      },
+      {
+       "fullName": "Cirillo B",
+       "firstName": "Bruno",
+       "lastName": "Cirillo",
+       "initials": "B"
+      },
+      {
+       "fullName": "Frati P",
+       "firstName": "Paola",
+       "lastName": "Frati",
+       "initials": "P"
+      },
+      {
+       "fullName": "Marinelli E",
+       "firstName": "Enrico",
+       "lastName": "Marinelli",
+       "initials": "E"
+      },
+      {
+       "fullName": "Pugliese F",
+       "firstName": "Francesco",
+       "lastName": "Pugliese",
+       "initials": "F"
+      },
+      {
+       "fullName": "De Paola L",
+       "firstName": "Lina",
+       "lastName": "De Paola",
+       "initials": "L"
+      },
+      {
+       "fullName": "Giordano G",
+       "firstName": "Giovanni",
+       "lastName": "Giordano",
+       "initials": "G"
+      }
+     ]
+    },
+    "journalInfo": {
+     "yearOfPublication": 2026,
+     "dateOfPublication": "2026 Oct",
+     "volume": "14",
+     "issue": "20",
+     "journal": {
+      "title": "Healthcare (Basel, Switzerland)",
+      "medlineAbbreviation": "Healthcare (Basel)"
+     }
+    },
+    "pubYear": "2026",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "citedByCount": 0,
+    "abstractText": "From a medico-legal perspective, AI functions as a clinical decision support tool without legal autonomy. Responsibility for AI-assisted clinical decisions remains subject to the applicable legal and regulatory framework and depends on the degree of human oversight. The use of artificial intelligence (AI) is rapidly transforming intensive care medicine, offering advanced tools for data processing, prediction, and clinical decision support. This narrative review explores current applications of AI in the intensive care unit (ICU), along with associated ethical, medico-legal, and regulatory challenges. AI systems, particularly those based on machine learning and deep learning, have demonstrated promising predictive performance across several intensive care applications. Systematic reviews of machine learning models for ICU prediction tasks have reported AUROC values generally ranging from approximately 0.80 to over 0.90 for early sepsis prediction and ARDS risk stratification, although performance decreases in external validation cohorts. AI has also shown encouraging performance in predicting weaning success and supporting mechanical ventilation management, while evidence of improved patient-centered clinical outcomes remains limited A narrative literature search was conducted in PubMed and Scopus for studies published between January 2015 and December 2025. Additionally, AI contributes to continuous patient monitoring, reduction in false alarms, and improved workflow efficiency. Despite these advances, most models are derived from retrospective and single-center datasets, limiting generalizability and real-world applicability. Moreover, only a limited number of AI systems have undergone prospective clinical evaluation or demonstrated improvements in patient-centered outcomes following real-world implementation. A key limitation of current AI systems is the \"black box\" nature of many algorithms, which reduces interpretability and may undermine clinician trust. Furthermore, algorithmic bias, data quality issues, and limited external validation raise concerns regarding safety, equity, and reliability. Importantly, improved predictive accuracy does not necessarily translate into better clinical outcomes, highlighting the need for prospective validation studies. From a medico-legal perspective, AI functions as a clinical decision support tool without legal autonomy. Responsibility for AI-assisted clinical decisions remains subject to the applicable legal and regulatory framework and depends on the degree of human oversight, the intended use of the AI system, and the relevant jurisdiction. The emergence of regulatory frameworks, such as the European Union Artificial Intelligence Act and the General Data Protection Regulation (GDPR), reflects the increasing regulation of healthcare AI according to the intended purpose, level of autonomy, and potential impact of each system, emphasizing requirements for transparency, human oversight, and data protection.",
+    "isOpenAccess": "Y",
+    "firstPublicationDate": "2026-10-10"
+   },
+   {
+    "id": "PPR1318242",
+    "source": "PPR",
+    "doi": "10.64898/2026.09.10.26362699",
+    "title": "DualStream-MTCA: A Hybrid Deep Learning Architecture for Joint Prediction and Early Detection of Sepsis and Heart Failure in Adult Intensive Care",
+    "authorString": "Khdir SA, Ahmed OH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Khdir SA",
+       "firstName": "Sako Aras",
+       "lastName": "Khdir",
+       "initials": "SA"
+      },
+      {
+       "fullName": "Ahmed OH",
+       "firstName": "Omed Hassan",
+       "lastName": "Ahmed",
+       "initials": "OH"
+      }
+     ]
+    },
+    "pubYear": "2026",
+    "pubTypeList": {
+     "pubType": [
+      "Preprint"
+     ]
+    },
+    "bookOrReportDetails": {
+     "publisher": "medRxiv",
+     "yearOfPublication": 2026
+    },
+    "citedByCount": 0,
+    "abstractText": "<h4>Objective</h4>  Sepsis and heart failure produce overlapping early physiological signs in intensive care but call for opposite treatments, yet existing models predict one condition at a time. We built one model for both. <h4>Methods</h4>  DualStream-MTCA combines two bidirectional long short-term memory encoders, for 48 hours of hourly vital signs and 7 days of daily laboratory results, with multi-head cross-attention, gradient-boosted-tree leaf embeddings and two task heads trained under uncertainty weighting. A refined configuration adds per-window aggregates, static patient features, self-supervised encoder pretraining and a five-seed ensemble with Monte Carlo dropout. Development used 53,229 adult stays from MIMIC-IV version 3.1; the frozen models were applied to 102,695 stays from the eICU Collaborative Research Database. <h4>Results</h4>  At a prediction time 48 hours after admission, the refined ensemble reached an area under the receiver operating characteristic curve of 0.867 for sepsis and 0.899 for heart failure internally, against 0.832 and 0.857 for the baseline model. Isotonic regression brought expected calibration error below 0.015. For positives whose onset followed the prediction time by 4 to 12 hours, the area dropped to 0.66–0.70. Externally, the refined ensemble scored 0.750 for sepsis and 0.786 for heart failure, against 0.711 and 0.821 for the baseline model. <h4>Conclusion</h4>  A single multi-task model matched its single-task variants on both conditions, but discrimination fell under strictly anticipatory prediction and across sites, where static features carried little usable signal. <h4>Significance</h4>  To our knowledge, this is the first model built specifically to predict both conditions jointly, with calibration, decision-curve and external evaluation.",
+    "isOpenAccess": "N",
+    "firstPublicationDate": "2026-09-11"
+   }
+  ]
+ }
+}

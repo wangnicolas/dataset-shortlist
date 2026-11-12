@@ -1,0 +1,377 @@
+{
+ "question": "Linked employer-employee microdata with worker and firm IDs, 10+ year panel, for AKM decomposition of wage inequality into within- and between-firm parts",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Worker ID and employer ID on each job record",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "10+ years of panel",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Wage or earnings measure",
+   "must": true
+  }
+ ],
+ "searched": {
+  "sources": [
+   "datacite",
+   "openaire",
+   "zenodo",
+   "huggingface",
+   "web"
+  ],
+  "queries": [
+   "linked employer-employee",
+   "matched employer-employee panel",
+   "worker firm panel administrative earnings",
+   "social security records employers wages"
+  ],
+  "n_candidates": 103
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "manual:10.5164/iab.liablm7524.de.en.v1",
+    "source": "manual",
+    "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- L\u00e4ngsschnittmodell 1975-2024, Version 1",
+    "url": "https://doi.org/10.5164/iab.liablm7524.de.en.v1",
+    "access": {
+     "tier": "application",
+     "evidence": "FDZ Data Usage Agreement; weakly anonymous data via research visit/remote access only"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Die Linked-Employer-Employee-Daten des IAB (LIAB) kombinieren die Interviews des IAB-Betriebspanels mit den zugeh\u00f6rigen Betriebs- und Personendaten aus den Prozessen der Bundesagentur f\u00fcr Arbeit. Letztere umfassen einerseits die administrativen Betriebsinformationen aus dem Betriebs-Historik-Panel (BHP) und andererseits die Erwerbsbiographien der in den interviewten Betrieben besch\u00e4ftigten Personen. Die LIAB Daten erm\u00f6glichen somit eine simultane Analyse der Angebots- und Nachfrageseite des Arbeitsmarktes.",
+    "doi": "10.5164/iab.liablm7524.de.en.v1",
+    "publisher": "Forschungsdatenzentrum (FDZ) der Bundesagentur f\u00fcr Arbeit (BA) im Institut f\u00fcr Arbeitsmarkt- und Berufsforschung (IAB)",
+    "creators": [
+     "Filser, Andreas",
+     "Graf, Tobias",
+     "Grie\u00dfemer, Stephan",
+     "K\u00f6hler, Markus",
+     "Moczall, Andreas"
+    ],
+    "year": 2026,
+    "version": null,
+    "updated": "2026-11-04",
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {
+     "downloads": 0,
+     "views": 0,
+     "citations": 0
+    },
+    "extra": {
+     "landing_page": "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+     "state": "findable",
+     "client": "iabg.rdciab"
+    },
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": 200,
+     "final_url": "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+     "checked_at": "2026-11-11T18:24:58Z",
+     "problems": [],
+     "notes": [
+      "description, publisher, creators, year, updated, usage, extra filled from the datacite registry record",
+      "the DOI 10.5164/iab.liablm7524.de.en.v1 is registered and resolves to https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+      "the landing page mentions \"Data Usage Agreement\" (\"...berg. DOI: 10.5164/IAB.FDZD.2609.en.v1 According to the FDZ Data Usage Agreement, any type of publication resulting from work with FDZ data...\"); confirm the access route on that page before calling the data open",
+      "access tier unknown (datacite: no standard access statement in rightsList); read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "datacite",
+     "found_title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- L\u00e4ngsschnittmodell 1975-2024, Version 1",
+     "access_text": {
+      "url": "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+      "sentences": [
+       "Due to size restrictions, the employment biographies of all employees can only be provided for establishments with up to 49 employees subject to social security.",
+       "With your application to LIAB, we provide automatically data from the IAB Establishment Panel for all establishments with linkage consent, the administrative individual data, and the Basis Establishment File of the BHP.",
+       "Further modules of the BHP have to be requested explicitly in your application.",
+       "According to the FDZ Data Usage Agreement, any type of publication resulting from work with FDZ data must be reported to the FDZ by email at the latest one month after publication."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "German social-security records linked to employers from 1975; the standard AKM data (Card-Heining-Kline). LIAB longitudinal model 1975-2024 is on-site/remote only.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Employment biographies linked to establishments (page quote)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "1975-2024"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Employment biographies provided only for establishments up to 49 employees in this model; check cross-sectional model / full IEB"
+    }
+   },
+   "access_steps": [
+    "Write project proposal on the FDZ site",
+    "FDZ approves; your institution signs Data Usage Agreement",
+    "Work via on-site visit or remote access (JoSuA)"
+   ],
+   "time_to_access": "months",
+   "caveats": [
+    "Must report publications to FDZ within one month",
+    "Employment biographies only for establishments with up to 49 employees in this model (page quote)"
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "manual:https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+    "source": "manual",
+    "title": "Sample of Integrated Labour Market Biographies (SIAB) - FDZ - Forschungsdatenzentrum",
+    "url": "https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+    "access": {
+     "tier": "application",
+     "evidence": "SUF can be downloaded by applying institutions (page quote)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The Sample of Integrated Labour Market Biographies (SIAB) is a 2 percent random sample drawn from the Integrated Employment Biographies (IEB) of the Institute for Employment Research (IAB).",
+    "doi": null,
+    "publisher": "FDZ - Forschungsdatenzentrum",
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+     "checked_at": "2026-11-11T18:24:55Z",
+     "problems": [],
+     "notes": [
+      "title, description, publisher read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "Sample of Integrated Labour Market Biographies (SIAB) - FDZ - Forschungsdatenzentrum",
+     "access_text": {
+      "url": "https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+      "sentences": [
+       "The IEB consist of all individuals in Germany, which are characterized by at least one of the following employment status: employment subject to social security (in the data since 1975), marginal part-time employment (in the data since 1999), benefit receipt according to the German Social Code III or II (SGB III since 1975, SGB II since 2005), officially re\u2026",
+       "The factually anonymous data set can be downloaded by the applying institutions as a Scientific Use File (SUF)."
+      ]
+     }
+    }
+   },
+   "fit": "partial",
+   "why": "2% sample of German worker biographies; downloadable SUF form is the easiest German route, but AKM suitability depends on establishment identifier in the Regional File (not confirmed).",
+   "requirements": {
+    "R1": {
+     "status": "unknown",
+     "evidence": "Establishment ID in the factually anonymous file not confirmed; check data report FDZ-Datenreport 07/2023"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Since 1975"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Person-level panel"
+    }
+   },
+   "access_steps": [
+    "Apply to FDZ with project description",
+    "Institution signs Data Usage Agreement",
+    "Download SUF"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Weakly vs factually anonymous versions cannot be used in the same project"
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "manual:https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+    "source": "manual",
+    "title": "INPS Data: Veneto Workers Histories (VWH) - FRDB",
+    "url": "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+    "access": {
+     "tier": "application",
+     "evidence": "Fill and sign form, email info@frdb.org (page quote)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Dataset estratto da archivi anagrafici INPS Giuseppe Tattara",
+    "doi": null,
+    "publisher": "FRDB",
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+     "checked_at": "2026-11-11T18:24:59Z",
+     "problems": [],
+     "notes": [
+      "title, description, publisher read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "INPS Data: Veneto Workers Histories (VWH) - FRDB",
+     "access_text": {
+      "url": "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+      "sentences": [
+       "Registry archive (anagr.dta): it is the register of the workers, including an anonymous personal identifier and basic demographic information about each individuals in the data",
+       "In order to access the dataset, it is necessary to fill and sign the attached form and send it to info@frdb.org."
+      ]
+     }
+    }
+   },
+   "fit": "partial",
+   "why": "Veneto private-sector workers and firms 1975-2001; small and old but the lightest-touch access found and well-used for AKM-type work.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Worker ID and firm ID (matr_az); firm tax code in azien.dta"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "27 years"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "Wage variable not stated on page"
+    }
+   },
+   "access_steps": [
+    "Download form from FRDB page",
+    "Sign and email to info@frdb.org"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Only Treviso/Vicenza firms; ends 2001, so not suitable for recent inequality trends"
+   ]
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "manual:https://lehd.ces.census.gov/data/",
+    "source": "manual",
+    "title": "LEHD Data Products for Workforce Analytics | U.S. Census Bureau",
+    "url": "https://lehd.ces.census.gov/data/",
+    "access": {
+     "tier": "application",
+     "evidence": "Restricted use through FSRDCs with approved projects (page quote)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Download LEHD data to explore employment, worker mobility, commuting patterns, and workforce trends with LODES, QWI, J2J, PSEO, and VEO statistics",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://lehd.ces.census.gov/data/",
+     "checked_at": "2026-11-11T18:25:00Z",
+     "problems": [],
+     "notes": [
+      "the landing page mentions \"restricted access\" (\"...ble to qualified researchers with approved projects through restricted access use in Federal Statistical Research Data Centers (FSRDCs) ....\"); confirm the access route on that page before calling the data open",
+      "title, description read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "LEHD Data Products for Workforce Analytics | U.S. Census Bureau",
+     "access_text": {
+      "url": "https://lehd.ces.census.gov/data/",
+      "sentences": [
+       "These data products include online applications, public-use data, and restricted-use microdata.",
+       "Confidential microdata are available to qualified researchers with approved projects through restricted access use in Federal Statistical Research Data Centers (FSRDCs).",
+       "Design Comparison Of LODES And ACS Commuting Data Products",
+       "In addition to public-use data products, LEHD microdata are available for research use in approved projects."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "US LEHD job-level quarterly earnings with employer IDs, many states; long panel.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Job-level earnings linked to employers (recalled + page)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Varies by state"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Quarterly earnings"
+    }
+   },
+   "access_steps": [
+    "Write short proposal, submit via FSRDC administrator",
+    "Census review",
+    "Security clearance",
+    "Work in FSRDC or virtual RDC"
+   ],
+   "time_to_access": "months",
+   "caveats": [
+    "Roughly 4-7+ months, extra month for non-US citizens (from RDC pages)"
+   ]
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "Arizona UI Administrative Records 2018-2025",
+   "url": "https://zenodo.org/records/18855144",
+   "reason": "Open, but UI claimant records, not an employer-employee wage panel."
+  },
+  {
+   "name": "LODES / QWI (US Census)",
+   "url": "https://lehd.ces.census.gov/data/",
+   "reason": "Open but aggregated; no worker-level panel, cannot estimate AKM."
+  }
+ ],
+ "gaps": [
+  "No open-download worker-firm panel found. Spain MCVL, UK ASHE, Italy INPS, Brazil RAIS, Nordic registers were checked by web search only and are not in the verified records above."
+ ],
+ "notes": "Registry search returned mostly noise; most entries come from web search and recall."
+}

@@ -1,0 +1,112 @@
+{
+  "must_haves": [
+    "Real recorded multi-party conversations (not simulated or synthetic mixtures)",
+    "English speech",
+    "Speaker-turn annotations (who spoke when, with segment timing)",
+    "Licence that permits commercial use (a paid licence is acceptable; research-only or non-commercial terms are excluded)"
+  ],
+  "A": [
+    {
+      "dataset": "NOTSOFAR-1 (Microsoft) recorded meeting dataset",
+      "official_url": "https://github.com/microsoft/NOTSOFAR1-Challenge",
+      "exists": true,
+      "access_stated": "CC BY 4.0 (licence as recalled); no download route stated",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The repo README's Data License section says 'The data provided in this repository is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0)', backed by a DATA_LICENSE file, and the Hugging Face dataset microsoft/NOTSOFAR is not gated; ground truth has speaker_id/start_time/end_time and participants are 'native or near-native English speakers'; the CHiME page says 'Meetings are role-played by the participants' and still carries a legacy line that the data is 'licensed for use exclusively in the NOTSOFAR challenge event', superseded by the open CC BY release; the ~1000 h simulated training set is separate."
+    },
+    {
+      "dataset": "AMI Meeting Corpus",
+      "official_url": "https://groups.inf.ed.ac.uk/ami/corpus/license.shtml",
+      "exists": true,
+      "access_stated": "CC BY 4.0 (licence as recalled); no download route stated",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The licence page says 'The AMI corpus and its annotations are released under the Creative Commons Attribution 4.0 license agreement'; the corpus page says it has 100 hours with close-talking and far-field microphones, 'Around two-thirds of the data has been elicited using a scenario' (still live recorded meetings); transcripts are 'time-synchronized with the digitized audio recordings' with per-speaker channel IDs and English (British spelling) transcription; the download page is free with no registration and offers microphone-array channels."
+    },
+    {
+      "dataset": "ICSI Meeting Corpus",
+      "official_url": "https://groups.inf.ed.ac.uk/ami/icsi/license.shtml",
+      "exists": true,
+      "access_stated": "Believed to be CC BY 4.0 now, to be confirmed",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Edinburgh ICSI pages say 'The ICSI corpus and its annotations are released under the Creative Commons Attribution 4.0 license agreement' (free download); the LDC catalogue (LDC2004S02/LDC2004T04) also sells it under the LDC non-member agreement and describes 75 'natural' English meetings with six table-top mics and transcripts recording 'who spoke them', time-synchronized to the audio."
+    },
+    {
+      "dataset": "DiPCo (Dinner Party Corpus, Amazon)",
+      "official_url": "https://zenodo.org/records/8122551",
+      "exists": true,
+      "access_stated": "Permissive CDLA licence (as recalled); no download route stated",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Zenodo record (open access) has licence cdla-permissive-1.0, whose text has no non-commercial restriction ('no obligations or restrictions on Your Use or Publication of Results'); it holds 10 sessions of 15-45 min of four people having 'a natural conversation in English', with five far-field 7-mic arrays and segmented per-speaker transcripts in JSON; it is casual dinner talk, not business meetings (a preference, not a must-have)."
+    },
+    {
+      "dataset": "ISL Meeting Corpus (LDC2004S05 / LDC2004T10), one of the 'LDC meeting corpora' A names",
+      "official_url": "https://catalog.ldc.upenn.edu/LDC2004S05",
+      "exists": true,
+      "access_stated": "LDC licence; LDC has commercial licensing options and non-members pay fees",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "A's single 'LDC meeting corpora (ISL, NIST meeting room)' bullet was split into its two named corpora; the catalogue lists 'LDC User Agreement for Non-Members' and 'Login for the applicable fee', which permits only 'non-commercial' use unless the user joins 'as a For-Profit Member', and the LDC For-Profit Membership Agreement says 'Member may incorporate portions of the LDC Databases into its own work products, including for commercial purposes' (Standard Membership '$34,000 per calendar year'), so a paid commercial route exists; the readme describes 18 English meetings (natural, or artificial 'but still had real topics and tasks') with lapel mics only and 'time stamps of begin and end of a speaker turn' in .mar files."
+    },
+    {
+      "dataset": "NIST Meeting Pilot Corpus (LDC2004S09 / LDC2004T13), one of the 'LDC meeting corpora' A names",
+      "official_url": "https://catalog.ldc.upenn.edu/LDC2004S09",
+      "exists": true,
+      "access_stated": "LDC licence; LDC has commercial licensing options and non-members pay fees",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "The catalogue lists 'LDC User Agreement for Non-Members' (non-commercial unless the user joins LDC as a For-Profit Member, whose agreement allows use 'including for commercial purposes' at $34,000/year) and describes 19 English meetings, about 15 h, with table and directional distant mics; the transcripts release (LDC2004T13) is documented only as 'Quick Transcript Text' TXT files with no stated speaker-turn timestamps, so who-spoke-when annotation cannot be confirmed."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "AMI Meeting Corpus",
+      "official_url": "https://groups.inf.ed.ac.uk/ami/corpus/license.shtml",
+      "exists": true,
+      "access_stated": "Direct download in minutes; CC BY 4.0, commercial use OK",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The licence page says 'The AMI corpus and its annotations are released under the Creative Commons Attribution 4.0 license agreement' and the download page offers signals (including microphone arrays) and annotations directly with no registration; transcripts are time-synchronized with per-speaker channel IDs in English, and about two-thirds of meetings are scenario-elicited but recorded live."
+    },
+    {
+      "dataset": "NOTSOFAR-1 (recorded meetings)",
+      "official_url": "https://github.com/microsoft/NOTSOFAR1-Challenge",
+      "exists": true,
+      "access_stated": "Download via repo or Hugging Face in minutes; CC BY 4.0 per GitHub banner, HF record shows no licence; pending check",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The README's Data License says the data is 'licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0)' (DATA_LICENSE file; the MIT LICENSE covers code) and the HF dataset is ungated; B's 'Hugging Face record states no licence' is true only of the HF metadata licence field, since the HF card text itself states CC BY 4.0; ground truth has speaker_id/start_time/end_time, English speakers, and the CHiME page notes meetings are 'role-played by the participants'."
+    },
+    {
+      "dataset": "ICSI Meeting Speech and Transcripts (LDC2004S02, LDC2004T04)",
+      "official_url": "https://catalog.ldc.upenn.edu/LDC2004S02",
+      "exists": true,
+      "access_stated": "Paid LDC order taking days; LDC user agreement, commercial terms not read",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The LDC page lists 'LDC User Agreement for Non-Members' and 'Login for the applicable fee', as B says (that agreement is non-commercial unless the user joins as a For-Profit Member); B missed that the corpus is also free under CC BY 4.0 at https://groups.inf.ed.ac.uk/ami/icsi/license.shtml, a route B flagged as unconfirmed; the corpus has 75 natural English meetings, six table-top mics, and transcripts recording 'who spoke them', time-synchronized to the audio."
+    },
+    {
+      "dataset": "DiPCo (Dinner Party Corpus)",
+      "official_url": "https://zenodo.org/records/8122551",
+      "exists": true,
+      "access_stated": "Zenodo download; CDLA-Permissive-1.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Zenodo record 8122551 is 'DiPCo -- Dinner Party Corpus', open access, licence cdla-permissive-1.0 (no commercial restriction); it has 10 sessions of four people having 'a natural conversation in English' with five far-field 7-mic arrays and segmented per-speaker JSON transcripts, but it is dinner talk, not business meetings (a preference, not a must-have)."
+    }
+  ]
+}

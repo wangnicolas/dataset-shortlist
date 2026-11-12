@@ -1,0 +1,294 @@
+{
+ "version": "6.9",
+ "hitCount": 6808,
+ "request": {
+  "queryString": "\"MIMIC-IV\"",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 3,
+  "sort": "CITED desc",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "36596836",
+    "source": "MED",
+    "pmid": "36596836",
+    "pmcid": "PMC9810617",
+    "doi": "10.1038/s41597-022-01899-x",
+    "title": "MIMIC-IV, a freely accessible electronic health record dataset.",
+    "authorString": "Johnson AEW, Bulgarelli L, Shen L, Gayles A, Shammout A, Horng S, Pollard TJ, Hao S, Moody B, Gow B, Lehman LH, Celi LA, Mark RG.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Johnson AEW",
+       "firstName": "Alistair E W",
+       "lastName": "Johnson",
+       "initials": "AEW"
+      },
+      {
+       "fullName": "Bulgarelli L",
+       "firstName": "Lucas",
+       "lastName": "Bulgarelli",
+       "initials": "L"
+      },
+      {
+       "fullName": "Shen L",
+       "firstName": "Lu",
+       "lastName": "Shen",
+       "initials": "L"
+      },
+      {
+       "fullName": "Gayles A",
+       "firstName": "Alvin",
+       "lastName": "Gayles",
+       "initials": "A"
+      },
+      {
+       "fullName": "Shammout A",
+       "firstName": "Ayad",
+       "lastName": "Shammout",
+       "initials": "A"
+      },
+      {
+       "fullName": "Horng S",
+       "firstName": "Steven",
+       "lastName": "Horng",
+       "initials": "S"
+      },
+      {
+       "fullName": "Pollard TJ",
+       "firstName": "Tom J",
+       "lastName": "Pollard",
+       "initials": "TJ"
+      },
+      {
+       "fullName": "Hao S",
+       "firstName": "Sicheng",
+       "lastName": "Hao",
+       "initials": "S"
+      },
+      {
+       "fullName": "Moody B",
+       "firstName": "Benjamin",
+       "lastName": "Moody",
+       "initials": "B"
+      },
+      {
+       "fullName": "Gow B",
+       "firstName": "Brian",
+       "lastName": "Gow",
+       "initials": "B"
+      },
+      {
+       "fullName": "Lehman LH",
+       "firstName": "Li-Wei H",
+       "lastName": "Lehman",
+       "initials": "LH"
+      },
+      {
+       "fullName": "Celi LA",
+       "firstName": "Leo A",
+       "lastName": "Celi",
+       "initials": "LA"
+      },
+      {
+       "fullName": "Mark RG",
+       "firstName": "Roger G",
+       "lastName": "Mark",
+       "initials": "RG"
+      }
+     ]
+    },
+    "journalInfo": {
+     "yearOfPublication": 2023,
+     "dateOfPublication": "2023 Jan",
+     "volume": "10",
+     "issue": "1",
+     "journal": {
+      "title": "Scientific data",
+      "medlineAbbreviation": "Sci Data"
+     }
+    },
+    "pubYear": "2023",
+    "pubTypeList": {
+     "pubType": [
+      "Dataset",
+      "data-paper",
+      "Journal Article"
+     ]
+    },
+    "citedByCount": 2562,
+    "abstractText": "Digital data collection during routine clinical practice is now ubiquitous within hospitals. The data contains valuable information on the care of patients and their response to treatments, offering exciting opportunities for research. Typically, data are stored within archival systems that are not intended to support research. These systems are often inaccessible to researchers and structured for optimal storage, rather than interpretability and analysis. Here we present MIMIC-IV, a publicly available database sourced from the electronic health record of the Beth Israel Deaconess Medical Center. Information available includes patient measurements, orders, diagnoses, procedures, treatments, and deidentified free-text clinical notes. MIMIC-IV is intended to support a wide array of research studies and educational material, helping to reduce barriers to conducting clinical research.",
+    "isOpenAccess": "Y",
+    "firstPublicationDate": "2023-01-03"
+   },
+   {
+    "id": "38965432",
+    "source": "MED",
+    "pmid": "38965432",
+    "pmcid": "PMC11405275",
+    "doi": "10.1038/s41591-024-03097-1",
+    "title": "Evaluation and mitigation of the limitations of large language models in clinical decision-making.",
+    "authorString": "Hager P, Jungmann F, Holland R, Bhagat K, Hubrecht I, Knauer M, Vielhauer J, Makowski M, Braren R, Kaissis G, Rueckert D.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hager P",
+       "firstName": "Paul",
+       "lastName": "Hager",
+       "initials": "P"
+      },
+      {
+       "fullName": "Jungmann F",
+       "firstName": "Friederike",
+       "lastName": "Jungmann",
+       "initials": "F"
+      },
+      {
+       "fullName": "Holland R",
+       "firstName": "Robbie",
+       "lastName": "Holland",
+       "initials": "R"
+      },
+      {
+       "fullName": "Bhagat K",
+       "firstName": "Kunal",
+       "lastName": "Bhagat",
+       "initials": "K"
+      },
+      {
+       "fullName": "Hubrecht I",
+       "firstName": "Inga",
+       "lastName": "Hubrecht",
+       "initials": "I"
+      },
+      {
+       "fullName": "Knauer M",
+       "firstName": "Manuel",
+       "lastName": "Knauer",
+       "initials": "M"
+      },
+      {
+       "fullName": "Vielhauer J",
+       "firstName": "Jakob",
+       "lastName": "Vielhauer",
+       "initials": "J"
+      },
+      {
+       "fullName": "Makowski M",
+       "firstName": "Marcus",
+       "lastName": "Makowski",
+       "initials": "M"
+      },
+      {
+       "fullName": "Braren R",
+       "firstName": "Rickmer",
+       "lastName": "Braren",
+       "initials": "R"
+      },
+      {
+       "fullName": "Kaissis G",
+       "firstName": "Georgios",
+       "lastName": "Kaissis",
+       "initials": "G"
+      },
+      {
+       "fullName": "Rueckert D",
+       "firstName": "Daniel",
+       "lastName": "Rueckert",
+       "initials": "D"
+      }
+     ]
+    },
+    "journalInfo": {
+     "yearOfPublication": 2024,
+     "dateOfPublication": "2024 Sep",
+     "volume": "30",
+     "issue": "9",
+     "journal": {
+      "title": "Nature medicine",
+      "medlineAbbreviation": "Nat Med"
+     }
+    },
+    "pubYear": "2024",
+    "pubTypeList": {
+     "pubType": [
+      "research-article",
+      "Journal Article"
+     ]
+    },
+    "citedByCount": 503,
+    "abstractText": "Clinical decision-making is one of the most impactful parts of a physician's responsibilities and stands to benefit greatly from artificial intelligence solutions and large language models (LLMs) in particular. However, while LLMs have achieved excellent performance on medical licensing exams, these tests fail to assess many skills necessary for deployment in a realistic clinical decision-making environment, including gathering information, adhering to guidelines, and integrating into clinical workflows. Here we have created a curated dataset based on the Medical Information Mart for Intensive Care database spanning 2,400 real patient cases and four common abdominal pathologies as well as a framework to simulate a realistic clinical setting. We show that current state-of-the-art LLMs do not accurately diagnose patients across all pathologies (performing significantly worse than physicians), follow neither diagnostic nor treatment guidelines, and cannot interpret laboratory results, thus posing a serious risk to the health of patients. Furthermore, we move beyond diagnostic accuracy and demonstrate that they cannot be easily integrated into existing workflows because they often fail to follow instructions and are sensitive to both the quantity and order of information. Overall, our analysis reveals that LLMs are currently not ready for autonomous clinical decision-making while providing a dataset and framework to guide future studies.",
+    "isOpenAccess": "Y",
+    "firstPublicationDate": "2024-07-04"
+   },
+   {
+    "id": "34893776",
+    "source": "MED",
+    "pmid": "34893776",
+    "pmcid": "PMC8674135",
+    "doi": "10.1038/s41591-021-01595-0",
+    "title": "Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations.",
+    "authorString": "Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Seyyed-Kalantari L",
+       "firstName": "Laleh",
+       "lastName": "Seyyed-Kalantari",
+       "initials": "L"
+      },
+      {
+       "fullName": "Zhang H",
+       "firstName": "Haoran",
+       "lastName": "Zhang",
+       "initials": "H"
+      },
+      {
+       "fullName": "McDermott MBA",
+       "firstName": "Matthew B A",
+       "lastName": "McDermott",
+       "initials": "MBA"
+      },
+      {
+       "fullName": "Chen IY",
+       "firstName": "Irene Y",
+       "lastName": "Chen",
+       "initials": "IY"
+      },
+      {
+       "fullName": "Ghassemi M",
+       "firstName": "Marzyeh",
+       "lastName": "Ghassemi",
+       "initials": "M"
+      }
+     ]
+    },
+    "journalInfo": {
+     "yearOfPublication": 2021,
+     "dateOfPublication": "2021 Dec",
+     "volume": "27",
+     "issue": "12",
+     "journal": {
+      "title": "Nature medicine",
+      "medlineAbbreviation": "Nat Med"
+     }
+    },
+    "pubYear": "2021",
+    "pubTypeList": {
+     "pubType": [
+      "Research Support, Non-U.S. Gov't",
+      "research-article",
+      "Journal Article"
+     ]
+    },
+    "citedByCount": 458,
+    "abstractText": "Artificial intelligence (AI) systems have increasingly achieved expert-level performance in medical imaging applications. However, there is growing concern that such AI systems may reflect and amplify human bias, and reduce the quality of their performance in historically under-served populations such as female patients, Black patients, or patients of low socioeconomic status. Such biases are especially troubling in the context of underdiagnosis, whereby the AI algorithm would inaccurately label an individual with a disease as healthy, potentially delaying access to care. Here, we examine algorithmic underdiagnosis in chest X-ray pathology classification across three large chest X-ray datasets, as well as one multi-source dataset. We find that classifiers produced using state-of-the-art computer vision techniques consistently and selectively underdiagnosed under-served patient populations and that the underdiagnosis rate was higher for intersectional under-served subpopulations, for example, Hispanic female patients. Deployment of AI systems using medical imaging for disease diagnosis with such biases risks exacerbation of existing care biases and can potentially lead to unequal access to medical treatment, thereby raising ethical concerns for the use of these models in the clinic.",
+    "isOpenAccess": "Y",
+    "firstPublicationDate": "2021-12-10"
+   }
+  ]
+ }
+}

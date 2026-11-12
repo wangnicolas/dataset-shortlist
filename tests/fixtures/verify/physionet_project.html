@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Predicting Mortality of ICU Patients: The PhysioNet/Computing in Cardiology Challenge 2012 v1.0.0</title>
+    
+  <!-- wfdb-python: <p>Version: 1.0.0</p> -->
+  
+  
+
+    
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/font-awesome/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="/static/custom/css/physionet.css?v=2"/>
+    
+  <link rel="stylesheet" type="text/css" href="/static/project/css/project-content.css?v=3"/>
+  <link rel="stylesheet" type="text/css" href="/static/highlight/css/default.min.css"/>
+
+    
+<script src="/static/jquery/jquery.min.js"></script>
+<script src="/static/popper/popper.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87592301-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87592301-7');
+</script>
+    
+  <script src="/static/mathjax/MathJax.js?config=MML_HTMLorMML"></script>
+  <script src="/static/highlight/js/highlight.min.js"></script>
+  <script src="/static/custom/js/copy-to-clipboard.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/fonts/inter-local.css">
+    <link rel="stylesheet" type="text/css" href="/static/custom/css/style.css?v=2">
+  </head>
+
+  
+  <body class="modern-ui flexbody">
+    
+
+
+
+
+<div class="modern-ui nav-wrapper">
+  <nav class="nav">
+    <div class="container my-0 h-100 d-flex justify-content-between align-items-center">
+      <button type="button" class="nav__hamburger circle-button mr-2"
+              popovertarget="nav__hamburger_popup"
+              title="Menu">
+        <i class="nav__hamburger__list bi bi-list"></i>
+        <i class="nav__hamburger__x bi bi-x"></i>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <a href="/">
+        
+          <img src="/static/images/physionet-logo.svg" width="200px" alt="PhysioNet">
+        
+      </a>
+      <div class="nav__links align-items-center">
+        
+          
+            <a href="/about/publish/" class="nav-link">Share</a>
+          
+        
+          
+            <a href="/about/" class="nav-link">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/about/faqs/" class="nav-link">FAQs</a>
+          
+        
+          
+        
+          
+        
+
+        <div>
+          <button type="button" class="nav-link nav-link--expandable"
+                  popovertarget="nav__explore_popup">
+            Explore <i class="bi bi-chevron-down ml-2"></i>
+          </button>
+          <dialog class="nav-link__popup" id="nav__explore_popup" popover
+                  aria-label="Explore">
+            <div class="nav-sublinks">
+              
+                <a class="nav-sublink" href="/about/database/">
+                  <div class="nav-sublink__icon">
+                    
+                      <img src="/static/images/icons/data.png" alt="" height="32px">
+                    
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">Data</span>
+                    <span class="nav-sublink__description">View datasets</span>
+                  </div>
+                </a>
+              
+                <a class="nav-sublink" href="/about/software/">
+                  <div class="nav-sublink__icon">
+                    
+                      <img src="/static/images/icons/software.png" alt="" height="32px">
+                    
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">Software</span>
+                    <span class="nav-sublink__description">View software</span>
+                  </div>
+                </a>
+              
+                <a class="nav-sublink" href="/about/challenge/">
+                  <div class="nav-sublink__icon">
+                    
+                      <img src="/static/images/icons/challenges.png" alt="" height="32px">
+                    
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">Challenges</span>
+                    <span class="nav-sublink__description">View challenges</span>
+                  </div>
+                </a>
+              
+                <a class="nav-sublink" href="/about/tutorial/">
+                  <div class="nav-sublink__icon">
+                    
+                      <img src="/static/images/icons/tutorials.png" alt="" height="32px">
+                    
+                  </div>
+                  <div class="nav-sublink__text">
+                    <span class="nav-sublink__title">Tutorials</span>
+                    <span class="nav-sublink__description">View tutorials</span>
+                  </div>
+                </a>
+              
+              </div>
+          </dialog>
+        </div>
+      </div>
+      <div class="nav__actions d-flex ml-md-4">
+        <form action="/content/" class="mr-2">
+          <div class="nav__search">
+            <input type="text" name="topic" placeholder="Search for anything...">
+            <div class="nav__search__actions">
+              <button type="button" class="nav__search__close mr-2"
+                      title="Cancel">
+                <i class="bi bi-x"></i>
+                <span class="visually-hidden">Cancel</span>
+              </button>
+              <button type="submit" class="circle-button">Search</button>
+            </div>
+          </div>
+        </form>
+        <button type="button" class="nav__search__open circle-button mr-md-2"
+                title="Search PhysioNet">
+          <i class="bi bi-search"></i>
+          <span class="visually-hidden">Search PhysioNet</span>
+        </button>
+        
+          <a class="nav__user" href="/login/"
+             title="Log in">
+            <i class="bi bi-person"></i>
+            <span class="visually-hidden">Log in</span>
+          </a>
+        
+      </div>
+    </div>
+
+    <dialog class="nav__mobile" id="nav__hamburger_popup" popover
+            aria-label="Menu">
+      
+        
+          <a href="/about/publish/" class="nav-link">Share</a>
+        
+      
+        
+          <a href="/about/" class="nav-link">About</a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/about/faqs/" class="nav-link">FAQs</a>
+        
+      
+        
+      
+        
+      
+      <hr>
+      <div class="nav-sublinks">
+        
+          <a class="nav-sublink" href="/about/database/">
+            <div class="nav-sublink__icon">
+              
+                <img src="/static/images/icons/data.png" alt="" height="32px">
+              
+              </div>
+            <div class="nav-sublink__text">
+              <span class="nav-sublink__title">Data</span>
+              <span class="nav-sublink__description">View datasets</span>
+            </div>
+          </a>
+        
+          <a class="nav-sublink" href="/about/software/">
+            <div class="nav-sublink__icon">
+              
+                <img src="/static/images/icons/software.png" alt="" height="32px">
+              
+              </div>
+            <div class="nav-sublink__text">
+              <span class="nav-sublink__title">Software</span>
+              <span class="nav-sublink__description">View software</span>
+            </div>
+          </a>
+        
+          <a class="nav-sublink" href="/about/challenge/">
+            <div class="nav-sublink__icon">
+              
+                <img src="/static/images/icons/challenges.png" alt="" height="32px">
+              
+              </div>
+            <div class="nav-sublink__text">
+              <span class="nav-sublink__title">Challenges</span>
+              <span class="nav-sublink__description">View challenges</span>
+            </div>
+          </a>
+        
+          <a class="nav-sublink" href="/about/tutorial/">
+            <div class="nav-sublink__icon">
+              
+                <img src="/static/images/icons/tutorials.png" alt="" height="32px">
+              
+              </div>
+            <div class="nav-sublink__text">
+              <span class="nav-sublink__title">Tutorials</span>
+              <span class="nav-sublink__description">View tutorials</span>
+            </div>
+          </a>
+        
+      </div>
+    </dialog>
+  </nav>
+</div>
+
+    <div class="nav-spacer"></div>
+
+    <main>
+  <div class="container">
+    
+
+    <div class="project-header">
+      <div class="mb-2">
+        <span class="badge badge-dark"><i class="fa fa-bullseye"></i> Challenge</span>
+        <span class="badge badge-success"><i class="fas fa-lock-open"></i> Open Access</span>
+        
+      </div>
+      <h1>Predicting Mortality of ICU Patients: The PhysioNet/Computing in Cardiology Challenge 2012</h1>
+      <p class="project-authors">
+        
+          <button type="button" class="author-popover-trigger" data-toggle="popover" data-placement="bottom" data-html="true" data-content="&lt;p&gt;&lt;strong&gt;Affiliations&lt;/strong&gt;&lt;br&gt;MIT Laboratory for Computational Physiology, Cambridge, USA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Profile&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;/users/ikarosilva/&quot; target=&quot;_blank&quot;&gt;ikarosilva&lt;/a&gt;&lt;/p&gt;" aria-label="Ikaro Silva: show author information" aria-expanded="false">Ikaro Silva<i class="fas fa-caret-down" aria-hidden="true"></i></button>,&nbsp;
+        
+          <button type="button" class="author-popover-trigger" data-toggle="popover" data-placement="bottom" data-html="true" data-content="&lt;p&gt;&lt;strong&gt;Affiliations&lt;/strong&gt;&lt;br&gt;MIT Laboratory for Computational Physiology, Cambridge, USA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Profile&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;/users/gmoody/&quot; target=&quot;_blank&quot;&gt;gmoody&lt;/a&gt;&lt;/p&gt;" aria-label="George Moody: show author information" aria-expanded="false">George Moody<i class="fas fa-caret-down" aria-hidden="true"></i></button>,&nbsp;
+        
+          <button type="button" class="author-popover-trigger" data-toggle="popover" data-placement="bottom" data-html="true" data-content="&lt;p&gt;&lt;strong&gt;Affiliations&lt;/strong&gt;&lt;br&gt;MIT Laboratory for Computational Physiology, Cambridge, USA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Profile&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;/users/rgmark/&quot; target=&quot;_blank&quot;&gt;rgmark&lt;/a&gt;&lt;/p&gt;" aria-label="Roger Mark: show author information" aria-expanded="false">Roger Mark<i class="fas fa-caret-down" aria-hidden="true"></i></button><a class="author-orcid" href="https://orcid.org/0000-0002-6318-2978" target="_blank" rel="noopener" title="ORCID iD: https://orcid.org/0000-0002-6318-2978"><img src="/static/images/orcid-id-icon.svg" alt="ORCID iD for Roger Mark" width="16" height="16"></a>,&nbsp;
+        
+          <button type="button" class="author-popover-trigger" data-toggle="popover" data-placement="bottom" data-html="true" data-content="&lt;p&gt;&lt;strong&gt;Affiliations&lt;/strong&gt;&lt;br&gt;MIT Laboratory for Computational Physiology, Cambridge, USA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Profile&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;/users/leoanthonyceli/&quot; target=&quot;_blank&quot;&gt;leoanthonyceli&lt;/a&gt;&lt;/p&gt;" aria-label="Leo Anthony Celi: show author information" aria-expanded="false">Leo Anthony Celi<i class="fas fa-caret-down" aria-hidden="true"></i></button>
+        
+      </p>
+      <div class="project-meta">
+        <span>Published Jan. 20, 2012</span>
+        <span class="project-meta-sep">&middot;</span>
+        <span>Version 1.0.0</span>
+      </div>
+    </div>
+
+    
+
+    
+
+    <!-- Latest news and announcements -->
+    
+      <div class="alert alert-primary" role="alert">
+        
+        
+        
+          
+          <p>
+            <strong>Community forum for the 2012 PhysioNet/CinC Challenge</strong>
+            <em>(Sept. 1, 2012, 2:40 p.m.)</em>
+            <p>If you have any questions or comments regarding this challenge, please post it directly in our&nbsp;<a href="https://groups.google.com/forum/#!forum/physionet-challenges">Community Discussion Forum</a>. This will increase transparency (benefiting all the competitors) and ensure that all the challenge organizers see your question.</p>
+            
+            
+            
+          </p>
+          
+        
+        
+          
+          <p>
+            <strong>Final scores in the PhysioNet/CinC Challenge 2012</strong>
+            <em>(Aug. 31, 2012, 12:45 a.m.)</em>
+            <p>Final scores in the PhysioNet/CinC Challenge 2012 have now been posted. Participants will present their work on the challenge, which focuses on predicting mortality of ICU patients, at CinC 2012 in Krakow, 9-12 September.</p>
+            
+            
+            
+          </p>
+          
+        
+        
+        <details>
+          <summary>More news</summary>
+          
+          
+          <p>
+            <strong>Submit a Phase 2 Challenge Entry Now</strong>
+            <em>(June 4, 2012, 6:40 p.m.)</em>
+            <p>Phase 2 of the PhysioNet/Computing in Cardiology Challenge 2012 (Predicting mortality of ICU patients) is now open, and participants may submit entries until 25 August. If you missed Phase 1, you are still welcome to participate unofficially in Phase 2.</p>
+            
+            
+            
+          </p>
+          
+        
+        
+          
+          <p>
+            <strong>Submit a prelminary Challenge Entry (closed 25 April)</strong>
+            <em>(March 27, 2012, 2 a.m.)</em>
+            <p>Registration for the PhysioNet/Computing in Cardiology Challenge 2012 is now open, and registered participants may submit entries. This year&#39;s challenge focuses on predicting mortality of ICU patients. Submit a preliminary entry by 25 April.</p>
+            
+            
+            
+          </p>
+          
+        
+        
+          
+          <p>
+            <strong>PhysioNet/Computing in Cardiology Challenge 2012 Opens</strong>
+            <em>(Jan. 20, 2012, 9 p.m.)</em>
+            <p>This year&#39;s challenge focuses on methods for predicting ICU mortality, using a rich set of physiologic and clinical variables collected from 12,000 patients.</p>
+            
+            </span>
+            
+          </p>
+          
+          
+        </details>
+        
+      </div>
+    
+
+    <div class="row">
+      <!-- Main column -->
+      <div class="col-md-8">
+        
+        
+        
+          <div class="citation-box">
+
+  
+
+  
+
+  
+    <div class="citation-section">
+      <span class="citation-label">Please include the standard citation for PhysioNet:</span>
+      <span class="citation-actions">
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#citationModalPlatform" title="View citation formats"><i class="bi bi-quote"></i> Cite</button>
+        
+          <button type="button" class="btn btn-sm btn-outline-secondary ml-1 btn-copy-bibtex" title="Copy BibTeX" data-clipboard-target="bibtex-data-platform"><i class="bi bi-clipboard"></i> Copy BibTeX</button>
+        
+      </span>
+      <p class="citation-text">Pollard, T., Moody, B. E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., &amp; Heldt, T. (2026). PhysioNet as a global platform for biomedical research. Nature Health. <a href="https://doi.org/10.1038/s44360-026-00096-z" rel="nofollow">https://doi.org/10.1038/s44360-026-00096-z</a>. Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></p>
+      <textarea id="bibtex-data-platform" style="display:none;">@article{pollard_physionet_2026, title = {{PhysioNet} as a global platform for biomedical research}, volume = {1}, issn = {3005-0693}, url = {https://doi.org/10.1038/s44360-026-00096-z}, doi = {10.1038/s44360-026-00096-z}, abstract = {Twenty-five years after its first public repository was established, the PhysioNet resource for biomedical and clinical data has enabled tens of thousands of research papers. Further efforts are ongoing to advance secure data sharing, community engagement and scalable research infrastructure.}, number = {8}, journal = {Nature Health}, author = {Pollard, Tom and Moody, Benjamin E. and Lehman, Li-wei H. and Gow, Brian J. and Fernandes, Chrystinne and Xie, Chen and Johnson, Alistair and Mark, Roger G. and Heldt, Thomas}, month = aug, year = {2026}, pages = {792--795},}</textarea>
+    </div>
+  
+
+  <div class="modal fade" id="citationModalPlatform">
+  <div class="modal-dialog citation" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+  <table><tbody>
+    
+      
+        <tr>
+          <th>APA</th>
+          <td>Pollard, T., Moody, B. E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., &amp; Heldt, T. (2026). PhysioNet as a global platform for biomedical research. Nature Health. <a href="https://doi.org/10.1038/s44360-026-00096-z" rel="nofollow">https://doi.org/10.1038/s44360-026-00096-z</a>. Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></td>
+        </tr>
+      
+    
+      
+        <tr>
+          <th>MLA</th>
+          <td>Pollard, Tom, et al. “PhysioNet as a Global Platform for Biomedical Research.” Nature Health, 2026, <a href="https://doi.org/10.1038/s44360-026-00096-z" rel="nofollow">https://doi.org/10.1038/s44360-026-00096-z</a>. Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></td>
+        </tr>
+      
+    
+      
+        <tr>
+          <th>CHICAGO</th>
+          <td>Pollard, Tom, Benjamin E. Moody, Li-wei Lehman, Brian Gow, Chrystinne Fernandes, Chen Xie, Alistair Johnson, Roger G. Mark, and Thomas Heldt. “PhysioNet as a Global Platform for Biomedical Research.” Nature Health (2026). <a href="https://doi.org/10.1038/s44360-026-00096-z.i" rel="nofollow">https://doi.org/10.1038/s44360-026-00096-z.i</a> Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></td>
+        </tr>
+      
+    
+      
+        <tr>
+          <th>HARVARD</th>
+          <td>Pollard, T., Moody, B.E., Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, R.G. and Heldt, T., 2026. PhysioNet as a global platform for biomedical research. Nature Health. Available at: <a href="https://doi.org/10.1038/s44360-026-00096-z" rel="nofollow">https://doi.org/10.1038/s44360-026-00096-z</a>. Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></td>
+        </tr>
+      
+    
+      
+        <tr>
+          <th>VANCOUVER</th>
+          <td>Pollard T, Moody BE, Lehman L, Gow B, Fernandes C, Xie C, et al. PhysioNet as a global platform for biomedical research. Nature Health. 2026. doi:10.1038/s44360-026-00096-z. Available from: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/" rel="nofollow">https://pmc.ncbi.nlm.nih.gov/articles/PMC13641116/</a></td>
+        </tr>
+      
+    
+      
+    
+  </tbody></table>
+  
+  <div class="mt-3">
+    <strong>BibTeX</strong>
+    <button class="btn btn-sm btn-outline-secondary ml-2 btn-copy-bibtex btn-copy-bibtex-modal" data-clipboard-target="bibtex-data-platform">Copy</button>
+    <pre class="mt-2 p-2 border rounded" style="white-space: pre-wrap; background-color: #f8f9fa;">@article{pollard_physionet_2026, title = {{PhysioNet} as a global platform for biomedical research}, volume = {1}, issn = {3005-0693}, url = {https://doi.org/10.1038/s44360-026-00096-z}, doi = {10.1038/s44360-026-00096-z}, abstract = {Twenty-five years after its first public repository was established, the PhysioNet resource for biomedical and clinical data has enabled tens of thousands of research papers. Further efforts are ongoing to advance secure data sharing, community engagement and scalable research infrastructure.}, number = {8}, journal = {Nature Health}, author = {Pollard, Tom and Moody, Benjamin E. and Lehman, Li-wei H. and Gow, Brian J. and Fernandes, Chrystinne and Xie, Chen and Johnson, Alistair and Mark, Roger G. and Heldt, Thomas}, month = aug, year = {2026}, pages = {792--795},}</pre>
+  </div>
+  
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+        
+        
+          <h3>Introduction</h3>
+
+<p>The development of methods for prediction of mortality rates in Intensive Care Unit (ICU) populations has been motivated primarily by the need to compare the efficacy of medications, care guidelines, surgery, and other interventions when, as is common, it is necessary to control for differences in severity of illness or trauma, age, and other factors. For example, comparing overall mortality rates between trauma units in a community hospital, a teaching hospital, and a military field hospital is likely to reflect the differences in the patient populations more than any differences in standards of care. Acuity scores such as APACHE and SAPS-II are widely used to account for these differences in the context of such studies.</p>
+
+<p>By contrast, the focus of the PhysioNet/CinC Challenge 2012 is to develop methods for patient-specific prediction of in-hospital mortality. Participants will use information collected during the first two days of an ICU stay to predict which patients survive their hospitalizations, and which patients do not.</p>
+
+<p>&nbsp;</p>
+
+<h3>Data for the Challenge</h3>
+
+<p>The data used for the challenge consist of records from 12,000 ICU stays. All patients were adults who were admitted for a wide variety of reasons to cardiac, medical, surgical, and trauma ICUs. ICU stays of less than 48 hours have been excluded. Patients with DNR (do not resuscitate) or CMO (comfort measures only) directives were not excluded.</p>
+
+<p>Four thousand records comprise <em>training set A</em>, and the remaining records form <em>test sets B and C</em>. Outcomes are provided for the training set records, and are withheld for the test set records.</p>
+
+<p>Up to 42 variables were recorded at least once during the first 48 hours after admission to the ICU. Not all variables are available in all cases, however. Six of these variables are <em>general descriptors</em> (collected on admission), and the remainder are <em>time series</em>, for which multiple observations may be available.</p>
+
+<p>Each observation has an associated <em>time-stamp</em> indicating the elapsed time of the observation since ICU admission in each case, in hours and minutes. Thus, for example, a time stamp of 35:19 means that the associated observation was made 35 hours and 19 minutes after the patient was admitted to the ICU.</p>
+
+<p>Each record is stored as a comma-separated value (CSV) text file. To simplify downloading, participants may download a zip file or tarball containing all of training set A or test set B. Test set C will be used for validation only and will not be made available to participants.</p>
+
+<p><a>&nbsp;</a></p>
+
+<p><em>Update (8 May 2012):</em> The extraneous ages that were present in the previous versions of some data files have been removed, and a new general descriptor (<em>ICUType</em>, see below) has been added in each data file.</p>
+
+<p>Five additional <em>outcome-related descriptors</em>, described below, are known for each record. These are stored in separate CSV text files for each of sets A, B, and C, but only those for set A are available to challenge participants.</p>
+
+<p><em>All valid values for general descriptors, time series variables, and outcome-related descriptors are non-negative</em> (&ge; 0). A value of -1 indicates missing or unknown data (for example, if a patient&#39;s height was not recorded).</p>
+
+<p>&nbsp;</p>
+
+<h3>General Descriptors</h3>
+
+<p>As noted, these six descriptors are collected at the time the patient is admitted to the ICU. Their associated time-stamps are set to 00:00 (thus they appear at the beginning of each patient&#39;s record).</p>
+
+<ul>
+	<li><em>RecordID</em> (a unique integer for each ICU stay)</li>
+	<li><em>Age</em> (years)</li>
+	<li><em>Gender</em> (0: female, or 1: male)</li>
+	<li><em>Height</em> (cm)</li>
+	<li><em>ICUType</em> (1: Coronary Care Unit, 2: Cardiac Surgery Recovery Unit,</li>
+	<li>3: Medical ICU, or 4: Surgical ICU)</li>
+	<li><em>Weight</em>&nbsp;(kg)<a href="https://physionet.org/challenge/2012/#weight"><sup>*</sup>.</a></li>
+</ul>
+
+<p>The ICUType was added for use in Phase 2; it specifies the type of ICU to which the patient has been admitted.</p>
+
+<p>&nbsp;</p>
+
+<h3>Time Series</h3>
+
+<p>These 37 variables may be observed once, more than once, or not at all in some cases:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="http://en.wikipedia.org/wiki/Human_serum_albumin"><em>Albumin</em></a> (g/dL)</li>
+				<li><a href="http://en.wikipedia.org/wiki/Alkaline_phosphatase"><em>ALP</em></a> [Alkaline phosphatase (IU/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Alanine_transaminase"><em>ALT</em></a> [Alanine transaminase (IU/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Aspartate_transaminase"><em>AST</em></a> [Aspartate transaminase (IU/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Bilirubin"><em>Bilirubin</em></a> (mg/dL)</li>
+				<li><a href="http://en.wikipedia.org/wiki/BUN"><em>BUN</em></a> [Blood urea nitrogen (mg/dL)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Cholesterol"><em>Cholesterol</em></a> (mg/dL)</li>
+				<li><a href="http://en.wikipedia.org/wiki/Serum_creatinine#Plasma_creatinine"><em>Creatinine</em></a> [Serum creatinine (mg/dL)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Diastolic_blood_pressure"><em>DiasABP</em></a> [Invasive diastolic arterial blood pressure (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/FIO2"><em>FiO2</em></a> [Fractional inspired O<sub>2</sub> (0-1)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Glasgow_coma_score"><em>GCS</em></a> [Glasgow Coma Score (3-15)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Serum_glucose"><em>Glucose</em></a> [Serum glucose (mg/dL)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Bicarbonate#Diagnostics"><em>HCO3</em></a> [Serum bicarbonate (mmol/L)]</li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li><a href="http://en.wikipedia.org/wiki/Hematocrit"><em>HCT</em></a> [Hematocrit (%)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Heart_rate"><em>HR</em></a> [Heart rate (bpm)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Hypokalemia"><em>K</em></a> [Serum potassium (mEq/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Lactic_acid"><em>Lactate</em></a> (mmol/L)</li>
+				<li><a href="http://en.wikipedia.org/wiki/Magnesium#Biological_role"><em>Mg</em></a> [Serum magnesium (mmol/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Mean_arterial_pressure"><em>MAP</em></a> [Invasive mean arterial blood pressure (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Mechanical_ventilation"><em>MechVent</em></a> [Mechanical ventilation respiration (0:false, or 1:true)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Serum_sodium"><em>Na</em></a> [Serum sodium (mEq/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Diastolic_blood_pressure"><em>NIDiasABP</em></a> [Non-invasive diastolic arterial blood pressure (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Mean_arterial_pressure"><em>NIMAP</em></a> [Non-invasive mean arterial blood pressure (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Systolic_blood_pressure"><em>NISysABP</em></a> [Non-invasive systolic arterial blood pressure (mmHg)]</li>
+			</ul>
+			</td>
+			<td>
+			<ul>
+				<li><a href="http://en.wikipedia.org/wiki/Arterial_blood_gas"><em>PaCO2</em></a> [partial pressure of arterial CO<sub>2</sub> (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Arterial_blood_gas"><em>PaO2</em></a> [Partial pressure of arterial O<sub>2</sub> (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Arterial_blood_gas"><em>pH</em></a> [Arterial pH (0-14)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Platelets"><em>Platelets</em></a> (cells/nL)</li>
+				<li><a href="http://en.wikipedia.org/wiki/Respiratory_physiology"><em>RespRate</em></a> [Respiration rate (bpm)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Arterial_blood_gas"><em>SaO2</em></a> [O<sub>2</sub> saturation in hemoglobin (%)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Systolic_blood_pressure"><em>SysABP</em></a> [Invasive systolic arterial blood pressure (mmHg)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Normal_human_body_temperature"><em>Temp</em></a> [Temperature (&deg;C)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Troponin"><em>TropI</em></a> [Troponin-I (&mu;g/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Troponin"><em>TropT</em></a> [Troponin-T (&mu;g/L)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Fluid_balance"><em>Urine</em></a> [Urine output (mL)]</li>
+				<li><a href="http://en.wikipedia.org/wiki/Reference_ranges_for_blood_tests#Hematology"><em>WBC</em></a> [White blood cell count (cells/nL)]</li>
+				<li><em>Weight</em> (kg)<a href="https://physionet.org/challenge/2012/#weight"><sup>*</sup> </a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The time series measurements are recorded in chronological order within each record, and the associated time stamps indicate the elapsed time since admission to the ICU. Measurements may be recorded at regular intervals ranging from hourly to daily, or at irregular intervals as required. Not all time series are available in all cases.</p>
+
+<p>In a few cases, such as blood pressure, different measurements made using two or more methods or sensors may be recorded with the same or only slightly different time-stamps. Occasional outliers should be expected as well.</p>
+
+<p><a>&nbsp;<sup>*</sup></a> Note that <em>Weight</em> is both a general descriptor (recorded on admission) and a time series variable (often measured hourly, for estimating fluid balance).</p>
+
+<p>&nbsp;</p>
+
+<h3>Outcome-related Descriptors</h3>
+
+<p>The outcome-related descriptors are kept in a separate CSV text file for each of the three record sets; as noted, only the file associated with training set A is available to participants. Each line of the outcomes file contains these descriptors:</p>
+
+<ul>
+	<li><em>RecordID</em> (defined as above)</li>
+	<li><em>SAPS-I score</em> (<a href="http://www.ncbi.nlm.nih.gov/pubmed/6499483">Le Gall et al., 1984</a>)</li>
+	<li><em>SOFA score</em> (<a href="http://www.ncbi.nlm.nih.gov/pubmed/11594901">Ferreira et al., 2001</a>)</li>
+	<li><em>Length of stay</em> (days)</li>
+	<li><em>Survival</em> (days)</li>
+	<li><em>In-hospital death</em> (0: survivor, or 1: died in-hospital)</li>
+</ul>
+
+<p>The <em>Length of stay</em> is the number of days between the patient&#39;s admission to the ICU and the end of hospitalization (including any time spent in the hospital after discharge from the ICU). If the patient&#39;s death was recorded (in or out of hospital), then <em>Survival</em> is the number of days between ICU admission and death; otherwise, <em>Survival</em> is assigned the value -1. Since patients who spent less than 48 hours in the ICU have been excluded, <em>Length of stay</em> and <em>Survival</em> never have the values 0 or 1 in the challenge data sets. Given these definitions and constraints,</p>
+
+<p><em>Survival</em> &gt; <em>Length of stay</em>&nbsp;&nbsp;&rArr;&nbsp;&nbsp;Survivor<br>
+<em>Survival</em> = -1&nbsp;&nbsp;&rArr;&nbsp;&nbsp;Survivor<br>
+2 &le; <em>Survival</em> &le; <em>Length of stay</em>&nbsp;&nbsp;&rArr;&nbsp;&nbsp;In-hospital death</p>
+
+<p>&nbsp;</p>
+
+<h3>Entering the Challenge</h3>
+
+<p>To begin, we recommend studying the training set as preparation for the Challenge itself. In particular, note that the SAPS-I score can be calculated readily from the time series, as the sample entries below do. To succeed in the Challenge, you should aim to outperform the sample entries (see Software below).</p>
+
+<p>All entries in the Challenge must be in the form of source code that analyses a single Challenge record, producing a prediction (0: survival, or 1: in-hospital death) and an estimate of the risk of death (as a number between 0 and 1, where 0 is certain survival and 1 is certain death).</p>
+
+<p>Your entry may be written in portable (ANSI/ISO) C or MATLAB/Octave m-code; other languages, such as Java, Perl, and R, may be acceptable (see special requirements for entries in other languages below), but please ask us first, and do so no later than <strong>7 April 2012</strong>. Entries must accept properly-formatted input and produce properly-formatted output, either as physionet2012.m does (if written in m-code), or as physionet2012.c does (otherwise).</p>
+
+<p>Acceptable entries are evaluated and scored by PhysioNet using an automated test framework, two versions of which are also available to participants for testing their entries unofficially prior to submitting them. The framework starts execution of an entry, supplies data from a single Challenge record, and collects the entry&#39;s analysis for that record; this process is a &quot;run&quot;. The framework performs a separate run for each of the 4000 records in set B or set C.</p>
+
+<p><em>Entries will be restarted for each run (each test record); they may not store information for use in later runs (for example, by writing files to be read later, or, in MATLAB entries, by setting global variables). Entries may include files that may be read but not modified during the test.</em></p>
+
+<p>Awards will be presented to the most successful eligible participants during <a href="http://www.cinc.org/">Computing in Cardiology</a> (CinC) 2012. To be eligible for an award, you must:</p>
+
+<ol>
+	<li>Submit a preliminary Challenge entry via PhysioNet&nbsp;no later than <strong>25 April 2012</strong>. (The period before this deadline is Phase 1.) You may submit <strong>up to five Phase 1 entries</strong> before this deadline. (Use them or lose them!) Each entry will receive scores for set B.</li>
+	<li>Submit an acceptable abstract on your work on the Challenge to <a href="http://www.cinc.org/">Computing in Cardiology</a> no later than <strong>1 May 2012</strong>. <em>Include a pair of set B scores for at least one preliminary entry in your abstract.</em> Please select &quot;PhysioNet/CinC Challenge&quot; as the topic of your abstract, so it can be identified easily by the abstract review committee.</li>
+	<li>Submit a final Challenge entry via PhysioNet&nbsp;during Phase 2 (on or after <strong>1 June</strong> but no later than <strong>25 August 2012</strong>). You may submit <strong>up to five Phase 2 entries</strong> between 26 April and 25 August. Each entry will receive scores for set B.</li>
+	<li>Select one of your previously submitted Phase 1 or Phase 2 entries for testing using set C. If you have not made a choice before <strong>26 August 2012</strong>, we will test the entry that received the best event 1 score for set B. The set C scores will determine the final rankings of the entries, with the top-ranked entries in each event eligible for awards.</li>
+	<li>Submit a full (4-page) paper on your work on the Challenge to CinC no later than <strong>1 September 2012</strong>.</li>
+	<li>Attend CinC 2012 (<strong>9-12 September 2012</strong>, in Krakow, Poland) and present your work there.</li>
+</ol>
+
+<p>An important goal of this Challenge, and of others in the annual series of PhysioNet/CinC Challenges, is to accelerate progress on the Challenge questions, not only during the limited period of the Challenge, but also afterward. In pursuit of this goal, we strongly encourage participants to submit open-source entries that will be made freely available after the conclusion of the Challenge via PhysioNet. If your entry is not intended as an open-source entry, please state this clearly within its first few lines.</p>
+
+<p>Eligible authors of the entries that receive the best set C scores in each Challenge event will receive award certificates during the closing plenary session of CinC on 12 September 2012. In recognition of their contributions to further work on the Challenge problem, eligible authors of the open-source entries that receive the best set C scores will also receive monetary awards. No team or individual will receive more than one such monetary award. <a>&nbsp;</a></p>
+
+<p>&nbsp;</p>
+
+<h3>Sample entries, test frameworks, and sample results</h3>
+
+<p>We have provided sample entries written in MATLAB m-code and in C, test frameworks that can be used for batch-processing a set of Challenge data using a sample entry or your own entry, code for calculating unofficial scores, as well as the outputs of the sample entries for set A. Use this software to test your entry before submitting it, to verify that it can accept properly-formatted input and produce properly-formatted output. If you wish, you may in

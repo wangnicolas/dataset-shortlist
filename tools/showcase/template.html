@@ -1,0 +1,774 @@
+<title>dataset-shortlist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Look: a field catalogue. Warm paper, ink, one stamp green. The replay stage carries the page. */
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --stage:#f3f1ec; --ink:#15171a; --muted:#666c75; --line:#e2dfd7;
+  --accent:#0f7a55; --accent-soft:#e2f1ea; --warn:#9a5c00; --warn-soft:#f6ecd9; --stop:#b3352a; --stop-soft:#f8e4e1;
+  --dot:#c6c2b8; --dotdim:#e6e3dc; --btn:#15171a; --btn-ink:#ffffff;
+  --head:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Noto Sans",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0e1012; --panel:#16181b; --stage:#1b1e22; --ink:#eceef0; --muted:#9aa1ab; --line:#2a2e34;
+  --accent:#3ecf8e; --accent-soft:#12382a; --warn:#e3a23c; --warn-soft:#3a2c12; --stop:#ff8a7a; --stop-soft:#3d1c18;
+  --dot:#565c66; --dotdim:#2d3138; --btn:#eceef0; --btn-ink:#0e1012; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0e1012; --panel:#16181b; --stage:#1b1e22; --ink:#eceef0; --muted:#9aa1ab; --line:#2a2e34;
+  --accent:#3ecf8e; --accent-soft:#12382a; --warn:#e3a23c; --warn-soft:#3a2c12; --stop:#ff8a7a; --stop-soft:#3d1c18;
+  --dot:#565c66; --dotdim:#2d3138; --btn:#eceef0; --btn-ink:#0e1012; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono)}
+
+/* navigation */
+.nav{display:flex;align-items:center;gap:20px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:10px;font:600 16px/1 var(--head);text-decoration:none;letter-spacing:-.01em}
+.brand svg{width:22px;height:22px;color:var(--accent)}
+.nav nav{display:flex;gap:26px;margin:0 auto;font-size:14.5px}
+.nav nav a{text-decoration:none;color:var(--muted)} .nav nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--btn);color:var(--btn-ink);border:0;border-radius:999px;padding:11px 20px;font:500 15px/1 var(--body);text-decoration:none;cursor:pointer}
+.btn.small{padding:9px 16px;font-size:14px}
+@media (max-width:760px){ .nav nav{display:none} .nav .btn{margin-left:auto} }
+
+/* hero */
+.hero{text-align:center;padding-block:56px 44px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;text-decoration:none;background:var(--panel)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:block}
+h1{font:600 clamp(40px,7.4vw,84px)/1.02 var(--head);letter-spacing:-.04em;margin:26px auto 22px;max-width:13ch;text-wrap:balance}
+.sub{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:46ch;margin:0 auto 30px;text-wrap:balance}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+.cmd{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);padding:6px 6px 6px 18px;font:13.5px/1 var(--mono);max-width:100%}
+.cmd code{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.cmd b{color:var(--accent);font-weight:500}
+.cmd button{border:0;background:var(--stage);border-radius:999px;padding:8px 12px;font:500 12.5px/1 var(--body);cursor:pointer}
+.tiny{font-size:13.5px;color:var(--muted);margin-top:16px}
+
+/* the stage */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 16px}
+.tab{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--btn);color:var(--btn-ink);border-color:var(--btn)}
+.stage{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(20,22,26,.35)}
+.stage-body{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);min-height:540px}
+.left{padding:26px 24px;border-right:1px solid var(--line);min-width:0;display:flex;flex-direction:column;gap:14px}
+.label{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.prompt{background:var(--stage);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.5;min-height:120px}
+.prompt .mark{color:var(--accent);font-family:var(--mono);margin-right:6px}
+.caret{display:inline-block;width:7px;height:16px;background:var(--ink);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.reqs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.reqs li{display:flex;gap:10px;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.reqs li.on{opacity:1;transform:none}
+.rid{flex:none;font:500 11px/1 var(--mono);border-radius:6px;padding:5px 6px;height:max-content;background:var(--btn);color:var(--btn-ink)}
+.rid.nice{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.right{position:relative;min-width:0;display:flex;flex-direction:column}
+.head{padding:24px 28px 6px}
+.head h3{font:600 clamp(22px,2.6vw,30px)/1.15 var(--head);letter-spacing:-.02em;margin:0 0 6px}
+.head p{margin:0;color:var(--muted);font-size:14.5px}
+.panels{position:relative;flex:1;min-height:380px}
+.panel{position:absolute;inset:0;padding:14px 28px 22px;opacity:0;visibility:hidden;transition:opacity .35s;overflow:hidden}
+.stage[data-step="1"] .p-field,.stage[data-step="2"] .p-field,.stage[data-step="3"] .p-field,
+.stage[data-step="4"] .p-access,.stage[data-step="5"] .p-fit,.stage[data-step="6"] .p-answer{opacity:1;visibility:visible}
+
+/* field of candidate records */
+.p-field{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:start}
+.field{width:100%;height:auto;display:block}
+.field .cname{font:500 11px var(--mono);fill:var(--muted);letter-spacing:.04em}
+.field .ccount{font:600 15px var(--head);fill:var(--ink)}
+.dot{fill:var(--dot);transform-box:fill-box;transform-origin:center;transition:opacity .35s,transform .45s cubic-bezier(.2,1.4,.4,1),fill .35s}
+.stage[data-step="1"] .dot{opacity:0;transform:scale(.1)}
+.stage[data-step="3"] .dot{fill:var(--dotdim)}
+.stage[data-step="3"] .dot.ok{fill:var(--accent);transform:scale(1.75)}
+.stage[data-step="3"] .dot.bad{fill:var(--stop);transform:scale(1.75)}
+.dot.extra{opacity:0} .stage[data-step="3"] .dot.extra{opacity:1}
+.side{min-width:0;font-size:13px}
+.side .label{margin-bottom:10px;display:block}
+.side ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.side .qs,.side .vs{display:none}
+.stage[data-step="1"] .side .idle,.stage[data-step="2"] .side .qs,.stage[data-step="3"] .side .vs{display:block}
+.side .idle{color:var(--muted);display:none}
+.q{font:12.5px var(--mono);background:var(--stage);border-radius:8px;padding:7px 10px;width:max-content;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v{display:flex;gap:8px;align-items:baseline;line-height:1.35}
+.v b{flex:none;font:600 10px/1 var(--mono);letter-spacing:.08em;border:1.5px solid currentColor;border-radius:4px;padding:3px 5px;color:var(--accent)}
+.v.bad b{color:var(--stop)}
+.v span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.stage[data-step="2"] .q,.stage[data-step="3"] .v,.stage[data-step="4"] .card,.stage[data-step="5"] .frow,.stage[data-step="6"] .arow,.stage[data-step="6"] .afoot{animation:rise .5s both;animation-delay:calc(var(--i,0)*70ms)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* access lanes */
+.lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;height:100%;align-content:start}
+.lane h4{margin:0 0 10px;font:600 13px/1.2 var(--body);display:flex;align-items:center;gap:8px}
+.lane h4 small{font:500 12px var(--mono);color:var(--muted)}
+.lane .stack{display:flex;flex-direction:column;gap:8px}
+.card{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--bg);min-width:0}
+.card strong{display:block;font:600 13px/1.3 var(--body);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.card small{display:block;font:11.5px var(--mono);color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.badge{display:inline-flex;align-items:center;gap:6px;font:600 11.5px/1 var(--body);border-radius:6px;padding:5px 8px;margin-top:8px;background:var(--stage);color:var(--muted)}
+.badge svg{width:13px;height:13px;flex:none}
+.badge.go{background:var(--accent-soft);color:var(--accent)} .badge.wait{background:var(--warn-soft);color:var(--warn)} .badge.stop{background:var(--stop-soft);color:var(--stop)}
+
+/* fit grid */
+.fit{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.frow{display:grid;grid-template-columns:22px minmax(0,1fr) repeat(var(--n),34px) 70px;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid var(--line)}
+.frow.hd{border-bottom:0;padding-bottom:2px;color:var(--muted);font:500 11px var(--mono);animation:none}
+.frow .rk{font:500 12px var(--mono);color:var(--muted)}
+.frow .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.cell{justify-self:center;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--line)}
+.cell.met{background:var(--accent);box-shadow:none}
+.cell.partial{background:linear-gradient(90deg,var(--accent) 50%,transparent 50%);box-shadow:inset 0 0 0 2px var(--accent)}
+.cell.unmet{box-shadow:inset 0 0 0 2px var(--stop)}
+.fitword{justify-self:end;font:600 11.5px var(--body);color:var(--muted)} .fitword.strong{color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;color:var(--muted);font-size:12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+
+/* answer */
+.answer{display:flex;flex-direction:column;gap:6px}
+.arow{display:grid;grid-template-columns:26px minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.arow .rk{font:600 15px var(--head)} .arow .nm{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arow .badge{margin:0}
+.afoot{margin-top:10px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.afoot p{margin:0;font-size:13px;color:var(--muted);flex:1 1 240px}
+.linkbtn{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font:500 13.5px/1 var(--body);text-decoration:none;background:var(--panel)}
+
+/* stage bar */
+.bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-top:1px solid var(--line);background:var(--bg)}
+.round{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;cursor:pointer;flex:none}
+.round svg{width:14px;height:14px}
+.steps{display:flex;gap:6px;flex:1;min-width:0;list-style:none;margin:0;padding:0}
+.steps button{width:100%;border:0;background:none;padding:6px 4px 0;cursor:pointer;text-align:left;font:500 12.5px/1.2 var(--body);color:var(--muted);border-top:3px solid var(--line)}
+.steps li{flex:1;min-width:0}
+.steps button i{font:500 10.5px var(--mono);font-style:normal;display:block;margin-bottom:3px}
+.steps li.done button{border-top-color:var(--ink)} .steps li.now button{border-top-color:var(--accent);color:var(--ink)}
+.count{font:500 12.5px var(--mono);color:var(--muted);flex:none}
+.cap{font-size:13px;color:var(--muted);text-align:center;margin:14px auto 0;max-width:70ch}
+@media (max-width:860px){
+  .stage-body{grid-template-columns:1fr}
+  .left{border-right:0;border-bottom:1px solid var(--line)}
+  .prompt{min-height:0}
+  .p-field{grid-template-columns:1fr}
+  .panels{min-height:520px}
+  .steps button{font-size:0} .steps button i{font-size:10.5px}
+  .frow{grid-template-columns:18px minmax(0,1fr) repeat(var(--n),22px) 0}
+  .fitword{display:none}
+}
+
+/* sections */
+section{padding-block:72px 8px}
+.eyebrow{font:500 13.5px/1 var(--body);color:var(--accent);text-align:center;margin:0 0 14px}
+h2{font:600 clamp(30px,4.6vw,50px)/1.06 var(--head);letter-spacing:-.035em;text-align:center;margin:0 auto 14px;max-width:18ch;text-wrap:balance}
+.lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 36px;text-wrap:balance}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.box{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:24px;min-width:0}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--stage);font:500 11.5px var(--mono);margin-bottom:18px}
+.box h3{font:600 18px/1.25 var(--head);letter-spacing:-.01em;margin:0 0 6px}
+.box p{margin:0;color:var(--muted);font-size:14.5px}
+.snip{margin-top:16px;background:var(--stage);border-radius:12px;padding:12px 14px;font:12.5px/1.6 var(--mono);overflow:hidden}
+.snip div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.snip b{color:var(--accent);font-weight:500} .snip .dim{color:var(--muted)}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.tile{border:1px solid var(--line);border-radius:18px;background:var(--panel);overflow:hidden;min-width:0;display:flex;flex-direction:column}
+.tile .demo{background:var(--stage);padding:22px;min-height:230px;flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.tile .txt{padding:18px 22px 22px}
+.tile h3{font:600 17px/1.25 var(--head);margin:0 0 4px} .tile p{margin:0;color:var(--muted);font-size:14px}
+.w6{grid-column:span 6} .w4{grid-column:span 4} .w3{grid-column:span 3} .w2{grid-column:span 2}
+@media (max-width:900px){ .three{grid-template-columns:1fr} .w4,.w3,.w2{grid-column:span 6} }
+
+/* demo: verifier */
+.vgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:900px){ .vgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.vcard{position:relative;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:12px 12px 12px;min-height:96px;font-size:13px;line-height:1.35;overflow:hidden}
+.vcard em{display:block;font:11.5px/1.4 var(--mono);font-style:normal;color:var(--muted);margin-top:6px;opacity:0;transition:opacity .3s}
+.vcard .stamp{position:absolute;right:10px;bottom:10px;font:700 10px/1 var(--mono);letter-spacing:.1em;border:2px solid currentColor;border-radius:5px;padding:5px 6px;color:var(--accent);transform:rotate(-8deg) scale(2.2);opacity:0;transition:transform .28s cubic-bezier(.2,1.6,.4,1),opacity .15s}
+.vcard.bad .stamp{color:var(--stop)}
+.vcard.done .stamp{opacity:1;transform:rotate(-8deg) scale(1)} .vcard.done em{opacity:1}
+.vcard.done.bad{background:var(--stop-soft);border-color:transparent}
+.demo .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ghost{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 14px;font:500 13px/1 var(--body);cursor:pointer}
+
+/* demo: unit dots and ladder */
+.units{display:flex;flex-wrap:wrap;gap:5px}
+.units i{width:11px;height:11px;border-radius:50%;background:var(--dotdim);display:block}
+.units i.on{background:var(--accent)} .units i.w{background:var(--warn)} .units i.s{background:var(--stop)} .units i.n{background:var(--dot)}
+.units.sq i{border-radius:3px}
+.urow{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.urow b{font:600 14px var(--head)} .urow span{font-size:12.5px;color:var(--muted)}
+.ladder{display:flex;flex-direction:column;gap:6px}
+.rung{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:8px 10px;font-size:13px;cursor:pointer;text-align:left}
+.rung svg{width:15px;height:15px;flex:none}
+.rung b{font-weight:600} .rung small{margin-left:auto;font:500 12px var(--mono);color:var(--muted)}
+.rung[aria-pressed="true"]{border-color:var(--ink)}
+.meaning{font-size:13px;color:var(--muted);min-height:38px}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.frame .chrome{display:flex;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line)}
+.frame .chrome i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.frame img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;object-position:top}
+
+/* evidence */
+.subhead{font:600 22px/1.2 var(--head);letter-spacing:-.015em;text-align:center;margin:44px 0 10px}
+.tally{display:flex;gap:6px;margin:14px 0 6px} .tally.center{justify-content:center;margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px} .chips span{font:500 11.5px var(--mono);border-radius:999px;padding:5px 10px;background:var(--accent-soft);color:var(--accent)}
+.chips.none span{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.tally i{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font:600 12px var(--mono);font-style:normal}
+.tally .up{background:var(--accent-soft);color:var(--accent)} .tally .eq{background:var(--stage);color:var(--muted)} .tally .dn{background:var(--stop-soft);color:var(--stop)}
+.qs10{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}
+.qt{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px;min-width:0}
+.qt h4{margin:0 0 10px;font:500 12.5px/1.3 var(--body);color:var(--muted);min-height:3.9em}
+.qt svg{width:100%;height:54px;display:block}
+.qt .d{font:600 20px/1 var(--head);margin-top:8px}
+.qt .d small{font:500 11.5px var(--mono);color:var(--muted);margin-left:6px}
+.qt.up .d{color:var(--accent)} .qt.dn .d{color:var(--stop)}
+@media (max-width:900px){ .qs10{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.more{text-align:center;margin-top:26px;font-size:14.5px}
+
+/* faq and close */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font:500 17px/1.3 var(--head);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font:400 22px/1 var(--body);color:var(--muted)} .faq details[open] summary::after{content:"\2212"}
+.faq p{color:var(--muted);margin:12px 0 0;max-width:68ch}
+.close{margin-block:72px 0;background:var(--stage);border:1px solid var(--line);border-radius:22px;padding:64px 24px;text-align:center}
+.close h2{margin-bottom:12px}
+footer{padding-block:44px 64px;color:var(--muted);font-size:13.5px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer p{margin:0;max-width:70ch}
+@media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} .caret{display:none} }
+details.fine{max-width:760px;margin:22px auto 0;text-align:center}
+details.fine summary{cursor:pointer;color:var(--muted);font-size:13px;list-style:none}
+details.fine summary::after{content:" +"}
+details.fine[open] summary::after{content:" \2212"}
+details.fine summary::-webkit-details-marker{display:none}
+details.fine p{margin-top:10px;text-align:left}
+.ugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:16px}
+.ugrid .qt h4{min-height:0;color:var(--fg, inherit);font-weight:600}
+.ugrid .qt{display:grid;gap:10px;align-content:start}
+.ugrid .qt .d{margin-top:2px}
+.lb{display:grid;gap:10px;max-width:780px;margin:22px auto 0}
+.lbt{margin:0;font:600 14px var(--head);text-align:left}
+.lbrow{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,2fr) minmax(112px,auto);gap:12px;align-items:center}
+.lbrow b{font:500 14px var(--body)} .lbrow span{font:500 12px var(--mono);color:var(--muted);text-align:right}
+.lbbar{height:14px;border-radius:7px;background:var(--dotdim);overflow:hidden}
+.lbbar i{display:block;height:100%;border-radius:7px;background:var(--accent)}
+.lbrow.base .lbbar i{background:var(--dot)}
+@media (max-width:560px){ .lbrow{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .lbrow span{grid-column:1 / -1;text-align:left} }
+#usage{display:block}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:stretch;text-align:left}
+@media (max-width:820px){ .ba{grid-template-columns:minmax(0,1fr)} }
+.bacard{border:1px solid var(--line);border-radius:18px;background:var(--panel);display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.bacard.skill{border-color:var(--accent)}
+.bahead{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.bahead b{font:600 15px var(--head);margin-right:auto}
+.batag{font:500 11.5px var(--mono);border-radius:999px;padding:4px 9px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+.bacard.skill .batag{background:var(--accent-soft);color:var(--accent);box-shadow:none}
+.babody{padding:14px 16px;font-size:13.5px;line-height:1.5;position:relative;max-height:310px;overflow:hidden}
+.babody.open{max-height:none}
+.babody:not(.open)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(transparent,var(--panel))}
+.babody h4{font:600 13.5px var(--head);margin:12px 0 6px} .babody h4:first-child{margin-top:0} .babody p{margin:0 0 8px} .babody ul{margin:0 0 8px;padding-left:18px} .babody li{margin:2px 0}
+.babody .tw{overflow-x:auto} .babody table{border-collapse:collapse;width:100%;font-size:12.5px;margin:0 0 10px}
+.babody th,.babody td{text-align:left;vertical-align:top;padding:6px 10px 6px 0;border-bottom:1px solid var(--line)}
+.babody th{font:600 10.5px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.babody code{font:500 12px var(--mono)} .babody a{color:inherit}
+.bafoot{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding:12px 16px;border-top:1px solid var(--line);margin-top:auto}
+.bafoot strong{font:600 26px/1 var(--head)} .bacard.skill .bafoot strong{color:var(--accent)} .bafoot span{font-size:12.5px;color:var(--muted)} .bafoot button{margin-left:auto}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px;text-align:center}
+@media (max-width:700px){ .nums{grid-template-columns:minmax(0,1fr);gap:28px} }
+.num3 strong{display:block;font:600 clamp(40px,6vw,60px)/1 var(--head);letter-spacing:-.03em;color:var(--accent)}
+.num3 em{display:block;font:500 13px var(--mono);font-style:normal;color:var(--muted);margin-top:8px}
+.num3 b{display:block;font:600 15px var(--head);margin-top:10px}
+.num3 small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.chartbox{margin:22px auto 0;max-width:840px;overflow-x:auto}
+.chartbox svg{display:block;width:100%;min-width:560px;height:auto}
+.chartbox figcaption{font-size:13.5px;color:var(--muted);text-align:center;margin-top:10px}
+.cx{font:500 11.5px var(--mono);fill:var(--muted)} .cl{font:600 12.5px var(--head);fill:currentColor} .clm{font:500 12px var(--body);fill:var(--muted)}
+.navend{display:inline-flex;align-items:center;gap:10px}
+#theme svg{width:16px;height:16px}
+@media (max-width:760px){ .navend{margin-left:auto} }
+.thumb{display:block;position:relative;margin-top:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden;height:104px;text-decoration:none}
+.thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.thumb span{position:absolute;right:8px;bottom:8px;font:500 11.5px var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 9px}
+</style>
+
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="dataset-shortlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="m7.8 10.6 1.9 1.9 3.6-3.8"/></svg>
+      dataset-shortlist
+    </a>
+    <nav aria-label="Sections"><a href="#replay">Demo</a><a href="#compare">Compare</a><a href="#how">How it works</a><a href="#benchmark">Benchmark</a><a href="#faq">FAQ</a></nav>
+    <span class="navend"><button class="round" id="theme" type="button" aria-label="Switch theme"></button><a class="btn small" href="#start">Get started</a></span>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <a class="pill" href="#benchmark"><i></i><span id="pill-text">See the benchmark</span> <span aria-hidden="true">&rarr;</span></a>
+      <h1>Find research data you can actually get.</h1>
+      <p class="sub" id="herosub">A Claude Code skill that looks datasets up, says how to get them and marks what it checked.</p>
+      <div class="actions">
+        <a class="btn" href="#replay">Watch a real run</a>
+        <span class="cmd"><code><b>$</b> <span id="cmd1"></span></code><button type="button" data-copy="cmd1">Copy</button></span>
+      </div>
+      <p class="tiny" id="cmd-note"></p>
+    </div>
+
+    <div id="replay">
+      <div class="tabs" role="tablist" aria-label="Recorded runs" id="tabs"></div>
+      <div class="stage" id="stage" data-step="1">
+        <div class="stage-body">
+          <div class="left">
+            <span class="label">The question</span>
+            <div class="prompt"><span class="mark">&rsaquo;</span><span id="qtext"></span><span class="caret" id="caret"></span></div>
+            <span class="label">What it has to have</span>
+            <ul class="reqs" id="reqs"></ul>
+          </div>
+          <div class="right">
+            <div class="head" aria-live="polite"><h3 id="h3"></h3><p id="hp"></p></div>
+            <div class="panels">
+              <div class="panel p-field">
+                <svg class="field" id="field" viewBox="0 0 480 392" role="img" aria-label="Candidate records, one dot each, grouped by the registry they came from"></svg>
+                <div class="side">
+                  <div class="idle"><span class="label">Registries</span><span id="idletext"></span></div>
+                  <div class="qs"><span class="label">Searches it ran</span><ul id="qs"></ul></div>
+                  <div class="vs"><span class="label">The verifier said</span><ul id="vs"></ul></div>
+                </div>
+              </div>
+              <div class="panel p-access"><div class="lanes" id="lanes"></div></div>
+              <div class="panel p-answer"><div class="answer" id="answer"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <button class="round" id="play" type="button" aria-label="Pause"></button>
+          <ol class="steps" id="steps"></ol>
+          <span class="count" id="count">01 / 05</span>
+          <button class="round" id="prev" type="button" aria-label="Previous step"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></button>
+          <button class="round" id="next" type="button" aria-label="Next step"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></svg></button>
+        </div>
+      </div>
+      <p class="cap" id="cap"></p>
+    </div>
+
+    <section id="compare">
+      <p class="eyebrow">Compare</p>
+      <h2>Same question. Different answer.</h2>
+      <p class="lead" id="baq"></p>
+      <div class="ba" id="ba"></div>
+      <p class="tiny" style="text-align:center" id="banote"></p>
+      <div class="nums" id="nums"></div>
+    </section>
+
+    <section id="how">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps to a shortlist.</h2>
+      <p class="lead">No commands to learn.</p>
+      <div class="three">
+        <div class="box"><span class="num">01</span><h3>Ask in plain words</h3><p>Say what you want to study.</p>
+          <div class="snip"><div><b>&rsaquo;</b> I want to predict sepsis onset in adult</div><div>&nbsp;&nbsp;ICU patients. What can I start on</div><div>&nbsp;&nbsp;this week?</div></div></div>
+        <div class="box"><span class="num">02</span><h3>It searches, then checks</h3><p>It looks up what it can and marks the rest as recalled.</p>
+          <div class="snip" id="snip2"></div></div>
+        <div class="box"><span class="num">03</span><h3>Pick from the shortlist</h3><p>Ranked, with how to get each one.</p>
+          <a class="thumb" id="pagelink" href="#"><img id="pageshot" alt="A shortlist page written by the skill during the evaluation" loading="lazy"><span>Open a page it wrote</span></a></div>
+      </div>
+    </section>
+
+    <section id="benchmark">
+      <p class="eyebrow">Benchmark</p>
+      <h2 id="benchh2">Accuracy against usage.</h2>
+      <p class="lead" id="benchlead"></p>
+      <figure class="chartbox"><svg id="chart" viewBox="0 0 760 400" role="img"></svg><figcaption id="chartcap"></figcaption></figure>
+      <p class="tiny" style="text-align:center;margin-top:10px" id="benchnote"></p>
+      <p class="tiny" style="text-align:center;margin-top:6px" id="ruleline"></p>
+      <details class="fine"><summary>Small print</summary><p class="cap" id="smallprint"></p></details>
+      <p class="more" id="morelinks"><a href="evidence.html">Full evidence</a></p>
+    </section>
+
+    <section id="faq">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions, answered.</h2>
+      <div class="faq" id="faqs"></div>
+    </section>
+
+    <div class="close" id="start">
+      <h2>Scout your next dataset.</h2>
+      <p class="lead" style="margin-bottom:26px">Open source under MIT: Python 3.9 or newer, standard library only, no keys needed.</p>
+      <div class="actions"><span class="cmd"><code><b>$</b> <span id="cmd2"></span></code><button type="button" data-copy="cmd2">Copy</button></span></div>
+      <p class="tiny" id="cmd-note2"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Builds on data-aggregator-mcp, Mobus, DataFinder, DatasetResearch and karpathy/autoresearch.</p>
+    <p>MIT licence.</p>
+  </footer>
+</div>
+
+<script type="application/json" id="sc-data">__DATA_JSON__</script>
+<script>
+(function(){
+  'use strict';
+  var DATA = JSON.parse(document.getElementById('sc-data').textContent);
+  var RUNS = DATA.runs, EV = DATA.evidence;
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function $(id){ return document.getElementById(id); }
+  function el(tag, attrs, kids){
+    var n = document.createElement(tag), k;
+    for (k in (attrs || {})) { if (k === 'text') n.textContent = attrs[k]; else if (k === 'cls') n.className = attrs[k]; else n.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function(c){ n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return n;
+  }
+  function svg(tag, attrs){ var n = document.createElementNS(SVGNS, tag), k; for (k in attrs) n.setAttribute(k, attrs[k]); return n; }
+  function clear(n){ while (n.firstChild) n.removeChild(n.firstChild); return n; }
+  function pct(x){ return Math.round(100 * x) + '%'; }
+  function plural(n, one, many){ return n + ' ' + (n === 1 ? one : many); }
+
+  var ICONS = {
+    open: 'M8 2v8m0 0 3-3m-3 3L5 7M3 13h10',
+    account: 'M8 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM3 13.5c.6-2.2 2.6-3.5 5-3.5s4.4 1.3 5 3.5',
+    gated: 'M4 2.5h8v11H4zM6 5.5h4M6 8h4M6 10.5h2.5',
+    controlled: 'M2.5 13.5h11M4 13.5V6.5M8 13.5V6.5M12 13.5V6.5M2.5 6.5 8 2.5l5.5 4',
+    closed: 'M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12ZM3.8 3.8l8.4 8.4',
+    unknown: 'M6 6.2a2 2 0 1 1 3 1.7c-.7.4-1 .8-1 1.6M8 12v.2'
+  };
+  var TONE = { open: 'go', account: 'go', gated: 'wait', controlled: 'wait', closed: 'stop', unknown: '' };
+  function icon(tier){
+    var s = svg('svg', { viewBox: '0 0 16 16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'aria-hidden': 'true' });
+    s.appendChild(svg('path', { d: ICONS[tier] || ICONS.unknown }));
+    return s;
+  }
+  function badge(tier, label){ var b = el('span', { cls: 'badge ' + (TONE[tier] || '') }); b.appendChild(icon(tier)); b.appendChild(document.createTextNode(label)); return b; }
+
+  // ---------------------------------------------------------------- install commands
+  $('cmd1').textContent = DATA.install.command; $('cmd2').textContent = DATA.install.command;
+  $('cmd-note').textContent = DATA.install.note; $('cmd-note2').textContent = DATA.install.note;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function(b){
+    b.addEventListener('click', function(){
+      var node = $(b.getAttribute('data-copy')), text = node.textContent;
+      function done(){ var old = b.textContent; b.textContent = 'Copied'; setTimeout(function(){ b.textContent = old; }, 1300); }
+      function select(){ var r = document.createRange(); r.selectNodeContents(node); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, select); else select();
+    });
+  });
+
+  // ---------------------------------------------------------------- light and dark
+  var rootEl = document.documentElement, themeBtn = $('theme');
+  var SUN = 'M8 5.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM8 1.5v1.3M8 13.2v1.3M1.5 8h1.3M13.2 8h1.3M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9';
+  var MOON = 'M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8a5.6 5.6 0 1 0 6.8 6.8Z';
+  function themeNow(){ var t = rootEl.getAttribute('data-theme'); if (t === 'light' || t === 'dark') return t; return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  function paintTheme(){
+    var dark = themeNow() === 'dark', s = svg('svg', { viewBox: '0 0 16 16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'aria-hidden': 'true' });
+    s.appendChild(svg('path', { d: dark ? SUN : MOON })); clear(themeBtn).appendChild(s);
+    themeBtn.setAttribute('aria-label', dark ? 'Switch to the light theme' : 'Switch to the dark theme');
+  }
+  try { var savedTheme = localStorage.getItem('theme'); if (savedTheme === 'light' || savedTheme === 'dark') rootEl.setAttribute('data-theme', savedTheme); } catch (e) {}
+  themeBtn.addEventListener('click', function(){ var next = themeNow() === 'dark' ? 'light' : 'dark'; rootEl.setAttribute('data-theme', next); try { localStorage.setItem('theme', next); } catch (e) {} paintTheme(); });
+  paintTheme();
+
+  // ---------------------------------------------------------------- the replay stage
+  var STEP_NAMES = ['Ask', 'Search', 'Verify', 'Access', 'Answer'], LAST = STEP_NAMES.length, PANEL = [0, 1, 2, 3, 4, 6];   // the stage keeps its panel numbers
+  var state = { run: 0, step: 1, playing: !REDUCED, timer: null, typed: false, typeTimer: null };
+  var stage = $('stage');
+
+  function headline(run, step){
+    var must = run.requirements.filter(function(r){ return r.must; }).length, nice = run.requirements.length - must;
+    var free = run.datasets.filter(function(d){ return d.tier === 'open' || d.tier === 'account'; }).length;
+    var apply = run.datasets.filter(function(d){ return d.tier === 'gated' || d.tier === 'controlled'; }).length;
+    var other = run.datasets.length - free - apply;
+    var strong = run.datasets.filter(function(d){ return d.fit === 'strong'; }).length;
+    var regs = run.sources.filter(function(s){ return s.key !== 'manual'; }).length;
+    var mins = Math.floor(run.seconds / 60), secs = run.seconds % 60, parts = [];
+    switch (PANEL[step]) {
+      case 1: return ['It lists what the data must have.', plural(must, 'must-have', 'must-haves') + (nice ? ', ' + nice + ' nice to have' : '') + '.'];
+      case 2: return [run.candidates + ' candidate records.', 'One dot is one record, from ' + plural(run.queries.length, 'registry search', 'registry searches') + (run.sources.some(function(s){ return s.key === 'manual' && s.count; }) ? ' or found elsewhere.' : '.')];
+      case 3: return run.verified
+        ? [run.verified + ' of ' + run.checked + ' checked records verified.', 'Only the records it chose to look up are marked.']
+        : ['Nothing could be confirmed.', run.checked + ' records checked, none confirmed' + (run.note ? '; the answer says: \u201c' + String(run.note).split('. ')[0].replace(/\.$/, '') + '.\u201d' : '.')];
+      case 4:
+        if (free) parts.push(free + ' you can start on today');
+        if (apply) parts.push(apply + (apply === 1 ? ' needs' : ' need') + ' an application, an agreement or a fee');
+        if (other) parts.push(free || apply ? other + ' not established' : 'Access not established for any of the ' + other);
+        return [parts.join(', ') + '.', 'Access as the session wrote it, grouped by version 0.1.1.'];
+      case 5: return [strong + ' rated a strong fit.', 'Each requirement: met, partly met, not met or not established.'];
+      default: return ['A shortlist of ' + run.datasets.length + (run.set_aside.length ? ', ' + run.set_aside.length + ' set aside with the reason.' : '.'), 'This run took ' + (mins ? mins + ' min ' : '') + secs + ' s and ' + run.tool_calls + ' tool calls.'];
+    }
+  }
+
+  function buildField(run){
+    var field = clear($('field')), cols = 2, cellW = 240, cellH = 128, perRow = 18, gap = 12.4;
+    run.sources.forEach(function(src, index){
+      var x0 = (index % cols) * cellW + 6, y0 = Math.floor(index / cols) * cellH + 6;
+      var name = svg('text', { x: x0, y: y0 + 12, 'class': 'cname' }); name.textContent = src.name.toUpperCase(); field.appendChild(name);
+      var count = svg('text', { x: x0, y: y0 + 34, 'class': 'ccount' }); count.textContent = '0'; count.setAttribute('data-count', src.count); field.appendChild(count);
+      var marks = run.verify.filter(function(v){ return v.source === src.key; });
+      for (var i = 0; i < Math.max(src.count, marks.length); i++) {
+        var c = svg('circle', { cx: x0 + 5 + (i % perRow) * gap, cy: y0 + 52 + Math.floor(i / perRow) * gap, r: 4.6, 'class': 'dot' });
+        if (i < marks.length) c.setAttribute('class', 'dot ' + (marks[i].ok ? 'ok' : 'bad') + (i >= src.count ? ' extra' : ''));
+        c.style.transitionDelay = REDUCED ? '0ms' : Math.min(900, (index * 40 + i * 9)) + 'ms';
+        field.appendChild(c);
+      }
+    });
+  }
+
+  function buildRun(){
+    var run = RUNS[state.run];
+    // question and requirements
+    clearTimeout(state.typeTimer); $('qtext').textContent = ''; state.typed = false;
+    var reqs = clear($('reqs'));
+    run.requirements.slice(0, 5).forEach(function(r){ reqs.appendChild(el('li', {}, [el('span', { cls: 'rid' + (r.must ? '' : ' nice'), text: r.id, title: r.must ? 'must have' : 'nice to have' }), el('span', { text: r.text })])); });
+    if (run.requirements.length > 5) reqs.appendChild(el('li', {}, [el('span', { cls: 'rid nice', text: '+' + (run.requirements.length - 5) }), el('span', { text: 'more on the page' })]));
+    buildField(run);
+    var qs = clear($('qs')); run.queries.slice(0, 5).forEach(function(q, i){ var li = el('li', { cls: 'q', text: q }); li.style.setProperty('--i', i); qs.appendChild(li); });
+    var vs = clear($('vs')), shown = run.verify.slice(0, 5);
+    shown.forEach(function(v, i){ var li = el('li', { cls: 'v' + (v.ok ? '' : ' bad') }, [el('b', { text: v.ok ? 'VERIFIED' : 'NOT VERIFIED' }), el('span', { text: v.title })]); li.style.setProperty('--i', i); vs.appendChild(li); });
+    if (run.verify.length > shown.length) vs.appendChild(el('li', { cls: 'v', text: '' }, [el('span', { text: 'and ' + (run.verify.length - shown.length) + ' more' })]));
+    if (!run.verify.length) vs.appendChild(el('li', { text: 'The verifier found no record for any of them.' }));
+    // access lanes
+    var lanes = clear($('lanes')), groups = [['Start today', ['open', 'account']], ['Apply first', ['gated', 'controlled']], ['Not established', ['unknown', 'closed']]], n = 0;
+    groups.forEach(function(g){
+      var items = run.datasets.filter(function(d){ return g[1].indexOf(d.tier) >= 0; });
+      if (!items.length) return;
+      var stack = el('div', { cls: 'stack' });
+      items.slice(0, 5).forEach(function(d){ var card = el('div', { cls: 'card' }, [el('strong', { text: d.title }), el('small', { text: d.host + (d.licence ? ' · ' + d.licence : '') }), badge(d.tier, d.tier_label)]); card.style.setProperty('--i', n++); stack.appendChild(card); });
+      if (items.length > 5) stack.appendChild(el('small', { cls: 'tiny', text: 'and ' + (items.length - 5) + ' more' }));
+      lanes.appendChild(el('div', { cls: 'lane' }, [el('h4', {}, [g[0], el('small', { text: String(items.length) })]), stack]));
+    });
+    // answer
+    var ans = clear($('answer'));
+    run.datasets.slice(0, 5).forEach(function(d, i){ var row = el('div', { cls: 'arow' }, [el('span', { cls: 'rk', text: String(d.rank || i + 1) }), el('span', { cls: 'nm', text: d.title }), el('span', { cls: 'fitword ' + d.fit, text: d.fit.charAt(0).toUpperCase() + d.fit.slice(1) + ' fit' }), badge(d.tier, d.tier_label)]); row.style.setProperty('--i', i); ans.appendChild(row); });
+    var bits = [];
+    if (run.datasets.length > 5) bits.push('And ' + (run.datasets.length - 5) + ' more on the page');
+    if (run.set_aside.length) bits.push('Set aside: ' + run.set_aside[0].name + ' (' + String(run.set_aside[0].reason).replace(/\.\s*$/, '') + ').');
+    else if (run.note) bits.push(run.note);
+    var foot = el('div', { cls: 'afoot' }, [el('p', { text: bits.join(' · ') }), el('a', { cls: 'linkbtn', href: run.page, text: 'Open the page this run wrote ↗' })]);
+    foot.style.setProperty('--i', 7); ans.appendChild(foot);
+    $('cap').textContent = 'A recorded run, replayed from its files (' + run.origin + ').';
+    $('idletext').textContent = 'Next it searches ' + DATA.registries + ' dataset registries.';
+    Array.prototype.forEach.call($('tabs').children, function(t, i){ t.setAttribute('aria-selected', i === state.run ? 'true' : 'false'); t.tabIndex = i === state.run ? 0 : -1; });
+  }
+
+  function shortQuestion(text){
+    if (text.length <= 250) return text;
+    var cut = text.slice(0, 250), stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('? '));
+    return (stop > 90 ? cut.slice(0, stop + 1) : cut.slice(0, cut.lastIndexOf(' '))) + ' \u2026';
+  }
+  function typeQuestion(){
+    var run = RUNS[state.run], node = $('qtext'), text = shortQuestion(run.question), i = 0;
+    node.parentNode.title = run.question;
+    if (state.typed) return;
+    state.typed = true;
+    function showReqs(){ Array.prototype.forEach.call($('reqs').children, function(li, k){ setTimeout(function(){ li.className = 'on'; }, REDUCED ? 0 : 160 * k); }); }
+    if (REDUCED) { node.textContent = text; showReqs(); return; }
+    var chunk = Math.max(2, Math.round(text.length / 110));
+    (function tick(){ i += chunk; node.textContent = text.slice(0, i); if (i < text.length) state.typeTimer = setTimeout(tick, 18); else showReqs(); })();
+  }
+
+  function countUp(){
+    Array.prototype.forEach.call(document.querySelectorAll('#field [data-count]'), function(node){
+      var target = +node.getAttribute('data-count'), start = null;
+      if (REDUCED || state.step === 1) { node.textContent = state.step === 1 ? '0' : String(target); return; }
+      function frame(t){ if (start === null) start = t; var p = Math.min(1, (t - start) / 900); node.textContent = String(Math.round(target * p)); if (p < 1) requestAnimationFrame(frame); }
+      requestAnimationFrame(frame);
+    });
+  }
+
+  function setStep(step, fromUser){
+    var before = state.step;
+    state.step = Math.max(1, Math.min(LAST, step));
+    stage.setAttribute('data-step', PANEL[state.step]);
+    var h = headline(RUNS[state.run], state.step); $('h3').textContent = h[0]; $('hp').textContent = h[1];
+    $('count').textContent = '0' + state.step + ' / 0' + LAST;
+    Array.prototype.forEach.call($('steps').children, function(li, i){ li.className = i + 1 < state.step ? 'done' : (i + 1 === state.step ? 'now' : ''); li.firstChild.setAttribute('aria-current', i + 1 === state.step ? 'step' : 'false'); });
+    if (state.step === 1) typeQuestion(); else { clearTimeout(state.typeTimer); $('qtext').textContent = shortQuestion(RUNS[state.run].question); $('qtext').parentNode.title = RUNS[state.run].question; state.typed = true; Array.prototype.forEach.call($('reqs').children, function(li){ li.className = 'on'; }); }
+    if ((state.step === 2 && before < 2) || state.step === 1) countUp(); else if (state.step > 1) Array.prototype.forEach.call(document.querySelectorAll('#field [data-count]'), function(n){ n.textContent = n.getAttribute('data-count'); });
+    if (fromUser) pause(); else schedule();
+  }
+  var DURATION = [0, 6200, 4600, 5200, 5200, 0];
+  function schedule(){ clearTimeout(state.timer); if (state.playing && state.step < LAST) state.timer = setTimeout(function(){ setStep(state.step + 1); }, DURATION[state.step]); else if (state.step === LAST) { state.playing = false; paintPlay(); } }
+  function pause(){ state.playing = false; clearTimeout(state.timer); paintPlay(); }
+  function paintPlay(){
+    var b = clear($('play')), s = svg('svg', { viewBox: '0 0 16 16', fill: 'currentColor', 'aria-hidden': 'true' });
+    s.appendChild(svg('path', { d: state.playing ? 'M4 3h3v10H4zM9 3h3v10H9z' : 'M5 3l8 5-8 5z' })); b.appendChild(s);
+    b.setAttribute('aria-label', state.playing ? 'Pause' : (state.step === LAST ? 'Replay' : 'Play'));
+  }
+  function selectRun(index, autoplay){ state.run = index; buildRun(); state.playing = !!autoplay && !REDUCED; paintPlay(); setStep(1); }
+
+  RUNS.forEach(function(run, i){ var t = el('button', { cls: 'tab', type: 'button', role: 'tab', text: run.label }); t.addEventListener('click', function(){ selectRun(i, true); }); $('tabs').appendChild(t); });
+  STEP_NAMES.forEach(function(name, i){ var b = el('button', { type: 'button' }, [el('i', { text: '0' + (i + 1) }), name]); b.addEventListener('click', function(){ setStep(i + 1, true); }); $('steps').appendChild(el('li', {}, [b])); });
+  $('prev').addEventListener('click', function(){ setStep(state.step - 1, true); });
+  $('next').addEventListener('click', function(){ setStep(state.step + 1, true); });
+  $('play').addEventListener('click', function(){ if (state.playing) { pause(); return; } state.playing = true; paintPlay(); if (state.step === LAST) setStep(1); else schedule(); });
+  stage.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') { setStep(state.step + 1, true); e.preventDefault(); } if (e.key === 'ArrowLeft') { setStep(state.step - 1, true); e.preventDefault(); } });
+
+  // start: a recorded run and step can be asked for in the address (used for checking the page)
+  var params = {}; (location.search || '').replace(/^\?/, '').split('&').forEach(function(p){ var kv = p.split('='); if (kv[0]) params[kv[0]] = decodeURIComponent(kv[1] || ''); });
+  var startRun = Math.max(0, RUNS.map(function(r){ return r.id; }).indexOf(params.run || RUNS[0].id));
+  state.run = startRun; buildRun(); paintPlay();
+  if (params.step) { state.playing = false; REDUCED = true; setStep(+params.step, true); }
+  else {
+    state.playing = false; paintPlay(); setStep(1, true);
+    if (!REDUCED && 'IntersectionObserver' in window) {
+      var seen = false, io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting && !seen) { seen = true; state.playing = true; paintPlay(); schedule(); } }); }, { threshold: 0.35 });
+      io.observe(stage);
+    }
+  }
+
+  // ---------------------------------------------------------------- how it works snippets
+  var first = RUNS[0];
+  var s2 = $('snip2');
+  [['$', ' scout.py search "' + (first.queries[0] || 'sepsis ICU') + '"'], ['', first.candidates + ' candidates in the file'], ['$', ' scout.py verify --pick …'], ['', '✓ verified ' + first.verified + ' of ' + first.checked]].forEach(function(line){
+    var d = el('div', { cls: line[0] ? '' : 'dim' }); if (line[0]) d.appendChild(el('b', { text: line[0] })); d.appendChild(document.createTextNode(line[1])); s2.appendChild(d); });
+  $('pageshot').src = DATA.page_shot; $('pagelink').href = DATA.page_link;
+
+  // ---------------------------------------------------------------- same question, two recorded answers
+  function inline(text){
+    var out = [], re = /(\*\*[^*]+\*\*|\[[^\]]+\]\(https?:[^)\s]+\)|`[^`]+`|\*[^*\s][^*]*\*)/g, last = 0, m, t, close;
+    while ((m = re.exec(text))) {
+      if (m.index > last) out.push(document.createTextNode(text.slice(last, m.index)));
+      t = m[0];
+      if (t.slice(0, 2) === '**') out.push(el('b', { text: t.slice(2, -2) }));
+      else if (t.charAt(0) === '[') { close = t.indexOf(']('); out.push(el('a', { href: t.slice(close + 2, -1), target: '_blank', rel: 'noopener', text: t.slice(1, close) })); }
+      else if (t.charAt(0) === '`') out.push(el('code', { text: t.slice(1, -1) }));
+      else out.push(el('em', { text: t.slice(1, -1) }));
+      last = m.index + t.length;
+    }
+    if (last < text.length) out.push(document.createTextNode(text.slice(last)));
+    return out;
+  }
+  function cellsOf(line){ return line.replace(/^\|/, '').replace(/\|\s*$/, '').split('|').map(function(c){ return c.trim(); }); }
+  function render(md, from, limit){
+    var lines = md.split('\n'), start = 0, box = el('div'), list = null, table = null, i, line, cells, shown = 0;
+    if (from) for (i = 0; i < lines.length; i++) if (lines[i].indexOf(from) === 0) { start = i; break; }
+    for (i = start; i < lines.length; i++) {
+      line = lines[i].replace(/\s+$/, '');
+      if (line) shown++;
+      if (limit && shown > limit) break;
+      if (line.charAt(0) === '|') {
+        cells = cellsOf(line);
+        if (/^[-: ]*$/.test(cells.join(''))) continue;
+        if (!table) { table = el('table'); box.appendChild(el('div', { cls: 'tw' }, [table])); table.appendChild(el('tr', {}, cells.map(function(c){ return el('th', { text: c }); }))); }
+        else table.appendChild(el('tr', {}, cells.map(function(c){ return el('td', {}, inline(c)); })));
+        list = null; continue;
+      }
+      table = null;
+      if (!line) { list = null; continue; }
+      if (/^#{1,4} /.test(line)) { box.appendChild(el('h4', { text: line.replace(/^#+ /, '') })); list = null; continue; }
+      if (/^\s*[-*] /.test(line)) { if (!list) { list = el('ul'); box.appendChild(list); } list.appendChild(el('li', {}, inline(line.replace(/^\s*[-*] /, '')))); continue; }
+      list = null; box.appendChild(el('p', {}, inline(line)));
+    }
+    return box;
+  }
+  function checkedToday(md){
+    var column = -1, count = 0;
+    md.split('\n').forEach(function(line){
+      if (line.charAt(0) !== '|') return;
+      var cells = cellsOf(line);
+      if (column < 0) { cells.forEach(function(c, k){ if (/^checked$/i.test(c)) column = k; }); return; }
+      if (cells[column] && /today/i.test(cells[column])) count++;
+    });
+    return count;
+  }
+  function answerCard(kind, title, tags, md, from, side){
+    var body = el('div', { cls: 'babody' }, [render(md, from, 14)]), more = el('button', { cls: 'ghost', type: 'button', text: 'Show full answer' });
+    more.addEventListener('click', function(){
+      var open = !body.classList.contains('open');
+      clear(body).appendChild(render(md, open ? '' : from, open ? 0 : 14)); body.classList.toggle('open', open); more.textContent = open ? 'Show less' : 'Show full answer';
+    });
+    var head = el('div', { cls: 'bahead' }, [el('b', { text: title })]);
+    tags.forEach(function(t){ if (t) head.appendChild(el('span', { cls: 'batag', text: t })); });
+    return el('div', { cls: 'bacard ' + kind }, [head, body, el('div', { cls: 'bafoot' }, [el('strong', { text: pct(side.score) }), el('span', { text: 'mean of ' + EV.runs_per_question + ' runs' + (side.run_checks ? '; this answer passed ' + side.run_checks.passed + ' of ' + side.run_checks.total + ' checks' : '') }), more])]);
+  }
+  var BA = DATA.before_after;
+  if (BA) {
+    $('baq').textContent = '“' + BA.question + '”';
+    var today = checkedToday(BA.skill.text);
+    $('ba').appendChild(answerCard('plain', 'Claude alone', [BA.plain.links ? plural(BA.plain.links, 'link', 'links') : 'no links', /from memory/i.test(BA.plain.text) ? 'from memory' : ''], BA.plain.text, '', BA.plain));
+    $('ba').appendChild(answerCard('skill', 'With the skill', [plural(BA.skill.links, 'source link', 'source links'), today ? today + ' rows checked today' : ''], BA.skill.text, /^## Shortlist/m.test(BA.skill.text) ? '## Shortlist' : '', BA.skill));
+    $('banote').textContent = 'The question with the widest gap of the ' + EV.n + '; both answers are recorded, run ' + BA.run + ' of each.';
+  }
+
+  // ---------------------------------------------------------------- three numbers
+  var fam = {}; EV.families.forEach(function(f){ fam[f.key] = f; });
+  var stamp = DATA.model_label + (DATA.run_month ? ' · ' + DATA.run_month : '');
+  function num3(big, versus, label, small){ $('nums').appendChild(el('div', { cls: 'num3' }, [el('strong', { text: big }), el('em', { text: 'against ' + versus + ' for Claude alone' }), el('b', { text: label }), el('small', { text: small })])); }
+  if (fam.access) num3(pct(fam.access['with'].passed / fam.access['with'].total), pct(fam.access.without.passed / fam.access.without.total), 'access facts stated', fam.access['with'].total + ' checks · ' + stamp);
+  if (EV.links && EV.links['with'] && EV.links.without) num3(String(Math.round(EV.links['with'].per_answer)), String(Math.round(EV.links.without.per_answer)), 'source links an answer', (EV.n * EV.runs_per_question) + ' answers each · ' + stamp);
+  num3(pct(EV['with']), pct(EV.without), 'average score on ' + EV.n + ' questions', 'higher on ' + EV.higher + ', level on ' + EV.same + ', lower on ' + EV.lower + ' · ' + EV.runs_per_question + ' runs each · ' + stamp);
+
+  // ---------------------------------------------------------------- benchmark: accuracy against usage, one arrow a model
+  var laterNote = '';
+  var BENCH = DATA.benchmark || {}, ALLMODELS = BENCH.models || [], UNIT = BENCH.unit_cost_usd;
+  var MODELS = ALLMODELS.filter(function(m){ return m.n >= EV.n; }), PARTIAL = ALLMODELS.filter(function(m){ return m.n < EV.n; });
+  if (MODELS.length && UNIT) {
+    var chart = $('chart'), CW = 760, CH = 400, ML = 56, MR = 190, MT = 30, MB = 58, pts = [];
+    MODELS.forEach(function(m){ pts.push([m['with'].cost_usd / UNIT, m['with'].accuracy], [m.without.cost_usd / UNIT, m.without.accuracy]); if (m.prompted) pts.push([m.prompted.cost_usd / UNIT, m.prompted.accuracy]); });
+    var lowest = Math.min.apply(null, pts.map(function(p){ return p[1]; })), widest = Math.max.apply(null, pts.map(function(p){ return p[0]; }));
+    var yLo = Math.min(0.7, Math.floor((lowest - 0.02) * 10) / 10), yHi = 1, xLo = Math.log(0.75), xHi = Math.log(Math.max(100, widest * 1.4));
+    var PX = function(mult){ return ML + (CW - ML - MR) * (Math.log(mult) - xLo) / (xHi - xLo); };
+    var PY = function(acc){ return MT + (CH - MT - MB) * (1 - (acc - yLo) / (yHi - yLo)); };
+    var text = function(x, y, cls, str, anchor){ var t = svg('text', { x: x, y: y, 'class': cls, 'text-anchor': anchor || 'start' }); t.textContent = str; chart.appendChild(t); return t; };
+    var defs = svg('defs', {}), marker = svg('marker', { id: 'arrowhead', markerWidth: 9, markerHeight: 9, refX: 8, refY: 4.5, orient: 'auto', markerUnits: 'userSpaceOnUse' });
+    marker.appendChild(svg('path', { d: 'M0,0 L9,4.5 L0,9 z', style: 'fill:var(--accent)' })); defs.appendChild(marker); chart.appendChild(defs);
+    for (var tick = Math.round(yLo * 10); tick <= 10; tick++) {
+      chart.appendChild(svg('line', { x1: ML, y1: PY(tick / 10), x2: CW - MR, y2: PY(tick / 10), style: 'stroke:var(--line)', 'stroke-width': 1 }));
+      text(ML - 8, PY(tick / 10) + 4, 'cx', (tick * 10) + '%', 'end');
+    }
+    [1, 3, 10, 30, 100, 300].forEach(function(mult){ if (Math.log(mult) <= xHi) { chart.appendChild(svg('line', { x1: PX(mult), y1: CH - MB, x2: PX(mult), y2: CH - MB + 5, style: 'stroke:var(--line)', 'stroke-width': 1 })); text(PX(mult), CH - MB + 19, 'cx', mult + '×', 'middle'); } });
+    text(ML - 44, 14, 'cx', 'Accuracy (checks passed)', 'start');
+    text((ML + CW - MR) / 2, CH - 12, 'cx', 'Cost of one answer in usage (1× = one plain ' + DATA.model_label + ' answer) → more', 'middle');
+    MODELS.forEach(function(m){
+      var tx = PX(m.without.cost_usd / UNIT), ty = PY(m.without.accuracy), hx = PX(m['with'].cost_usd / UNIT), hy = PY(m['with'].accuracy);
+      var len = Math.sqrt((hx - tx) * (hx - tx) + (hy - ty) * (hy - ty)) || 1, ex = hx - 9 * (hx - tx) / len, ey = hy - 9 * (hy - ty) / len;
+      chart.appendChild(svg('line', { x1: tx, y1: ty, x2: ex, y2: ey, style: 'stroke:var(--accent)', 'stroke-width': 2, 'stroke-linecap': 'round', 'marker-end': 'url(#arrowhead)' }));
+      var tail = svg('circle', { cx: tx, cy: ty, r: 5.5, style: 'fill:var(--dot);stroke:var(--bg);stroke-width:2' }), head = svg('circle', { cx: hx, cy: hy, r: 6.5, style: 'fill:var(--accent);stroke:var(--bg);stroke-width:2' });
+      var part = m.n < EV.n ? ' (' + m.n + ' of ' + EV.n + ' questions)' : '', shortPart = m.n < EV.n ? ' (' + m.n + ' of ' + EV.n + ')' : '';
+      var tip = svg('title', {}); tip.textContent = m.label + ' alone: ' + pct(m.without.accuracy) + ' at ' + (m.without.cost_usd / UNIT).toFixed(1) + '× usage' + part; tail.appendChild(tip);
+      tip = svg('title', {}); tip.textContent = m.label + ' with the skill: ' + pct(m['with'].accuracy) + ' at ' + (m['with'].cost_usd / UNIT).toFixed(1) + '× usage' + part; head.appendChild(tip);
+      chart.appendChild(tail); chart.appendChild(head);
+      text(tx, ty + 20, 'clm', 'alone ' + pct(m.without.accuracy), 'middle');
+      var headLabel = m.label + ' + skill ' + pct(m['with'].accuracy) + shortPart;
+      if (hx + 12 + 7.2 * headLabel.length > CW) text(hx + 8, hy - 13, 'cl', headLabel, 'end'); else text(hx + 12, hy + 4, 'cl', headLabel);
+      if (m.prompted) {
+        var qx = PX(m.prompted.cost_usd / UNIT), qy = PY(m.prompted.accuracy), ring = svg('circle', { cx: qx, cy: qy, r: 5, style: 'fill:var(--bg);stroke:var(--dot);stroke-width:2' });
+        tip = svg('title', {}); tip.textContent = m.label + ' told to search and verify: ' + pct(m.prompted.accuracy) + ' at ' + (m.prompted.cost_usd / UNIT).toFixed(1) + '× usage'; ring.appendChild(tip);
+        chart.appendChild(ring); text(qx + 10, qy + 4, 'clm', 'told to search and verify ' + pct(m.prompted.accuracy));
+      }
+    });
+    chart.setAttribute('aria-label', MODELS.map(function(m){ return m.label + ': ' + pct(m.without.accuracy) + ' alone, ' + pct(m['with'].accuracy) + ' with the skill'; }).join('; '));
+    $('benchlead').textContent = 'Accuracy is the share of checks an answer passes, on ' + EV.n + ' unseen questions.';
+    $('chartcap').textContent = 'Up is more accurate, right costs more usage; each arrow is one model, from Claude alone to the same model with the skill.';
+    var later = MODELS.filter(function(m){ return m.model !== EV.model; }).map(function(m){ return m.label; });
+    $('benchnote').textContent = PARTIAL.length ? 'Not drawn yet: ' + PARTIAL.map(function(m){ return m.label + ' (' + m.n + ' of ' + EV.n + ' questions so far)'; }).join(', ') + '.' : '';
+    if (later.length) laterNote = ' ' + later.join(' and ') + (later.length > 1 ? ' were' : ' was') + ' run after the ' + DATA.model_label + ' result was known.';
+  }
+  if (DATA.repo_url) {
+    $('pill-text').textContent = 'Benchmarked in the open'; $('benchh2').textContent = 'Accuracy against usage, in the open.';
+    $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/blob/main/docs/EVAL_PROTOCOL.md', text: 'Protocol' }));
+    $('morelinks').appendChild(document.createTextNode(' · ')); $('morelinks').appendChild(el('a', { href: DATA.repo_url + '/tree/main/eval-runs', text: 'Every recorded run' }));
+  }
+  if (EV.verdict === 'mixed') $('ruleline').textContent = 'By the rule set before the run (' + EV.needed + ' of ' + EV.n + ' needed), the ' + DATA.model_label + ' result counts as mixed.';
+  var sp = 'A score is the share of a question’s content checks that passed. ' + EV.n + ' questions on ' + DATA.model_label + ', judged by Sonnet, with answer keys built by agents from published sources: a small sample, no significance test, and access rules and links as of ' + (DATA.run_month || 'November 2026') + '. Both arms had the same tools, web search included.';
+  if (EV.verdict === 'mixed') sp += ' The rule fixed before the run asked for a higher score on ' + EV.needed + ' questions, so by that rule the result counts as mixed (higher on ' + EV.higher + ', the same on ' + EV.same + ', lower on ' + EV.lower + ').';
+  else sp += ' By the rule fixed before the run: ' + EV.statement;
+  if (EV.prompted) sp += ' Against Claude told to search the web and verify, the skill averaged ' + Math.round(100 * EV.prompted.diff) + ' points higher.';
+  var failedCalls = MODELS.reduce(function(sum, m){ return sum + (m.judge_failures || 0); }, 0);
+  if (failedCalls) sp += ' In the chart, checks whose judge call failed are left out (' + failedCalls + ' in all).';
+  sp += laterNote;
+  sp += ' Usage is counted at API list prices; an answer with the skill takes about ' + Math.round(EV.effort['with'].minutes) + ' minutes. On the replay, access labels follow version 0.1.1; the pages the runs wrote keep those of 0.1.0. The replay runs were chosen by hand; the two answers shown side by side are the question with the widest gap, run 1 of each.';
+  $('smallprint').textContent = sp;
+
+  // ---------------------------------------------------------------- faq
+  var second = EV.second_model;
+  var faqs = [
+    ['Why not just ask Claude?', 'In our test ' + DATA.model_label + ' alone had web search but answered from memory, with no links.'],
+    ['Does it save usage or time?', 'No: about ' + EV.effort['with'].minutes.toFixed(0) + ' minutes against ' + EV.effort.without.minutes.toFixed(1) + ', and about ' + (EV.effort['with'].cost_usd / EV.effort.without.cost_usd).toFixed(1) + ' times the usage of a plain answer at list prices.'],
+    ['Does it download the data or apply for me?', 'No: it finds and checks, and the answer lists the steps that stay with you.'],
+    ['Which registries does it search?', 'OpenAIRE, DataCite, Zenodo, Hugging Face Hub and PhysioNet directly, and others through web search.'],
+    ['Does it work outside Claude Code?', 'It follows the open Agent Skills format; it has been tested only in Claude Code.']
+  ];
+  faqs.forEach(function(f){ $('faqs').appendChild(el('details', {}, [el('summary', { text: f[0] }), el('p', { text: f[1] })])); });
+})();
+</script>

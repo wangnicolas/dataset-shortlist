@@ -1,0 +1,171 @@
+{
+  "must_haves": [
+    "Modality: chest X-ray (radiograph) images",
+    "Each image or study paired with the radiologist's own free-text report (not only labels or other output extracted from it)",
+    "Language: English reports preferred; a non-English report set is acceptable for a secondary experiment (a preference, not exclusionary)"
+  ],
+  "A": [
+    {
+      "dataset": "MIMIC-CXR",
+      "official_url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+      "exists": true,
+      "access_stated": "Credentialed PhysioNet access: account, CITI training, credentialing, sign the DUA",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says 'Only credentialed users who sign the DUA can access the files' (PhysioNet Credentialed Health Data License 1.5.0, CITI Data or Specimens Only Research training) and lists 377,110 DICOM images, 227,835 studies and one free-text report per study (PHI replaced by '___'), matching the answer; the total size could not be checked without logging in."
+    },
+    {
+      "dataset": "CheXpert Plus",
+      "official_url": "https://aimi.stanford.edu/datasets/chexpert-plus",
+      "exists": true,
+      "access_stated": "Accept Stanford's research use agreement on the AIMI site; research-only, no commercial use or redistribution",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The AIMI page (download now on Stanford Redivis, data gated with only metadata public, about 6.76 TB) lists 187,711 radiology reports 'divided into 11 subsections' with 223,462 report-image pairs, and AIMI states its datasets are for non-commercial research under data use terms; the answer itself flags this entry as not confirmed."
+    },
+    {
+      "dataset": "ReXGradient-160K",
+      "official_url": "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+      "exists": true,
+      "access_stated": "Gated Hugging Face repo; log in and accept the non-commercial data access and use agreement",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The card requires accepting the 'ReXGradient-160K Non-Commercial Data Access and Use Agreement' ('No commercial use of the Data is permitted') and describes 160,000 studies, 273,004 chest X-rays and 109,487 patients from 3 U.S. health systems, with reports in Indication, Comparison, Findings and Impression sections."
+    },
+    {
+      "dataset": "IU X-Ray (Open-i, Indiana University chest X-ray collection)",
+      "official_url": "https://openi.nlm.nih.gov/faq",
+      "exists": true,
+      "access_stated": "Open download from NLM Open-i; licence not confirmed",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Open-i FAQ lists '7,470 chest x-rays with 3,955 radiology reports' and gives direct public links (NLMCXR_png.tgz, NLMCXR_dcm.tgz, NLMCXR_reports.tgz, all returning HTTP 200 with no login), and says Indiana images are under CC BY-NC-ND 4.0; the answer marks the terms as not confirmed."
+    },
+    {
+      "dataset": "PadChest (BIMCV)",
+      "official_url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+      "exists": true,
+      "access_stated": "Request through the BIMCV form; agree not to share the data or re-identify anyone",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The page requires a formal Google Forms request and the PADCHEST Dataset Research Use Agreement (free; 1.02 TB; over 160,000 images, 67,000 patients), matching the answer, but the paper's field table says the released Report field is 'A text snippet extracted from the original report... The text is preprocessed, while the words are stemmed and tokenized' (stop words removed), so it does not ship the radiologist's free-text report."
+    },
+    {
+      "dataset": "PadChest-GR",
+      "official_url": "https://bimcv.cipf.es/bimcv-projects/padchest-gr/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "none",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "It exists (4,555 studies, bilingual Spanish/English, request form plus the PADCHEST research use agreement, delivered via B2DROP), and the paper confirms the answer's claim that the authors 'retrieved the original reports... after anonymization and without further processing', but the documentation describes the released text as curated lists of extracted positive and negative finding sentences and does not say whether the original report text ships."
+    },
+    {
+      "dataset": "REFLACX",
+      "official_url": "https://physionet.org/content/reflacx-xray-localization/1.0.0/",
+      "exists": true,
+      "access_stated": "Free PhysioNet account plus restricted DUA, no credentialing; images need MIMIC-CXR access",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says 'Only registered users who sign the specified data use agreement can access the files' (PhysioNet Restricted Health Data License 1.5.0) and provides 3,032 radiologist-dictated transcription reports for MIMIC-CXR images from five radiologists; the images themselves are not included and must come from MIMIC-CXR, which needs credentialing."
+    },
+    {
+      "dataset": "Naija-CXR",
+      "official_url": "https://zenodo.org/records/21781842",
+      "exists": true,
+      "access_stated": "Open on Zenodo; record says CC-BY-4.0 but the description says non-commercial",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Zenodo record is open-access with licence cc-by-4.0 while the description says 'released exclusively for non-commercial scientific research and educational purposes', and it lists contents as 'De-identified frontal chest X-ray images' and 'Free radiologist reports' (one 389 MB zip; size and report format not documented)."
+    },
+    {
+      "dataset": "FMCEB-CXR",
+      "official_url": "https://zenodo.org/records/20750284",
+      "exists": true,
+      "access_stated": "Zenodo, CC-BY-4.0",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The record is open with licence cc-by-4.0, but its description says 'Version 1.0 (current): NLP-extracted labels with confidence scores and extraction code', and the only file (a 42 KB zip) contains just LICENSE.txt, fmceb_cxr_labels_v1.0.csv, label_schema.json and zenodo_README.md, so it has no images and no report text."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "IU X-Ray (Open-i, Indiana University chest X-ray collection)",
+      "official_url": "https://openi.nlm.nih.gov/faq",
+      "exists": true,
+      "access_stated": "Open download of images and XML reports from NLM Open-i, no application",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Open-i FAQ lists '7,470 chest x-rays with 3,955 radiology reports' and gives direct public links (NLMCXR_png.tgz, NLMCXR_dcm.tgz, NLMCXR_reports.tgz, all returning HTTP 200 with no login), and says Indiana images are under CC BY-NC-ND 4.0; the answer's 'open, no application' matches."
+    },
+    {
+      "dataset": "MIMIC-CXR",
+      "official_url": "https://physionet.org/content/mimic-cxr/2.1.0/",
+      "exists": true,
+      "access_stated": "PhysioNet credentialed access: account, CITI Data or Specimens Only training, credentialing with references, sign the DUA",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says 'Only credentialed users who sign the DUA can access the files' and names the required training 'CITI Data or Specimens Only Research', matching the answer; it also lists 377,110 images, 227,835 studies and one free-text report per study with PHI replaced by '___' (the size figures could not be checked without logging in)."
+    },
+    {
+      "dataset": "CheXpert Plus",
+      "official_url": "https://aimi.stanford.edu/datasets/chexpert-plus",
+      "exists": true,
+      "access_stated": "Register at the Stanford AIMI site and agree to a research-use license",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The AIMI page (download now on Stanford Redivis, data gated with only metadata public, about 6.76 TB) lists 187,711 radiology reports 'divided into 11 subsections' with 223,462 report-image pairs, and AIMI states its datasets are for non-commercial research under data use terms, which matches registration plus a research-use agreement."
+    },
+    {
+      "dataset": "ReXGradient-160K",
+      "official_url": "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+      "exists": true,
+      "access_stated": "Gated release, believed to be on Hugging Face, with a terms agreement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The card is a gated Hugging Face repo that requires accepting the 'ReXGradient-160K Non-Commercial Data Access and Use Agreement', and it describes 160,000 studies, 273,004 chest X-rays and 109,487 patients from 3 U.S. health systems, with reports in Indication, Comparison, Findings and Impression sections."
+    },
+    {
+      "dataset": "PadChest (BIMCV)",
+      "official_url": "https://bimcv.cipf.es/bimcv-projects/padchest/",
+      "exists": true,
+      "access_stated": "Request form, usually fast",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The page requires a formal Google Forms request and the PADCHEST Dataset Research Use Agreement (free; it gives no turnaround time), matching the answer, but the paper's field table says the released Report field is 'A text snippet extracted from the original report... The text is preprocessed, while the words are stemmed and tokenized', so it does not ship the radiologist's free-text report (the answer itself flags this doubt)."
+    },
+    {
+      "dataset": "PadChest-GR",
+      "official_url": "https://bimcv.cipf.es/bimcv-projects/padchest-gr/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "none",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "It exists as described (a grounded-report extension of PadChest with sentences in Spanish and English; 4,555 studies; request form plus the PADCHEST research use agreement), but the documentation describes the released text as curated lists of extracted finding sentences and does not say whether the original report text ships."
+    },
+    {
+      "dataset": "BIMCV-COVID19+",
+      "official_url": "https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "none",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The page and paper describe CR/DX chest X-ray (plus CT) studies of COVID-19+ patients with 'radiological reports (in Spanish)', and the paper says the anonymized report for each study is in derivatives/EHR/labels/labels_COVID-19_posi.tsv (the sample text is lowercased with accents removed but not stemmed); access is free via a Google Forms request and research use agreement, which the answer does not state."
+    }
+  ]
+}

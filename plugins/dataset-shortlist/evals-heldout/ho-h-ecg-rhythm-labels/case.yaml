@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-ecg-rhythm-labels
+expected_outcome: |
+  Recommends large, openly downloadable 12-lead resting ECG collections with diagnostic labels, such as PTB-XL, the Chapman-Shaoxing (and Ningbo) database, the PhysioNet/Computing in Cardiology Challenge 2020/2021 data and CODE-15%, and makes clear that these can be downloaded without credentialing or an application.
+  Does not offer two-channel ambulatory recordings such as the MIT-BIH Arrhythmia Database as meeting the 12-lead requirement, and ideally adds a less-known open set such as the Shandong Provincial Hospital (SPH) database or MIMIC-IV-ECG.

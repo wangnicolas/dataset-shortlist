@@ -1,0 +1,722 @@
+{
+ "question": "Public audio recordings of speech or voice from people with Parkinson's disease and healthy controls, for deep learning detection",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Actual audio files (wav etc.), not precomputed features",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Both PD patients and healthy controls, labelled",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Downloadable now without a lengthy approval",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "datacite",
+   "huggingface",
+   "openaire",
+   "physionet",
+   "zenodo",
+   "europepmc/openalex"
+  ],
+  "queries": [
+   "Parkinson's disease speech",
+   "Parkinson voice recordings",
+   "Parkinson audio",
+   "dysarthria speech healthy controls",
+   "Italian Parkinson's Voice and Speech",
+   "PC-GITA Parkinson Spanish",
+   "mPower voice Parkinson"
+  ],
+  "n_candidates": 150
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "datacite:10.5281/zenodo.21775027",
+    "source": "datacite",
+    "title": "VOC-PD Dataset: Multi-task Mandarin Speech Recordings of Parkinson's Disease Patients and Healthy Controls",
+    "url": "https://doi.org/10.5281/zenodo.21775027",
+    "access": {
+     "tier": "open",
+     "evidence": "bestAccessRight=OPEN"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Overview The VOC-PD dataset is a Mandarin speech corpus specifically constructed to provide objective voice biomarkers for the diagnosis of Parkinson's Disease (PD). It comprises high-quality audio recordings from both Parkinson's Disease patients and Healthy Controls (HC). Dataset Statistics Format: .wav Total Samples: 1,551 recordings (740 from Healthy Controls, 811 from PD patients) Directory Structure & Tasks The dataset is organized into 5 subfolders based on different speech tasks: numbers: Reading numbers from 1 to 10. phrases: Reading specific Mandarin words (window, car, Tiananmen, forty-seven, tractor). sentences: Reading specific Mandarin sentences. vowels: Pronouncing vowels (a,\u2026",
+    "doi": "10.5281/zenodo.21775027",
+    "publisher": "Zenodo",
+    "creators": [
+     "Chen, Min",
+     "Du, Ting",
+     "Li, Liangshuo",
+     "Su, Fei"
+    ],
+    "year": 2026,
+    "version": null,
+    "updated": "2026-10-09",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "Creative Commons Attribution 4.0 International (cc-by-4.0)",
+     "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 366725767,
+     "files": 4
+    },
+    "formats": [
+     "zip",
+     "xlsx",
+     "md"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 0,
+     "views": 0,
+     "citations": 0
+    },
+    "extra": {
+     "landing_page": "https://zenodo.org/doi/10.5281/zenodo.21775027",
+     "state": "findable",
+     "client": "cern.zenodo",
+     "versions_collapsed": 1,
+     "other_dois": [
+      "10.5281/zenodo.21775026"
+     ],
+     "all_dois": [
+      "10.5281/zenodo.21775026",
+      "10.5281/zenodo.21775027"
+     ],
+     "access_right": "open",
+     "record_id": "21775027",
+     "concept_record_id": "21775026",
+     "concept_doi": "10.5281/zenodo.21775026",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::d895b45f9a84c1541c7368e2b0fafd40",
+      "url": "https://doi.org/10.5281/zenodo.21775027"
+     },
+     {
+      "source": "openaire",
+      "id": "openaire:od______2659::d895b45f9a84c1541c7368e2b0fafd40",
+      "url": "https://doi.org/10.5281/zenodo.21775027"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/doi/10.5281/zenodo.21775027",
+     "checked_at": "2026-11-11T17:40:17Z",
+     "problems": [],
+     "notes": [
+      "size, formats, extra filled from the zenodo registry record",
+      "the DOI 10.5281/zenodo.21775027 is registered and resolves to https://zenodo.org/doi/10.5281/zenodo.21775027"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "VOC-PD Dataset: Multi-task Mandarin Speech Recordings of Parkinson's Disease Patients and Healthy Controls"
+    }
+   },
+   "fit": "strong",
+   "why": "1,551 .wav recordings (811 PD, 740 healthy) from several Mandarin speech tasks; open and downloadable now.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Zenodo description: 'Format: .wav ... 1,551 recordings (740 from Healthy Controls, 811 from PD patients)'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "PD vs HC labels per recording"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the zip archives (~367 MB)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Mandarin only, a 2026 release with no citing papers yet",
+    "Check the xlsx metadata for speaker IDs so you can split by speaker, not by recording"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "openaire:doi_dedup___::3040e65460e0e60f12fb3cba5d78beaa",
+    "source": "openaire",
+    "title": "Mobile Device Voice Recordings at King's College London (MDVR-KCL) from both early and advanced Parkinson's disease patients and healthy controls",
+    "url": "https://doi.org/10.5281/zenodo.2867215",
+    "access": {
+     "tier": "open",
+     "evidence": "bestAccessRight=OPEN"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Dataset description The dataset description will start with describing the local conditions and other metadata, then will continue with describing the recording procedure and annotation methodology. Finally, a brief description of the dataset deployment and publication will be given. Meta Information The dataset was recorded at King's College London (KCL) Hospital, Denmark Hill, Brixton, London SE5 9RS in the period from 26 to 29 September 2017. We used a typical examination room with about ten square meters area and a typical reverberation tome of approx. 500ms to perform the voice recordings. Due to the fact, that the voice recordings are performed in the realistic situation of doing a ph\u2026",
+    "doi": "10.5281/zenodo.2867215",
+    "publisher": "Zenodo",
+    "creators": [
+     "Hagen Jaeger",
+     "Dhaval Trivedi",
+     "Michael Stadtschnitzer"
+    ],
+    "year": 2019,
+    "version": null,
+    "updated": "2019-05-17",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "CC BY",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 606144431,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "Read speech",
+     "Parkinson's disease",
+     "Early detection",
+     "Spontaneous speech",
+     "Telephone speech",
+     "Speech corpus",
+     "03 medical and health sciences",
+     "0305 other medical science"
+    ],
+    "usage": {
+     "citations": 17,
+     "downloads": 3083,
+     "views": 7738
+    },
+    "extra": {
+     "openaire_id": "doi_dedup___::3040e65460e0e60f12fb3cba5d78beaa",
+     "all_dois": [
+      "10.5281/zenodo.2867215",
+      "10.5281/zenodo.2867216"
+     ],
+     "access_right": "open",
+     "record_id": "2867216",
+     "concept_record_id": "2867215",
+     "concept_doi": "10.5281/zenodo.2867215",
+     "resource_type": "dataset",
+     "landing_page": "https://zenodo.org/record/2867215",
+     "state": "findable",
+     "client": "cern.zenodo"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/record/2867215",
+     "checked_at": "2026-11-11T17:40:29Z",
+     "problems": [],
+     "notes": [
+      "size, formats, extra filled from the zenodo registry record",
+      "extra filled from the datacite registry record",
+      "the DOI 10.5281/zenodo.2867215 is registered and resolves to https://zenodo.org/record/2867215"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Mobile Device Voice Recordings at King's College London (MDVR-KCL) from both early and advanced Parkinson's disease patients and healthy controls"
+    }
+   },
+   "fit": "strong",
+   "why": "Smartphone recordings at King's College London of early and advanced PD patients and healthy controls; widely used.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Title: 'Voice Recordings ... from both early and advanced Parkinson's disease patients and healthy controls'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "PD vs HC"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the zip (~606 MB)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Small cohort (about 37 speakers, from memory, not confirmed today)",
+    "Read speech and spontaneous dialogue, telephone-quality audio"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "datacite:10.21227/aw6b-tg17",
+    "source": "datacite",
+    "title": "Italian Parkinson's Voice and Speech",
+    "url": "https://doi.org/10.21227/aw6b-tg17",
+    "access": {
+     "tier": "free account",
+     "evidence": "IEEE DataPort page: Open Access data files are available to all users upon login."
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This dataset is associated with the paper, Giovanni Dimauro et al. 2017, which is open source, and can be found here: https://ieeexplore.ieee.org/document/8070308The DataPort Repository contains the data used primarily for generating Figure 2,3,4,5",
+    "doi": "10.21227/aw6b-tg17",
+    "publisher": "IEEE DataPort",
+    "creators": [
+     "Dimauro, Giovanni",
+     "Girardi, Francesco"
+    ],
+    "year": 2019,
+    "version": null,
+    "updated": "2022-11-23",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "Creative Commons Attribution",
+     "url": "https://creativecommons.org/licenses/by/4.0",
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": null,
+    "formats": [],
+    "subjects": [
+     "Biomedical and Health Sciences",
+     "Speech",
+     "Voice",
+     "Parkinson's disease"
+    ],
+    "usage": {
+     "downloads": 0,
+     "views": 0,
+     "citations": 6
+    },
+    "extra": {
+     "landing_page": "https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+     "state": "findable",
+     "client": "ieee.dataport",
+     "versions_collapsed": 1,
+     "other_dois": [
+      "10.21227/aw6b-tg17"
+     ]
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": 200,
+     "final_url": "https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+     "checked_at": "2026-11-11T17:42:00Z",
+     "problems": [],
+     "notes": [
+      "the DOI 10.21227/aw6b-tg17 is registered and resolves to https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+      "the landing page mentions \"LOGIN TO ACCESS\" (\"...(Size: 565.44 MB) Italian Parkinson's Voice and speech_zip LOGIN TO ACCESS DATASET FILES Open Access dataset files are accessible to a...\"); confirm the access route on that page before calling the data open",
+      "the landing page mentions \"to access this dataset\" (\"...a USERID: 1353045 DATASETID: 14627 Close Dataset Access How to access this dataset This dataset requires an IEEE DataPort Subscription. For al...\"); confirm the access route on that page before calling the data open",
+      "access tier unknown (no standard access statement in rightsList); read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "datacite",
+     "found_title": "Italian Parkinson's Voice and Speech",
+     "access_text": {
+      "url": "https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+      "sentences": [
+       "Napoletano, \"VoxTester, software for digital evaluation of speech changes in Parkinson disease,\" 2016 IEEE International Symposium on Medical Measurements and Applications (MeMeA), 2016, pp.",
+       "Open Access dataset files are accessible to all logged in users.",
+       "to the IEEE DataPort platform to access your FREE IEEE DataPort Subscription.",
+       "Open Access data files are available to all users upon login."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Italian PD and healthy-control recordings (.wav) by Dimauro and Girardi; the most reused open PD speech set.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "IEEE DataPort: 'Data Format: wav and xlsx'",
+     "url": "https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "PD vs HC groups (from memory, confirm in the xlsx)"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Open Access, CC-BY"
+    }
+   },
+   "access_steps": [
+    "Create a free IEEE DataPort account and log in",
+    "Open the dataset page and download the files (the page also mentions an AWS route)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Page text: 'Open Access dataset files are accessible to all logged in users'",
+    "Copies exist on Hugging Face (about 7,700 downloads on one copy). They are uploader copies; use the IEEE DataPort original as your source and for citation"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "zenodo:22036480",
+    "source": "zenodo",
+    "title": "Arabic Parkinson's Disease Speech Dataset",
+    "url": "https://zenodo.org/records/22036480",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This dataset contains audio recordings collected to investigate acoustic biomarkers and machine learning models for detecting Parkinson\u2019s Disease (PD) in native Arabic speakers. Designed to support voice pathology detection, acoustic feature extraction, and cross-linguistic validation studies, it serves as a benchmark resource for speech processing and clinical AI applications. Participant Breakdown : 40 native Arabic-speaking subjects, comprising 17 diagnosed Parkinson\u2019s Disease patients and 23 age-matched Healthy Controls (HC). Speech Tasks: Includes sustained vowel phonations (/a/, /i/, /u/), reading of a standardized phonetically balanced Arabic text passage, and spontaneous speech reco\u2026",
+    "doi": "10.5281/zenodo.22036480",
+    "publisher": "Zenodo",
+    "creators": [
+     "Hassanat, Ahmad",
+     "Almahadin, Alaa O."
+    ],
+    "year": 2026,
+    "version": "1.0.0",
+    "updated": "2026-08-21",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 38621717,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "Parkinson's Disease, Arabic Speech Dataset, Audio Processing, Acoustic Biomarkers, Machine Learning, Voice Analysis, Cross-Linguistic Validation"
+    ],
+    "usage": {
+     "downloads": 20,
+     "views": 45
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "22036480",
+     "concept_record_id": "22036479",
+     "concept_doi": "10.5281/zenodo.22036479",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.22036480",
+      "url": "https://doi.org/10.5281/zenodo.22036480"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/22036480",
+     "checked_at": "2026-11-11T17:40:18Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:22036480"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Arabic Parkinson's Disease Speech Dataset"
+    }
+   },
+   "fit": "strong",
+   "why": "Arabic recordings from 17 PD patients and 23 age-matched controls: vowels, a read passage and spontaneous speech.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Zenodo description: 'audio recordings ... sustained vowel phonations, reading ... and spontaneous speech'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "17 PD, 23 HC"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the zip (~39 MB)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Only 40 speakers: fine for cross-lingual testing, too small to train on alone"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "zenodo:13647600",
+    "source": "zenodo",
+    "title": "NeuroVoz: a Castillian Spanish corpus of parkinsonian speech",
+    "url": "https://zenodo.org/records/13647600",
+    "access": {
+     "tier": "gated",
+     "evidence": "access_right=restricted"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The NeuroVoz dataset emerges as a pioneering resource in the field of computational linguistics and biomedical research, specifically designed to enhance the diagnosis and understanding of Parkinson's Disease (PD) through speech analysis. This dataset is distinguished as the first of its kind to be made publicly available in Castilian Spanish, addressing a critical gap in the availability of linguistic and dialectical diversity within PD research. Compiled from a cohort of 112 participants, including 54 individuals diagnosed with PD and 58 healthy controls, the NeuroVoz dataset offers a rich compilation of speech recordings. All PD participants were recorded under medication (ON state), ens\u2026",
+    "doi": "10.5281/zenodo.13647600",
+    "publisher": "Zenodo",
+    "creators": [
+     "Mendes-Laureano, Jana\u00edna",
+     "G\u00f3mez-Garc\u00eda, Jorge Andr\u00e9s",
+     "Guerrero-L\u00f3pez, Alejandro",
+     "Luque-Buzo, Elisa",
+     "Arias-Londo\u00f1o, Juli\u00e1n D."
+    ],
+    "year": 2024,
+    "version": null,
+    "updated": "2025-12-04",
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [
+     "Parkinson's disease",
+     "Parkinson",
+     "speech",
+     "castillian",
+     "spanish",
+     "neurovoz",
+     "Castillian Spanish",
+     "speech corpus"
+    ],
+    "usage": {
+     "downloads": 1101,
+     "views": 12004
+    },
+    "extra": {
+     "access_right": "restricted",
+     "record_id": "13647600",
+     "concept_record_id": "10777656",
+     "concept_doi": "10.5281/zenodo.10777656",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/13647600",
+     "checked_at": "2026-11-11T17:40:23Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:13647600"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "NeuroVoz: a Castillian Spanish corpus of parkinsonian speech",
+     "access_text": {
+      "url": "https://zenodo.org/records/13647600",
+      "sentences": [
+       "The NeuroVoz dataset emerges as a pioneering resource in the field of computational linguistics and biomedical research, specifically designed to enhance the diagnosis and understanding of Parkinson's Disease (PD) through speech analysis.",
+       "The record is publicly accessible, but files are restricted.",
+       "You accept the Data Agreement Usage detailed in the request access method."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "NeuroVoz: 2,977 audio files of Castilian Spanish speech from PD patients and controls, about 27 tasks per participant.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Zenodo: 'Encompassing 2,977 audio files'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "PD vs HC (from the record's description)"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "files restricted; request needed"
+    }
+   },
+   "access_steps": [
+    "Log in to Zenodo",
+    "Use 'Request access' on the record and accept the Data Usage Agreement",
+    "Wait for the owners to approve"
+   ],
+   "time_to_access": "days",
+   "caveats": [
+    "Page text: 'The record is publicly accessible, but files are restricted.'",
+    "Licence is CC BY-NC-ND 4.0 on the page: non-commercial and no derivatives. Ask the owners whether trained models or augmented audio count as derivatives",
+    "The feature-only version on Zenodo (Rasta-PLP) is not audio"
+   ],
+   "papers": [
+    {
+     "title": "Multilingual evaluation of interpretable biomarkers to represent language and speech patterns in Parkinson's disease",
+     "year": 2023,
+     "doi": "10.3389/fneur.2023.1142642",
+     "url": "https://doi.org/10.3389/fneur.2023.1142642",
+     "note": "returned by a NeuroVoz literature search; used for multilingual PD speech evaluation"
+    }
+   ]
+  },
+  {
+   "rank": 6,
+   "record": {
+    "id": "zenodo:22082939",
+    "source": "zenodo",
+    "title": "Processed Multimodal MRI and Speech Datasets for Parkinson's Disease Classification",
+    "url": "https://zenodo.org/records/22082939",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This repository contains the processed multimodal datasets and associated research materials supporting the study \u201cParkMultiNet combines MRI and speech data for multimodal Parkinson\u2019s disease classification.\u201d The deposit includes two datasets. PubPDdataset was constructed by integrating processed structural brain MRI scans from multiple publicly available repositories with publicly available speech data. It contains MRI data from 127 subjects (76 with Parkinson\u2019s disease and 51 non-PD controls) and 502 processed speech clips (266 PD and 236 non-PD). PativePDdataset is an independent clinical dataset collected at the Second Affiliated Hospital of Xinjiang Medical University, China. The share\u2026",
+    "doi": "10.5281/zenodo.22082939",
+    "publisher": "Zenodo",
+    "creators": [
+     "Jia, Guoyong"
+    ],
+    "year": 2026,
+    "version": "1.0.0",
+    "updated": "2026-08-24",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 1295021588,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "Multimodal learning",
+     "Medical imaging",
+     "Parkinson's disease"
+    ],
+    "usage": {
+     "downloads": 7,
+     "views": 25
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "22082939",
+     "concept_record_id": "22082938",
+     "concept_doi": "10.5281/zenodo.22082938",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.22082939",
+      "url": "https://doi.org/10.5281/zenodo.22082939"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/22082939",
+     "checked_at": "2026-11-11T17:40:16Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:22082939"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Processed Multimodal MRI and Speech Datasets for Parkinson's Disease Classification"
+    }
+   },
+   "fit": "partial",
+   "why": "502 processed speech clips (266 PD, 236 non-PD) plus MRI, built from other public sets, as in the ParkMultiNet study.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "'processed speech clips', so check whether they are waveforms or spectrograms"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "PD vs non-PD"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the zip (~1.3 GB)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Repackages speech from other public sources, so using it alongside them risks overlap between your train and test data"
+   ],
+   "papers": []
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "NeuroVoz Rasta-PLP features",
+   "url": "https://doi.org/10.5281/zenodo.3557758",
+   "reason": "Precomputed features only, no audio (fails R1)."
+  },
+  {
+   "name": "Bridge2AI-Voice on PhysioNet",
+   "url": "https://physionet.org/content/b2ai-voice/4.0.0/",
+   "reason": "Page says 'This PhysioNet project does not contain raw audios.' Raw audio needs institutional sign-off via Synapse."
+  },
+  {
+   "name": "Synthetic PD voice dataset (Zenodo 17753641)",
+   "url": "https://zenodo.org/records/17753641",
+   "reason": "Synthetic recordings, not from real people."
+  },
+  {
+   "name": "BenchmarkDatasets/Parkinson_Speech (Hugging Face)",
+   "url": "https://huggingface.co/datasets/BenchmarkDatasets/Parkinson_Speech",
+   "reason": "Looks like the UCI tabular feature set; I did not confirm its contents."
+  }
+ ],
+ "gaps": [
+  "PC-GITA (Spanish, Colombian): no public record found by the tool; recalled as available on request only.",
+  "mPower (Synapse): not returned by any registry searched; recalled as requiring a Synapse application.",
+  "Not checked: the figshare sets 'Parkinson-Disease-voice-Dataset' and 'Dataset for Parkinson Disease' (figshare blocked the page check), or the Czech and German corpora."
+ ],
+ "notes": "Registry search covers DataCite, Hugging Face, OpenAIRE, PhysioNet and Zenodo. Project sites and challenge pages were not searched, so the list may be incomplete."
+}

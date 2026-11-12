@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-measured-bp-surveys
+expected_outcome: |
+  Recommends nationally representative surveys with examiner- or nurse-measured blood pressure plus a diagnosis question, such as NHANES for the US and the Health Survey for England and CHARLS for comparison, and explains how each is obtained (NHANES public files download freely; HSE needs UK Data Service registration and its End User Licence; CHARLS needs registration and an approved data application).
+  Does not offer BRFSS as a source of measured blood pressure, since all its responses are self-reported by telephone, and ideally adds less-known options such as LASI or WHO SAGE.

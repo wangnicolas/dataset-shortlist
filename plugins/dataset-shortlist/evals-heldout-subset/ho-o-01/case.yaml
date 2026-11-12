@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-o-01
+expected_outcome: |
+  A good answer recommends real taxi GPS trajectory datasets with point sequences along each trip, such as the Porto taxi data from the ECML/PKDD 2015 challenge, the Microsoft T-Drive Beijing sample and the San Francisco Cabspotting traces (CRAWDAD epfl/mobility), and explains how each is obtained (Porto is an open CC BY 4.0 download; the CRAWDAD traces need a free IEEE DataPort login).
+  It does not present the NYC TLC trip records as trajectory data, since they hold only pickup and drop-off zones, and ideally adds a less known option such as the Rome taxi traces or Grab-Posisi.

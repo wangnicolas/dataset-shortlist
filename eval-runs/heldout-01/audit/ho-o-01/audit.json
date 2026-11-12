@@ -1,0 +1,153 @@
+{
+  "must_haves": [
+    "Timestamped GPS point sequences along each trip or vehicle track, not only pickup and drop-off; continuous per-vehicle tracks that can be cut into trips count, and pre-segmented trips are not required",
+    "Vehicles are taxis or ride-hailing cars, in any city",
+    "At least a few hundred distinct vehicles",
+    "Publicly obtainable: open download or a documented registration, request or application procedure (the researcher asks what is needed for each, so gated access is acceptable)",
+    "Usable for trajectory similarity and travel-time estimation, which follows from the first must-have (time-stamped point sequences give durations)"
+  ],
+  "A": [
+    {
+      "dataset": "Porto taxi trajectories (ECML/PKDD 2015)",
+      "official_url": "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+      "exists": true,
+      "access_stated": "Free download from the UCI ML Repository with no signup; also on Kaggle with a free account and accepting the competition rules",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The UCI page describes 'all the 442 taxis running in the city of Porto', 1,710,671 trips, POLYLINE with one coordinate pair per 15 s and TIMESTAMP as the trip start, licence CC BY 4.0, and a direct 'Download (509.3 MB)' button with no login stated; the Kaggle data page did not render, so the Kaggle part was not verified."
+    },
+    {
+      "dataset": "T-Drive (Microsoft Research, Beijing)",
+      "official_url": "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+      "exists": true,
+      "access_stated": "Free direct download from the Microsoft Research page; cite the T-Drive papers",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says it 'contains a one-week trajectories of 10,357 taxis' with 'about 15 million' points, offers a 'Download the Trajectory Data' OneDrive link with no registration mentioned, and says 'Please cite the following papers' (KDD'11, GIS'10); the average sampling interval is not on the page itself."
+    },
+    {
+      "dataset": "DiDi GAIA Open Data (Chengdu, Xi'an)",
+      "official_url": "https://outreach.didichuxing.com/research/opendata/en/",
+      "exists": null,
+      "access_stated": "Apply on the DiDi GAIA portal with institutional affiliation and stated research purpose; manual approval, usually non-commercial; access inconsistent over time",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The official portal returned HTTP 404 on two attempts (/research/opendata/en/ and /research/opendata/) and gaia.didichuxing.com does not resolve, so existence, access terms and contents could not be established from an official page; secondary sources (TechNode 2019, a PLoS ONE 2019 study, a 2018 BusinessWire release) describe GAIA releasing Chengdu and Xi'an ride-hailing trajectories to registered or approved researchers."
+    },
+    {
+      "dataset": "San Francisco Cabspotting (CRAWDAD epfl/mobility)",
+      "official_url": "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+      "exists": true,
+      "access_stated": "Register with CRAWDAD and accept its licence; archive has moved hosts, find current location",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Now hosted on IEEE DataPort, which says both 'This dataset requires an IEEE DataPort Subscription' and 'Open Access dataset files are accessible to all logged in users' (a free IEEE account is enough), so a free registration gate matches; about 500 taxis, lines of [latitude, longitude, occupancy, time]; outside the access field, the page gives an average update interval of 'less than 10 sec' (A said about 1 min) and the licence as CC BY 4.0, which contradicts A's caveat that CRAWDAD licences bar redistribution."
+    },
+    {
+      "dataset": "Rome taxi traces (CRAWDAD roma/taxi)",
+      "official_url": "https://ieee-dataport.org/open-access/crawdad-romataxi",
+      "exists": true,
+      "access_stated": "Same CRAWDAD registration and licence as San Francisco",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The IEEE DataPort page describes about 320 taxis in Rome from 2014-02-01 to 2014-03-02 with positions every 7 s; files need 'LOGIN TO ACCESS DATASET FILES', with 'Create a free IEEE account' offered, so a free registration gate matches; the licence is CC BY 4.0, which contradicts A's caveat that the licence bars redistribution."
+    },
+    {
+      "dataset": "Grab-Posisi (Singapore, Jakarta)",
+      "official_url": "https://engineering.grab.com/grab-posisi",
+      "exists": true,
+      "access_stated": "not stated (says it was released for a Grab research challenge and may no longer be available)",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The page describes about 84K trajectories and over 80 million pings at 1 s sampling from April 2019, obtained by emailing grab.posisi@grabtaxi.com with name, institution and intended use ('You cannot use Grab-Posisi dataset for commercial purposes'); the number of distinct drivers or vehicles is not stated, so the few-hundred-vehicles must-have cannot be checked, and the driving-mode label includes motorcycles as well as cars."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "Porto taxi trajectories (ECML/PKDD 2015)",
+      "official_url": "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+      "exists": true,
+      "access_stated": "Direct download from UCI with no login (or ucimlrepo fetch_ucirepo(id=339)); CC BY 4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The UCI page describes 'all the 442 taxis running in the city of Porto', 1,710,671 trips, POLYLINE with one coordinate pair per 15 s and TIMESTAMP as the trip start, licence 'Creative Commons Attribution 4.0 International', and a direct 'Download (509.3 MB)' button with no login stated."
+    },
+    {
+      "dataset": "San Francisco cabs (CRAWDAD epfl/mobility)",
+      "official_url": "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+      "exists": true,
+      "access_stated": "Free IEEE DataPort login; CC BY 4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says both 'This dataset requires an IEEE DataPort Subscription' and 'Open Access dataset files are accessible to all logged in users' (a free IEEE account is enough) and gives the licence as CC BY 4.0; it describes about 500 taxis, lines of [latitude, longitude, occupancy, time] with an average interval 'less than 10 sec', and cabspottingdata.tar.gz at 90.68 MB."
+    },
+    {
+      "dataset": "T-Drive (Beijing)",
+      "official_url": "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+      "exists": true,
+      "access_stated": "Direct download via OneDrive, no registration; no licence stated; cite two papers",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says it 'contains a one-week trajectories of 10,357 taxis' with 'about 15 million' points, gives a 'Download the Trajectory Data' OneDrive link with no registration mentioned and no dataset-specific licence, and says 'Please cite the following papers' (KDD'11, GIS'10); the 177 s average interval B gives is not on this page (it may be in the linked user guide, which was not checked)."
+    },
+    {
+      "dataset": "Grab-Posisi (Singapore, Jakarta)",
+      "official_url": "https://engineering.grab.com/grab-posisi",
+      "exists": true,
+      "access_stated": "Email grab.posisi@grabtaxi.com with name, contact details, institution and intended use; research only, no commercial use; cite Huang et al. 2019",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "The page confirms access by emailing grab.posisi@grabtaxi.com with 'your name and contact details, your institution, and your intended use', says 'You cannot use Grab-Posisi dataset for commercial purposes', and gives about 84K trajectories at 1 s sampling; it does not state the number of distinct drivers or vehicles (as B itself notes), so the few-hundred-vehicles must-have cannot be checked; the driving-mode label includes motorcycles, and Grab-Posisi-L is not mentioned on this page."
+    },
+    {
+      "dataset": "Rome taxis (CRAWDAD roma/taxi)",
+      "official_url": "https://ieee-dataport.org/open-access/crawdad-romataxi",
+      "exists": true,
+      "access_stated": "IEEE DataPort subscription, free with an IEEE society membership; unsure whether a plain free account is enough; licence not confirmed",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "B attributes the access fact to a search done in the same session and cites the DataPort link, though it says it did not open the page and leaves the free-account question unconfirmed; the page matches B's wording ('This dataset requires an IEEE DataPort Subscription', free for IEEE Society members) and also says 'Open Access dataset files are accessible to all logged in users' with a free IEEE account; it describes about 320 taxis from 2014-02-01 to 2014-03-02 with positions 'every 7 seconds' (B said 15 s), under CC BY 4.0."
+    },
+    {
+      "dataset": "DiDi GAIA (Chengdu and Xi'an)",
+      "official_url": "https://outreach.didichuxing.com/research/opendata/en/",
+      "exists": null,
+      "access_stated": "Registration and an application stating the research plan, crediting DiDi; portal unreachable, current status unknown",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The official portal returned HTTP 404 on two attempts (/research/opendata/en/ and /research/opendata/) and gaia.didichuxing.com does not resolve, so existence, access terms and contents could not be established from an official page; secondary sources (TechNode 2019, a PLoS ONE 2019 study, a 2018 BusinessWire release) describe GAIA releasing Chengdu and Xi'an ride-hailing trajectories to registered or approved researchers."
+    },
+    {
+      "dataset": "Segmented Taxi Trajectories in Bangkok (Zenodo 17003809)",
+      "official_url": "https://zenodo.org/records/17003809",
+      "exists": true,
+      "access_stated": "Open, CC BY 4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "Listed under B's heading 'Known, not confirmed', but B cites the Zenodo record and describes its contents, so it is marked 'today'; the record is Open, CC BY 4.0, covers 4-24 April 2019 in three files totalling 33.5 MB, and has timestamped points (roughly every minute with the engine on, every 3 minutes with it off), but it does not state the number of taxis, so the few-hundred-vehicles must-have cannot be checked."
+    },
+    {
+      "dataset": "Shanghai SUVnet taxi traces",
+      "official_url": null,
+      "exists": null,
+      "access_stated": "not stated (says access and contents not verified)",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "No official page could be reached: the likely host wirelesslab.sjtu.edu.cn did not resolve, and two searches turned up only secondary papers (for example a 2007 IEEE TVT paper and arXiv 1705.08409) describing GPS traces from about 4,000 Shanghai taxis in 2007 under the SUVnet-Trace project, with no current download or access terms."
+    }
+  ]
+}

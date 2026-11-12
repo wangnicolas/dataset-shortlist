@@ -1,0 +1,8 @@
+---
+tags: [heldout, health]
+max_turns: 60
+timeout_seconds: 1500
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+I want to study whether physical activity and sleep patterns measured in daily life by wrist-worn accelerometers or activity trackers predict later disease and death. I need data from at least a few thousand adults who wore the device on the wrist for several days to a week or longer, linked to follow-up outcomes such as hospital records, diagnoses or death registrations. Wrist placement matters to me because I want my results to be comparable with other wrist-based studies. I'm at a US university and happy to go through applications. Which datasets should I consider, and what does getting access involve for each?

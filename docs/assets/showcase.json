@@ -1,0 +1,1184 @@
+{
+ "runs": [
+  {
+   "id": "meetings",
+   "label": "Meeting audio",
+   "origin": "a held-out question",
+   "page": "examples/heldout/ho-o-03__with__2.html",
+   "question": "We're a small startup building meeting transcription with speaker diarization. I'm looking for recordings of real multi-party conversations (not simulated mixtures), ideally business-style meetings, with speaker-turn annotations (who spoke when), preferably including far-field or microphone-array audio. English only. It's for a commercial product, so the licence has to allow commercial use. We can pay a reasonable licence fee if needed, but research-only or non-commercial data is out. What should we use?",
+   "requirements": [
+    {
+     "id": "R1",
+     "text": "Real (not simulated) multi-party meetings",
+     "must": true
+    },
+    {
+     "id": "R2",
+     "text": "Speaker-turn / diarization annotations",
+     "must": true
+    },
+    {
+     "id": "R3",
+     "text": "English",
+     "must": true
+    },
+    {
+     "id": "R4",
+     "text": "Commercial use permitted (free or paid)",
+     "must": true
+    },
+    {
+     "id": "R5",
+     "text": "Far-field / microphone-array audio",
+     "must": false
+    },
+    {
+     "id": "R6",
+     "text": "Business-style meetings",
+     "must": false
+    }
+   ],
+   "queries": [
+    "meeting corpus speaker diarization",
+    "multi-party meeting recordings",
+    "far-field meeting speech microphone array"
+   ],
+   "sources": [
+    {
+     "key": "physionet",
+     "name": "PhysioNet",
+     "count": 7
+    },
+    {
+     "key": "zenodo",
+     "name": "Zenodo",
+     "count": 26
+    },
+    {
+     "key": "huggingface",
+     "name": "Hugging Face",
+     "count": 15
+    },
+    {
+     "key": "openaire",
+     "name": "OpenAIRE",
+     "count": 9
+    },
+    {
+     "key": "datacite",
+     "name": "DataCite",
+     "count": 13
+    },
+    {
+     "key": "manual",
+     "name": "Found elsewhere",
+     "count": 5
+    }
+   ],
+   "candidates": 75,
+   "verify": [
+    {
+     "ok": true,
+     "title": "VIP-MINGLE: A Corpus for Videoconference and In-Person Mu…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "First DIHARD Challenge Development - Eight Sources",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "2005 Spring NIST Rich Transcription (RT-05S) Evaluation S…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "ground-truth/multichannel-meetings-10h",
+     "source": "huggingface"
+    },
+    {
+     "ok": true,
+     "title": "huuuyeah/meetingbank",
+     "source": "huggingface"
+    },
+    {
+     "ok": true,
+     "title": "aaronyee/icsi-meeting-corpus",
+     "source": "huggingface"
+    },
+    {
+     "ok": true,
+     "title": "DiPCo -- Dinner Party Corpus",
+     "source": "zenodo"
+    },
+    {
+     "ok": true,
+     "title": "AMI Meeting Corpus",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "NOTSOFAR-1 (CHiME-8 Task 2)",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "ICSI Meeting Corpus",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "NIST Rich Transcription meeting evaluation sets (LDC)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "CHiME-6 dinner party corpus",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "microsoft/NOTSOFAR",
+     "source": "manual"
+    }
+   ],
+   "verified": 12,
+   "checked": 13,
+   "datasets": [
+    {
+     "rank": 1,
+     "title": "NOTSOFAR-1 (CHiME-8 Task 2)",
+     "host": "github.com",
+     "tier": "open",
+     "tier_label": "Open",
+     "licence": "CC-BY-4.0",
+     "fit": "strong",
+     "time": "minutes",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "partial",
+      "R5": "met",
+      "R6": "met"
+     }
+    },
+    {
+     "rank": 2,
+     "title": "AMI Meeting Corpus",
+     "host": "groups.inf.ed.ac.uk",
+     "tier": "open",
+     "tier_label": "Open",
+     "licence": "CC-BY-4.0",
+     "fit": "strong",
+     "time": "minutes",
+     "stamped": true,
+     "req": {
+      "R1": "partial",
+      "R2": "met",
+      "R3": "met",
+      "R4": "met",
+      "R5": "met",
+      "R6": "met"
+     }
+    },
+    {
+     "rank": 3,
+     "title": "ICSI Meeting Corpus",
+     "host": "groups.inf.ed.ac.uk",
+     "tier": "open",
+     "tier_label": "Open",
+     "licence": "CC-BY-4.0",
+     "fit": "partial",
+     "time": "minutes",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "met",
+      "R5": "partial",
+      "R6": "partial"
+     }
+    },
+    {
+     "rank": 4,
+     "title": "DiPCo -- Dinner Party Corpus",
+     "host": "zenodo.org",
+     "tier": "open",
+     "tier_label": "Open",
+     "licence": "CDLA-Permissive-1.0",
+     "fit": "partial",
+     "time": "minutes",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "met",
+      "R5": "met",
+      "R6": "unmet"
+     }
+    },
+    {
+     "rank": 5,
+     "title": "2005 Spring NIST Rich Transcription (RT-05S) Evaluation Set",
+     "host": "doi.org",
+     "tier": "controlled",
+     "tier_label": "Institutional agreement",
+     "licence": "",
+     "fit": "partial",
+     "time": "weeks",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "unknown",
+      "R5": "met",
+      "R6": "met"
+     }
+    }
+   ],
+   "stamped": 5,
+   "set_aside": [
+    {
+     "name": "MeetingBank",
+     "reason": "CC-BY-NC-SA-4.0 on Hugging Face; city council, not diarization-focused."
+    },
+    {
+     "name": "ground-truth/multichannel-meetings-10h",
+     "reason": "CC-BY-NC-4.0"
+    },
+    {
+     "name": "First DIHARD (LDC)",
+     "reason": "Mixed domains, LDC fee; not meeting-focused"
+    }
+   ],
+   "gaps": [
+    "CHiME-6 data page 404'd; its licence was not confirmed (CHiME-5/6 recalled as non-commercial)",
+    "No large, commercially licensed, business-meeting corpus with far-field audio beyond NOTSOFAR/AMI was found"
+   ],
+   "note": "HuggingFace search partly failed (response too large). Registry noise was high.",
+   "seconds": 131,
+   "turns": 11,
+   "tool_calls": 9
+  },
+  {
+   "id": "payroll",
+   "label": "Employer and employee records",
+   "origin": "a held-out question",
+   "page": "examples/heldout/ho-o-02__with__1.html",
+   "question": "I'm a second-year PhD student in labor economics. I want to decompose the rise in wage inequality into within-firm and between-firm parts with an AKM-style model (worker and firm fixed effects), so I need linked employer-employee microdata where I can follow individual workers as they move between employers over at least ten years. Any country is fine. I already know most data like this is restricted, so please be honest about what it would actually take to get access to each option, and tell me if there is anything I could start working with right away.",
+   "requirements": [
+    {
+     "id": "R1",
+     "text": "At least 10 years of panel",
+     "must": true
+    },
+    {
+     "id": "R2",
+     "text": "Worker ID and firm ID on each job spell",
+     "must": true
+    },
+    {
+     "id": "R3",
+     "text": "Enough job movers for a large connected set",
+     "must": true
+    },
+    {
+     "id": "R4",
+     "text": "Wages or earnings per job",
+     "must": true
+    }
+   ],
+   "queries": [
+    "linked employer-employee",
+    "matched employer-employee panel",
+    "employer-employee administrative earnings",
+    "worker firm identifiers wages panel"
+   ],
+   "sources": [
+    {
+     "key": "zenodo",
+     "name": "Zenodo",
+     "count": 33
+    },
+    {
+     "key": "huggingface",
+     "name": "Hugging Face",
+     "count": 47
+    },
+    {
+     "key": "openaire",
+     "name": "OpenAIRE",
+     "count": 14
+    },
+    {
+     "key": "datacite",
+     "name": "DataCite",
+     "count": 22
+    },
+    {
+     "key": "manual",
+     "name": "Found elsewhere",
+     "count": 7
+    }
+   ],
+   "candidates": 123,
+   "verify": [
+    {
+     "ok": true,
+     "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- Läng…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "Linked Employer-Employee Data of the IAB: LIAB Longitudin…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "ECIN Replication Package for \"Dynamics and Sources of Wag…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "Replication data for: Firms and the Decline in Earnings I…",
+     "source": "datacite"
+    },
+    {
+     "ok": true,
+     "title": "SIAB Sample of Integrated Labour Market Biographies (IAB…",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "MCVL Muestra Continua de Vidas Laborales (Spain Social Se…",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "Veneto Worker Histories (INPS, via FRDB)",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "Admin3 Linked Administrative Panel (KRTK Databank, Hungar…",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "RAIS public microdata (Brazil, MTE)",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "LEHD restricted-use (US Census, FSRDC)",
+     "source": "manual"
+    },
+    {
+     "ok": true,
+     "title": "Statistics Denmark IDA",
+     "source": "manual"
+    }
+   ],
+   "verified": 10,
+   "checked": 11,
+   "datasets": [
+    {
+     "rank": 1,
+     "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- Längsschni…",
+     "host": "doi.org",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "strong",
+     "time": "weeks to months",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "partial",
+      "R4": "met"
+     }
+    },
+    {
+     "rank": 2,
+     "title": "SIAB Sample of Integrated Labour Market Biographies (IAB FDZ)",
+     "host": "fdz.iab.de",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "partial",
+     "time": "weeks to months",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "partial",
+      "R3": "partial",
+      "R4": "met"
+     }
+    },
+    {
+     "rank": 3,
+     "title": "MCVL Muestra Continua de Vidas Laborales (Spain Social Security)",
+     "host": "portaldatos.seg-social.gob.es",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "strong",
+     "time": "weeks",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "partial",
+      "R4": "partial"
+     }
+    },
+    {
+     "rank": 4,
+     "title": "Veneto Worker Histories (INPS, via FRDB)",
+     "host": "frdb.org",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "partial",
+     "time": "weeks",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "partial",
+      "R4": "met"
+     }
+    },
+    {
+     "rank": 5,
+     "title": "Admin3 Linked Administrative Panel (KRTK Databank, Hungary)",
+     "host": "adatbank.krtk.mta.hu",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "partial",
+     "time": "months",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "met"
+     }
+    },
+    {
+     "rank": 6,
+     "title": "LEHD restricted-use (US Census, FSRDC)",
+     "host": "lehd.ces.census.gov",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "partial",
+     "time": "months",
+     "stamped": true,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met",
+      "R4": "partial"
+     }
+    },
+    {
+     "rank": 7,
+     "title": "Statistics Denmark IDA",
+     "host": "dst.dk",
+     "tier": "gated",
+     "tier_label": "Application required",
+     "licence": "",
+     "fit": "partial",
+     "time": "months",
+     "stamped": true,
+     "req": {
+      "R1": "met"
+     }
+    }
+   ],
+   "stamped": 7,
+   "set_aside": [
+    {
+     "name": "RAIS public microdata (Brazil)",
+     "reason": "Open, but de-identified: no worker ID, so workers cannot be followed. The identified RAIS needs a request to the Ministry of Labour and cooperation a…"
+    },
+    {
+     "name": "SIAB Campus File",
+     "reason": "Free but for teaching only; no publications; covers a 2005 unemployment-entry cohort to 2008."
+    },
+    {
+     "name": "US QWI / LODES / J2J",
+     "reason": "Public but aggregated; no individual worker histories."
+    },
+    {
+     "name": "Replication packages (Taiwan, Brazil)",
+     "reason": "Code and results for AKM-type papers; the underlying microdata are restricted. Useful for code, not data. Pages blocked automated checks."
+    }
+   ],
+   "gaps": [
+    "No open or free-download worker-by-firm panel with identified firms was found.",
+    "Finland (FLEED), Sweden, Norway, Canada (CEEDD), Portugal (Quadros de Pessoal), France and Netherlands were checked by web search only and are not in…"
+   ],
+   "note": "Checked 2026-11-12. Registry search returned mostly noise; access facts come from the agency pages quoted.",
+   "seconds": 261,
+   "turns": 25,
+   "tool_calls": 23
+  },
+  {
+   "id": "hard",
+   "label": "A hard case",
+   "origin": "a held-out question",
+   "page": "examples/heldout/ho-h-checkpoint-response-rnaseq__with__1.html",
+   "question": "I'm a bioinformatics postdoc building a classifier that predicts response to immune checkpoint inhibitors (anti-PD-1/PD-L1 or anti-CTLA-4) from pre-treatment tumour RNA-seq. I need cohorts of patients who actually received checkpoint inhibitors, with bulk expression data and a recorded clinical response (RECIST or clinical benefit), ideally several independent cohorts so I can validate across studies. Any cancer type is fine. Where can I get these, and which ones can I download right away versus having to apply for?",
+   "requirements": [
+    {
+     "id": "R1",
+     "text": "Patients received anti-PD-1/PD-L1 or anti-CTLA-4",
+     "must": true
+    },
+    {
+     "id": "R2",
+     "text": "Pre-treatment bulk tumour RNA-seq",
+     "must": true
+    },
+    {
+     "id": "R3",
+     "text": "Recorded RECIST or clinical-benefit response",
+     "must": true
+    }
+   ],
+   "queries": [
+    "immune checkpoint inhibitor RNA-seq response",
+    "anti-PD-1 melanoma RNA-seq",
+    "immunotherapy response transcriptome",
+    "nivolumab pembrolizumab expression"
+   ],
+   "sources": [
+    {
+     "key": "zenodo",
+     "name": "Zenodo",
+     "count": 41
+    },
+    {
+     "key": "huggingface",
+     "name": "Hugging Face",
+     "count": 42
+    },
+    {
+     "key": "openaire",
+     "name": "OpenAIRE",
+     "count": 28
+    },
+    {
+     "key": "datacite",
+     "name": "DataCite",
+     "count": 18
+    },
+    {
+     "key": "manual",
+     "name": "Found elsewhere",
+     "count": 9
+    }
+   ],
+   "candidates": 138,
+   "verify": [
+    {
+     "ok": false,
+     "title": "Gide 2019 melanoma anti-PD-1 +/- anti-CTLA-4 RNA-seq (PRJ…",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Riaz 2017 melanoma nivolumab RNA-seq (GSE91061)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Hugo 2016 melanoma pembrolizumab RNA-seq (GSE78220)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Liu 2019 melanoma anti-PD-1 (dbGaP phs000452)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Mariathasan 2018 IMvigor210 urothelial atezolizumab",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Kim 2018 gastric pembrolizumab RNA-seq (PRJEB25780)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Braun 2020 renal nivolumab (CheckMate 009/010/025)",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Miao 2018 ccRCC ICI",
+     "source": "manual"
+    },
+    {
+     "ok": false,
+     "title": "Cho 2020 NSCLC (GSE126044) / Jung 2019 NSCLC",
+     "source": "manual"
+    }
+   ],
+   "verified": 0,
+   "checked": 9,
+   "datasets": [
+    {
+     "rank": 1,
+     "title": "Riaz 2017 melanoma nivolumab RNA-seq (GSE91061)",
+     "host": "ncbi.nlm.nih.gov",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "strong",
+     "time": "minutes",
+     "stamped": false,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 2,
+     "title": "Hugo 2016 melanoma pembrolizumab RNA-seq (GSE78220)",
+     "host": "ncbi.nlm.nih.gov",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "strong",
+     "time": "minutes",
+     "stamped": false,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 3,
+     "title": "Gide 2019 melanoma anti-PD-1 +/- anti-CTLA-4 RNA-seq (PRJEB2370…",
+     "host": "ebi.ac.uk",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "strong",
+     "time": "days",
+     "stamped": false,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 4,
+     "title": "Mariathasan 2018 IMvigor210 urothelial atezolizumab",
+     "host": "research-pub.gene.com",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "strong",
+     "time": "minutes (processed) / weeks to months (raw)",
+     "stamped": false,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 5,
+     "title": "Kim 2018 gastric pembrolizumab RNA-seq (PRJEB25780)",
+     "host": "ebi.ac.uk",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "partial",
+     "time": "days",
+     "stamped": false,
+     "req": {
+      "R1": "met",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 6,
+     "title": "Liu 2019 melanoma anti-PD-1 (dbGaP phs000452)",
+     "host": "ncbi.nlm.nih.gov",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "partial",
+     "time": "weeks to months",
+     "stamped": false,
+     "req": {
+      "R1": "partial",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 7,
+     "title": "Braun 2020 renal nivolumab (CheckMate 009/010/025)",
+     "host": "ncbi.nlm.nih.gov",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "partial",
+     "time": "weeks to months",
+     "stamped": false,
+     "req": {
+      "R1": "partial",
+      "R2": "met",
+      "R3": "met"
+     }
+    },
+    {
+     "rank": 8,
+     "title": "Cho 2020 NSCLC (GSE126044) / Jung 2019 NSCLC",
+     "host": "ncbi.nlm.nih.gov",
+     "tier": "unknown",
+     "tier_label": "Unknown",
+     "licence": "",
+     "fit": "weak",
+     "time": "minutes",
+     "stamped": false,
+     "req": {
+      "R1": "unknown",
+      "R2": "unknown",
+      "R3": "unknown"
+     }
+    }
+   ],
+   "stamped": 0,
+   "set_aside": [
+    {
+     "name": "TCGA",
+     "reason": "Patients were mostly not treated with checkpoint inhibitors, so no response labels."
+    }
+   ],
+   "gaps": [
+    "GEO, EGA and dbGaP are not covered by the registry tool, and their pages were blocked or redirected, so no accession was confirmed today.",
+    "The curated ICBatlas, ICB benchmark (PMC10452274) and IOhub tables list ~30 more cohorts; I could not open them."
+   ],
+   "note": "Most entries are from memory and are marked not verified. Confirm each in a browser before planning.",
+   "seconds": 185,
+   "turns": 16,
+   "tool_calls": 14
+  }
+ ],
+ "evidence": {
+  "model": "sonnet",
+  "statement": "Mixed: the per-question table is the result.",
+  "verdict": "mixed",
+  "conditions": "The rule's three conditions for \"beats\": a mean gain of 5 points or more, met (+9.6); a higher score on at least 7 of the 10 questions, not met (6); no stratum lower, met.",
+  "higher": 6,
+  "same": 2,
+  "lower": 2,
+  "needed": 7,
+  "n": 10,
+  "with": 0.9067460317460316,
+  "without": 0.8104497354497354,
+  "diff": 0.0962962962962963,
+  "cases": [
+   {
+    "case": "ho-h-checkpoint-response-rnaseq",
+    "title": "Checkpoint-inhibitor response from tumour RNA-seq",
+    "stratum": "health",
+    "with": 1.0,
+    "without": 1.0,
+    "prompted": 1.0
+   },
+   {
+    "case": "ho-h-cxr-free-text-reports",
+    "title": "Chest X-rays with free-text reports",
+    "stratum": "health",
+    "with": 0.9166666666666666,
+    "without": 0.875,
+    "prompted": 0.9583333333333334
+   },
+   {
+    "case": "ho-h-derm-skin-tone",
+    "title": "Skin images with skin-tone labels",
+    "stratum": "health",
+    "with": 0.9047619047619048,
+    "without": 0.6666666666666666,
+    "prompted": 1.0
+   },
+   {
+    "case": "ho-h-ecg-rhythm-labels",
+    "title": "12-lead ECGs with rhythm labels, no application",
+    "stratum": "health",
+    "with": 0.8888888888888888,
+    "without": 0.9259259259259259,
+    "prompted": 0.6666666666666666
+   },
+   {
+    "case": "ho-h-measured-bp-surveys",
+    "title": "National surveys with measured blood pressure",
+    "stratum": "health",
+    "with": 0.7916666666666666,
+    "without": 0.75,
+    "prompted": 0.6666666666666666
+   },
+   {
+    "case": "ho-h-wrist-activity-outcomes",
+    "title": "Wrist accelerometry linked to outcomes",
+    "stratum": "health",
+    "with": 1.0,
+    "without": 0.9583333333333334,
+    "prompted": 1.0
+   },
+   {
+    "case": "ho-o-01",
+    "title": "Taxi GPS trajectories",
+    "stratum": "other fields",
+    "with": 0.9523809523809524,
+    "without": 1.0,
+    "prompted": 0.8571428571428572
+   },
+   {
+    "case": "ho-o-02",
+    "title": "Linked employer-employee microdata",
+    "stratum": "other fields",
+    "with": 0.9583333333333334,
+    "without": 0.75,
+    "prompted": 0.875
+   },
+   {
+    "case": "ho-o-03",
+    "title": "Meeting recordings for diarization, commercial use",
+    "stratum": "other fields",
+    "with": 0.75,
+    "without": 0.75,
+    "prompted": 0.6666666666666666
+   },
+   {
+    "case": "ho-o-04",
+    "title": "Galaxy images with human morphology labels",
+    "stratum": "other fields",
+    "with": 0.9047619047619048,
+    "without": 0.42857142857142855,
+    "prompted": 0.7619047619047619
+   }
+  ],
+  "families": [
+   {
+    "key": "access",
+    "label": "Says how to get it",
+    "without": {
+     "passed": 56,
+     "total": 81
+    },
+    "with": {
+     "passed": 69,
+     "total": 81
+    }
+   },
+   {
+    "key": "long tail",
+    "label": "Finds a less-known one",
+    "without": {
+     "passed": 19,
+     "total": 30
+    },
+    "with": {
+     "passed": 24,
+     "total": 30
+    }
+   },
+   {
+    "key": "recall",
+    "label": "Finds the well-known ones",
+    "without": {
+     "passed": 89,
+     "total": 96
+    },
+    "with": {
+     "passed": 92,
+     "total": 96
+    }
+   },
+   {
+    "key": "trap",
+    "label": "Avoids the wrong famous one",
+    "without": {
+     "passed": 27,
+     "total": 27
+    },
+    "with": {
+     "passed": 27,
+     "total": 27
+    }
+   }
+  ],
+  "judge_failures": 1,
+  "long_tail_by_stratum": {
+   "health": {
+    "with": {
+     "passed": 13,
+     "total": 18
+    },
+    "without": {
+     "passed": 13,
+     "total": 18
+    }
+   },
+   "other fields": {
+    "with": {
+     "passed": 11,
+     "total": 12
+    },
+    "without": {
+     "passed": 6,
+     "total": 12
+    }
+   }
+  },
+  "runs_per_question": 3,
+  "judge": "sonnet",
+  "prompted": {
+   "mean": 0.8452380952380952,
+   "diff": 0.06150793650793651,
+   "higher": 6,
+   "same": 2,
+   "lower": 2
+  },
+  "effort": {
+   "with": {
+    "minutes": 2.8755150000000005,
+    "cost_usd": 0.4429375166666667,
+    "tool_calls": 14.333333333333334
+   },
+   "without": {
+    "minutes": 0.4959655555555555,
+    "cost_usd": 0.06839846666666667,
+    "tool_calls": 0.0
+   },
+   "prompted": {
+    "minutes": 0.85977,
+    "cost_usd": 0.3454417666666666,
+    "tool_calls": 9.133333333333333
+   }
+  },
+  "links": {
+   "with": {
+    "per_answer": 8.033333333333333,
+    "total": 241,
+    "ok": 217,
+    "dead": 4,
+    "blocked": 20
+   },
+   "without": {
+    "per_answer": 0.0,
+    "total": 0,
+    "ok": 0,
+    "dead": 0,
+    "blocked": 0
+   },
+   "prompted": {
+    "per_answer": 11.266666666666667,
+    "total": 338,
+    "ok": 278,
+    "dead": 22,
+    "blocked": 38
+   }
+  },
+  "audit": {
+   "with": {
+    "n": 83,
+    "exists_true": 80,
+    "exists_judged": 81,
+    "access_true": 65,
+    "access_judged": 70,
+    "fit_true": 63,
+    "fit_judged": 70
+   },
+   "without": {
+    "n": 76,
+    "exists_true": 75,
+    "exists_judged": 75,
+    "access_true": 54,
+    "access_judged": 60,
+    "fit_true": 61,
+    "fit_judged": 65
+   }
+  },
+  "marking": {
+   "today": {
+    "right": 39,
+    "n": 40
+   },
+   "memory": {
+    "right": 26,
+    "n": 30
+   }
+  },
+  "workflow": {
+   "runs": 30,
+   "pages": 16,
+   "used": {
+    "search": 30,
+    "add": 11,
+    "show": 19,
+    "lookup": 8,
+    "read": 26,
+    "verify": 27,
+    "papers": 29,
+    "render": 16
+   },
+   "false_page_claims": 0
+  },
+  "trigger": {
+   "fired_when_it_should": 10,
+   "should": 10,
+   "fired_when_it_should_not": 0,
+   "should_not": 10
+  },
+  "second_model": {
+   "model": "fable",
+   "judge_failures": 2,
+   "cases": [
+    {
+     "case": "ho-h-checkpoint-response-rnaseq",
+     "title": "Checkpoint-inhibitor response from tumour RNA-seq",
+     "with": 1.0,
+     "without": 1.0
+    },
+    {
+     "case": "ho-h-cxr-free-text-reports",
+     "title": "Chest X-rays with free-text reports",
+     "with": 0.9375,
+     "without": 0.9375
+    },
+    {
+     "case": "ho-o-01",
+     "title": "Taxi GPS trajectories",
+     "with": 1.0,
+     "without": 1.0
+    }
+   ],
+   "recorded_diff": 0.04761904761904764,
+   "diff": 0.0,
+   "higher": 0,
+   "same": 3,
+   "lower": 0,
+   "effort": {
+    "with": {
+     "minutes": 8.547816666666668,
+     "cost_usd": 4.1099036
+    },
+    "without": {
+     "minutes": 1.9727638888888888,
+     "cost_usd": 0.8547705
+    }
+   }
+  }
+ },
+ "benchmark": {
+  "unit_cost_usd": 0.06839846666666667,
+  "models": [
+   {
+    "model": "sonnet",
+    "n": 10,
+    "with": {
+     "accuracy": 0.9109126984126984,
+     "cost_usd": 0.44293751666666664,
+     "runs": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "accuracy": 0.8104497354497354,
+     "cost_usd": 0.06839846666666667,
+     "runs": [
+      3,
+      3
+     ]
+    },
+    "higher": 6,
+    "lower": 2,
+    "judge_failures": 1,
+    "same": 2,
+    "prompted": {
+     "accuracy": 0.8452380952380952,
+     "cost_usd": 0.34544176666666665,
+     "runs": [
+      3,
+      3
+     ]
+    }
+   },
+   {
+    "model": "fable",
+    "n": 3,
+    "with": {
+     "accuracy": 0.9791666666666666,
+     "cost_usd": 4.1099036,
+     "runs": [
+      2,
+      2
+     ]
+    },
+    "without": {
+     "accuracy": 0.9791666666666666,
+     "cost_usd": 0.8547705,
+     "runs": [
+      2,
+      2
+     ]
+    },
+    "higher": 0,
+    "lower": 0,
+    "judge_failures": 2,
+    "same": 3
+   }
+  ]
+ },
+ "before_after": {
+  "case": "ho-o-04",
+  "title": "Galaxy images with human morphology labels",
+  "question": "I need free galaxy images with detailed morphology labels (bars, spiral arms, bulge size, mergers etc.) to train a CNN for my master's thesis: at least 40k galaxies, and the labels have to come from humans (volunteer votes or experts), not from another model's predictions. Ideally the images come bundled with the labels. What should I download?",
+  "run": 1,
+  "plain": {
+   "text": "I'd start with **Galaxy Zoo**. It's the main source of volunteer-labelled galaxy morphology. These are the options that fit your constraints (I'm going from memory, so check the exact sizes and URLs on the pages).\n\n## Best fits\n\n**1. Galaxy Zoo DECaLS (GZD-5, and GZD-8 in the later releases)**\n- It has hundreds of thousands of galaxies (roughly 250k for GZD-5). The images are deeper and sharper than SDSS.\n- The labels are volunteer vote counts for a decision tree. It covers bars, spiral arm count and tightness, bulge size, mergers and tidal features, edge-on discs, and more.\n- Walmsley et al. 2022 describes it.\n- The Zoobot project (Walmsley et al.) hosts the images and votes together on Hugging Face under the `mwalmsley` account, so you can load them with the `datasets` library. Search for the `gz_decals` and `gz_evo` datasets.\n\n**2. Galaxy Zoo 2 (SDSS)**\n- It has about 240k to 300k galaxies in the Willett et al. 2013 catalogue, with vote fractions on the same kind of questions: bar, spiral, bulge prominence (none, just noticeable, obvious, dominant), merger or odd features, and edge-on.\n- The images are lower resolution than DECaLS. They are 424×424 JPEGs.\n- The **Kaggle \"Galaxy Zoo – The Galaxy Challenge\"** download bundles about 61k training images with 37 vote-fraction columns. That is above your 40k minimum, and the images and labels come together. You need a free Kaggle account and have to accept the competition rules.\n- The Hugging Face `gz2` dataset is another option.\n\n## What to avoid\n\n- **Galaxy10 DECaLS and Galaxy10 SDSS** are convenient, but they're too small (about 17k and 21k). They also reduce the votes to 10 coarse classes, so you'd lose bar, bulge and merger detail.\n- **Galaxy Zoo DESI** and parts of **GZ Evo** mix volunteer votes with Zoobot model predictions. This matters because you need human-only labels. If you use them, take only the volunteer vote-count columns and ignore the model-posterior columns. For a clean thesis, GZD-5 or GZ2 is simpler to defend.\n\n## Using the votes\n\n- **Filter by vote count.** Keep galaxies where the relevant question has at least about 20 to 30 votes. Questions are conditional, so a bar vote only exists for galaxies that volunteers called \"featured, not edge-on\".\n- **Train on vote fractions or counts** (soft labels or a Dirichlet/multinomial loss) rather than hard classes. Zoobot does this.\n- **Check class balance.** Mergers and strong bars are rare, so you'll need weighting or oversampling.\n- **Cite the papers** (Willett 2013, Walmsley 2022, and the Galaxy Zoo volunteers). Both data releases ask for this.\n\nI'd go with GZD-5 from Hugging Face for the main run, and use the Kaggle GZ2 set as a second dataset to test generalisation across surveys. I can write the download and filtering script if you want.",
+   "links": 0,
+   "words": 469,
+   "score": 0.42857142857142855,
+   "run_checks": {
+    "passed": 3,
+    "total": 7
+   }
+  },
+  "skill": {
+   "text": "## What I assumed you need\n\n- **R1 (must):** at least 40k galaxies.\n- **R2 (must):** detailed morphology: bars, spiral arms, bulge size, mergers.\n- **R3 (must):** labels from human votes, not model predictions.\n- **R4 (nice to have):** images bundled with the labels.\n- I assumed a free, direct download and that you'll train on the vote counts or fractions yourself.\n\n## Shortlist\n\n| # | Dataset | Access | Licence | Size | Fit | Checked |\n|---|---|---|---|---|---|---|\n| 1 | Galaxy Zoo 2 (SDSS) images + volunteer table | Open download, minutes | Images CC-BY-4.0. Table terms not checked | 243,434 images (3.35 GB) | Strong | Images: today. Table: today (site text) |\n| 2 | Galaxy Zoo DECaLS | Open download, days (~104 GB of images) | CC-BY-4.0 | 314k galaxies in total. Volunteer-labelled subset not counted | Strong | today |\n| 3 | Galaxy Zoo UKIDSS (near-infrared) | Open download, minutes | CC-BY-4.0 | 71,052 galaxies (7.9 GB images) | Partial | today |\n\n## Details\n\n**1. Galaxy Zoo 2**\n- **Links:** [images (Zenodo)](https://zenodo.org/records/3565489) and [labels (data.galaxyzoo.org)](https://data.galaxyzoo.org).\n- **Contents:** the images come with `gz2_filename_mapping.csv`. The labels are volunteer votes from the GZ2 decision tree, covering bars, spiral arms, bulge prominence and mergers/odd features. They come from 16M classifications. Use the debiased Table 1 (Hart et al. 2016).\n- **Why it's first:** it clears 40k comfortably, the labels are human, and the images are lower-resolution SDSS cutouts, a common setting for CNN work.\n- **Caveat:** images and labels are two downloads that you join with the mapping file.\n- **Zenodo catalogue:** a separate Zenodo copy of the GZ2 catalogue ([record 3566991](https://zenodo.org/records/3566991)) is flagged \"restricted\". I didn't resolve that. Use data.galaxyzoo.org instead.\n\n**2. Galaxy Zoo DECaLS** ([Zenodo](https://zenodo.org/records/4573248))\n- **Contents:** the record has volunteer-vote files for the GZD-1/2 and GZD-5 campaigns and a `schema.md`. It also has four DR5 PNG image zips, about 104 GB in total. The newer question schema targets mergers and weak bars. Images are higher quality than SDSS.\n- **Caveat 1:** the file `gz_decals_auto_posteriors` is *model predictions*. Don't use it as labels. Use only the `gz_decals_volunteers_*` files.\n- **Caveat 2:** many GZD-5 galaxies have only about 5 votes, so filter by vote count.\n- **Caveat 3:** the record doesn't say how many galaxies have volunteer votes. Count the rows before relying on 40k.\n\n**3. Galaxy Zoo UKIDSS** ([Zenodo](https://zenodo.org/records/13357341))\n- **Contents:** catalogue and images in one record. The catalogue has vote counts and fractions (images are in `ukidss_images.zip`, 7.9 GB).\n- **Caveat:** it's near-infrared, so it's less useful as a main training set. It works as a second domain to compare against.\n\n## Known, not confirmed\n\n- **Galaxy Zoo Hubble and CANDELS:** both are listed on data.galaxyzoo.org and have volunteer votes, but I didn't check sizes or whether images are bundled.\n- **Euclid Q1 visual morphology catalogue** ([Zenodo](https://zenodo.org/records/15106473)): I didn't check whether its labels are human or model-derived, or its size.\n- **Hugging Face copies** of GZ2 (for example `juliensimon/galaxy-zoo-2-morphology`): they show up as open, but I didn't check which columns they carry. They may be easier to load than the Zenodo zip.\n\n## Not recommended, and why\n\n- **Galaxy Zoo DESI (8.7M):** this is the famous one, but its main catalogue is deep-learning predicted vote fractions, which fails R3. The only human votes in it are about 96k galaxies from the GZD-8 campaign, and the images aren't bundled.\n- **Galaxy10 DECaLS:** about 17.7k images (from memory), which is below your 40k, and only 10 coarse classes.\n- **Galaxy MNIST:** about 10k images (from memory) and 4 coarse classes. Too small.\n\n## What I could not find\n\nThe literature search returned almost nothing relevant, so I found no lesser-known alternatives. The ranking comes from registry searches and the Galaxy Zoo data portal.\n\n## Next step\n\nDownload the GZ2 images and Table 1 and join them with the mapping file. Then decide whether the DECaLS vote count is enough to add a second, sharper-image set. This check was done on 2026-11-12, and access terms and versions can change.\n\nThe interactive page is at `/private/tmp/e-rixoW4/home/cwd/dataset-shortlist.html`.",
+   "links": 6,
+   "words": 680,
+   "score": 0.9047619047619048,
+   "run_checks": {
+    "passed": 7,
+    "total": 7
+   }
+  }
+ }
+}

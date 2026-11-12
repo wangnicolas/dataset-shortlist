@@ -1,0 +1,93 @@
+{
+  "must_haves": [
+    "Dermatology skin images (clinical photographs or dermoscopy) of any skin condition, not limited to skin cancer",
+    "A skin tone label (Fitzpatrick type or Monk Skin Tone scale) attached to each image or each patient/case",
+    "A diagnosis label for each image or case",
+    "Fitzpatrick types V and VI (or the equivalent darkest tones) represented by more than a handful of images: on the order of a hundred or more, enough for a subgroup comparison",
+    "Publicly available dataset (no further access or licence constraint was stated by the researcher)"
+  ],
+  "A": [
+    {
+      "dataset": "DDI (Diverse Dermatology Images, Stanford)",
+      "official_url": "https://ddi-dataset.github.io/",
+      "exists": true,
+      "access_stated": "Free registration and signed Research Use Agreement via Stanford AIMI portal; non-commercial, no redistribution",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The DDI page says downloads require registering, which means agreeing to the Research Use Agreement, for 'personal, non-commercial research purposes only' and 'YOU MAY NOT SHARE THE DOWNLOAD LINK', and the AIMI page (https://aimi.stanford.edu/datasets/ddi-diverse-dermatology-images) lists 656 biopsy-confirmed images from 570 patients with 207 FST V-VI images (159 benign, 48 malignant), matching the answer; the pages do not say how long access takes, so 'minutes' is unverified."
+    },
+    {
+      "dataset": "SCIN (Skin Condition Image Network, Google)",
+      "official_url": "https://github.com/google-research-datasets/scin",
+      "exists": true,
+      "access_stated": "Open download from a public cloud bucket; SCIN Data Use Public License",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "The README says 'The data is stored in the dx-scin-public-data bucket on Google Cloud Storage' and the licence preamble names the 'SCIN Data Use Public License' (royalty-free, no re-identification); the paper (arXiv 2402.18545) gives V/VI only as percentages (self-reported 9.84%/6.57%, dermatologist-estimated 5.27%/0.57%, Monk 8-10 'less than 1.5%') and reports 'Fitzpatrick skin type: 2500, 49.65%' self-reporting, so per-case tone coverage and absolute V/VI counts cannot be confirmed from the documentation, and the answer's 'about 800' self-reported V/VI cases is not a figure stated in the documentation."
+    },
+    {
+      "dataset": "Fitzpatrick17k",
+      "official_url": "https://github.com/mattgroh/fitzpatrick17k",
+      "exists": true,
+      "access_stated": "CSV openly available; images fetched from the source atlases; CC BY-NC-SA 3.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The README says annotations are in fitzpatrick17k.csv with image URLs to the original atlases ('some of the links are broken', with a form to request a link to all images) under 'a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License', and the paper (ar5iv 2104.09957) reports 16,577 images, 114 conditions and 2,168 Type 5-6 images (565 unknown), matching the answer's about 2,170."
+    },
+    {
+      "dataset": "Fitzpatrick17k-C (cleaned Fitzpatrick17k)",
+      "official_url": "https://zenodo.org/records/11101338",
+      "exists": true,
+      "access_stated": "Open download from Zenodo; CC BY-NC 4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "The Zenodo record (Abhishek, Jain, Hamarneh; 'DermaMNIST-C, DermaMNIST-E, and Fitzpatrick17k-C') is openly downloadable under CC BY-NC 4.0 and holds a Fitzpatrick17k image archive plus the Fitzpatrick17k-C CSV, but neither it, the GitHub repo nor the Scientific Data paper text I could read states the post-cleaning image count or the number of FST V-VI images, so the darker-skin requirement cannot be confirmed for the cleaned set."
+    },
+    {
+      "dataset": "DDI-2 (Stanford, self-identified Asian patients)",
+      "official_url": "https://daneshjoulab.github.io/ddi2-dataset/",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The answer lists DDI-2 under 'Known, not confirmed'; the project page confirms 665 photos, 550 self-identified Asian patients, 169 histopathologically confirmed diagnoses, 'granular annotation of Fitzpatrick skin type', and access via the AIMI portal under a Research Use Agreement, but gives no FST V-VI count, and the JID paper with the breakdown returned HTTP 403 on fetch."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "DDI (Diverse Dermatology Images, Stanford)",
+      "official_url": "https://ddi-dataset.github.io/",
+      "exists": true,
+      "access_stated": "Stanford AIMI data use agreement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The DDI page says access is via the Stanford AIMI Shared Datasets Portal and that registering means agreeing to the Research Use Agreement, and the AIMI page (https://aimi.stanford.edu/datasets/ddi-diverse-dermatology-images) lists 656 biopsy-confirmed images from 570 patients with 207 FST V-VI images, matching the answer's figures."
+    },
+    {
+      "dataset": "SCIN (Skin Condition Image Network, Google)",
+      "official_url": "https://github.com/google-research-datasets/scin",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The answer gives no access route (the README says 'The data is stored in the dx-scin-public-data bucket on Google Cloud Storage'); the paper (arXiv 2402.18545) gives V/VI only as percentages (self-reported 9.84%/6.57%, dermatologist-estimated 5.27%/0.57%) and reports 'Fitzpatrick skin type: 2500, 49.65%' self-reporting, so per-case tone coverage and absolute V/VI counts cannot be confirmed, and the answer's upper range of 'low thousands' V/VI cases is not supported by any figure in the documentation."
+    },
+    {
+      "dataset": "Fitzpatrick17k",
+      "official_url": "https://github.com/mattgroh/fitzpatrick17k",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The answer gives no access route (the README provides fitzpatrick17k.csv with source-atlas image URLs under CC BY-NC-SA 3.0); the paper (ar5iv 2104.09957) reports 16,577 images, 114 conditions, Scale AI crowd annotation and 2,168 Type 5-6 images (565 unknown), matching the answer's 'a couple thousand combined'."
+    }
+  ]
+}

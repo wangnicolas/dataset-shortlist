@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-RtmQHonwFqaDGk5tL289kcWS5HNEtCagDDu+RZngI8Y='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta name="generator" content="dataset-scout">
+<title>Dataset shortlist: Benchmark datasets with specific crop-type labels (field or pixel…</title>
+<style>
+/* dataset-scout report.
+   Layout: the researcher's brief in one reading column, then a full-width
+   comparison table and one dossier card per dataset; the plan bar stays at
+   the bottom of the window.
+   Three voices: serif is the researcher's own question, sans is this report,
+   mono is text quoted from a registry or a date.
+   One accent, used for things you can act on. Green, amber and red are kept
+   for state (access, requirement check, verification) and always come with a
+   word and a mark, never colour alone. */
+:root {
+  color-scheme: light dark;
+  --paper: #f5f6f7;
+  --surface: #ffffff;
+  --sunken: #eceef1;
+  --ink: #14181d;
+  --ink-2: #47505b;
+  --ink-3: #5f6975;
+  --rule: #dfe2e6;
+  --rule-strong: #c5cad1;
+  --control: #7d8794;
+  --accent: #2a44c2;
+  --accent-ink: #ffffff;
+  --accent-tint: #e9edfc;
+  --go: #1a7340;
+  --go-tint: #e6f4ea;
+  --go-line: #a3d1b1;
+  --wait: #8a5700;
+  --wait-tint: #fcf2dc;
+  --wait-line: #e3c684;
+  --stop: #b3261a;
+  --stop-tint: #fdece9;
+  --stop-line: #ebaaa2;
+  --shadow: rgba(20, 24, 29, 0.3);
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --radius: 3px;
+  --measure: 44rem;
+  --gutter: 16px;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1216;
+    --surface: #171b21;
+    --sunken: #1f252c;
+    --ink: #e8ecf0;
+    --ink-2: #b4bdc8;
+    --ink-3: #939da9;
+    --rule: #2a3139;
+    --rule-strong: #3b444e;
+    --control: #76818e;
+    --accent: #a3b4ff;
+    --accent-ink: #0c1230;
+    --accent-tint: #1d2750;
+    --go: #74d391;
+    --go-tint: #12301e;
+    --go-line: #2e6a44;
+    --wait: #efc260;
+    --wait-tint: #33280c;
+    --wait-line: #7a5f1e;
+    --stop: #ff9f92;
+    --stop-tint: #3b1814;
+    --stop-line: #8f3d33;
+    --shadow: rgba(0, 0, 0, 0.7);
+  }
+}
+@media (min-width: 48rem) {
+  :root { --gutter: 2rem; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 1rem;
+  scroll-padding-bottom: 8rem;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+[hidden] { display: none !important; }
+h1, h2, h3, h4, p, ul, ol, dl, dd { margin: 0; }
+ul, ol { padding: 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input[type="checkbox"] {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: 0;
+  z-index: 30;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0.75rem); }
+
+.page {
+  max-width: 73rem;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+@media (min-width: 48rem) {
+  .page { padding-top: 4rem; }
+}
+
+.label {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.muted { color: var(--ink-3); }
+.icon { flex: none; width: 1em; height: 1em; }
+
+/* State tones: a mark, a tint and a line. The word next to them stays in ink. */
+.tone-go { --tone: var(--go); --tone-tint: var(--go-tint); --tone-line: var(--go-line); }
+.tone-wait { --tone: var(--wait); --tone-tint: var(--wait-tint); --tone-line: var(--wait-line); }
+.tone-stop { --tone: var(--stop); --tone-tint: var(--stop-tint); --tone-line: var(--stop-line); }
+.tone-none { --tone: var(--ink-2); --tone-tint: transparent; --tone-line: var(--control); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.1875rem 0.5rem 0.1875rem 0.4375rem;
+  border: 1px solid var(--tone-line);
+  border-radius: var(--radius);
+  background: var(--tone-tint);
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+.badge .icon { font-size: 1rem; color: var(--tone); }
+.badge.tone-none { border-style: dashed; }
+
+.status { display: inline-flex; align-items: center; gap: 0.375rem; font-weight: 650; white-space: nowrap; }
+.status .icon { font-size: 1.0625rem; color: var(--tone); }
+
+.fit { display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+.pips { display: inline-flex; gap: 3px; }
+.pips i { display: block; width: 0.5625rem; height: 0.5625rem; border: 1.5px solid var(--ink-3); border-radius: 1px; }
+.pips i.on { border-width: 0.28125rem; border-color: var(--ink); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-height: 2.5rem;
+  padding: 0.4375rem 0.875rem;
+  border: 1px solid var(--control);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--ink); }
+.btn-primary { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { border-color: var(--ink); }
+.btn-quiet { border-color: transparent; background: transparent; color: var(--accent); }
+.btn-quiet:hover { border-color: var(--accent); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn:disabled:hover { border-color: var(--control); }
+.btn-primary:disabled:hover { border-color: var(--accent); }
+
+/* ---- Masthead and brief ---- */
+.eyebrow { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 1.25rem; }
+.eyebrow time { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-3); }
+.question {
+  max-width: 50rem;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.625rem, 1.15rem + 2.1vw, 2.5rem);
+  line-height: 1.2;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.question.is-long { font-size: clamp(1.375rem, 1.1rem + 1.2vw, 1.875rem); line-height: 1.28; }
+.error {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--stop-line);
+  border-radius: var(--radius);
+  background: var(--stop-tint);
+}
+
+.brief { margin-top: 2.5rem; }
+.req-groups { display: grid; gap: 2rem 3rem; }
+@media (min-width: 48rem) {
+  .req-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.req-group { min-width: 0; }
+.req-list { list-style: none; margin-top: 0.625rem; border-top: 1px solid var(--rule); }
+.req-list li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  column-gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9375rem;
+  overflow-wrap: anywhere;
+}
+.req-id { font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.95; color: var(--ink-3); }
+
+.provenance { margin-top: 2rem; max-width: 50rem; font-size: 0.9375rem; color: var(--ink-2); }
+.queries {
+  margin-top: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+.report-notes {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--sunken);
+  color: var(--ink);
+  overflow-wrap: break-word;
+}
+
+/* ---- Sections ---- */
+.band { margin-top: 3.5rem; }
+.section-title { font-size: 1.375rem; line-height: 1.25; font-weight: 650; letter-spacing: -0.01em; }
+.section-lede { margin-top: 0.375rem; max-width: var(--measure); color: var(--ink-2); }
+
+.tally {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+}
+.tally li { display: inline-flex; align-items: center; gap: 0.375rem; }
+.tally strong { color: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; }
+.tally .icon { font-size: 1rem; color: var(--tone); }
+
+/* ---- Comparison table: the only thing allowed to scroll sideways ---- */
+.table-wrap {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.compare { width: 100%; min-width: 56rem; border-collapse: collapse; font-size: 0.875rem; line-height: 1.4; }
+.compare th, .compare td { padding: 0.75rem 0.875rem; text-align: left; vertical-align: top; font-weight: 400; }
+.compare thead th {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--rule-strong);
+  background: var(--sunken);
+  color: var(--ink-2);
+  font-size: 0.6875rem;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.compare tbody tr + tr > * { border-top: 1px solid var(--rule); }
+.compare tbody tr.is-selected > * { background: var(--accent-tint); }
+.compare .col-pick { width: 3.5rem; text-align: center; }
+.compare .col-rank { width: 3.5rem; font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.2; font-variant-numeric: lining-nums tabular-nums; color: var(--ink-2); }
+.compare thead .col-rank { font-family: inherit; font-size: 0.6875rem; }
+.compare .col-name { min-width: 15rem; max-width: 24rem; }
+.compare .col-licence { max-width: 14rem; }
+.compare .col-size { max-width: 12rem; font-variant-numeric: tabular-nums; }
+.compare .col-fit, .compare .col-time { white-space: nowrap; }
+.compare .main { font-weight: 650; overflow-wrap: anywhere; }
+.compare .empty-row td { padding: 1.5rem 0.875rem; color: var(--ink-2); }
+.name-link { font-weight: 650; color: var(--ink); text-decoration-color: var(--control); overflow-wrap: anywhere; }
+.name-link:hover { color: var(--accent); text-decoration-color: currentColor; }
+.sub { display: block; margin-top: 0.125rem; font-size: 0.8125rem; color: var(--ink-3); overflow-wrap: anywhere; }
+.flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.375rem;
+  padding: 0.0625rem 0.4rem 0.0625rem 0.3rem;
+  border: 1px dashed var(--tone-line);
+  border-radius: var(--radius);
+  background: var(--tone-tint);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+.flag .icon { font-size: 0.875rem; color: var(--tone); }
+
+/* ---- Filters ---- */
+.filters {
+  display: grid;
+  gap: 1rem 2rem;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+@media (min-width: 62rem) {
+  .filters { grid-template-columns: auto auto auto minmax(12rem, 1fr); align-items: start; padding: 1rem 1.25rem; }
+}
+.filters fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.filters legend, .filters .field-label { display: block; margin-bottom: 0.5rem; padding: 0; }
+.options { display: flex; flex-wrap: wrap; gap: 0.375rem 0.5rem; }
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.625rem 0.25rem 0.5rem;
+  border: 1px solid var(--control);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.875rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.option:hover { border-color: var(--ink); }
+.option .count { font-size: 0.8125rem; font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.field { min-width: 0; }
+.field input {
+  display: block;
+  width: 100%;
+  min-height: 2.25rem;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid var(--control);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9375rem;
+}
+.filter-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+.filter-status { margin-right: auto; font-size: 0.9375rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.no-match {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px dashed var(--control);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+}
+.no-match .btn { margin-top: 0.75rem; }
+
+/* ---- Dataset cards ---- */
+.cards { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+.card {
+  min-width: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  scroll-margin-top: 1rem;
+}
+.card.is-unverified { border: 2px dashed var(--control); }
+.card.is-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.card:target { box-shadow: 0 0 0 3px var(--accent-tint), 0 0 0 4px var(--accent); }
+
+.card-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.875rem 1rem; align-items: start; padding: 1.25rem 1rem 1.125rem; }
+.card-rank {
+  min-width: 1.75rem;
+  font-family: var(--font-serif);
+  font-size: 2.125rem;
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+  color: var(--ink-3);
+}
+.card-heading { min-width: 0; }
+.card-title { font-size: 1.25rem; line-height: 1.3; font-weight: 650; letter-spacing: -0.005em; overflow-wrap: anywhere; }
+.card-source { margin-top: 0.25rem; font-size: 0.875rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.stamp {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.5rem;
+  align-items: center;
+  max-width: 100%;
+  padding: 0.3125rem 0.625rem 0.3125rem 0.5rem;
+  border: 3px double var(--tone);
+  border-radius: var(--radius);
+  line-height: 1.3;
+}
+.stamp .icon { grid-row: 1 / span 2; font-size: 1.5rem; color: var(--tone); }
+.stamp-word { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--tone); }
+.stamp-meta { grid-column: 2; font-family: var(--font-mono); font-size: 0.6875rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.stamp-off { border: 2px dashed var(--tone); background: var(--tone-tint); }
+@media (min-width: 48rem) {
+  .card-head { grid-template-columns: auto minmax(0, 1fr) auto; gap: 1rem 1.25rem; padding: 1.5rem 1.75rem 1.25rem; }
+  .stamp { grid-column: auto; justify-self: end; max-width: 17rem; }
+}
+
+.alert {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-top: 1px dashed var(--tone-line);
+  background: var(--tone-tint);
+  font-size: 0.9375rem;
+  overflow-wrap: break-word;
+}
+.alert .icon { margin-top: 0.125rem; font-size: 1.25rem; color: var(--tone); }
+.alert-title { font-weight: 700; }
+.alert ul { margin-top: 0.375rem; padding-left: 1.125rem; }
+
+.glance { display: grid; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.glance > div { min-width: 0; padding: 1rem; }
+.glance > div + div { border-top: 1px solid var(--rule); }
+.glance dt { margin-bottom: 0.5rem; font-size: 0.8125rem; font-weight: 650; color: var(--ink-2); }
+.glance .answer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem 0.5rem; font-size: 1.0625rem; line-height: 1.35; font-weight: 650; overflow-wrap: anywhere; }
+.glance .badge { white-space: normal; }
+.glance .mark { display: flex; align-items: flex-start; gap: 0.375rem; color: var(--ink); font-weight: 650; }
+.glance .mark .icon { margin-top: 0.1875rem; font-size: 1rem; color: var(--tone); }
+.glance .detail { margin-top: 0.375rem; font-size: 0.875rem; color: var(--ink-2); overflow-wrap: break-word; }
+.glance .detail strong { color: var(--ink); font-weight: 650; }
+.evidence { margin-top: 0.375rem; font-size: 0.8125rem; color: var(--ink-3); overflow-wrap: anywhere; }
+.evidence code, .mono { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-2); }
+@media (min-width: 48rem) {
+  .alert { padding: 1rem 1.75rem; }
+  .glance > div { padding: 1.125rem 1.75rem; }
+}
+@media (min-width: 56rem) {
+  .glance { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .glance > div + div { border-top: 0; border-left: 1px solid var(--rule); }
+}
+
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.625rem 0.875rem; padding: 0.75rem 1rem; }
+.pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.375rem 0.75rem 0.375rem 0.625rem;
+  border: 1px solid var(--control);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+.pick:hover { border-color: var(--ink); }
+.card.is-selected .pick { border-color: var(--accent); background: var(--accent-tint); }
+.card-actions .toggle { margin-left: auto; }
+.toggle .icon { transition: transform 0.15s ease; }
+.toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
+.no-link { font-size: 0.875rem; color: var(--ink-3); }
+
+.card-body { display: grid; gap: 1.75rem 2.5rem; padding: 1.5rem 1rem 1.75rem; border-top: 1px solid var(--rule); }
+.card.is-collapsed .card-body { display: none; }
+.block { min-width: 0; }
+.block > .label { margin-bottom: 0.625rem; }
+.block p { max-width: var(--measure); overflow-wrap: break-word; }
+.block p + p { margin-top: 0.5rem; }
+.why-text { font-size: 1.0625rem; line-height: 1.5; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.25rem 1rem; margin-top: 0.875rem; font-size: 0.875rem; }
+.facts dt { color: var(--ink-3); }
+.facts dd { overflow-wrap: anywhere; }
+.steps { padding-left: 1.375rem; max-width: var(--measure); }
+.steps li { padding-left: 0.25rem; overflow-wrap: break-word; }
+.steps li + li, .bullets li + li { margin-top: 0.375rem; }
+.steps li::marker { color: var(--ink-3); font-weight: 650; font-variant-numeric: tabular-nums; }
+.bullets { padding-left: 1.125rem; max-width: var(--measure); }
+.bullets li { overflow-wrap: break-word; }
+.bullets li::marker { color: var(--ink-3); }
+.papers { list-style: none; display: grid; gap: 0.875rem; }
+.paper-title { font-weight: 650; overflow-wrap: anywhere; }
+.paper-meta { font-size: 0.8125rem; color: var(--ink-3); overflow-wrap: anywhere; }
+.paper-note { font-size: 0.9375rem; color: var(--ink-2); }
+.usage { margin-top: 0.875rem; font-size: 0.875rem; color: var(--ink-2); }
+@media (min-width: 48rem) {
+  .card-actions { padding: 0.75rem 1.75rem; }
+  .card-body { padding: 1.75rem; }
+}
+@media (min-width: 62rem) {
+  .card-body {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-areas: "about why" "reqs reqs" "steps caveats" "papers verify";
+  }
+  .block-about { grid-area: about; }
+  .block-why { grid-area: why; }
+  .block-reqs { grid-area: reqs; }
+  .block-steps { grid-area: steps; }
+  .block-caveats { grid-area: caveats; }
+  .block-papers { grid-area: papers; }
+  .block-verify { grid-area: verify; }
+}
+
+/* Requirement check: a real table on wide screens, stacked rows on a phone. */
+.reqtable { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.reqtable th, .reqtable td { padding: 0.625rem 1rem 0.625rem 0; border-top: 1px solid var(--rule); text-align: left; vertical-align: top; font-weight: 400; }
+.reqtable thead th { padding-top: 0; border-top: 0; font-size: 0.75rem; font-weight: 650; color: var(--ink-3); }
+.reqtable .c-status { width: 8rem; }
+.reqtable .c-req { width: 38%; overflow-wrap: break-word; }
+.reqtable .c-evidence { padding-right: 0; color: var(--ink-2); overflow-wrap: anywhere; }
+.req-meta { display: block; margin-top: 0.125rem; font-size: 0.75rem; color: var(--ink-3); }
+.req-meta .mono { color: var(--ink-3); }
+.source { white-space: nowrap; }
+@media (max-width: 40rem) {
+  .reqtable, .reqtable tbody, .reqtable tr, .reqtable th, .reqtable td { display: block; width: auto; }
+  .reqtable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); }
+  .reqtable tbody tr { padding: 0.75rem 0; border-top: 1px solid var(--rule); }
+  .reqtable tbody th, .reqtable tbody td { padding: 0; border: 0; }
+  .reqtable .c-status { width: auto; margin-bottom: 0.25rem; }
+  .reqtable .c-req { width: auto; }
+  .reqtable .c-evidence { margin-top: 0.25rem; }
+  .source { white-space: normal; }
+}
+
+/* ---- Not recommended, gaps, key, colophon ---- */
+.aside-list { list-style: none; max-width: 58rem; margin-top: 1.25rem; border-top: 1px solid var(--rule); }
+.aside-list li { display: grid; gap: 0.25rem 2rem; padding: 0.875rem 0; border-bottom: 1px solid var(--rule); }
+.aside-name { font-weight: 650; overflow-wrap: anywhere; }
+.aside-reason { color: var(--ink-2); overflow-wrap: break-word; }
+@media (min-width: 48rem) {
+  .aside-list li { grid-template-columns: minmax(0, 19rem) minmax(0, 1fr); }
+}
+.gap-list { max-width: var(--measure); margin-top: 1.25rem; padding-left: 1.125rem; }
+.gap-list li { overflow-wrap: break-word; }
+.gap-list li + li { margin-top: 0.625rem; }
+.gap-list li::marker { color: var(--ink-3); }
+
+.colophon { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--rule-strong); }
+.key-grid { display: grid; gap: 2rem 3rem; margin-top: 1.25rem; }
+@media (min-width: 62rem) {
+  .key-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+}
+.key-group { min-width: 0; }
+.key-list { display: grid; gap: 0.625rem; margin-top: 0.75rem; font-size: 0.875rem; }
+.key-list > div { display: grid; gap: 0.25rem 1rem; align-items: start; }
+.key-list dd { color: var(--ink-2); }
+.key-list dt { font-weight: 650; }
+@media (min-width: 34rem) {
+  .key-list > div { grid-template-columns: 12.75rem minmax(0, 1fr); }
+}
+.fine-print { display: grid; gap: 0.5rem; max-width: 50rem; margin-top: 2.5rem; font-size: 0.875rem; color: var(--ink-2); }
+.fine-print strong { color: var(--ink); font-weight: 650; }
+
+/* ---- Plan bar ---- */
+.planbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  border-top: 1px solid var(--rule-strong);
+  background: var(--surface);
+  box-shadow: 0 -10px 24px -20px var(--shadow);
+}
+.planbar-inner, .plan-fallback {
+  max-width: 73rem;
+  margin: 0 auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.planbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+}
+.plan-status { min-width: 0; flex: 1 1 16rem; }
+.plan-count { font-weight: 650; font-variant-numeric: tabular-nums; }
+.plan-hint, .plan-message { font-size: 0.875rem; color: var(--ink-2); }
+.plan-message { color: var(--ink); }
+.plan-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.plan-fallback { display: grid; gap: 0.5rem; padding-bottom: 1rem; }
+.plan-fallback label { font-size: 0.875rem; }
+.plan-fallback textarea {
+  display: block;
+  width: 100%;
+  max-height: 40vh;
+  padding: 0.625rem;
+  border: 1px solid var(--control);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+.plan-fallback .btn { justify-self: start; }
+@media (max-width: 30rem) {
+  .plan-hint { display: none; }
+  .plan-actions { flex: 1 1 100%; }
+  .plan-actions .btn { flex: 1 1 auto; padding-left: 0.5rem; padding-right: 0.5rem; font-size: 0.8125rem; }
+}
+
+/* ---- Without JavaScript ---- */
+.noscript {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.noscript p + p, .noscript ol { margin-top: 1rem; }
+.noscript ol { padding-left: 1.5rem; }
+.noscript li + li { margin-top: 0.875rem; }
+.noscript li { overflow-wrap: anywhere; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toggle .icon { transition: none; }
+}
+@media (forced-colors: active) {
+  .pips i { border-color: CanvasText; }
+  .card.is-selected { outline: 2px solid Highlight; }
+}
+
+/* ---- Print: every card open, no controls, addresses spelled out ---- */
+@media print {
+  :root { color-scheme: light; --gutter: 0px; }
+  html { scroll-behavior: auto; }
+  body { background: #ffffff; font-size: 10.5pt; }
+  .page { max-width: none; padding-top: 0; padding-bottom: 0; }
+  .skip, .planbar, .filters, .no-match, .pick, .toggle, .compare .col-pick { display: none !important; }
+  .card.is-collapsed .card-body { display: grid !important; }
+  .card, .card.is-selected, .card:target { box-shadow: none; border-color: #8a8f96; }
+  .card-head, .glance, .alert, .block-why, .reqtable tr, .papers li, .aside-list li { break-inside: avoid; }
+  .section-title { break-after: avoid; }
+  .band { margin-top: 2rem; }
+  .table-wrap { overflow: visible; }
+  .compare { min-width: 0; font-size: 8.5pt; }
+  .compare th, .compare td { padding: 0.375rem 0.5rem; }
+  .compare tbody tr.is-selected > * { background: transparent; }
+  .card-actions { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  a { color: inherit; }
+  a[href^="http"]::after {
+    content: " <" attr(href) ">";
+    font-family: var(--font-mono);
+    font-size: 7.5pt;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+  .btn { min-height: 0; padding: 0; border: 0; background: none; color: inherit; }
+}
+</style>
+<noscript><style>.needs-js { display: none !important; }</style></noscript>
+</head>
+<body>
+<a class="skip needs-js" href="#shortlist">Skip to the datasets</a>
+
+<noscript>
+<div class="noscript">
+<p><strong>This page needs JavaScript</strong> to show the comparison table, the filters and the plan export. Open the file in a web browser with JavaScript switched on. A plain list of the shortlisted datasets follows.</p>
+<p><strong>Research question:</strong> Benchmark datasets with specific crop-type labels (field or pixel level), already paired with multi-temporal Sentinel-2 data, under a licence that permits publishing results and sharing trained models.</p>
+<ol>
+<li><strong><a href="https://zenodo.org/records/5012942" rel="noopener noreferrer">PASTIS - Panoptic Segmentation of Satellite image TIme Series</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/15095445" rel="noopener noreferrer">EuroCropsML</a></strong><br>Access: Open. Licence: CC-BY-SA-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/14585341" rel="noopener noreferrer">BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/4715631" rel="noopener noreferrer">TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/7892012" rel="noopener noreferrer">AgriSen-COG.LPIS.GT.</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/10251170" rel="noopener noreferrer">CropHarvest Dataset</a></strong><br>Access: Open. Licence: CC-BY-SA-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/18461147" rel="noopener noreferrer">Brazil-Crop dataset: a benchmark for agricultural remote sensing applications</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+<li><strong><a href="https://zenodo.org/records/19949051" rel="noopener noreferrer">Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Perú</a></strong><br>Access: Open. Licence: CC-BY-4.0. Verified on 11 November 2026.</li>
+</ol>
+<p>Access conditions and licences change. These were checked on 12 November 2026.</p>
+</div>
+</noscript>
+
+<div class="page needs-js" id="top">
+  <header>
+    <p class="eyebrow"><span class="label" id="eyebrow-label">Dataset shortlist</span> <time id="generated" hidden></time></p>
+    <h1 class="question" id="question">Dataset shortlist</h1>
+    <p class="error" id="scout-error" role="alert" hidden></p>
+  </header>
+
+  <main id="main">
+    <section class="brief" id="requirements" aria-labelledby="h-requirements" hidden>
+      <h2 class="vh" id="h-requirements">Requirements</h2>
+      <div class="req-groups">
+        <div class="req-group" id="req-must-group">
+          <h3 class="label">Must have</h3>
+          <ul class="req-list" id="req-must"></ul>
+        </div>
+        <div class="req-group" id="req-nice-group">
+          <h3 class="label">Nice to have</h3>
+          <ul class="req-list" id="req-nice"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="provenance" id="search" aria-labelledby="h-search">
+      <h2 class="vh" id="h-search">What was searched</h2>
+      <p id="searched-line"></p>
+      <p class="queries" id="searched-queries" hidden></p>
+      <div class="report-notes" id="notes" hidden></div>
+    </section>
+
+    <section class="band" id="comparison" aria-labelledby="h-comparison" hidden>
+      <h2 class="section-title" id="h-comparison">Compare the shortlist</h2>
+      <ul class="tally" id="tally"></ul>
+      <div class="table-wrap" role="region" aria-labelledby="h-comparison" tabindex="0">
+        <table class="compare">
+          <caption class="vh">Shortlisted datasets, best first. Tick a row to add it to your plan.</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="col-pick">Plan</th>
+              <th scope="col" class="col-rank">Rank</th>
+              <th scope="col" class="col-name">Dataset</th>
+              <th scope="col">Access</th>
+              <th scope="col" class="col-licence">Licence</th>
+              <th scope="col" class="col-size">Size</th>
+              <th scope="col" class="col-fit">Fit</th>
+              <th scope="col" class="col-time">Time to access</th>
+            </tr>
+          </thead>
+          <tbody id="compare-body">
+            <tr class="empty-row" id="compare-empty" hidden><td colspan="8">No dataset matches these filters.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="band" id="shortlist" aria-labelledby="h-shortlist">
+      <h2 class="section-title" id="h-shortlist">The datasets</h2>
+      <p class="section-lede" id="shortlist-empty" hidden>This shortlist contains no datasets.</p>
+      <form class="filters" id="filters" aria-label="Filter the datasets" hidden>
+        <fieldset>
+          <legend class="label">Access</legend>
+          <div class="options" id="filter-tiers"></div>
+        </fieldset>
+        <fieldset>
+          <legend class="label">Fit</legend>
+          <div class="options" id="filter-fits"></div>
+        </fieldset>
+        <fieldset>
+          <legend class="label">Licence</legend>
+          <div class="options">
+            <label class="option" for="filter-commercial"><input type="checkbox" id="filter-commercial"> <span>Allows commercial use</span> <span class="count" id="filter-commercial-count"></span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="label field-label" for="filter-search">Search</label>
+          <input type="search" id="filter-search" placeholder="Name, publisher or keyword" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="filter-foot">
+          <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
+          <button type="button" class="btn btn-quiet" id="filter-clear" disabled>Clear filters</button>
+          <button type="button" class="btn" id="toggle-all">Collapse all</button>
+        </div>
+      </form>
+      <div class="no-match" id="no-match" hidden>
+        <p>No dataset matches these filters. The filters apply to the table above and to the cards below.</p>
+        <button type="button" class="btn" id="no-match-clear">Clear filters</button>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="band" id="not-recommended" aria-labelledby="h-not-recommended" hidden>
+      <h2 class="section-title" id="h-not-recommended">Not recommended</h2>
+      <p class="section-lede">Candidates that were looked at and set aside, with the reason.</p>
+      <ul class="aside-list" id="not-recommended-list"></ul>
+    </section>
+
+    <section class="band" id="gaps" aria-labelledby="h-gaps" hidden>
+      <h2 class="section-title" id="h-gaps">Gaps</h2>
+      <p class="section-lede">What this search could not find.</p>
+      <ul class="gap-list" id="gap-list"></ul>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <h2 class="section-title" id="h-key">How to read the labels</h2>
+    <div class="key-grid">
+      <div class="key-group">
+        <h3 class="label">Access, from least to most effort</h3>
+        <dl class="key-list" id="key-access"></dl>
+      </div>
+      <div class="key-group">
+        <h3 class="label">Verification</h3>
+        <dl class="key-list key-plain">
+          <div><dt>Registry record</dt><dd>The registry's own entry for the dataset was read.</dd></div>
+          <div><dt>DOI</dt><dd>The dataset's DOI leads to its landing page.</dd></div>
+          <div><dt>Landing page</dt><dd>The page answered and does not look like an error page.</dd></div>
+          <div><dt>Not verified</dt><dd>Nothing confirmed the dataset at the address given. Open the page yourself before you rely on it.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="fine-print">
+      <p id="checked-note"></p>
+      <p>Fit is a judgement about the question as a whole; the requirement check on each card shows what it rests on. Links open in a new tab.</p>
+      <p>Made with dataset-scout. This page is a single file: it loads nothing from the network, and the datasets you tick stay in your browser.</p>
+    </div>
+  </footer>
+</div>
+
+<div class="planbar needs-js" id="planbar" role="region" aria-label="Your plan" hidden>
+  <div class="planbar-inner">
+    <div class="plan-status">
+      <p class="plan-count" id="plan-count" role="status" aria-live="polite" aria-atomic="true">No datasets selected</p>
+      <p class="plan-hint" id="plan-hint"></p>
+      <p class="plan-message" id="plan-message" role="status" aria-live="polite"></p>
+    </div>
+    <div class="plan-actions">
+      <button type="button" class="btn btn-primary" id="plan-copy" disabled>Copy plan as Markdown</button>
+      <button type="button" class="btn" id="plan-download" disabled>Download plan (.md)</button>
+    </div>
+  </div>
+  <div class="plan-fallback" id="plan-fallback" hidden>
+    <label for="plan-text" id="plan-fallback-label">Your plan as Markdown.</label>
+    <textarea id="plan-text" rows="9" readonly spellcheck="false"></textarea>
+    <button type="button" class="btn" id="plan-fallback-close">Close</button>
+  </div>
+</div>
+
+<template id="scout-icons">
+  <svg class="icon" data-icon="download" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2.5v7.75M4.75 7 8 10.25 11.25 7M3 13.5h10"/></svg>
+  <svg class="icon" data-icon="user" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="5.5" r="2.5"/><path d="M3.25 13.5c.5-2.4 2.4-3.75 4.75-3.75s4.25 1.35 4.75 3.75"/></svg>
+  <svg class="icon" data-icon="form" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 2.5h8v11H4z"/><path d="M6.25 5.5h3.5M6.25 8h3.5M6.25 10.5h2"/></svg>
+  <svg class="icon" data-icon="institution" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 6.25 8 3l5.5 3.25M3.5 6.5h9M4.5 6.75v4.5M8 6.75v4.5M11.5 6.75v4.5M3 13h10"/></svg>
+  <svg class="icon" data-icon="blocked" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.25"/><path d="M4.3 4.3l7.4 7.4"/></svg>
+  <svg class="icon" data-icon="question" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.9 6.1a2.1 2.1 0 1 1 3.3 1.7c-.7.5-1.2 1-1.2 1.9"/><path d="M8 12.3v.1"/></svg>
+  <svg class="icon" data-icon="check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.25 8.5l3 3 6.5-7"/></svg>
+  <svg class="icon" data-icon="half" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5.25"/><path d="M8 2.75a5.25 5.25 0 0 0 0 10.5z" fill="currentColor" stroke="none"/></svg>
+  <svg class="icon" data-icon="cross" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.25 4.25l7.5 7.5M11.75 4.25l-7.5 7.5"/></svg>
+  <svg class="icon" data-icon="seal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"/><path d="M5.4 8.2l1.8 1.8 3.4-3.9"/></svg>
+  <svg class="icon" data-icon="warning" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2.5 14 13H2z"/><path d="M8 6.6v3M8 11.5v.1"/></svg>
+  <svg class="icon" data-icon="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6.25l4 4 4-4"/></svg>
+  <svg class="icon" data-icon="external" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 3.5h-3v9h9v-3M9.25 3.5h3.25v3.25M12.25 3.75 7.5 8.5"/></svg>
+</template>
+
+<script type="application/json" id="scout-data">{"question":"Benchmark datasets with specific crop-type labels (field or pixel level), already paired with multi-temporal Sentinel-2 data, under a licence that permits publishing results and sharing trained models.","generated_at":"2026-11-12T09:00:00Z","requirements":[{"id":"R1","text":"Crop-type labels with specific crops (not cropland vs non-cropland)","must":true},{"id":"R2","text":"Field/parcel or pixel level labels","must":true},{"id":"R3","text":"Sentinel-2 time series already paired with labels (no own download/preprocessing)","must":true},{"id":"R4","text":"Licence allows publishing results and sharing trained models","must":true},{"id":"R5","text":"Downloadable today without application","must":false}],"searched":{"sources":["zenodo","datacite","openaire","huggingface","europepmc/openalex (papers)"],"queries":["crop type classification Sentinel-2","crop type time series benchmark","agricultural parcels Sentinel-2 satellite image time series","crop type mapping labels field","land use land cover crop Sentinel-2 benchmark","PASTIS","EuroCrops","EuroCropsML","BreizhCrops","CropHarvest","TimeSen2Crop","Sen4AgriNet"],"n_candidates":179},"datasets":[{"rank":1,"record":{"id":"zenodo:5012942","source":"zenodo","title":"PASTIS - Panoptic Segmentation of Satellite image TIme Series","url":"https://zenodo.org/records/5012942","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"Public dataset for Panoptic segmentation of agricultural parcels from satellite image time series. See companion github repository for more information.","doi":"10.5281/zenodo.5012942","publisher":"Zenodo","creators":["Sainte Fare Garnot Vivien","Landrieu Loic"],"year":2021,"version":"1.0","updated":"2021-06-28","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":28760245504,"files":1},"formats":["zip"],"subjects":[],"usage":{"downloads":93494,"views":13975},"extra":{"access_right":"open","record_id":"5012942","concept_record_id":"5012941","concept_doi":"10.5281/zenodo.5012941","resource_type":"dataset"},"also_found_in":[{"source":"openaire","id":"openaire:doi_dedup___::61372e8078849534e554c3e8767edc53","url":"https://doi.org/10.5281/zenodo.5012941"}],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/5012942","checked_at":"2026-11-11T17:37:08Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:5012942"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"PASTIS - Panoptic Segmentation of Satellite image TIme Series"}},"fit":"strong","why":"Parcel-level semantic and panoptic crop labels with Sentinel-2 time series, ready as patches; the most used benchmark for crop segmentation. PASTIS-R adds Sentinel-1.","requirements":{"R1":{"status":"met","evidence":"Agricultural parcels with crop-type labels (from memory: 18 crop classes, France)"},"R2":{"status":"met","evidence":"Parcel-level panoptic segmentation (record description)"},"R3":{"status":"met","evidence":"Satellite image time series packaged with labels (record + companion GitHub)"},"R4":{"status":"met","evidence":"Zenodo licence CC-BY-4.0"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/5012942","Download the archive(s) directly, no account needed (Zenodo access_right=open)","Optional: PASTIS-R (https://zenodo.org/records/5735646, 53.7 GB) for the S1+S2 version"],"time_to_access":"minutes","caveats":["28.8 GB download","Study area is four regions of France (from memory), so geographic generalisation is limited","Companion GitHub repo has loaders and baselines"],"papers":[]},{"rank":2,"record":{"id":"zenodo:15095445","source":"zenodo","title":"EuroCropsML","url":"https://zenodo.org/records/15095445","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"EuroCropsML * is a ready-to-use ML dataset combining EuroCrops reference data with Sentinel-2 reflectance data from 2021. It contains data from Latvia, Portugal, and Estonia and is intended for benchmarking few-shot crop type classification. We used Eurostat's GISCO dataset to map the EuroCrops parcels to their NUTS1-3 region. The provided data comes in two stages: raw_data.zip (stage 1): One dataframe per country containing a annual time series of observations for each parcel, as well as separate files for the parcels' geometries and classes ( EC_hcat_c = 10-digit HCAT code indicating the hierarchy of the crop). preprocess.zip (stage 2): Read-to-use .npz -files. Each data point is saved in\u2026","doi":"10.5281/zenodo.15095445","publisher":"Zenodo","creators":["Reuss, Joana","Macdonald, Jan"],"year":2025,"version":null,"updated":"2025-04-07","licence":{"id":"CC-BY-SA-4.0","name":"cc-by-sa-4.0","url":null,"commercial_use":true,"share_alike":true},"size":{"bytes":4768938112,"files":3},"formats":["zip"],"subjects":[],"usage":{"downloads":6188,"views":5198},"extra":{"access_right":"open","record_id":"15095445","concept_record_id":"10629609","concept_doi":"10.5281/zenodo.10629609","resource_type":"dataset"},"also_found_in":[{"source":"datacite","id":"datacite:10.5281/zenodo.15095445","url":"https://doi.org/10.5281/zenodo.15095445"},{"source":"openaire","id":"openaire:doi_dedup___::601f2b95218681be873f963e1208fa2d","url":"https://doi.org/10.5281/zenodo.12168505"}],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/15095445","checked_at":"2026-11-11T17:37:11Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:15095445"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"EuroCropsML"}},"fit":"strong","why":"Analysis-ready parcel-level Sentinel-2 time series with crop labels across 3 countries, designed for crop-type benchmarking.","requirements":{"R1":{"status":"met","evidence":"176 crop classes, 706,683 labelled points (Sci. Data paper abstract)"},"R2":{"status":"met","evidence":"per-parcel median pixel values"},"R3":{"status":"met","evidence":"Sentinel-2 L1C reflectance time series from 2021, Latvia, Portugal, Estonia"},"R4":{"status":"partial","evidence":"CC-BY-SA-4.0: publishing results is fine; share-alike applies to derived data/adaptations, and whether it reaches trained weights is legally unsettled"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/15095445","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["Share-alike licence; check with your supervisor/institution before releasing models trained on it under a different licence","Per-parcel median values, not image patches, so no spatial context (suits time-series models, not segmentation)"],"papers":[{"title":"The EUROCROPSML time series benchmark dataset for few-shot crop type classification in Europe","year":2025,"doi":"10.1038/s41597-025-04952-7","url":"https://doi.org/10.1038/s41597-025-04952-7","note":"dataset paper"}]},{"rank":3,"record":{"id":"zenodo:14585341","source":"zenodo","title":"BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING","url":"https://zenodo.org/records/14585341","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"","doi":"10.5194/isprs-archives-xliii-b2-2020-1545-2020","publisher":"Zenodo","creators":["Ru\u00dfwurm, Marc","Pelletier, Charlotte","Zollner, Johann Maximilian","Lef\u00e8vre, S\u00e9bastien","K\u00f6rner, Marco"],"year":2020,"version":null,"updated":"2025-01-01","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":7650624294,"files":15},"formats":["zip","pth"],"subjects":[],"usage":{"downloads":1916,"views":90},"extra":{"access_right":"open","record_id":"14585341","concept_record_id":"14585340","resource_type":"dataset"},"also_found_in":[],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/14585341","checked_at":"2026-11-11T17:37:12Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:14585341"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING"}},"fit":"strong","why":"Classic parcel-level time-series benchmark (Brittany) with Sentinel-2 series per field, widely used for sequence models.","requirements":{"R1":{"status":"met","evidence":"Title: time series dataset for crop type mapping"},"R2":{"status":"met","evidence":"field-parcel level (from memory)"},"R3":{"status":"met","evidence":"Sentinel-2 time series included (from memory: L1C and L2A)"},"R4":{"status":"met","evidence":"CC-BY-4.0"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/14585341","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["7.7 GB","Single region, single year (from memory: Brittany, 2017), few crop groups","Record has no description; check the GitHub repo/paper for class list"],"papers":[]},{"rank":4,"record":{"id":"zenodo:4715631","source":"zenodo","title":"TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification","url":"https://zenodo.org/records/4715631","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"TimeSen2Crop is a pixel based dataset made up of more than 1 million samples of Sentinel 2 Time Series associated to 16 crop types, during an agronomic year ranging from September 2017 to August 2018. The dataset contains atmospherically corrected samples, as well as information related to snow, clouds and shadows. This benchmark dataset has been developed in the framework of the ExtremeEarth project, which received funding from the European Union\u2019s Horizon 2020 research and innovation programme under grant agreement No 825258.","doi":"10.1109/jstars.2021.3073965","publisher":"Zenodo","creators":["Giulio Weikmann","Claudia Paris","Lorenzo Bruzzone"],"year":2021,"version":null,"updated":"2024-07-19","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":1080051855,"files":2},"formats":["pdf","zip"],"subjects":[],"usage":{"downloads":2777,"views":4174},"extra":{"access_right":"open","record_id":"4715631","concept_record_id":"4715630","resource_type":"dataset"},"also_found_in":[{"source":"openaire","id":"openaire:dedup_wf_002::41459b239bb01bf32cf13193b7331ed8","url":"http://dx.doi.org/10.1109/JSTARS.2021.3073965"}],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/4715631","checked_at":"2026-11-11T17:37:08Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:4715631"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification"}},"fit":"strong","why":"Pixel-level Sentinel-2 time series with 16 crop types; small, easy to use, good for pixel classifiers.","requirements":{"R1":{"status":"met","evidence":"16 crop types"},"R2":{"status":"met","evidence":"pixel based, \u003e1 million samples"},"R3":{"status":"met","evidence":"Sentinel-2 time series Sept 2017 - Aug 2018 with cloud/snow info"},"R4":{"status":"met","evidence":"CC-BY-4.0"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/4715631","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["1.1 GB","Single agronomic year; region (Austria, from memory)"],"papers":[{"title":"TimeSen2Crop (IEEE JSTARS)","year":2021,"doi":"10.1109/jstars.2021.3073965","url":"https://doi.org/10.1109/jstars.2021.3073965","note":"dataset paper"}]},{"rank":5,"record":{"id":"zenodo:7892012","source":"zenodo","title":"AgriSen-COG.LPIS.GT.","url":"https://zenodo.org/records/7892012","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"AgriSen-COG - a large-scale dataset for crop type mapping. This repository includes the original and processed LPIS files and the rasterized corresponding tiles in Geotiff format.","doi":"10.5281/zenodo.7892012","publisher":"Zenodo","creators":["Selea, Teodora"],"year":2023,"version":null,"updated":"2023-06-20","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":28175787944,"files":9},"formats":["zip"],"subjects":["benchmark dataset","crop monitoring","crop detection","deep learning","semantic segmentation","multi-temporal analysis","crop classification","agricultural application","sentinel-2"],"usage":{"downloads":1908,"views":950},"extra":{"access_right":"open","record_id":"7892012","concept_record_id":"7892011","concept_doi":"10.5281/zenodo.7892011","resource_type":"dataset"},"also_found_in":[],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/7892012","checked_at":"2026-11-11T17:37:15Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:7892012"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"AgriSen-COG.LPIS.GT."}},"fit":"strong","why":"Large multi-country crop-type mapping dataset built from LPIS parcels and Sentinel-2 tiles as Cloud-Optimised GeoTIFFs.","requirements":{"R1":{"status":"met","evidence":"Described as a large-scale dataset for crop type mapping"},"R2":{"status":"met","evidence":"rasterised LPIS parcel labels"},"R3":{"status":"partial","evidence":"Record lists LPIS/GT tiles; confirm the Sentinel-2 time series sits in the same or a linked record"},"R4":{"status":"met","evidence":"CC-BY-4.0"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/7892012","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["28 GB; this record is the labels (LPIS.GT), the imagery may be a separate record, check the dataset paper"],"papers":[]},{"rank":6,"record":{"id":"zenodo:10251170","source":"zenodo","title":"CropHarvest Dataset","url":"https://zenodo.org/records/10251170","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"Dataset being developed for the CropHarvest package and benchmarks.","doi":"10.5281/zenodo.10251170","publisher":"Zenodo","creators":["Gabriel Tseng","Ivan Zvonkov","Catherine Nakalembe","Hannah Kerner"],"year":2023,"version":"v14","updated":"2023-12-04","licence":{"id":"CC-BY-SA-4.0","name":"cc-by-sa-4.0","url":null,"commercial_use":true,"share_alike":true},"size":{"bytes":27677587661,"files":4},"formats":["gz","geojson"],"subjects":[],"usage":{"downloads":39532,"views":13485},"extra":{"access_right":"open","record_id":"10251170","concept_record_id":"5021761","concept_doi":"10.5281/zenodo.5021761","resource_type":"dataset"},"also_found_in":[],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/10251170","checked_at":"2026-11-11T17:37:14Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:10251170"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"CropHarvest Dataset"}},"fit":"partial","why":"Global crop-label benchmark with pixel time series (S1, S2, climate); strongest for few-shot and transfer settings, mostly binary crop tasks plus a multiclass set.","requirements":{"R1":{"status":"partial","evidence":"Multiclass labels exist but many tasks are crop vs non-crop (from memory)"},"R2":{"status":"met","evidence":"point-level labels with pixel time series"},"R3":{"status":"met","evidence":"Pre-extracted satellite time series (from memory)"},"R4":{"status":"partial","evidence":"CC-BY-SA-4.0 share-alike"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/10251170","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["27.7 GB record; share-alike licence","Time series are Sentinel-2 plus other sources, not S2-only"],"papers":[]},{"rank":7,"record":{"id":"zenodo:18461147","source":"zenodo","title":"Brazil-Crop dataset: a benchmark for agricultural remote sensing applications","url":"https://zenodo.org/records/18461147","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"Abstract Remote sensing facilitates the regular acquisition of agricultural information using non-invasive measurement techniques. Field data are essential for effective agricultural monitoring via remote sensing methods. Open and reliable field data are golden in the new Geospatial Artificial Intelligence (GeoAI) era. However, publicly available field data remain limited, particularly in tropical regions where agriculture exhibits considerable dynamism. This dataset seeks to address this gap by introducing a comprehensive crop type dataset that provides seasonal land use information across two distinct agricultural regions in Brazil. The dataset captures the temporal dynamics of Brazilian\u2026","doi":"10.5281/zenodo.18461147","publisher":"Zenodo","creators":["Volochen Oldoni, Lucas","Kuhl, Samuel","Prudente, Victor Hugo Rohden","Dalla Bernardina Garcia, Andre","Pastana, Afonso"],"year":2026,"version":null,"updated":"2026-09-16","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":10398911660,"files":9},"formats":["zip","html","md"],"subjects":["Remote Sensing","Agriculture","Earth Observation","Land Use Land Cover (LULC)","Crop Type Mapping","GeoAI (Geospatial Artificial Intelligence)","Field Data","Ground Truth","In-situ Data","Training Data","Brazil","Mato Grosso"],"usage":{"downloads":433,"views":127},"extra":{"access_right":"open","record_id":"18461147","concept_record_id":"18461146","concept_doi":"10.5281/zenodo.18461146","resource_type":"dataset"},"also_found_in":[{"source":"openaire","id":"openaire:doi_dedup___::8832471fa4233a1b79d8aeb93591ef82","url":"https://doi.org/10.5281/zenodo.18461146"}],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/18461147","checked_at":"2026-11-11T17:37:17Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:18461147"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"Brazil-Crop dataset: a benchmark for agricultural remote sensing applications"}},"fit":"partial","why":"Recent tropical crop benchmark; useful as a second geography for generalisation tests.","requirements":{"R1":{"status":"unknown","evidence":"Not checked beyond abstract"},"R2":{"status":"unknown","evidence":"Field data, level not checked"},"R3":{"status":"unknown","evidence":"Not checked"},"R4":{"status":"met","evidence":"CC-BY-4.0"},"R5":{"status":"met","evidence":"access_right=open"}},"access_steps":["Open https://zenodo.org/records/18461147","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["10.4 GB; 2026 release with little independent usage yet; read the abstract/README before committing"],"papers":[]},{"rank":8,"record":{"id":"zenodo:19949051","source":"zenodo","title":"Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Per\u00fa","url":"https://zenodo.org/records/19949051","access":{"tier":"open","evidence":"access_right=open"},"retrieved_at":"2026-11-11","description":"This repository contains multi-annual crop classification data for the Chugay district, Peru. The main dataset, s2_cube.nc , contains processed Sentinel-2 imagery (August 2021\u2013December 2024) used to generate crop classifications. The imagery was retrieved from Google Earth Engine collections: COPERNICUS/S2_SR , COPERNICUS/S2_CLOUD_PROBABILITY , and GOOGLE/CLOUD_SCORE_PLUS/V1/S2_HARMONIZED and processed using the Python function export_s2_images from the s2_gee_utils module in the Github repository https://github.com/kundun14/multi-annual-crop-classification-with-phenological-features . Additional datasets include: aoi.gpkg \u2013 Area of interest of the study region. fields.gpkg \u2013 Cropland bound\u2026","doi":"10.5281/zenodo.19949051","publisher":"Zenodo","creators":["Bueno Due\u00f1as, Marcelo","Loayza Loza, Hildo Mac Lean"],"year":2026,"version":"V2","updated":"2026-05-01","licence":{"id":"CC-BY-4.0","name":"cc-by-4.0","url":null,"commercial_use":true,"share_alike":false},"size":{"bytes":7196747600,"files":3},"formats":["nc","gpkg"],"subjects":[],"usage":{"downloads":428,"views":688},"extra":{"access_right":"open","record_id":"19949051","concept_record_id":"17352135","concept_doi":"10.5281/zenodo.17352135","resource_type":"dataset"},"also_found_in":[{"source":"openaire","id":"openaire:doi_dedup___::022d6fa0c430f8d1f81ba529f477591f","url":"https://doi.org/10.5281/zenodo.17352136"},{"source":"datacite","id":"datacite:10.5281/zenodo.19949051","url":"https://doi.org/10.5281/zenodo.19949051"}],"verification":{"verified":true,"method":"registry-api","http_status":null,"final_url":"https://zenodo.org/records/19949051","checked_at":"2026-11-11T17:37:16Z","problems":[],"notes":["confirmed by the zenodo registry record zenodo:19949051"],"outcome":"confirmed","problem_types":[],"registry":"zenodo","found_title":"Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Per\u00fa"}},"fit":"partial","why":"Sentinel-2 cube plus multi-annual crop classes for one Peruvian district.","requirements":{"R1":{"status":"met","evidence":"multi-annual crop classification data"},"R2":{"status":"unknown","evidence":"Label unit not checked"},"R3":{"status":"met","evidence":"s2_cube.nc, Aug 2021 - Dec 2024"},"R4":{"status":"met","evidence":"CC-BY-4.0"},"R5":{"status":"met","evidence":"open"}},"access_steps":["Open https://zenodo.org/records/19949051","Download the archive(s) directly, no account needed (Zenodo access_right=open)"],"time_to_access":"minutes","caveats":["Single small district: a niche or transfer test, not a main benchmark"],"papers":[]}],"not_recommended":[{"name":"EuroCrops","url":"https://zenodo.org/records/14094196","reason":"Excellent parcel labels for 16 EU countries (CC-BY-SA-4.0) but no imagery; you would have to build the Sentinel-2 pipeline. EuroCropsML is the ready-made version."},{"name":"IBM-NASA multi-temporal-crop-classification","url":"https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification","reason":"Open, CC-BY-4.0 and ready to use, but imagery is Harmonized Landsat-Sentinel (30 m) over the US with CDL-derived labels, not native Sentinel-2."},{"name":"CROPSIGHT-US","url":"https://zenodo.org/records/19501943","reason":"Ground-truth labels only (0.3 GB, US); not a packaged time-series benchmark."}],"gaps":["Sen4AgriNet (https://github.com/Orion-AI-Lab/S4A) exists and is a Sentinel-2 multi-year, multi-country crop benchmark, but its GitHub page states no licence and downloads sit on Dropbox/Google Drive/HuggingFace; licence unconfirmed.","ZueriCrop (Switzerland, S2 time series, crop parcels) could not be located at an official data record; unconfirmed.","DENETHOR, TimeMatch, SICKLE and other datasets were not verified in this session."],"notes":"Registry records (Zenodo/HuggingFace) checked 2026-11-11. Facts marked 'from memory' were not confirmed."}</script>
+<script>
+(function () {
+  'use strict';
+
+  // =====================================================================
+  // 1. Pure functions. Nothing in this part touches the page, so Node can
+  //    load this script and test it (see the export at the very end).
+  //    Every value that comes out of the shortlist passes through str(),
+  //    safeUrl() or num() before it is used.
+  // =====================================================================
+
+  var hasOwn = Object.prototype.hasOwnProperty;
+  function has(obj, key) { return obj !== null && obj !== undefined && hasOwn.call(obj, key); }
+  function isObj(v) { return v !== null && typeof v === 'object' && !Array.isArray(v); }
+
+  // Any value as one line of plain text. Control characters and the
+  // characters that reverse text direction are dropped.
+  function str(v) {
+    if (typeof v === 'number') { return isFinite(v) ? String(v) : ''; }
+    if (typeof v !== 'string') { return ''; }
+    return v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u202A-\u202E\u2066-\u2069]/g, '')
+      .replace(/\s+/g, ' ').trim();
+  }
+  function arr(v) {
+    if (Array.isArray(v)) { return v; }
+    return (v === null || v === undefined || v === '') ? [] : [v];
+  }
+  function strList(v) {
+    var out = [];
+    arr(v).forEach(function (item) { var s = str(item); if (s) { out.push(s); } });
+    return out;
+  }
+  function num(v) {
+    if (typeof v === 'number') { return isFinite(v) ? v : null; }
+    if (typeof v === 'string' && /^\s*-?\d+(\.\d+)?\s*$/.test(v)) { return parseFloat(v); }
+    return null;
+  }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : (many || one + 's')); }
+  function lowerFirst(s) { return s ? s.charAt(0).toLowerCase() + s.slice(1) : ''; }
+
+  // Only http and https addresses ever become links. Anything else gives ''.
+  function safeUrl(v) {
+    if (typeof v !== 'string') { return ''; }
+    var s = v.trim();
+    if (!/^https?:\/\/\S/i.test(s)) { return ''; }
+    if (typeof URL === 'function') {
+      try {
+        var u = new URL(s);
+        if ((u.protocol !== 'http:' && u.protocol !== 'https:') || !u.hostname) { return ''; }
+        return u.href;
+      } catch (e) {
+        return '';
+      }
+    }
+    return /[\s<>"\\]/.test(s) ? '' : s;
+  }
+  function hostOf(url) {
+    var host = '';
+    if (typeof url !== 'string' || !url) { return host; }
+    try {
+      host = new URL(url).hostname;
+    } catch (e) {
+      var m = /^https?:\/\/(?:[^\/?#@]*@)?([^\/?#:]+)/i.exec(url);
+      host = m ? m[1] : '';
+    }
+    return host.replace(/^www\./i, '');
+  }
+  function cleanDoi(v) {
+    var d = str(v).replace(/^(https?:\/\/(dx\.)?doi\.org\/|doi:\s*)/i, '');
+    return /^10\.\d{4,9}\/\S+$/.test(d) ? d : '';
+  }
+  function doiLink(doi) {
+    if (!doi) { return ''; }
+    try {
+      return safeUrl('https://doi.org/' + doi.split('/').map(encodeURIComponent).join('/'));
+    } catch (e) {
+      return '';
+    }
+  }
+
+  // ---- Vocabulary ------------------------------------------------------
+
+  var TIER_ORDER = ['open', 'account', 'gated', 'controlled', 'closed', 'unknown'];
+  var TIERS = {
+    open: { label: 'Open', tone: 'go', icon: 'download', group: 'free',
+      meaning: 'Direct download. No account and no approval.' },
+    account: { label: 'Free account', tone: 'go', icon: 'user', group: 'free',
+      meaning: 'A free account, a login or click-through terms. No person has to approve you.' },
+    gated: { label: 'Application required', tone: 'wait', icon: 'form', group: 'approval',
+      meaning: 'An application, credentialing, training or the owner\'s approval comes first.' },
+    controlled: { label: 'Institutional agreement', tone: 'wait', icon: 'institution', group: 'approval',
+      meaning: 'An agreement signed by your institution, ethics approval, an access committee, a fee or a secure environment.' },
+    closed: { label: 'Not obtainable', tone: 'stop', icon: 'blocked', group: 'closed',
+      meaning: 'Withdrawn, under embargo or metadata only.' },
+    unknown: { label: 'Unknown', tone: 'none', icon: 'question', group: 'unknown',
+      meaning: 'The registry does not state the access condition. Read the landing page before you plan around this dataset.' }
+  };
+  var FIT_ORDER = ['strong', 'partial', 'weak', 'unrated'];
+  var FITS = {
+    strong: { label: 'Strong', level: 3 },
+    partial: { label: 'Partial', level: 2 },
+    weak: { label: 'Weak', level: 1 },
+    unrated: { label: 'Not rated', level: 0 }
+  };
+  var STATUSES = {
+    met: { label: 'Met', tone: 'go', icon: 'check' },
+    partial: { label: 'Partial', tone: 'wait', icon: 'half' },
+    unmet: { label: 'Unmet', tone: 'stop', icon: 'cross' },
+    unknown: { label: 'Unknown', tone: 'none', icon: 'question' }
+  };
+  var TIMES = { minutes: 'Minutes', days: 'Days', weeks: 'Weeks', months: 'Months', unknown: 'Unknown' };
+  var METHODS = {
+    'registry-api': { label: 'Registry record', sentence: 'the registry\'s own record of this dataset was read' },
+    doi: { label: 'DOI', sentence: 'its DOI leads to the landing page' },
+    http: { label: 'Landing page', sentence: 'the landing page answered and does not look like an error page' }
+  };
+  // Optional detail from the verifier: why a dataset is not verified.
+  var OUTCOMES = {
+    not_found: { label: 'Not found', tone: 'stop',
+      sentence: 'The check found no dataset at the address given.' },
+    wrong_page: { label: 'Link leads elsewhere', tone: 'stop',
+      sentence: 'The link leads to a different page from the dataset described here.' },
+    could_not_check: { label: 'Could not be checked', tone: 'wait',
+      sentence: 'The check could not read the landing page (a login wall, a block on automated visits or a timeout), so the dataset is neither confirmed nor ruled out.' },
+    incomplete: { label: 'Check not recorded', tone: 'wait',
+      sentence: 'The record says it was verified, but not how or when, so that claim is not shown as a check.' }
+  };
+  var PLAN_FILENAME = 'dataset-access-plan.md';
+
+  // ---- Dates and numbers ------------------------------------------------
+
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'];
+  // Dates are shown as written in the file (no time-zone arithmetic).
+  function dateParts(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})(?:$|[T\s])/.exec(str(v));
+    if (!m) { return null; }
+    var month = parseInt(m[2], 10), day = parseInt(m[3], 10);
+    if (month < 1 || month > 12 || day < 1 || day > 31) { return null; }
+    return { year: m[1], month: month, day: day, iso: m[1] + '-' + m[2] + '-' + m[3] };
+  }
+  function longDate(v) { var p = dateParts(v); return p ? p.day + ' ' + MONTHS[p.month - 1] + ' ' + p.year : ''; }
+  function shortDate(v) { var p = dateParts(v); return p ? p.day + ' ' + MONTHS[p.month - 1].slice(0, 3) + ' ' + p.year : ''; }
+  function isoDate(v) { var p = dateParts(v); return p ? p.iso : ''; }
+
+  function groupDigits(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function threeDigits(v) { return String(Number(v.toPrecision(3))); }
+  function compactCount(n) {
+    if (n >= 999500000) { return threeDigits(n / 1e9) + ' billion'; }
+    if (n >= 999500) { return threeDigits(n / 1e6) + ' million'; }
+    return groupDigits(n);
+  }
+  function formatBytes(n) {
+    var units = ['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'], i = 0, v = n;
+    while (v >= 999.5 && i < units.length - 1) { v /= 1000; i += 1; }
+    if (i === 0) { return plural(Math.round(v), 'byte'); }
+    return (v < 10 ? String(Math.round(v * 10) / 10) : String(Math.round(v))) + ' ' + units[i];
+  }
+  function sizeText(size) {
+    if (!isObj(size)) { return typeof size === 'string' ? str(size) : ''; }
+    var written = str(size.text);
+    if (written) { return written; }
+    var parts = [], records = num(size.records), files = num(size.files), bytes = num(size.bytes);
+    if (records !== null && records >= 0) { parts.push(compactCount(records) + (records === 1 ? ' record' : ' records')); }
+    if (files !== null && files >= 0) { parts.push(groupDigits(files) + (files === 1 ? ' file' : ' files')); }
+    if (bytes !== null && bytes >= 0) { parts.push(formatBytes(bytes)); }
+    return parts.join(' \u00B7 ');
+  }
+  function usageText(usage) {
+    if (!isObj(usage)) { return ''; }
+    var parts = [];
+    [['downloads', 'download'], ['citations', 'citation'], ['views', 'view'], ['likes', 'like']].forEach(function (pair) {
+      var n = num(usage[pair[0]]);
+      if (n !== null && n >= 0) { parts.push(groupDigits(n) + ' ' + (n === 1 ? pair[1] : pair[0])); }
+    });
+    return parts.join(', ');
+  }
+
+  // ---- Shortlist -> model ------------------------------------------------
+
+  function normLicence(raw) {
+    var id = '', name = '', url = '', commercial = null, shareAlike = null;
+    if (isObj(raw)) {
+      id = str(raw.id);
+      name = str(raw.name);
+      url = safeUrl(raw.url);
+      // Only an explicit true or false counts; anything else is "not determined".
+      commercial = raw.commercial_use === true ? true : (raw.commercial_use === false ? false : null);
+      shareAlike = raw.share_alike === true ? true : (raw.share_alike === false ? false : null);
+    } else {
+      name = str(raw);
+    }
+    var stated = !!(id || name);
+    var commercialLabel;
+    if (!stated) { commercialLabel = 'Reuse rights unclear'; }
+    else if (commercial === true) { commercialLabel = 'Commercial use allowed'; }
+    else if (commercial === false) { commercialLabel = 'Non-commercial use only'; }
+    else { commercialLabel = 'Commercial use not determined'; }
+    return {
+      stated: stated, id: id, name: name, url: url, label: id || name || 'Not stated',
+      commercial: stated ? commercial : null, shareAlike: stated ? shareAlike : null,
+      commercialLabel: commercialLabel
+    };
+  }
+
+  function normRequirements(raw) {
+    var items = [];
+    if (isObj(raw)) {
+      Object.keys(raw).forEach(function (key) {
+        var value = raw[key];
+        items.push(isObj(value) ? { id: key, text: value.text, must: value.must } : { id: key, text: value });
+      });
+    } else {
+      items = arr(raw);
+    }
+    var out = [], seen = Object.create(null);
+    items.forEach(function (item, index) {
+      var id = '', text = '', must = true;
+      if (isObj(item)) { id = str(item.id); text = str(item.text); must = item.must !== false; }
+      else { text = str(item); }
+      if (!id && !text) { return; }
+      if (!id) { id = 'R' + (index + 1); }
+      if (seen[id]) { return; }
+      seen[id] = true;
+      out.push({ id: id, text: text || id, must: must });
+    });
+    return out;
+  }
+
+  function requirementRow(req, entry, assessed) {
+    var status = '', evidence = '', url = '';
+    if (isObj(entry)) {
+      status = str(entry.status).toLowerCase();
+      evidence = str(entry.evidence);
+      url = safeUrl(entry.url);
+    } else {
+      status = str(entry).toLowerCase();
+    }
+    // An unassessed or unrecognised status is "unknown", never "met".
+    if (!has(STATUSES, status)) { status = 'unknown'; }
+    return {
+      id: req.id, text: req.text, must: req.must, status: status, statusLabel: STATUSES[status].label,
+      evidence: evidence, url: url, host: hostOf(url), assessed: assessed
+    };
+  }
+  // One row per requirement of the search, in order, then any extra ids the
+  // dataset entry mentions.
+  function requirementRows(topReqs, raw) {
+    var entries = Object.create(null), order = [];
+    function put(id, entry) {
+      id = str(id);
+      if (!id) { return; }
+      if (!(id in entries)) { order.push(id); }
+      entries[id] = entry;
+    }
+    if (Array.isArray(raw)) {
+      raw.forEach(function (item) { if (isObj(item)) { put(item.id, item); } });
+    } else if (isObj(raw)) {
+      Object.keys(raw).forEach(function (key) { put(key, raw[key]); });
+    }
+    var rows = [], used = Object.create(null);
+    topReqs.forEach(function (req) {
+      used[req.id] = true;
+      rows.push(requirementRow(req, entries[req.id], req.id in entries));
+    });
+    order.forEach(function (id) {
+      if (!used[id]) { rows.push(requirementRow({ id: id, text: '', must: null }, entries[id], true)); }
+    });
+    return rows;
+  }
+  function mustSummary(rows) {
+    var must = rows.filter(function (r) { return r.must === true; });
+    if (!must.length) { return ''; }
+    var counts = { met: 0, partial: 0, unmet: 0, unknown: 0 };
+    must.forEach(function (r) { counts[r.status] += 1; });
+    var rest = [];
+    if (counts.partial) { rest.push(counts.partial + ' partly'); }
+    if (counts.unmet) { rest.push(counts.unmet + ' unmet'); }
+    if (counts.unknown) { rest.push(counts.unknown + ' unknown'); }
+    return counts.met + ' of ' + must.length + (must.length === 1 ? ' must-have met' : ' must-haves met') +
+      (rest.length ? ' (' + rest.join(', ') + ')' : '');
+  }
+
+  // A missing or empty verification block means "not verified". "Verified" also needs
+  // the method and the date of the check, as the verifier writes them: a bare
+  // { verified: true } typed by hand is not a check.
+  function normVerification(raw) {
+    var ver = isObj(raw) ? raw : null;
+    var claimed = !!ver && ver.verified === true;
+    var method = ver ? str(ver.method) : '';
+    var verified = claimed && !!method && !!isoDate(ver.checked_at);
+    var known = has(METHODS, method) ? METHODS[method] : null;
+    var outcome = ver && !verified ? (claimed ? 'incomplete' : str(ver.outcome).toLowerCase()) : '';
+    var why = has(OUTCOMES, outcome) ? OUTCOMES[outcome] : null;
+    var problems = ver ? strList(ver.problems) : [];
+    if (claimed && !verified) {
+      problems = ['The verification block gives no method or no date of the check; run the verifier again.'].concat(problems);
+    }
+    if (!verified && !problems.length) {
+      problems = [ver ? 'The check did not confirm this dataset, and it gave no reason.' :
+        'No verification was recorded for this dataset.'];
+    }
+    return {
+      verified: verified,
+      recorded: !!ver,
+      tone: verified ? 'go' : (why ? why.tone : 'stop'),
+      method: method,
+      methodLabel: known ? known.label : method,
+      methodSentence: known ? known.sentence : (method ? 'checked by ' + method : ''),
+      registry: ver ? str(ver.registry) : '',
+      reason: why ? why.label : '',
+      explanation: why ? why.sentence : 'Nothing confirmed that this dataset exists at the address given.',
+      checkedIso: ver ? isoDate(ver.checked_at) : '',
+      checkedLong: ver ? longDate(ver.checked_at) : '',
+      checkedShort: ver ? shortDate(ver.checked_at) : '',
+      httpStatus: ver ? num(ver.http_status) : null,
+      finalUrl: ver ? safeUrl(ver.final_url) : '',
+      foundTitle: ver ? str(ver.found_title) : '',
+      problems: problems,
+      // A verified dataset can still carry problems (an access conflict, a broken link, a
+      // name that differs from the registry's): they are shown, never hidden behind the stamp.
+      warned: verified && problems.length > 0,
+      notes: ver ? strList(ver.notes) : []
+    };
+  }
+
+  // Lower-case letters and digits only, to tell two spellings of one name from two names.
+  function sameName(a, b) {
+    function key(s) { return str(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+    return key(a) === key(b);
+  }
+
+  function normPapers(raw) {
+    var out = [];
+    arr(raw).forEach(function (item) {
+      var p = isObj(item) ? item : { title: item };
+      var doi = cleanDoi(p.doi), title = str(p.title);
+      if (!title && !doi && !safeUrl(p.url)) { return; }
+      out.push({
+        title: title || 'Untitled paper', year: str(p.year), venue: str(p.venue),
+        doi: doi, doiUrl: doiLink(doi), url: safeUrl(p.url), note: str(p.note)
+      });
+    });
+    return out;
+  }
+
+  function searchText(ds) {
+    var parts = [ds.title, ds.publisher, ds.host, ds.source, ds.id, ds.doi, ds.description, ds.why,
+      ds.tierLabel, ds.fitLabel, ds.licence.label, ds.licence.name, ds.accessEvidence, ds.sizeText]
+      .concat(ds.creators, ds.formats, ds.subjects, ds.steps, ds.caveats);
+    ds.requirements.forEach(function (r) { parts.push(r.evidence); });
+    ds.papers.forEach(function (p) { parts.push(p.title, p.note); });
+    return parts.join(' ').toLowerCase();
+  }
+
+  function normDataset(raw, topReqs) {
+    var d = isObj(raw) ? raw : { record: { title: str(raw) } };
+    var rec = isObj(d.record) ? d.record : d;
+    var access = isObj(rec.access) ? rec.access : {};
+    // A missing or unrecognised tier is "unknown", never "open".
+    var tier = str(typeof rec.access === 'string' ? rec.access : access.tier).toLowerCase();
+    if (!has(TIERS, tier)) { tier = 'unknown'; }
+    var fit = str(d.fit).toLowerCase();
+    if (!has(FITS, fit)) { fit = 'unrated'; }
+    var time = str(d.time_to_access).toLowerCase();
+    if (!has(TIMES, time)) { time = 'unknown'; }
+    var url = safeUrl(rec.url);
+    var doi = cleanDoi(rec.doi);
+    var rows = requirementRows(topReqs, d.requirements);
+    var also = [];
+    arr(rec.also_found_in).forEach(function (item) {
+      var name = isObj(item) ? str(item.source) : str(item);
+      if (name) { also.push({ source: name, url: isObj(item) ? safeUrl(item.url) : '' }); }
+    });
+    var ds = {
+      key: '', rank: num(d.rank), rankLabel: '',
+      title: str(rec.title) || 'Untitled dataset',
+      url: url, urlGiven: !!str(rec.url), host: hostOf(url),
+      publisher: str(rec.publisher), source: str(rec.source), id: str(rec.id),
+      year: str(rec.year), version: str(rec.version),
+      updated: longDate(rec.updated) || str(rec.updated),
+      doi: doi, doiUrl: doiLink(doi),
+      description: str(rec.description),
+      creators: strList(rec.creators), formats: strList(rec.formats), subjects: strList(rec.subjects),
+      sizeText: sizeText(rec.size), usageText: usageText(rec.usage), alsoFoundIn: also,
+      tier: tier, tierLabel: TIERS[tier].label, accessEvidence: str(access.evidence),
+      licence: normLicence(rec.licence !== undefined ? rec.licence : rec.license),
+      fit: fit, fitLabel: FITS[fit].label, why: str(d.why),
+      requirements: rows, mustSummary: mustSummary(rows),
+      steps: strList(d.access_steps), time: time, timeLabel: TIMES[time],
+      caveats: strList(d.caveats), papers: normPapers(d.papers),
+      givenTitle: str(isObj(rec.extra) ? rec.extra.given_title : ''),
+      verification: normVerification(rec.verification)
+    };
+    ds.searchText = searchText(ds);
+    return ds;
+  }
+
+  function normalise(raw) {
+    var src = isObj(raw) ? raw : {};
+    var requirements = normRequirements(src.requirements);
+    // An entry is an object or, at the least, a name. Anything else is skipped.
+    var datasets = arr(src.datasets).filter(function (item) {
+      return isObj(item) || str(item) !== '';
+    }).map(function (item, index) {
+      return { ds: normDataset(item, requirements), index: index };
+    });
+    // Best first: by rank where one is given, then in the order written.
+    datasets.sort(function (a, b) {
+      var ra = a.ds.rank === null ? Infinity : a.ds.rank, rb = b.ds.rank === null ? Infinity : b.ds.rank;
+      return (ra < rb ? -1 : (ra > rb ? 1 : 0)) || (a.index - b.index);
+    });
+    datasets = datasets.map(function (pair, position) {
+      var ds = pair.ds;
+      // Keys come from the position, never from shortlist text.
+      ds.key = 'd' + (position + 1);
+      ds.rankLabel = ds.rank === null ? String(position + 1) : String(ds.rank);
+      return ds;
+    });
+
+    var searched = isObj(src.searched) ? src.searched : {};
+    var notRecommended = [];
+    arr(src.not_recommended).forEach(function (item) {
+      var o = isObj(item) ? item : { name: item };
+      var name = str(o.name) || str(o.title), reason = str(o.reason);
+      if (!name && !reason) { return; }
+      notRecommended.push({ name: name || 'Unnamed dataset', url: safeUrl(o.url), reason: reason });
+    });
+    var notes = typeof src.notes === 'string' ? src.notes.split(/\n\s*\n/).map(str).filter(Boolean) : strList(src.notes);
+
+    var generatedLong = longDate(src.generated_at);
+    var latest = '';
+    datasets.forEach(function (ds) {
+      if (ds.verification.checkedIso > latest) { latest = ds.verification.checkedIso; }
+    });
+    return {
+      question: str(src.question),
+      generatedIso: isoDate(src.generated_at),
+      generatedLong: generatedLong || str(src.generated_at).slice(0, 40),
+      checkedLong: generatedLong || longDate(latest),
+      requirements: requirements,
+      searched: {
+        sources: strList(searched.sources),
+        queries: strList(searched.queries),
+        candidates: num(searched.n_candidates)
+      },
+      datasets: datasets,
+      notRecommended: notRecommended,
+      gaps: strList(src.gaps),
+      notes: notes
+    };
+  }
+
+  // ---- Sentences and counts built from the model ----------------------------
+
+  function searchedSentence(model) {
+    var s = model.searched, n = model.datasets.length, aside = model.notRecommended.length;
+    var first = s.sources.length ?
+      'Searched ' + plural(s.sources.length, 'source') + ' (' + s.sources.join(', ') + ')' :
+      'The sources searched were not recorded';
+    if (model.generatedLong) { first += (s.sources.length ? ' on ' : '; the report is dated ') + model.generatedLong; }
+    var second = (s.candidates !== null ? 'Of ' + plural(s.candidates, 'candidate') + ', ' : '') +
+      plural(n, 'dataset') + ' made the shortlist' +
+      (aside ? ' and ' + aside + (aside === 1 ? ' was' : ' were') + ' set aside' : '') + '.';
+    return first + '. ' + second;
+  }
+
+  function tally(model) {
+    var groups = { free: 0, approval: 0, closed: 0, unknown: 0 }, unverified = 0, warned = 0;
+    model.datasets.forEach(function (ds) {
+      groups[TIERS[ds.tier].group] += 1;
+      if (!ds.verification.verified) { unverified += 1; }
+      if (ds.verification.warned) { warned += 1; }
+    });
+    var out = [];
+    function push(count, one, many, tone, icon) {
+      if (count) { out.push({ count: count, label: count === 1 ? one : many, tone: tone, icon: icon }); }
+    }
+    push(groups.free, 'needs no approval', 'need no approval', 'go', 'download');
+    push(groups.approval, 'needs an application or agreement', 'need an application or agreement', 'wait', 'form');
+    push(groups.closed, 'is not obtainable', 'are not obtainable', 'stop', 'blocked');
+    push(groups.unknown, 'has unknown access', 'have unknown access', 'none', 'question');
+    push(unverified, 'could not be verified', 'could not be verified', 'stop', 'warning');
+    push(warned, 'was verified with problems to check', 'were verified with problems to check', 'wait', 'warning');
+    return out;
+  }
+
+  function checkedSentence(model) {
+    return 'Access conditions and licences change. ' + (model.checkedLong ?
+      'Everything on this page was checked on ' + model.checkedLong + '.' :
+      'The date of this check was not recorded.') +
+      ' Confirm the terms on each dataset\'s landing page before you apply for access or publish results.';
+  }
+
+  // ---- Filtering ---------------------------------------------------------
+
+  function filterOptions(model) {
+    var tiers = Object.create(null), fits = Object.create(null), commercial = 0;
+    model.datasets.forEach(function (ds) {
+      tiers[ds.tier] = (tiers[ds.tier] || 0) + 1;
+      fits[ds.fit] = (fits[ds.fit] || 0) + 1;
+      if (ds.licence.commercial === true) { commercial += 1; }
+    });
+    return {
+      tiers: TIER_ORDER.filter(function (t) { return tiers[t]; }).map(function (t) {
+        return { value: t, label: TIERS[t].label, count: tiers[t] };
+      }),
+      fits: FIT_ORDER.filter(function (f) { return fits[f]; }).map(function (f) {
+        return { value: f, label: FITS[f].label, count: fits[f] };
+      }),
+      commercial: commercial
+    };
+  }
+
+  // filters: { tiers: [..], fits: [..], commercial: bool, query: '..' }.
+  // An empty list means "any". Search terms must all be present.
+  function matchesFilters(ds, filters) {
+    var f = filters || {}, tiers = arr(f.tiers), fits = arr(f.fits);
+    if (tiers.length && tiers.indexOf(ds.tier) === -1) { return false; }
+    if (fits.length && fits.indexOf(ds.fit) === -1) { return false; }
+    // Only a licence that says so counts; "not determined" does not.
+    if (f.commercial && ds.licence.commercial !== true) { return false; }
+    var terms = str(f.query).toLowerCase().split(' ');
+    for (var i = 0; i < terms.length; i += 1) {
+      if (terms[i] && ds.searchText.indexOf(terms[i]) === -1) { return false; }
+    }
+    return true;
+  }
+  function filtersActive(filters) {
+    var f = filters || {};
+    return arr(f.tiers).length > 0 || arr(f.fits).length > 0 || !!f.commercial || str(f.query) !== '';
+  }
+
+  // ---- The plan, as Markdown ------------------------------------------------
+
+  // Shortlist text inside Markdown: one line, with the characters that could
+  // start markup or a link escaped.
+  function mdText(v) {
+    var s = str(v).replace(/[\\`*_\[\]<>]/g, function (ch, index, all) {
+      if (ch === '_' && /[A-Za-z0-9]/.test(all.charAt(index - 1)) && /[A-Za-z0-9]/.test(all.charAt(index + 1))) {
+        return ch;
+      }
+      return '\\' + ch;
+    });
+    return s.replace(/^([#+\-])/, '\\$1').replace(/^(\d+)([.)])/, '$1\\$2');
+  }
+  function mdLink(url) { return '<' + url + '>'; }
+
+  function verificationLine(v) {
+    if (v.verified) {
+      return 'verified' + (v.checkedLong ? ' on ' + v.checkedLong : '') + (v.methodLabel ? ' (' + mdText(lowerFirst(v.methodLabel)) + ')' : '') +
+        (v.problems.length ? '; problems to check: ' + v.problems.map(mdText).join('; ') : '');
+    }
+    return 'NOT VERIFIED' + (v.checkedLong ? ' when checked on ' + v.checkedLong : '') + ': ' + v.problems.map(mdText).join('; ');
+  }
+
+  function buildPlanMarkdown(model, keys) {
+    var wanted = Object.create(null);
+    arr(keys).forEach(function (key) { wanted[String(key)] = true; });
+    var chosen = model.datasets.filter(function (ds) { return wanted[ds.key] === true; });
+    var lines = ['# Data access plan', ''];
+    if (model.question) { lines.push('**Research question:** ' + mdText(model.question), ''); }
+    lines.push(plural(chosen.length, 'dataset') + ' chosen from the dataset-scout shortlist' +
+      (model.generatedLong ? ' of ' + mdText(model.generatedLong) : '') + '.');
+    chosen.forEach(function (ds, index) {
+      var lic = ds.licence;
+      lines.push('', '## ' + (index + 1) + '. ' + mdText(ds.title), '');
+      lines.push('- **URL:** ' + (ds.url ? mdLink(ds.url) :
+        (ds.urlGiven ? 'the address in the record is not a web address' : 'not stated')));
+      lines.push('- **Access:** ' + ds.tierLabel +
+        (ds.accessEvidence ? ' (evidence: ' + mdText(ds.accessEvidence) + ')' : ''));
+      lines.push('- **Licence:** ' + mdText(lic.label) + ' (' + lowerFirst(lic.commercialLabel) +
+        (lic.shareAlike === true ? ', share-alike' : '') + ')' + (lic.url ? ' ' + mdLink(lic.url) : ''));
+      lines.push('- **Time to access:** ' + ds.time);
+      lines.push('- **Verification:** ' + verificationLine(ds.verification));
+      lines.push('', '### Access steps', '');
+      if (ds.steps.length) {
+        ds.steps.forEach(function (step, i) { lines.push((i + 1) + '. ' + mdText(step)); });
+      } else {
+        lines.push('No access steps were recorded.');
+      }
+      lines.push('', '### Caveats', '');
+      if (ds.caveats.length) {
+        ds.caveats.forEach(function (caveat) { lines.push('- ' + mdText(caveat)); });
+      } else {
+        lines.push('No caveats were recorded.');
+      }
+      lines.push('', '### Papers that used it', '');
+      if (ds.papers.length) {
+        ds.papers.forEach(function (p) {
+          var where = p.url || p.doiUrl;
+          lines.push('- ' + mdText(p.title) + (p.year ? ' (' + mdText(p.year) + ')' : '') + '.' +
+            (where ? ' ' + mdLink(where) : '') + (p.note ? ' ' + mdText(p.note) : ''));
+        });
+      } else {
+        lines.push('No papers were recorded.');
+      }
+    });
+    lines.push('', '---', '', checkedSentence(model));
+    return lines.join('\n') + '\n';
+  }
+
+  var api = {
+    TIERS: TIERS, TIER_ORDER: TIER_ORDER, FITS: FITS, STATUSES: STATUSES, TIMES: TIMES,
+    str: str, num: num, safeUrl: safeUrl, hostOf: hostOf, cleanDoi: cleanDoi, doiLink: doiLink,
+    longDate: longDate, shortDate: shortDate, sizeText: sizeText, formatBytes: formatBytes, compactCount: compactCount,
+    normalise: normalise, searchedSentence: searchedSentence, tally: tally, checkedSentence: checkedSentence,
+    filterOptions: filterOptions, matchesFilters: matchesFilters, filtersActive: filtersActive,
+    mdText: mdText, buildPlanMarkdown: buildPlanMarkdown
+  };
+
+  // =====================================================================
+  // 2. The page. Elements are created with createElement and filled with
+  //    text nodes; shortlist text is never parsed as markup. The only href
+  //    values written are safeUrl() results, in-page anchors and one blob.
+  // =====================================================================
+
+  function buildPage(doc, model) {
+    function byId(id) { return doc.getElementById(id); }
+
+    function add(parent, child) {
+      if (child === null || child === undefined || child === false || child === '') { return parent; }
+      if (Array.isArray(child)) {
+        for (var i = 0; i < child.length; i += 1) { add(parent, child[i]); }
+        return parent;
+      }
+      if (typeof child === 'string' || typeof child === 'number') {
+        parent.appendChild(doc.createTextNode(String(child)));
+        return parent;
+      }
+      parent.appendChild(child);
+      return parent;
+    }
+    // attrs come from this script only; text and children go in as text nodes.
+    function el(tag, attrs, children) {
+      var node = doc.createElement(tag);
+      if (attrs) {
+        Object.keys(attrs).forEach(function (name) {
+          var value = attrs[name];
+          if (value === null || value === undefined || value === false) { return; }
+          node.setAttribute(name, value === true ? '' : String(value));
+        });
+      }
+      return add(node, children);
+    }
+    function link(url, children, cls) {
+      var href = safeUrl(url);
+      if (!href) { return el('span', { 'class': cls }, children); }
+      return el('a', { 'class': cls, href: href, target: '_blank', rel: 'noopener noreferrer' }, children);
+    }
+
+    var iconStore = byId('scout-icons');
+    function icon(name) {
+      var source = iconStore && iconStore.content ?
+        iconStore.content.querySelector('[data-icon="' + name + '"]') : null;
+      return source ? source.cloneNode(true) : null;
+    }
+    function badge(tone, iconName, label, title) {
+      return el('span', { 'class': 'badge tone-' + tone, title: title }, [icon(iconName), el('span', null, label)]);
+    }
+    function accessBadge(ds) {
+      var t = TIERS[ds.tier];
+      return badge(t.tone, t.icon, t.label, t.meaning);
+    }
+    function fitMark(ds, long) {
+      var level = FITS[ds.fit].level;
+      var pips = el('span', { 'class': 'pips', 'aria-hidden': 'true' });
+      for (var i = 1; i <= 3; i += 1) { add(pips, el('i', { 'class': i <= level ? 'on' : null })); }
+      var words = long ? (level ? ds.fitLabel + ' fit' : 'Fit not rated') : ds.fitLabel;
+      return el('span', { 'class': 'fit' }, [level ? pips : null, el('span', null, words)]);
+    }
+    function textList(tag, cls, items) {
+      return el(tag, { 'class': cls }, items.map(function (item) { return el('li', null, item); }));
+    }
+    function cardId(ds) { return 'dataset-' + ds.key; }
+
+    var state = { selected: Object.create(null), filters: { tiers: [], fits: [], commercial: false, query: '' } };
+    var ui = { cards: {}, rows: {}, cardPicks: {}, rowPicks: {}, toggles: {} };
+    var messageTimer = null;
+
+    // ---- Masthead, brief, provenance ----
+
+    function renderMasthead() {
+      var h1 = byId('question');
+      if (model.question) {
+        h1.textContent = model.question;
+        if (model.question.length > 170) { h1.className = 'question is-long'; }
+      } else {
+        byId('eyebrow-label').hidden = true;
+      }
+      var time = byId('generated');
+      if (model.generatedLong) {
+        time.textContent = model.generatedLong;
+        if (model.generatedIso) { time.setAttribute('datetime', model.generatedIso); }
+        time.hidden = false;
+      }
+    }
+
+    function renderRequirements() {
+      if (!model.requirements.length) { return; }
+      var must = model.requirements.filter(function (r) { return r.must; });
+      var nice = model.requirements.filter(function (r) { return !r.must; });
+      function fill(listId, groupId, items) {
+        var list = byId(listId);
+        items.forEach(function (r) {
+          add(list, el('li', null, [el('span', { 'class': 'req-id' }, r.id), el('span', null, r.text)]));
+        });
+        byId(groupId).hidden = !items.length;
+      }
+      fill('req-must', 'req-must-group', must);
+      fill('req-nice', 'req-nice-group', nice);
+      byId('requirements').hidden = false;
+    }
+
+    function renderProvenance() {
+      byId('searched-line').textContent = searchedSentence(model);
+      if (model.searched.queries.length) {
+        var q = byId('searched-queries');
+        q.textContent = 'Queries: ' + model.searched.queries.join(' \u00B7 ');
+        q.hidden = false;
+      }
+      if (model.notes.length) {
+        var box = byId('notes');
+        model.notes.forEach(function (text, i) {
+          add(box, el('p', null, [i === 0 ? el('strong', null, 'Note. ') : null, text]));
+        });
+        box.hidden = false;
+      }
+    }
+
+    // ---- Comparison table ----
+
+    function renderTable() {
+      var list = byId('tally');
+      tally(model).forEach(function (item) {
+        add(list, el('li', { 'class': 'tone-' + item.tone }, [icon(item.icon), el('strong', null, String(item.count)), ' ' + item.label]));
+      });
+      var body = byId('compare-body'), emptyRow = byId('compare-empty');
+      model.datasets.forEach(function (ds) {
+        var v = ds.verification, lic = ds.licence;
+        var pick = el('input', { type: 'checkbox', id: 'pick-row-' + ds.key, 'aria-label': 'Add ' + ds.title + ' to the plan' });
+        pick.addEventListener('change', function () { setSelected(ds.key, pick.checked); });
+        var name = el('a', { 'class': 'name-link', href: '#' + cardId(ds) }, ds.title);
+        name.addEventListener('click', function () { setCollapsed(ds.key, false); });
+        var where = [ds.publisher, ds.host].filter(Boolean).join(' \u00B7 ');
+        var row = el('tr', { id: 'row-' + ds.key, 'class': v.verified ? null : 'is-unverified' }, [
+          el('td', { 'class': 'col-pick' }, pick),
+          el('td', { 'class': 'col-rank' }, ds.rankLabel),
+          el('th', { scope: 'row', 'class': 'col-name' }, [
+            name,
+            where ? [' ', el('span', { 'class': 'sub' }, where)] : null,
+            v.verified ? (v.warned ? [' ', el('span', { 'class': 'flag tone-wait' }, [icon('warning'), 'Problems to check'])] : null) :
+              [' ', el('span', { 'class': 'flag tone-' + v.tone }, [icon('warning'), 'Not verified'])]
+          ]),
+          el('td', { 'class': 'col-access' }, accessBadge(ds)),
+          el('td', { 'class': 'col-licence' }, [
+            el('span', { 'class': 'main' }, lic.label), ' ',
+            el('span', { 'class': 'sub' }, lic.commercialLabel)
+          ]),
+          el('td', { 'class': 'col-size' }, ds.sizeText || el('span', { 'class': 'muted' }, 'Not stated')),
+          el('td', { 'class': 'col-fit' }, fitMark(ds, false)),
+          el('td', { 'class': 'col-time' }, ds.timeLabel)
+        ]);
+        body.insertBefore(row, emptyRow);
+        ui.rows[ds.key] = row;
+        ui.rowPicks[ds.key] = pick;
+      });
+      byId('comparison').hidden = false;
+    }
+
+    // ---- Filters ----
+
+    function renderFilters() {
+      var options = filterOptions(model);
+      function option(group, o) {
+        var id = 'filter-' + group + '-' + o.value;
+        return el('label', { 'class': 'option', 'for': id }, [
+          el('input', { type: 'checkbox', id: id, name: group, value: o.value }),
+          ' ', el('span', null, o.label), ' ',
+          el('span', { 'class': 'count' }, [String(o.count), el('span', { 'class': 'vh' }, o.count === 1 ? ' dataset' : ' datasets')])
+        ]);
+      }
+      options.tiers.forEach(function (o) { add(byId('filter-tiers'), option('tier', o)); });
+      options.fits.forEach(function (o) { add(byId('filter-fits'), option('fit', o)); });
+      add(byId('filter-commercial-count'), [String(options.commercial),
+        el('span', { 'class': 'vh' }, options.commercial === 1 ? ' dataset' : ' datasets')]);
+      var form = byId('filters');
+      form.addEventListener('submit', function (event) { event.preventDefault(); });
+      form.addEventListener('change', readFilters);
+      form.addEventListener('input', readFilters);
+      byId('filter-clear').addEventListener('click', clearFilters);
+      byId('no-match-clear').addEventListener('click', clearFilters);
+      byId('toggle-all').addEventListener('click', function () {
+        var collapse = !allCollapsed();
+        model.datasets.forEach(function (ds) { setCollapsed(ds.key, collapse); });
+      });
+      form.hidden = false;
+    }
+    function readFilters() {
+      var f = state.filters, boxes = byId('filters').querySelectorAll('input[type="checkbox"]');
+      f.tiers = [];
+      f.fits = [];
+      for (var i = 0; i < boxes.length; i += 1) {
+        if (!boxes[i].checked) { continue; }
+        if (boxes[i].name === 'tier') { f.tiers.push(boxes[i].value); }
+        if (boxes[i].name === 'fit') { f.fits.push(boxes[i].value); }
+      }
+      f.commercial = byId('filter-commercial').checked;
+      f.query = byId('filter-search').value;
+      applyFilters();
+    }
+    function clearFilters() {
+      var boxes = byId('filters').querySelectorAll('input[type="checkbox"]');
+      for (var i = 0; i < boxes.length; i += 1) { boxes[i].checked = false; }
+      byId('filter-search').value = '';
+      readFilters();
+    }
+    // Filtering uses the hidden attribute; collapsing a card uses a class.
+    // Print can therefore open every card without bringing filtered ones back.
+    function applyFilters() {
+      var shown = 0, total = model.datasets.length;
+      model.datasets.forEach(function (ds) {
+        var ok = matchesFilters(ds, state.filters);
+        ui.cards[ds.key].hidden = !ok;
+        ui.rows[ds.key].hidden = !ok;
+        if (ok) { shown += 1; }
+      });
+      byId('filter-status').textContent = shown === total ?
+        'Showing ' + (total === 1 ? 'the only dataset' : 'all ' + total + ' datasets') :
+        'Showing ' + shown + ' of ' + plural(total, 'dataset');
+      byId('filter-clear').disabled = !filtersActive(state.filters);
+      byId('no-match').hidden = shown !== 0;
+      byId('compare-empty').hidden = shown !== 0;
+      updatePlanBar();
+    }
+
+    // ---- Cards ----
+
+    function stamp(ds) {
+      var v = ds.verification, meta;
+      if (v.verified) {
+        meta = [v.methodLabel, v.checkedShort].filter(Boolean).join(' \u00B7 ') || 'method not recorded';
+        return el('p', { 'class': 'stamp tone-go' }, [icon('seal'),
+          el('span', { 'class': 'stamp-word' }, 'Verified'), ' ', el('span', { 'class': 'stamp-meta' }, meta)]);
+      }
+      meta = [v.reason, v.checkedShort ? 'checked ' + v.checkedShort : ''].filter(Boolean).join(' \u00B7 ') || 'no check recorded';
+      return el('p', { 'class': 'stamp stamp-off tone-' + v.tone }, [icon('warning'),
+        el('span', { 'class': 'stamp-word' }, 'Not verified'), ' ', el('span', { 'class': 'stamp-meta' }, meta)]);
+    }
+
+    function glance(ds) {
+      var lic = ds.licence, tier = TIERS[ds.tier];
+      var canGet = [
+        el('p', { 'class': 'answer' }, accessBadge(ds)),
+        el('p', { 'class': 'detail' }, ['Time to access: ', el('strong', null, ds.timeLabel.toLowerCase())]),
+        ds.accessEvidence ?
+          el('p', { 'class': 'evidence' }, ['Evidence: ', el('code', null, ds.accessEvidence)]) :
+          el('p', { 'class': 'evidence' }, ds.tier === 'unknown' ? tier.meaning : 'No evidence was recorded for this access label.')
+      ];
+      var useTone = !lic.stated ? 'wait' : (lic.commercial === true ? 'go' : 'none');
+      var useIcon = !lic.stated ? 'warning' : (lic.commercial === true ? 'check' : (lic.commercial === false ? 'blocked' : 'question'));
+      var mayUse = [
+        el('p', { 'class': 'answer' }, lic.stated ? lic.label : 'Licence not stated'),
+        el('p', { 'class': 'detail mark tone-' + useTone }, [icon(useIcon), el('span', null, lic.commercialLabel)]),
+        lic.shareAlike === true ? el('p', { 'class': 'detail' }, 'Share-alike: what you derive must carry the same licence.') : null,
+        lic.stated && lic.id && lic.name && lic.name !== lic.id ? el('p', { 'class': 'detail' }, lic.name) : null,
+        !lic.stated ? el('p', { 'class': 'detail' }, 'Ask the publisher which terms apply before you rely on this data.') : null,
+        lic.url ? el('p', { 'class': 'detail' }, link(lic.url, 'Read the licence')) : null
+      ];
+      var fits = [
+        el('p', { 'class': 'answer' }, fitMark(ds, true)),
+        el('p', { 'class': 'detail' }, ds.mustSummary || 'No must-have requirements were listed.')
+      ];
+      return el('dl', { 'class': 'glance' }, [
+        el('div', null, [el('dt', null, 'Can I get it?'), el('dd', null, canGet)]),
+        el('div', null, [el('dt', null, 'May I use it?'), el('dd', null, mayUse)]),
+        el('div', null, [el('dt', null, 'Does it fit?'), el('dd', null, fits)])
+      ]);
+    }
+
+    function requirementTable(ds) {
+      if (!ds.requirements.length) {
+        return el('p', { 'class': 'muted' }, 'No requirements were listed for this search.');
+      }
+      function head(text) { return el('th', { role: 'columnheader', scope: 'col' }, text); }
+      var rows = ds.requirements.map(function (r) {
+        var s = STATUSES[r.status];
+        var kind = r.must === true ? 'Must have' : (r.must === false ? 'Nice to have' : 'Not in the list above');
+        return el('tr', { role: 'row' }, [
+          el('td', { role: 'cell', 'class': 'c-status' }, el('span', { 'class': 'status tone-' + s.tone }, [icon(s.icon), s.label])),
+          el('th', { role: 'rowheader', scope: 'row', 'class': 'c-req' }, [
+            r.text || r.id, ' ',
+            el('span', { 'class': 'req-meta' }, [r.text ? [el('span', { 'class': 'mono' }, r.id), ' \u00B7 '] : null, kind])
+          ]),
+          el('td', { role: 'cell', 'class': 'c-evidence' }, [
+            r.evidence || el('span', { 'class': 'muted' }, r.assessed ? 'No evidence recorded.' : 'Not assessed for this dataset.'),
+            r.url ? [' ', el('span', { 'class': 'source' }, ['Source: ', link(r.url, r.host || 'link')])] : null
+          ])
+        ]);
+      });
+      return el('table', { role: 'table', 'class': 'reqtable' }, [
+        el('thead', { role: 'rowgroup' }, el('tr', { role: 'row' }, [head('Status'), head('Requirement'), head('Evidence')])),
+        el('tbody', { role: 'rowgroup' }, rows)
+      ]);
+    }
+
+    function aboutBlock(ds) {
+      var facts = [];
+      function fact(term, value) { if (value) { facts.push(el('dt', null, term), el('dd', null, value)); } }
+      fact('Size', ds.sizeText);
+      fact('Formats', ds.formats.join(', '));
+      fact('Updated', ds.updated);
+      fact('Creators', ds.creators.join('; '));
+      fact('DOI', ds.doi ? link(ds.doiUrl, ds.doi, 'mono') : '');
+      var found = [];
+      if (ds.source) { found.push(ds.source); }
+      ds.alsoFoundIn.forEach(function (item) {
+        if (found.length) { found.push(', '); }
+        found.push(item.url ? link(item.url, item.source) : item.source);
+      });
+      fact('Found in', found.length ? found : '');
+      return [
+        ds.description ? el('p', null, ds.description) : el('p', { 'class': 'muted' }, 'The record has no description.'),
+        facts.length ? el('dl', { 'class': 'facts' }, facts) : null
+      ];
+    }
+
+    function papersBlock(ds) {
+      var out = [];
+      if (ds.papers.length) {
+        out.push(el('ul', { 'class': 'papers' }, ds.papers.map(function (p) {
+          var where = p.url || p.doiUrl;
+          var meta = [p.year, p.venue].filter(Boolean).join(' \u00B7 ');
+          return el('li', null, [
+            el('p', { 'class': 'paper-title' }, where ? link(where, p.title) : p.title),
+            (meta || p.doi) ? el('p', { 'class': 'paper-meta' }, [meta, meta && p.doi ? ' \u00B7 ' : null,
+              p.doi ? ['doi:', p.url && p.doiUrl ? link(p.doiUrl, p.doi) : p.doi] : null]) : null,
+            p.note ? el('p', { 'class': 'paper-note' }, p.note) : null
+          ]);
+        })));
+      } else {
+        out.push(el('p', { 'class': 'muted' }, 'No papers that used this dataset were recorded.'));
+      }
+      if (ds.usageText) { out.push(el('p', { 'class': 'usage' }, 'The registry reports ' + ds.usageText + '.')); }
+      return out;
+    }
+
+    function verificationBlock(ds) {
+      var v = ds.verification, out = [];
+      if (v.verified) {
+        out.push(el('p', null, 'Verified' + (v.checkedLong ? ' on ' + v.checkedLong : '') +
+          (v.methodSentence ? ': ' + v.methodSentence : '') + (v.registry ? ' (' + v.registry + ')' : '') + '.'));
+        if (v.finalUrl && v.finalUrl !== ds.url) {
+          out.push(el('p', null, ['The address resolved to ', link(v.finalUrl, hostOf(v.finalUrl) || 'another page'), '.']));
+        }
+        if (v.warned) {
+          out.push(el('p', null, el('strong', null, 'Problems the check found:')));
+          out.push(textList('ul', 'bullets', v.problems));
+        }
+      } else {
+        out.push(el('p', null, [el('strong', null, 'Not verified' + (v.checkedLong ? ' when checked on ' + v.checkedLong : '') + '. '), v.explanation]));
+        out.push(textList('ul', 'bullets', v.problems));
+      }
+      if (v.foundTitle && !sameName(v.foundTitle, ds.title)) {
+        out.push(el('p', null, (v.method === 'registry-api' || v.method === 'doi' ? 'The registry record is titled \u201C' :
+          'The page is titled \u201C') + v.foundTitle + '\u201D.'));
+      }
+      if (ds.givenTitle && !sameName(ds.givenTitle, ds.title)) {
+        out.push(el('p', null, 'It was given as \u201C' + ds.givenTitle + '\u201D.'));
+      }
+      if (v.notes.length) {
+        out.push(el('p', { 'class': 'muted' }, 'Notes from the check:'));
+        out.push(textList('ul', 'bullets', v.notes));
+      }
+      return out;
+    }
+
+    function renderCard(ds) {
+      var id = cardId(ds), v = ds.verification;
+      var pick = el('input', { type: 'checkbox', id: 'pick-' + ds.key });
+      pick.addEventListener('change', function () { setSelected(ds.key, pick.checked); });
+      var toggleLabel = el('span', null, 'Hide details');
+      var toggle = el('button', { type: 'button', 'class': 'btn btn-quiet toggle', 'aria-expanded': 'true', 'aria-controls': id + '-body' },
+        [toggleLabel, icon('chevron')]);
+      toggle.addEventListener('click', function () { setCollapsed(ds.key, !isCollapsed(ds.key)); });
+
+      var version = ds.version ? (/^[\d.]+$/.test(ds.version) ? 'version ' + ds.version : ds.version) : '';
+      var sourceLine = [ds.publisher, ds.host, ds.year, version].filter(Boolean).join(' \u00B7 ');
+      function block(area, title, children) {
+        return el('section', { 'class': 'block block-' + area }, [el('h4', { 'class': 'label' }, title), children]);
+      }
+
+      var card = el('article', { 'class': 'card' + (v.verified ? '' : ' is-unverified'), id: id, 'aria-labelledby': id + '-title' }, [
+        el('header', { 'class': 'card-head' }, [
+          el('p', { 'class': 'card-rank', 'aria-hidden': 'true' }, ds.rankLabel),
+          el('div', { 'class': 'card-heading' }, [
+            el('h3', { 'class': 'card-title', id: id + '-title' }, [el('span', { 'class': 'vh' }, 'Rank ' + ds.rankLabel + ': '), ds.title]),
+            sourceLine ? el('p', { 'class': 'card-source' }, sourceLine) : null
+          ]),
+          stamp(ds)
+        ]),
+        v.warned ? el('div', { 'class': 'alert tone-wait', role: 'note' }, [
+          icon('warning'),
+          el('div', null, [
+            el('p', { 'class': 'alert-title' }, 'Verified, with problems to check'),
+            el('p', null, 'The dataset was confirmed, but the check found the problems below. Read them before you rely on this card.'),
+            textList('ul', null, v.problems)
+          ])
+        ]) : null,
+        v.verified ? null : el('div', { 'class': 'alert tone-' + v.tone, role: 'note' }, [
+          icon('warning'),
+          el('div', null, [
+            el('p', { 'class': 'alert-title' }, 'Not verified' + (v.reason ? ': ' + lowerFirst(v.reason) : '')),
+            el('p', null, v.explanation + ' Open the landing page yourself before you rely on anything on this card.'),
+            textList('ul', null, v.problems)
+          ])
+        ]),
+        glance(ds),
+        el('div', { 'class': 'card-actions' }, [
+          el('label', { 'class': 'pick', 'for': 'pick-' + ds.key }, [pick, ' ', el('span', null, 'Add to plan')]),
+          ds.url ?
+            link(ds.url, ['Open the landing page ', icon('external')], 'btn') :
+            el('span', { 'class': 'no-link' }, ds.urlGiven ?
+              'The address in the record is not a web address, so no link is shown.' : 'No landing page address was given.'),
+          toggle
+        ]),
+        el('div', { 'class': 'card-body', id: id + '-body' }, [
+          block('about', 'About the data', aboutBlock(ds)),
+          block('why', 'Why it fits', ds.why ? el('p', { 'class': 'why-text' }, ds.why) :
+            el('p', { 'class': 'muted' }, 'No note on fit was written.')),
+          block('reqs', 'Requirement check', requirementTable(ds)),
+          block('steps', 'How to get access', ds.steps.length ? textList('ol', 'steps', ds.steps) :
+            el('p', { 'class': 'muted' }, 'No access steps were recorded.')),
+          block('caveats', 'Caveats', ds.caveats.length ? textList('ul', 'bullets', ds.caveats) :
+            el('p', { 'class': 'muted' }, 'No caveats were recorded.')),
+          block('papers', 'Evidence of use', papersBlock(ds)),
+          block('verify', 'Verification', verificationBlock(ds))
+        ])
+      ]);
+      ui.cards[ds.key] = card;
+      ui.cardPicks[ds.key] = pick;
+      ui.toggles[ds.key] = { button: toggle, label: toggleLabel };
+      return card;
+    }
+
+    function isCollapsed(key) { return ui.cards[key].classList.contains('is-collapsed'); }
+    function allCollapsed() {
+      return model.datasets.length > 0 && model.datasets.every(function (ds) { return isCollapsed(ds.key); });
+    }
+    function setCollapsed(key, collapsed) {
+      ui.cards[key].classList.toggle('is-collapsed', collapsed);
+      ui.toggles[key].button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      ui.toggles[key].label.textContent = collapsed ? 'Show details' : 'Hide details';
+      byId('toggle-all').textContent = allCollapsed() ? 'Expand all' : 'Collapse all';
+    }
+
+    // ---- Selection and the plan ----
+
+    function selectedKeys() {
+      return model.datasets.filter(function (ds) { return state.selected[ds.key] === true; })
+        .map(function (ds) { return ds.key; });
+    }
+    function setSelected(key, on) {
+      if (on) { state.selected[key] = true; } else { delete state.selected[key]; }
+      ui.cardPicks[key].checked = on;
+      ui.rowPicks[key].checked = on;
+      ui.cards[key].classList.toggle('is-selected', on);
+      ui.rows[key].classList.toggle('is-selected', on);
+      updatePlanBar();
+    }
+    function updatePlanBar() {
+      var keys = selectedKeys(), n = keys.length;
+      var hiddenCount = keys.filter(function (key) { return ui.cards[key].hidden; }).length;
+      byId('plan-count').textContent = n ? plural(n, 'dataset') + ' selected' : 'No datasets selected';
+      byId('plan-hint').textContent = !n ? 'Tick "Add to plan" on the datasets you want to take away.' :
+        (hiddenCount ? hiddenCount + ' of them ' + (hiddenCount === 1 ? 'is' : 'are') + ' hidden by the filters. ' : '') +
+        'The plan lists the access steps, licence, caveats and papers for each.';
+      byId('plan-copy').disabled = !n;
+      byId('plan-download').disabled = !n;
+    }
+    function say(text) {
+      var box = byId('plan-message');
+      box.textContent = text;
+      if (messageTimer) { clearTimeout(messageTimer); }
+      messageTimer = setTimeout(function () { box.textContent = ''; }, 8000);
+    }
+    function currentPlan() { return buildPlanMarkdown(model, selectedKeys()); }
+
+    function showFallback(text, reason) {
+      var area = byId('plan-text');
+      byId('plan-fallback').hidden = false;
+      area.value = text;
+      area.focus();
+      area.select();
+      var copied = false;
+      try { copied = doc.execCommand('copy'); } catch (e) { copied = false; }
+      byId('plan-fallback-label').textContent = copied ?
+        'Plan copied. It is also shown here in case you want to check it.' :
+        reason + ' The plan is selected below: press Ctrl+C (Cmd+C on a Mac) to copy it.';
+      say(copied ? 'Plan copied.' : 'Copy the plan from the box below.');
+    }
+    function copyPlan() {
+      var text = currentPlan();
+      var clipboard = typeof navigator !== 'undefined' ? navigator.clipboard : null;
+      if (clipboard && typeof clipboard.writeText === 'function') {
+        try {
+          clipboard.writeText(text).then(function () {
+            byId('plan-fallback').hidden = true;
+            say('Plan copied. Paste it into your notes or an e-mail.');
+          }, function () {
+            showFallback(text, 'The browser did not allow this page to copy by itself.');
+          });
+          return;
+        } catch (e) { /* fall through to the text box */ }
+      }
+      showFallback(text, 'This browser cannot copy from a page opened as a file.');
+    }
+    function downloadPlan() {
+      var text = currentPlan();
+      try {
+        var blob = new Blob([text], { type: 'text/markdown;charset=utf-8' });
+        var address = URL.createObjectURL(blob);
+        var anchor = el('a', { href: address, download: PLAN_FILENAME, hidden: true });
+        doc.body.appendChild(anchor);
+        anchor.click();
+        doc.body.removeChild(anchor);
+        setTimeout(function () { URL.revokeObjectURL(address); }, 1500);
+        say('Plan saved as ' + PLAN_FILENAME + '.');
+      } catch (e) {
+        showFallback(text, 'The browser did not allow the download.');
+      }
+    }
+
+    // ---- The rest of the page ----
+
+    function renderAside() {
+      if (model.notRecommended.length) {
+        var list = byId('not-recommended-list');
+        model.notRecommended.forEach(function (item) {
+          add(list, el('li', null, [
+            el('p', { 'class': 'aside-name' }, item.url ? link(item.url, item.name) : item.name),
+            el('p', { 'class': 'aside-reason' }, item.reason || 'No reason was recorded.')
+          ]));
+        });
+        byId('not-recommended').hidden = false;
+      }
+      if (model.gaps.length) {
+        var gaps = byId('gap-list');
+        model.gaps.forEach(function (gap) { add(gaps, el('li', null, gap)); });
+        byId('gaps').hidden = false;
+      }
+    }
+    function renderKey() {
+      var list = byId('key-access');
+      TIER_ORDER.forEach(function (name) {
+        var t = TIERS[name];
+        add(list, el('div', null, [el('dt', null, badge(t.tone, t.icon, t.label)), el('dd', null, t.meaning)]));
+      });
+      byId('checked-note').textContent = checkedSentence(model);
+    }
+
+    renderMasthead();
+    renderRequirements();
+    renderProvenance();
+    renderAside();
+    renderKey();
+    if (!model.datasets.length) {
+      byId('shortlist-empty').hidden = false;
+      return;
+    }
+    renderTable();
+    renderFilters();
+    var cards = byId('cards');
+    model.datasets.forEach(function (ds) { add(cards, renderCard(ds)); });
+    byId('plan-copy').addEventListener('click', copyPlan);
+    byId('plan-download').addEventListener('click', downloadPlan);
+    byId('plan-fallback-close').addEventListener('click', function () {
+      byId('plan-fallback').hidden = true;
+      byId('plan-copy').focus();
+    });
+    byId('planbar').hidden = false;
+    applyFilters();
+
+    // The cards did not exist when the browser first looked for the #fragment.
+    var hash = doc.defaultView && doc.defaultView.location ? doc.defaultView.location.hash : '';
+    var target = hash.length > 1 ? byId(hash.slice(1)) : null;
+    if (target && typeof target.scrollIntoView === 'function') { target.scrollIntoView(); }
+  }
+
+  function start(doc) {
+    var root = doc.documentElement;
+    try {
+      var holder = doc.getElementById('scout-data');
+      var model = normalise(JSON.parse(holder ? holder.textContent : '{}'));
+      buildPage(doc, model);
+      root.setAttribute('data-scout', 'ready');
+    } catch (err) {
+      root.setAttribute('data-scout', 'error');
+      var box = doc.getElementById('scout-error');
+      if (box) {
+        box.textContent = 'This report could not be displayed (' + String(err && err.message ? err.message : err) +
+          '). Its data is still inside this file: ask whoever produced it to render it again.';
+        box.hidden = false;
+      }
+    }
+  }
+
+  if (typeof module === 'object' && module !== null && typeof module.exports === 'object') {
+    module.exports = api;
+  }
+  if (typeof document === 'object' && document !== null && typeof document.getElementById === 'function') {
+    start(document);
+  }
+}());
+</script>
+</body>
+</html>

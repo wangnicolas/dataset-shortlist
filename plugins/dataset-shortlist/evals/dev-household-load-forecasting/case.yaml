@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: dev-household-load-forecasting
+expected_outcome: |
+  A good answer recommends multi-household smart-meter datasets with at least a year of hourly or finer readings, such as the Low Carbon London smart meter data, the Irish CER Smart Metering Project trial, the Australian Smart-Grid Smart-City customer trial and Pecan Street Dataport.
+  It states correctly which can be downloaded directly (London Datastore under CC BY 4.0, data.gov.au under CC BY 3.0 Australia) and which need an application or licence (CER through an ISSDA data request form for non-commercial research; Pecan Street, whose free university licence covers only a 75-home subset).
+  It does not present the UCI "Individual household electric power consumption" data, which covers a single house, as meeting the many-households requirement.

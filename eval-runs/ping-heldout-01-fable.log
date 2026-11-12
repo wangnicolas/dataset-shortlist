@@ -1,0 +1,397 @@
+04:02:39 PING 1.1.1.1 (1.1.1.1): 56 data bytes
+04:02:39 64 bytes from 1.1.1.1: icmp_seq=0 ttl=58 time=20.473 ms
+04:02:49 64 bytes from 1.1.1.1: icmp_seq=1 ttl=58 time=21.065 ms
+04:02:59 64 bytes from 1.1.1.1: icmp_seq=2 ttl=58 time=21.300 ms
+04:03:09 64 bytes from 1.1.1.1: icmp_seq=3 ttl=58 time=24.467 ms
+04:03:19 64 bytes from 1.1.1.1: icmp_seq=4 ttl=58 time=21.557 ms
+04:03:29 64 bytes from 1.1.1.1: icmp_seq=5 ttl=58 time=20.968 ms
+04:03:39 64 bytes from 1.1.1.1: icmp_seq=6 ttl=58 time=20.610 ms
+04:03:49 64 bytes from 1.1.1.1: icmp_seq=7 ttl=58 time=20.354 ms
+04:03:59 64 bytes from 1.1.1.1: icmp_seq=8 ttl=58 time=21.176 ms
+04:04:09 64 bytes from 1.1.1.1: icmp_seq=9 ttl=58 time=20.786 ms
+04:04:19 64 bytes from 1.1.1.1: icmp_seq=10 ttl=58 time=20.477 ms
+04:04:29 64 bytes from 1.1.1.1: icmp_seq=11 ttl=58 time=20.924 ms
+04:04:39 64 bytes from 1.1.1.1: icmp_seq=12 ttl=58 time=20.785 ms
+04:04:49 64 bytes from 1.1.1.1: icmp_seq=13 ttl=58 time=21.104 ms
+04:04:59 64 bytes from 1.1.1.1: icmp_seq=14 ttl=58 time=22.061 ms
+04:05:09 64 bytes from 1.1.1.1: icmp_seq=15 ttl=58 time=20.853 ms
+04:05:19 64 bytes from 1.1.1.1: icmp_seq=16 ttl=58 time=20.346 ms
+04:05:29 64 bytes from 1.1.1.1: icmp_seq=17 ttl=58 time=21.172 ms
+04:05:39 64 bytes from 1.1.1.1: icmp_seq=18 ttl=58 time=21.371 ms
+04:05:49 64 bytes from 1.1.1.1: icmp_seq=19 ttl=58 time=20.142 ms
+04:05:59 64 bytes from 1.1.1.1: icmp_seq=20 ttl=58 time=20.799 ms
+04:06:09 64 bytes from 1.1.1.1: icmp_seq=21 ttl=58 time=21.257 ms
+04:06:19 64 bytes from 1.1.1.1: icmp_seq=22 ttl=58 time=21.264 ms
+04:06:29 64 bytes from 1.1.1.1: icmp_seq=23 ttl=58 time=20.934 ms
+04:06:39 64 bytes from 1.1.1.1: icmp_seq=24 ttl=58 time=22.128 ms
+04:06:49 64 bytes from 1.1.1.1: icmp_seq=25 ttl=58 time=20.525 ms
+04:06:59 64 bytes from 1.1.1.1: icmp_seq=26 ttl=58 time=21.198 ms
+04:07:09 64 bytes from 1.1.1.1: icmp_seq=27 ttl=58 time=21.218 ms
+04:07:19 64 bytes from 1.1.1.1: icmp_seq=28 ttl=58 time=21.508 ms
+04:07:29 64 bytes from 1.1.1.1: icmp_seq=29 ttl=58 time=41.553 ms
+04:07:39 64 bytes from 1.1.1.1: icmp_seq=30 ttl=58 time=20.592 ms
+04:07:49 64 bytes from 1.1.1.1: icmp_seq=31 ttl=58 time=20.435 ms
+04:07:59 64 bytes from 1.1.1.1: icmp_seq=32 ttl=58 time=21.505 ms
+04:08:09 64 bytes from 1.1.1.1: icmp_seq=33 ttl=58 time=20.378 ms
+04:08:19 64 bytes from 1.1.1.1: icmp_seq=34 ttl=58 time=20.057 ms
+04:08:29 64 bytes from 1.1.1.1: icmp_seq=35 ttl=58 time=36.399 ms
+04:08:39 64 bytes from 1.1.1.1: icmp_seq=36 ttl=58 time=21.016 ms
+04:08:49 64 bytes from 1.1.1.1: icmp_seq=37 ttl=58 time=20.679 ms
+04:08:59 64 bytes from 1.1.1.1: icmp_seq=38 ttl=58 time=22.292 ms
+04:09:09 64 bytes from 1.1.1.1: icmp_seq=39 ttl=58 time=21.166 ms
+04:09:19 64 bytes from 1.1.1.1: icmp_seq=40 ttl=58 time=20.045 ms
+04:09:29 64 bytes from 1.1.1.1: icmp_seq=41 ttl=58 time=21.013 ms
+04:09:39 64 bytes from 1.1.1.1: icmp_seq=42 ttl=58 time=20.598 ms
+04:09:49 64 bytes from 1.1.1.1: icmp_seq=43 ttl=58 time=20.742 ms
+04:09:59 64 bytes from 1.1.1.1: icmp_seq=44 ttl=58 time=21.354 ms
+04:10:09 64 bytes from 1.1.1.1: icmp_seq=45 ttl=58 time=21.683 ms
+04:10:19 64 bytes from 1.1.1.1: icmp_seq=46 ttl=58 time=20.049 ms
+04:10:29 64 bytes from 1.1.1.1: icmp_seq=47 ttl=58 time=20.634 ms
+04:10:39 64 bytes from 1.1.1.1: icmp_seq=48 ttl=58 time=21.352 ms
+04:10:49 64 bytes from 1.1.1.1: icmp_seq=49 ttl=58 time=20.722 ms
+04:10:59 64 bytes from 1.1.1.1: icmp_seq=50 ttl=58 time=21.420 ms
+04:11:09 64 bytes from 1.1.1.1: icmp_seq=51 ttl=58 time=21.011 ms
+04:11:19 64 bytes from 1.1.1.1: icmp_seq=52 ttl=58 time=20.453 ms
+04:11:29 64 bytes from 1.1.1.1: icmp_seq=53 ttl=58 time=21.713 ms
+04:11:39 64 bytes from 1.1.1.1: icmp_seq=54 ttl=58 time=20.641 ms
+04:11:49 64 bytes from 1.1.1.1: icmp_seq=55 ttl=58 time=21.213 ms
+04:11:59 64 bytes from 1.1.1.1: icmp_seq=56 ttl=58 time=25.438 ms
+04:12:09 64 bytes from 1.1.1.1: icmp_seq=57 ttl=58 time=24.994 ms
+04:12:19 64 bytes from 1.1.1.1: icmp_seq=58 ttl=58 time=21.720 ms
+04:12:29 64 bytes from 1.1.1.1: icmp_seq=59 ttl=58 time=21.168 ms
+04:12:39 64 bytes from 1.1.1.1: icmp_seq=60 ttl=58 time=21.164 ms
+04:12:49 64 bytes from 1.1.1.1: icmp_seq=61 ttl=58 time=20.444 ms
+04:12:59 64 bytes from 1.1.1.1: icmp_seq=62 ttl=58 time=21.794 ms
+04:13:09 64 bytes from 1.1.1.1: icmp_seq=63 ttl=58 time=25.543 ms
+04:13:19 64 bytes from 1.1.1.1: icmp_seq=64 ttl=58 time=24.438 ms
+04:13:29 64 bytes from 1.1.1.1: icmp_seq=65 ttl=58 time=25.814 ms
+04:13:39 64 bytes from 1.1.1.1: icmp_seq=66 ttl=58 time=21.309 ms
+04:13:49 64 bytes from 1.1.1.1: icmp_seq=67 ttl=58 time=20.441 ms
+04:13:59 64 bytes from 1.1.1.1: icmp_seq=68 ttl=58 time=21.198 ms
+04:14:09 64 bytes from 1.1.1.1: icmp_seq=69 ttl=58 time=20.937 ms
+04:14:19 64 bytes from 1.1.1.1: icmp_seq=70 ttl=58 time=25.370 ms
+04:14:29 64 bytes from 1.1.1.1: icmp_seq=71 ttl=58 time=24.067 ms
+04:14:39 64 bytes from 1.1.1.1: icmp_seq=72 ttl=58 time=24.828 ms
+04:14:49 64 bytes from 1.1.1.1: icmp_seq=73 ttl=58 time=29.730 ms
+04:14:59 64 bytes from 1.1.1.1: icmp_seq=74 ttl=58 time=25.185 ms
+04:15:09 64 bytes from 1.1.1.1: icmp_seq=75 ttl=58 time=25.186 ms
+04:15:19 64 bytes from 1.1.1.1: icmp_seq=76 ttl=58 time=21.569 ms
+04:15:29 64 bytes from 1.1.1.1: icmp_seq=77 ttl=58 time=23.977 ms
+04:15:39 64 bytes from 1.1.1.1: icmp_seq=78 ttl=58 time=25.868 ms
+04:15:49 64 bytes from 1.1.1.1: icmp_seq=79 ttl=58 time=21.158 ms
+04:15:59 64 bytes from 1.1.1.1: icmp_seq=80 ttl=58 time=21.466 ms
+04:16:09 64 bytes from 1.1.1.1: icmp_seq=81 ttl=58 time=25.111 ms
+04:16:19 64 bytes from 1.1.1.1: icmp_seq=82 ttl=58 time=21.422 ms
+04:16:29 64 bytes from 1.1.1.1: icmp_seq=83 ttl=58 time=20.565 ms
+04:16:39 64 bytes from 1.1.1.1: icmp_seq=84 ttl=58 time=20.960 ms
+04:16:49 64 bytes from 1.1.1.1: icmp_seq=85 ttl=58 time=21.206 ms
+04:16:59 64 bytes from 1.1.1.1: icmp_seq=86 ttl=58 time=20.712 ms
+04:17:09 64 bytes from 1.1.1.1: icmp_seq=87 ttl=58 time=20.304 ms
+04:17:19 64 bytes from 1.1.1.1: icmp_seq=88 ttl=58 time=21.357 ms
+04:17:29 64 bytes from 1.1.1.1: icmp_seq=89 ttl=58 time=25.031 ms
+04:17:39 64 bytes from 1.1.1.1: icmp_seq=90 ttl=58 time=22.472 ms
+04:17:49 64 bytes from 1.1.1.1: icmp_seq=91 ttl=58 time=21.057 ms
+04:17:59 64 bytes from 1.1.1.1: icmp_seq=92 ttl=58 time=25.335 ms
+04:18:09 64 bytes from 1.1.1.1: icmp_seq=93 ttl=58 time=24.879 ms
+04:18:19 64 bytes from 1.1.1.1: icmp_seq=94 ttl=58 time=19.878 ms
+04:18:30 64 bytes from 1.1.1.1: icmp_seq=95 ttl=58 time=21.131 ms
+04:18:40 64 bytes from 1.1.1.1: icmp_seq=96 ttl=58 time=24.508 ms
+04:18:50 64 bytes from 1.1.1.1: icmp_seq=97 ttl=58 time=21.534 ms
+04:19:00 64 bytes from 1.1.1.1: icmp_seq=98 ttl=58 time=20.438 ms
+04:19:10 64 bytes from 1.1.1.1: icmp_seq=99 ttl=58 time=21.236 ms
+04:19:20 64 bytes from 1.1.1.1: icmp_seq=100 ttl=58 time=24.964 ms
+04:19:30 64 bytes from 1.1.1.1: icmp_seq=101 ttl=58 time=24.215 ms
+04:19:40 64 bytes from 1.1.1.1: icmp_seq=102 ttl=58 time=21.352 ms
+04:19:50 64 bytes from 1.1.1.1: icmp_seq=103 ttl=58 time=21.039 ms
+04:20:00 64 bytes from 1.1.1.1: icmp_seq=104 ttl=58 time=21.264 ms
+04:20:10 64 bytes from 1.1.1.1: icmp_seq=105 ttl=58 time=20.562 ms
+04:20:20 64 bytes from 1.1.1.1: icmp_seq=106 ttl=58 time=21.688 ms
+04:20:30 64 bytes from 1.1.1.1: icmp_seq=107 ttl=58 time=21.049 ms
+04:20:40 64 bytes from 1.1.1.1: icmp_seq=108 ttl=58 time=21.305 ms
+04:20:50 64 bytes from 1.1.1.1: icmp_seq=109 ttl=58 time=20.673 ms
+04:21:00 64 bytes from 1.1.1.1: icmp_seq=110 ttl=58 time=20.249 ms
+04:21:10 64 bytes from 1.1.1.1: icmp_seq=111 ttl=58 time=20.431 ms
+04:21:20 64 bytes from 1.1.1.1: icmp_seq=112 ttl=58 time=19.966 ms
+04:21:30 64 bytes from 1.1.1.1: icmp_seq=113 ttl=58 time=20.263 ms
+04:21:40 64 bytes from 1.1.1.1: icmp_seq=114 ttl=58 time=21.726 ms
+04:21:50 64 bytes from 1.1.1.1: icmp_seq=115 ttl=58 time=21.054 ms
+04:22:00 64 bytes from 1.1.1.1: icmp_seq=116 ttl=58 time=21.187 ms
+04:22:10 64 bytes from 1.1.1.1: icmp_seq=117 ttl=58 time=21.947 ms
+04:22:20 64 bytes from 1.1.1.1: icmp_seq=118 ttl=58 time=20.532 ms
+04:22:30 64 bytes from 1.1.1.1: icmp_seq=119 ttl=58 time=21.185 ms
+04:22:40 64 bytes from 1.1.1.1: icmp_seq=120 ttl=58 time=21.199 ms
+04:22:50 64 bytes from 1.1.1.1: icmp_seq=121 ttl=58 time=21.292 ms
+04:23:00 64 bytes from 1.1.1.1: icmp_seq=122 ttl=58 time=20.602 ms
+04:23:10 64 bytes from 1.1.1.1: icmp_seq=123 ttl=58 time=24.232 ms
+04:23:20 64 bytes from 1.1.1.1: icmp_seq=124 ttl=58 time=21.182 ms
+04:23:30 64 bytes from 1.1.1.1: icmp_seq=125 ttl=58 time=25.054 ms
+04:23:40 64 bytes from 1.1.1.1: icmp_seq=126 ttl=58 time=25.455 ms
+04:23:50 64 bytes from 1.1.1.1: icmp_seq=127 ttl=58 time=20.340 ms
+04:24:00 64 bytes from 1.1.1.1: icmp_seq=128 ttl=58 time=20.524 ms
+04:24:10 64 bytes from 1.1.1.1: icmp_seq=129 ttl=58 time=23.217 ms
+04:24:20 64 bytes from 1.1.1.1: icmp_seq=130 ttl=58 time=20.248 ms
+04:24:30 64 bytes from 1.1.1.1: icmp_seq=131 ttl=58 time=20.276 ms
+04:24:40 64 bytes from 1.1.1.1: icmp_seq=132 ttl=58 time=20.990 ms
+04:24:50 64 bytes from 1.1.1.1: icmp_seq=133 ttl=58 time=21.225 ms
+04:25:00 64 bytes from 1.1.1.1: icmp_seq=134 ttl=58 time=20.914 ms
+04:25:10 64 bytes from 1.1.1.1: icmp_seq=135 ttl=58 time=20.841 ms
+04:25:20 64 bytes from 1.1.1.1: icmp_seq=136 ttl=58 time=21.048 ms
+04:25:30 64 bytes from 1.1.1.1: icmp_seq=137 ttl=58 time=21.781 ms
+04:25:40 64 bytes from 1.1.1.1: icmp_seq=138 ttl=58 time=20.371 ms
+04:25:50 64 bytes from 1.1.1.1: icmp_seq=139 ttl=58 time=21.382 ms
+04:26:00 64 bytes from 1.1.1.1: icmp_seq=140 ttl=58 time=39.957 ms
+04:26:10 64 bytes from 1.1.1.1: icmp_seq=141 ttl=58 time=24.533 ms
+04:26:20 64 bytes from 1.1.1.1: icmp_seq=142 ttl=58 time=21.519 ms
+04:26:30 64 bytes from 1.1.1.1: icmp_seq=143 ttl=58 time=22.766 ms
+04:26:40 64 bytes from 1.1.1.1: icmp_seq=144 ttl=58 time=21.345 ms
+04:26:50 64 bytes from 1.1.1.1: icmp_seq=145 ttl=58 time=20.546 ms
+04:27:00 64 bytes from 1.1.1.1: icmp_seq=146 ttl=58 time=21.455 ms
+04:27:10 64 bytes from 1.1.1.1: icmp_seq=147 ttl=58 time=20.345 ms
+04:27:20 64 bytes from 1.1.1.1: icmp_seq=148 ttl=58 time=21.043 ms
+04:27:30 64 bytes from 1.1.1.1: icmp_seq=149 ttl=58 time=21.321 ms
+04:27:40 64 bytes from 1.1.1.1: icmp_seq=150 ttl=58 time=22.615 ms
+04:27:50 64 bytes from 1.1.1.1: icmp_seq=151 ttl=58 time=25.544 ms
+04:28:00 64 bytes from 1.1.1.1: icmp_seq=152 ttl=58 time=21.363 ms
+04:28:10 64 bytes from 1.1.1.1: icmp_seq=153 ttl=58 time=21.410 ms
+04:28:20 64 bytes from 1.1.1.1: icmp_seq=154 ttl=58 time=20.633 ms
+04:28:30 64 bytes from 1.1.1.1: icmp_seq=155 ttl=58 time=21.402 ms
+04:28:40 64 bytes from 1.1.1.1: icmp_seq=156 ttl=58 time=20.294 ms
+04:28:50 64 bytes from 1.1.1.1: icmp_seq=157 ttl=58 time=22.045 ms
+04:29:00 64 bytes from 1.1.1.1: icmp_seq=158 ttl=58 time=21.432 ms
+04:29:10 64 bytes from 1.1.1.1: icmp_seq=159 ttl=58 time=21.222 ms
+04:29:20 64 bytes from 1.1.1.1: icmp_seq=160 ttl=58 time=24.793 ms
+04:29:30 64 bytes from 1.1.1.1: icmp_seq=161 ttl=58 time=21.183 ms
+04:29:40 64 bytes from 1.1.1.1: icmp_seq=162 ttl=58 time=21.691 ms
+04:29:50 64 bytes from 1.1.1.1: icmp_seq=163 ttl=58 time=21.625 ms
+04:30:00 64 bytes from 1.1.1.1: icmp_seq=164 ttl=58 time=20.760 ms
+04:30:10 64 bytes from 1.1.1.1: icmp_seq=165 ttl=58 time=20.463 ms
+04:30:20 64 bytes from 1.1.1.1: icmp_seq=166 ttl=58 time=21.854 ms
+04:30:30 64 bytes from 1.1.1.1: icmp_seq=167 ttl=58 time=20.792 ms
+04:30:40 64 bytes from 1.1.1.1: icmp_seq=168 ttl=58 time=25.081 ms
+04:30:50 64 bytes from 1.1.1.1: icmp_seq=169 ttl=58 time=21.011 ms
+04:31:00 64 bytes from 1.1.1.1: icmp_seq=170 ttl=58 time=20.606 ms
+04:31:10 64 bytes from 1.1.1.1: icmp_seq=171 ttl=58 time=25.434 ms
+04:31:20 64 bytes from 1.1.1.1: icmp_seq=172 ttl=58 time=25.857 ms
+04:31:30 64 bytes from 1.1.1.1: icmp_seq=173 ttl=58 time=25.536 ms
+04:31:40 64 bytes from 1.1.1.1: icmp_seq=174 ttl=58 time=20.474 ms
+04:31:50 64 bytes from 1.1.1.1: icmp_seq=175 ttl=58 time=20.519 ms
+04:32:00 64 bytes from 1.1.1.1: icmp_seq=176 ttl=58 time=20.656 ms
+04:32:10 64 bytes from 1.1.1.1: icmp_seq=177 ttl=58 time=20.995 ms
+04:32:20 64 bytes from 1.1.1.1: icmp_seq=178 ttl=58 time=20.960 ms
+04:32:30 64 bytes from 1.1.1.1: icmp_seq=179 ttl=58 time=21.245 ms
+04:32:40 64 bytes from 1.1.1.1: icmp_seq=180 ttl=58 time=21.469 ms
+04:32:50 64 bytes from 1.1.1.1: icmp_seq=181 ttl=58 time=24.632 ms
+04:33:00 64 bytes from 1.1.1.1: icmp_seq=182 ttl=58 time=20.896 ms
+04:33:10 64 bytes from 1.1.1.1: icmp_seq=183 ttl=58 time=21.496 ms
+04:33:20 64 bytes from 1.1.1.1: icmp_seq=184 ttl=58 time=21.338 ms
+04:33:30 64 bytes from 1.1.1.1: icmp_seq=185 ttl=58 time=20.608 ms
+04:33:40 64 bytes from 1.1.1.1: icmp_seq=186 ttl=58 time=20.066 ms
+04:33:50 64 bytes from 1.1.1.1: icmp_seq=187 ttl=58 time=21.380 ms
+04:34:00 64 bytes from 1.1.1.1: icmp_seq=188 ttl=58 time=21.260 ms
+04:34:10 64 bytes from 1.1.1.1: icmp_seq=189 ttl=58 time=25.566 ms
+04:34:20 64 bytes from 1.1.1.1: icmp_seq=190 ttl=58 time=21.008 ms
+04:34:30 64 bytes from 1.1.1.1: icmp_seq=191 ttl=58 time=19.973 ms
+04:34:40 64 bytes from 1.1.1.1: icmp_seq=192 ttl=58 time=21.354 ms
+04:34:50 64 bytes from 1.1.1.1: icmp_seq=193 ttl=58 time=20.296 ms
+04:35:00 64 bytes from 1.1.1.1: icmp_seq=194 ttl=58 time=21.053 ms
+04:35:10 64 bytes from 1.1.1.1: icmp_seq=195 ttl=58 time=20.443 ms
+04:35:20 64 bytes from 1.1.1.1: icmp_seq=196 ttl=58 time=24.893 ms
+04:35:30 64 bytes from 1.1.1.1: icmp_seq=197 ttl=58 time=21.301 ms
+04:35:40 64 bytes from 1.1.1.1: icmp_seq=198 ttl=58 time=20.617 ms
+04:35:50 64 bytes from 1.1.1.1: icmp_seq=199 ttl=58 time=20.985 ms
+04:36:00 64 bytes from 1.1.1.1: icmp_seq=200 ttl=58 time=21.673 ms
+04:36:10 64 bytes from 1.1.1.1: icmp_seq=201 ttl=58 time=21.352 ms
+04:36:20 64 bytes from 1.1.1.1: icmp_seq=202 ttl=58 time=21.096 ms
+04:36:30 64 bytes from 1.1.1.1: icmp_seq=203 ttl=58 time=21.074 ms
+04:36:40 64 bytes from 1.1.1.1: icmp_seq=204 ttl=58 time=25.063 ms
+04:36:50 64 bytes from 1.1.1.1: icmp_seq=205 ttl=58 time=20.191 ms
+04:37:00 64 bytes from 1.1.1.1: icmp_seq=206 ttl=58 time=20.700 ms
+04:37:10 64 bytes from 1.1.1.1: icmp_seq=207 ttl=58 time=20.933 ms
+04:37:20 64 bytes from 1.1.1.1: icmp_seq=208 ttl=58 time=21.474 ms
+04:37:30 64 bytes from 1.1.1.1: icmp_seq=209 ttl=58 time=20.968 ms
+04:37:40 64 bytes from 1.1.1.1: icmp_seq=210 ttl=58 time=20.344 ms
+04:37:50 64 bytes from 1.1.1.1: icmp_seq=211 ttl=58 time=20.195 ms
+04:38:00 64 bytes from 1.1.1.1: icmp_seq=212 ttl=58 time=20.516 ms
+04:38:10 64 bytes from 1.1.1.1: icmp_seq=213 ttl=58 time=25.129 ms
+04:38:20 64 bytes from 1.1.1.1: icmp_seq=214 ttl=58 time=21.085 ms
+04:38:30 64 bytes from 1.1.1.1: icmp_seq=215 ttl=58 time=20.826 ms
+04:38:40 64 bytes from 1.1.1.1: icmp_seq=216 ttl=58 time=20.126 ms
+04:38:50 64 bytes from 1.1.1.1: icmp_seq=217 ttl=58 time=24.923 ms
+04:39:00 64 bytes from 1.1.1.1: icmp_seq=218 ttl=58 time=24.516 ms
+04:39:10 64 bytes from 1.1.1.1: icmp_seq=219 ttl=58 time=20.537 ms
+04:39:20 64 bytes from 1.1.1.1: icmp_seq=220 ttl=58 time=22.693 ms
+04:39:30 64 bytes from 1.1.1.1: icmp_seq=221 ttl=58 time=25.632 ms
+04:39:40 64 bytes from 1.1.1.1: icmp_seq=222 ttl=58 time=21.793 ms
+04:40:00 Request timeout for icmp_seq 223
+04:40:10 Request timeout for icmp_seq 224
+04:40:10 64 bytes from 1.1.1.1: icmp_seq=225 ttl=58 time=44.665 ms
+04:40:30 Request timeout for icmp_seq 226
+04:40:30 64 bytes from 1.1.1.1: icmp_seq=227 ttl=58 time=81.149 ms
+04:40:40 64 bytes from 1.1.1.1: icmp_seq=228 ttl=58 time=36.958 ms
+04:41:00 Request timeout for icmp_seq 229
+04:41:10 Request timeout for icmp_seq 230
+04:41:10 64 bytes from 1.1.1.1: icmp_seq=231 ttl=58 time=35.714 ms
+04:41:21 64 bytes from 1.1.1.1: icmp_seq=232 ttl=58 time=361.308 ms
+04:41:31 64 bytes from 1.1.1.1: icmp_seq=233 ttl=58 time=166.029 ms
+04:41:41 64 bytes from 1.1.1.1: icmp_seq=234 ttl=58 time=79.482 ms
+04:42:00 Request timeout for icmp_seq 235
+04:42:10 Request timeout for icmp_seq 236
+04:42:10 64 bytes from 1.1.1.1: icmp_seq=237 ttl=58 time=23.711 ms
+04:42:21 64 bytes from 1.1.1.1: icmp_seq=238 ttl=58 time=531.429 ms
+04:42:31 64 bytes from 1.1.1.1: icmp_seq=239 ttl=58 time=60.882 ms
+04:42:50 Request timeout for icmp_seq 240
+04:42:51 64 bytes from 1.1.1.1: icmp_seq=241 ttl=58 time=88.729 ms
+04:43:01 64 bytes from 1.1.1.1: icmp_seq=242 ttl=58 time=46.430 ms
+04:43:21 Request timeout for icmp_seq 243
+04:43:31 Request timeout for icmp_seq 244
+04:43:41 Request timeout for icmp_seq 245
+04:43:51 Request timeout for icmp_seq 246
+04:43:51 64 bytes from 1.1.1.1: icmp_seq=247 ttl=58 time=70.553 ms
+04:44:01 64 bytes from 1.1.1.1: icmp_seq=248 ttl=58 time=78.005 ms
+04:44:21 Request timeout for icmp_seq 249
+04:44:21 64 bytes from 1.1.1.1: icmp_seq=250 ttl=58 time=67.086 ms
+04:44:41 Request timeout for icmp_seq 251
+04:44:41 64 bytes from 1.1.1.1: icmp_seq=252 ttl=58 time=29.715 ms
+04:44:51 64 bytes from 1.1.1.1: icmp_seq=253 ttl=58 time=201.753 ms
+04:45:01 64 bytes from 1.1.1.1: icmp_seq=254 ttl=58 time=266.238 ms
+04:45:11 64 bytes from 1.1.1.1: icmp_seq=255 ttl=58 time=98.090 ms
+04:45:21 64 bytes from 1.1.1.1: icmp_seq=256 ttl=58 time=103.896 ms
+04:45:31 64 bytes from 1.1.1.1: icmp_seq=257 ttl=58 time=73.284 ms
+04:45:51 Request timeout for icmp_seq 258
+04:45:51 64 bytes from 1.1.1.1: icmp_seq=259 ttl=58 time=518.510 ms
+04:46:01 64 bytes from 1.1.1.1: icmp_seq=260 ttl=58 time=210.523 ms
+04:46:21 Request timeout for icmp_seq 261
+04:46:21 64 bytes from 1.1.1.1: icmp_seq=262 ttl=58 time=69.687 ms
+04:46:41 Request timeout for icmp_seq 263
+04:46:51 Request timeout for icmp_seq 264
+04:46:51 64 bytes from 1.1.1.1: icmp_seq=265 ttl=58 time=393.881 ms
+04:47:01 64 bytes from 1.1.1.1: icmp_seq=266 ttl=58 time=683.970 ms
+04:47:21 Request timeout for icmp_seq 267
+04:47:21 64 bytes from 1.1.1.1: icmp_seq=268 ttl=58 time=375.414 ms
+04:47:41 Request timeout for icmp_seq 269
+04:47:51 Request timeout for icmp_seq 270
+04:48:01 Request timeout for icmp_seq 271
+04:48:01 64 bytes from 1.1.1.1: icmp_seq=272 ttl=58 time=69.136 ms
+04:48:21 Request timeout for icmp_seq 273
+04:48:31 Request timeout for icmp_seq 274
+04:48:31 64 bytes from 1.1.1.1: icmp_seq=275 ttl=58 time=47.365 ms
+04:48:41 64 bytes from 1.1.1.1: icmp_seq=276 ttl=58 time=79.073 ms
+04:49:01 Request timeout for icmp_seq 277
+04:49:11 Request timeout for icmp_seq 278
+04:49:21 Request timeout for icmp_seq 279
+04:49:21 64 bytes from 1.1.1.1: icmp_seq=280 ttl=58 time=508.415 ms
+04:49:41 Request timeout for icmp_seq 281
+04:49:41 64 bytes from 1.1.1.1: icmp_seq=282 ttl=58 time=354.184 ms
+04:50:01 Request timeout for icmp_seq 283
+04:50:01 64 bytes from 1.1.1.1: icmp_seq=284 ttl=58 time=413.545 ms
+04:50:11 64 bytes from 1.1.1.1: icmp_seq=285 ttl=58 time=663.358 ms
+04:50:21 64 bytes from 1.1.1.1: icmp_seq=286 ttl=58 time=260.784 ms
+04:50:41 Request timeout for icmp_seq 287
+04:50:41 64 bytes from 1.1.1.1: icmp_seq=288 ttl=58 time=49.532 ms
+04:50:51 64 bytes from 1.1.1.1: icmp_seq=289 ttl=58 time=622.586 ms
+04:51:11 Request timeout for icmp_seq 290
+04:51:21 Request timeout for icmp_seq 291
+04:51:31 Request timeout for icmp_seq 292
+04:51:41 Request timeout for icmp_seq 293
+04:51:41 64 bytes from 1.1.1.1: icmp_seq=294 ttl=58 time=54.174 ms
+04:52:01 Request timeout for icmp_seq 295
+04:52:11 Request timeout for icmp_seq 296
+04:52:21 Request timeout for icmp_seq 297
+04:52:31 Request timeout for icmp_seq 298
+04:52:31 64 bytes from 1.1.1.1: icmp_seq=299 ttl=58 time=419.117 ms
+04:52:51 Request timeout for icmp_seq 300
+04:52:51 64 bytes from 1.1.1.1: icmp_seq=301 ttl=58 time=474.819 ms
+04:53:11 Request timeout for icmp_seq 302
+04:53:21 Request timeout for icmp_seq 303
+04:53:31 Request timeout for icmp_seq 304
+04:53:41 Request timeout for icmp_seq 305
+04:53:51 Request timeout for icmp_seq 306
+04:53:51 64 bytes from 1.1.1.1: icmp_seq=307 ttl=58 time=39.927 ms
+04:54:11 Request timeout for icmp_seq 308
+04:54:21 Request timeout for icmp_seq 309
+04:54:31 Request timeout for icmp_seq 310
+04:54:41 Request timeout for icmp_seq 311
+04:54:51 Request timeout for icmp_seq 312
+04:54:51 64 bytes from 1.1.1.1: icmp_seq=313 ttl=58 time=32.773 ms
+04:55:11 Request timeout for icmp_seq 314
+04:55:11 64 bytes from 1.1.1.1: icmp_seq=315 ttl=58 time=78.842 ms
+04:55:31 Request timeout for icmp_seq 316
+04:55:41 Request timeout for icmp_seq 317
+04:55:41 64 bytes from 1.1.1.1: icmp_seq=318 ttl=58 time=339.034 ms
+04:56:01 Request timeout for icmp_seq 319
+04:56:11 Request timeout for icmp_seq 320
+04:56:11 64 bytes from 1.1.1.1: icmp_seq=321 ttl=58 time=37.981 ms
+04:56:21 64 bytes from 1.1.1.1: icmp_seq=322 ttl=58 time=211.199 ms
+04:56:41 Request timeout for icmp_seq 323
+04:56:41 64 bytes from 1.1.1.1: icmp_seq=324 ttl=58 time=24.919 ms
+04:57:01 Request timeout for icmp_seq 325
+04:57:01 64 bytes from 1.1.1.1: icmp_seq=326 ttl=58 time=87.726 ms
+04:57:11 64 bytes from 1.1.1.1: icmp_seq=327 ttl=58 time=71.963 ms
+04:57:31 Request timeout for icmp_seq 328
+04:57:41 Request timeout for icmp_seq 329
+04:57:51 Request timeout for icmp_seq 330
+04:57:52 64 bytes from 1.1.1.1: icmp_seq=331 ttl=58 time=665.820 ms
+04:58:11 Request timeout for icmp_seq 332
+04:58:11 64 bytes from 1.1.1.1: icmp_seq=333 ttl=58 time=24.092 ms
+04:58:31 Request timeout for icmp_seq 334
+04:58:41 Request timeout for icmp_seq 335
+04:58:41 64 bytes from 1.1.1.1: icmp_seq=336 ttl=58 time=98.015 ms
+04:59:01 Request timeout for icmp_seq 337
+04:59:11 Request timeout for icmp_seq 338
+04:59:21 Request timeout for icmp_seq 339
+04:59:31 Request timeout for icmp_seq 340
+04:59:41 Request timeout for icmp_seq 341
+04:59:51 Request timeout for icmp_seq 342
+05:00:01 Request timeout for icmp_seq 343
+05:00:11 Request timeout for icmp_seq 344
+05:00:11 64 bytes from 1.1.1.1: icmp_seq=345 ttl=58 time=95.573 ms
+05:00:22 64 bytes from 1.1.1.1: icmp_seq=346 ttl=58 time=507.665 ms
+05:00:31 64 bytes from 1.1.1.1: icmp_seq=347 ttl=58 time=26.316 ms
+05:00:41 64 bytes from 1.1.1.1: icmp_seq=348 ttl=58 time=202.147 ms
+05:01:01 Request timeout for icmp_seq 349
+05:01:02 64 bytes from 1.1.1.1: icmp_seq=350 ttl=58 time=307.145 ms
+05:01:21 Request timeout for icmp_seq 351
+05:01:31 Request timeout for icmp_seq 352
+05:01:41 Request timeout for icmp_seq 353
+05:01:51 Request timeout for icmp_seq 354
+05:02:01 Request timeout for icmp_seq 355
+05:02:11 Request timeout for icmp_seq 356
+05:02:11 64 bytes from 1.1.1.1: icmp_seq=357 ttl=58 time=103.939 ms
+05:02:31 Request timeout for icmp_seq 358
+05:02:32 64 bytes from 1.1.1.1: icmp_seq=359 ttl=58 time=338.248 ms
+05:02:41 64 bytes from 1.1.1.1: icmp_seq=360 ttl=58 time=61.701 ms
+05:03:01 Request timeout for icmp_seq 361
+05:03:01 64 bytes from 1.1.1.1: icmp_seq=362 ttl=58 time=70.830 ms
+05:03:21 Request timeout for icmp_seq 363
+05:03:21 64 bytes from 1.1.1.1: icmp_seq=364 ttl=58 time=31.654 ms
+05:03:31 64 bytes from 1.1.1.1: icmp_seq=365 ttl=58 time=62.643 ms
+05:03:41 64 bytes from 1.1.1.1: icmp_seq=366 ttl=58 time=46.449 ms
+05:04:01 Request timeout for icmp_seq 367
+05:04:11 Request timeout for icmp_seq 368
+05:04:11 64 bytes from 1.1.1.1: icmp_seq=369 ttl=58 time=64.977 ms
+05:04:31 Request timeout for icmp_seq 370
+05:04:41 Request timeout for icmp_seq 371
+05:04:41 64 bytes from 1.1.1.1: icmp_seq=372 ttl=58 time=41.936 ms
+05:04:52 64 bytes from 1.1.1.1: icmp_seq=373 ttl=58 time=132.770 ms
+05:05:01 64 bytes from 1.1.1.1: icmp_seq=374 ttl=58 time=34.799 ms
+05:05:12 64 bytes from 1.1.1.1: icmp_seq=375 ttl=58 time=74.929 ms
+05:05:31 Request timeout for icmp_seq 376
+05:05:32 64 bytes from 1.1.1.1: icmp_seq=377 ttl=58 time=95.195 ms
+05:05:51 Request timeout for icmp_seq 378
+05:06:01 Request timeout for icmp_seq 379
+05:06:02 64 bytes from 1.1.1.1: icmp_seq=380 ttl=58 time=39.741 ms
+05:06:21 Request timeout for icmp_seq 381
+05:06:32 Request timeout for icmp_seq 382
+05:06:42 Request timeout for icmp_seq 383
+05:06:52 Request timeout for icmp_seq 384
+05:06:52 64 bytes from 1.1.1.1: icmp_seq=385 ttl=58 time=38.386 ms
+05:07:12 ping: sendto: No route to host
+05:07:12 Request timeout for icmp_seq 386
+05:07:22 Request timeout for icmp_seq 387
+05:07:22 64 bytes from 1.1.1.1: icmp_seq=388 ttl=58 time=20.425 ms
+05:07:32 64 bytes from 1.1.1.1: icmp_seq=389 ttl=58 time=29.037 ms
+05:07:42 64 bytes from 1.1.1.1: icmp_seq=390 ttl=58 time=77.078 ms
+05:07:52 64 bytes from 1.1.1.1: icmp_seq=391 ttl=58 time=21.320 ms
+05:08:02 64 bytes from 1.1.1.1: icmp_seq=392 ttl=58 time=19.690 ms
+05:08:12 64 bytes from 1.1.1.1: icmp_seq=393 ttl=58 time=21.879 ms
+05:08:22 64 bytes from 1.1.1.1: icmp_seq=394 ttl=58 time=20.436 ms

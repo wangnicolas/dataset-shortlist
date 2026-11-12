@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-cxr-free-text-reports
+expected_outcome: |
+  Recommends chest X-ray datasets that release the free-text radiology reports with the images, such as MIMIC-CXR, the Indiana University collection on Open-i (IU X-ray) and the Spanish-language PadChest, and states access correctly (MIMIC-CXR needs PhysioNet credentialing, CITI training and a signed data use agreement; IU X-ray downloads directly under CC BY-NC-ND 4.0; PadChest is free but requires a formal access request and acceptance of its research use agreement).
+  Does not present NIH ChestX-ray14 as having reports, since only text-mined labels were released, and ideally adds newer report datasets such as CheXpert Plus, PadChest-GR or ReXGradient-160K.

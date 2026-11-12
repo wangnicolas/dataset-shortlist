@@ -1,0 +1,5 @@
+{
+  "name": "no-skill-baseline",
+  "version": "0.0.1",
+  "description": "An empty plugin used only to run the 'prompted' baseline arm of the dataset-shortlist evaluation: it adds no skill, agent, hook or tool."
+}

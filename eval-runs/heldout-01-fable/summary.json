@@ -1,0 +1,1294 @@
+{
+  "source": "<repo>/eval-runs/heldout-01-fable/result.json",
+  "model": "fable",
+  "judge": "sonnet",
+  "cost_usd": 33.1406526,
+  "n_cases": 3,
+  "strata": {
+    "health": {
+      "cases": 2,
+      "with": 0.96875,
+      "without": 0.96875,
+      "delta": 0.0,
+      "better": 0,
+      "same": 2,
+      "worse": 0
+    },
+    "other fields": {
+      "cases": 1,
+      "with": 1.0,
+      "without": 0.8571428571428571,
+      "delta": 0.1428571428571429,
+      "better": 1,
+      "same": 0,
+      "worse": 0
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 1.0,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "with": 0.9375,
+      "without": 0.9375,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "with": 1.0,
+      "without": 0.8571428571428571,
+      "delta": 0.1428571428571429
+    }
+  ],
+  "runs": [
+    {
+      "no_verdicts": false,
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-imvigor210",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-riaz2017",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-hugo2016",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-gide2019",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-riaz-geo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-imvigor210-package",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-gide-ena",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 27,
+      "cost_usd": 4.3400753,
+      "seconds": 694.087,
+      "cost_with_judge_usd": 4.8330113,
+      "error": null,
+      "tokens": 1170313,
+      "tools": {
+        "Skill": 1,
+        "Bash": 18,
+        "ToolSearch": 1,
+        "WebSearch": 2,
+        "WebFetch": 3
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/7459023",
+        "https://zenodo.org/records/7332074",
+        "https://www.cbioportal.org/datasets",
+        "https://github.com/cBioPortal/datahub",
+        "http://research-pub.gene.com/IMvigor210CoreBiologies/",
+        "https://doi.org/10.1038/s41591-020-0839-y",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE91061",
+        "https://www.ebi.ac.uk/ena/browser/view/PRJEB23709",
+        "https://doi.org/10.1038/s41591-019-0654-5",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176307",
+        "https://www.ebi.ac.uk/ena/browser/view/PRJEB25780",
+        "https://ega-archive.org/studies/EGAS00001005013",
+        "https://ega-archive.org/studies/EGAS00001004353",
+        "https://ega-archive.org/studies/EGAS00001005503",
+        "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002822",
+        "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001493",
+        "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452",
+        "https://www.hartwigmedicalfoundation.nl/en/data/data-access-request/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12313928/",
+        "https://doi.org/10.1038/s41591-020-1044-8",
+        "http://tiger.canceromics.org/",
+        "http://tide.dfci.harvard.edu/",
+        "https://zenodo.org/records/6142546",
+        "https://healthdatanexus.ai/content/icb/1.0/",
+        "https://docs.cbioportal.org/user-guide/faq/",
+        "https://ega-archive.org/access/request-data/how-to-request-data/",
+        "https://www.hartwigmedicalfoundation.nl/en/data/database/",
+        "https://www.biorxiv.org/content/10.1101/2024.12.09.627506v1.full"
+      ],
+      "answer_chars": 12397,
+      "links": {
+        "total": 28,
+        "ok": 27,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-imvigor210",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-riaz2017",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-hugo2016",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-gide2019",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-riaz-geo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-imvigor210-package",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-gide-ena",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 30,
+      "cost_usd": 3.6766944,
+      "seconds": 695.432,
+      "cost_with_judge_usd": 4.2119664000000006,
+      "error": null,
+      "tokens": 1364749,
+      "tools": {
+        "Skill": 1,
+        "Bash": 19,
+        "ToolSearch": 1,
+        "WebSearch": 2,
+        "WebFetch": 5
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.orcestra.ca/clinical_icb",
+        "https://zenodo.org/records/6142546",
+        "https://doi.org/10.1016/j.annonc.2022.08.084",
+        "https://www.cbioportal.org/study/summary?id=blca_iatlas_imvigor210_2017",
+        "https://doi.org/10.5281/zenodo.7332183",
+        "http://research-pub.gene.com/IMvigor210CoreBiologies/",
+        "https://doi.org/10.1038/nature25501",
+        "https://www.cbioportal.org/study/summary?id=rcc_iatlas_immotion150_2018",
+        "https://doi.org/10.5281/zenodo.7332172",
+        "https://www.cbioportal.org/study/summary?id=mel_iatlas_liu_2019",
+        "https://doi.org/10.5281/zenodo.7332096",
+        "https://www.cbioportal.org/study/summary?id=mel_iatlas_gide_2019",
+        "https://www.ebi.ac.uk/ena/browser/view/PRJEB23709",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE91061",
+        "https://doi.org/10.5281/zenodo.7332230",
+        "https://doi.org/10.5281/zenodo.7332074",
+        "https://doi.org/10.5281/zenodo.7332153",
+        "https://www.ebi.ac.uk/ena/browser/view/PRJEB25780",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176307",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE78220",
+        "https://doi.org/10.5281/zenodo.7332108",
+        "https://doi.org/10.5281/zenodo.7332289",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135222",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136961",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126044",
+        "https://ega-archive.org/studies/EGAS00001004353",
+        "https://ega-archive.org/studies/EGAS00001005013",
+        "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002822",
+        "https://www.nature.com/articles/s41588-023-01355-5",
+        "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000452"
+      ],
+      "answer_chars": 11166,
+      "links": {
+        "total": 30,
+        "ok": 30,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-imvigor210",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-riaz2017",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-hugo2016",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-gide2019",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-riaz-geo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-imvigor210-package",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-gide-ena",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 8,
+      "cost_usd": 1.0862124,
+      "seconds": 277.285,
+      "cost_with_judge_usd": 1.2201444000000001,
+      "error": null,
+      "tokens": 215388,
+      "tools": {
+        "Bash": 6,
+        "ToolSearch": 1
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 5086,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-imvigor210",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-riaz2017",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-hugo2016",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-gide2019",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-riaz-geo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-imvigor210-package",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-gide-ena",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 6,
+      "cost_usd": 0.738405,
+      "seconds": 172.864,
+      "cost_with_judge_usd": 0.8770409999999997,
+      "error": null,
+      "tokens": 132286,
+      "tools": {
+        "Bash": 4,
+        "ToolSearch": 1
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 5477,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-mimic-cxr",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-iu-xray",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-padchest",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-mimic-cxr-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-iu-xray-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-padchest-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-chestxray14",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 38,
+      "cost_usd": 4.6424205,
+      "seconds": 537.262,
+      "cost_with_judge_usd": 5.0829965,
+      "error": null,
+      "tokens": 1179151,
+      "tools": {
+        "Skill": 1,
+        "Bash": 14,
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "WebFetch": 12
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/mimic-cxr/2.1.0/",
+        "https://physionet.org/content/mimic-cxr-jpg/2.1.0/",
+        "https://physionet.org/news/post/llm-responsible-use/",
+        "https://doi.org/10.1038/s41597-019-0322-0",
+        "https://doi.org/10.1016/j.artmed.2023.102633",
+        "https://aimi.stanford.edu/datasets/chexpert-plus",
+        "https://doi.org/10.57761/fzna-pm76",
+        "https://stanfordaimi.azurewebsites.net/datasets/5158c524-d3ab-4e02-96e9-6ee9efc110a1",
+        "https://doi.org/10.1038/s41467-025-58344-x",
+        "https://doi.org/10.1609/aaai.v40i40.40688",
+        "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+        "https://openi.nlm.nih.gov/faq",
+        "https://openi.nlm.nih.gov/imgs/collections/NLMCXR_reports.tgz",
+        "https://openi.nlm.nih.gov/imgs/collections/NLMCXR_png.tgz",
+        "https://www.casia-cxr.net/",
+        "https://doi.org/10.1016/j.neucom.2024.128478",
+        "https://casia-cxr.net/downloads.html",
+        "https://bimcv.cipf.es/bimcv-projects/padchest-gr/",
+        "https://bimcv.cipf.es/bimcv-projects/padchest/padchest-dataset-research-use-agreement/",
+        "https://doi.org/10.1056/aidbp2401120",
+        "https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/",
+        "https://doi.org/10.21227/w3aw-rv39",
+        "https://bimcv.cipf.es/bimcv-projects/padchest/",
+        "https://github.com/auriml/Rx-thorax-automatic-captioning",
+        "https://physionet.org/content/reflacx-xray-localization/1.0.0/",
+        "https://doi.org/10.17608/k6.auckland.14173982.v2",
+        "https://pubs.rsna.org/doi/full/10.1148/ryai.2021210136",
+        "https://zenodo.org/records/21781842",
+        "https://huggingface.co/datasets/StanfordAIMI/interpret-cxr-test-public",
+        "https://physionet.org/content/brax/1.1.0/",
+        "https://doi.org/10.5281/zenodo.5493595",
+        "https://zenodo.org/records/20750284"
+      ],
+      "answer_chars": 12208,
+      "links": {
+        "total": 32,
+        "ok": 31,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-mimic-cxr",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-iu-xray",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-padchest",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-mimic-cxr-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-iu-xray-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-padchest-request",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-chestxray14",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 37,
+      "cost_usd": 4.8414949,
+      "seconds": 470.502,
+      "cost_with_judge_usd": 5.3309169,
+      "error": null,
+      "tokens": 844599,
+      "tools": {
+        "Skill": 1,
+        "Bash": 12,
+        "ToolSearch": 1,
+        "WebSearch": 11,
+        "WebFetch": 10
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/mimic-cxr/2.1.0/",
+        "https://physionet.org/content/mimic-cxr-jpg/2.1.0/",
+        "https://physionet.org/news/post/llm-responsible-use/",
+        "https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K",
+        "https://openi.nlm.nih.gov/faq",
+        "https://aimi.stanford.edu/datasets/chexpert-plus",
+        "https://huggingface.co/datasets/StanfordAIMI/rrg24-shared-task-bionlp",
+        "https://bimcv.cipf.es/bimcv-projects/padchest/",
+        "https://bimcv.cipf.es/bimcv-projects/padchest/padchest-dataset-research-use-agreement/",
+        "https://www.casia-cxr.net/",
+        "https://bimcv.cipf.es/bimcv-projects/padchest-gr/",
+        "https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/",
+        "https://physionet.org/content/reflacx-xray-localization/1.0.0/",
+        "https://www.nature.com/articles/s41597-019-0322-0",
+        "https://doi.org/10.2196/95888",
+        "https://arxiv.org/pdf/2505.00228",
+        "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/9ab6a7d1-790f-4fc1-85b9-18afeb0d0c3f/content",
+        "https://arxiv.org/pdf/2405.19538",
+        "https://doi.org/10.1038/s41467-025-58344-x",
+        "https://doi.org/10.1609/aaai.v40i40.40688",
+        "https://aclanthology.org/2024.bionlp-1.51.pdf",
+        "https://arxiv.org/html/1901.07441v2",
+        "https://doi.org/10.1056/aidbp2401120",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0925231224012499",
+        "https://auckland.figshare.com/articles/dataset/CANDID-PTX/14173982",
+        "https://physionet.org/content/brax/1.1.0/"
+      ],
+      "answer_chars": 11445,
+      "links": {
+        "total": 26,
+        "ok": 25,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-mimic-cxr",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-iu-xray",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-padchest",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-mimic-cxr-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-iu-xray-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-padchest-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-chestxray14",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.3109448,
+      "seconds": 43.272,
+      "cost_with_judge_usd": 0.44090280000000004,
+      "error": null,
+      "tokens": 22024,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3581,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-mimic-cxr",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-iu-xray",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-padchest",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-mimic-cxr-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-iu-xray-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-padchest-request",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-chestxray14",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.32099279999999997,
+      "seconds": 43.695,
+      "cost_with_judge_usd": 0.44959480000000007,
+      "error": null,
+      "tokens": 22400,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3859,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-porto-taxi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-beijing-tdrive",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sf-cabspotting",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-porto-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-sf-cab-login",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-nyc-tlc-zones",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 36,
+      "cost_usd": 3.7848208,
+      "seconds": 334.435,
+      "cost_with_judge_usd": 4.1278948,
+      "error": null,
+      "tokens": 687083,
+      "tools": {
+        "Skill": 1,
+        "Bash": 9,
+        "Read": 1,
+        "ToolSearch": 1,
+        "WebSearch": 9,
+        "WebFetch": 13
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+        "https://doi.org/10.1371/journal.pone.0194629",
+        "https://www.mdpi.com/2227-7390/14/22/4119",
+        "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+        "https://ieee-dataport.org/open-access/crawdad-romataxi",
+        "https://github.com/boathit/deepgtt",
+        "https://xiucheng.org/assets/pdfs/www19-deepgtt.pdf",
+        "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+        "https://engineering.grab.com/grab-posisi",
+        "https://doi.org/10.1145/3356995.3364536",
+        "https://zenodo.org/records/17003809",
+        "https://people.cs.rutgers.edu/~dz220/data.html",
+        "https://github.com/UrbComp/DeepTTE",
+        "https://outreach.didichuxing.com/opendata/datasets",
+        "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/User_guide_T-drive.pdf",
+        "https://github.com/Zhiyang-Z/Traj-Transformer/issues/3"
+      ],
+      "answer_chars": 9916,
+      "links": {
+        "total": 16,
+        "ok": 14,
+        "dead": 1,
+        "blocked": 1,
+        "dead_urls": [
+          "https://outreach.didichuxing.com/opendata/datasets"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-porto-taxi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-beijing-tdrive",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sf-cabspotting",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-porto-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-sf-cab-login",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-nyc-tlc-zones",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 36,
+      "cost_usd": 3.3739157,
+      "seconds": 345.496,
+      "cost_with_judge_usd": 3.5898537000000004,
+      "error": null,
+      "tokens": 783266,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "ToolSearch": 1,
+        "WebFetch": 15,
+        "WebSearch": 7
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+        "https://doi.org/10.1371/journal.pone.0194629",
+        "https://arxiv.org/abs/2511.16105",
+        "https://itic.longdo.com/opendata/probe-data/",
+        "https://www.nature.com/articles/s44333-024-00020-6",
+        "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+        "https://ieee-dataport.org/faq/do-i-have-subscribe-ieee-dataport-order-download-datasets-and-tools-ieee-dataport",
+        "https://ieee-dataport.org/open-access/crawdad-romataxi",
+        "https://github.com/boathit/deepgtt",
+        "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+        "https://doi.org/10.3390/s22197608",
+        "https://engineering.grab.com/grab-posisi",
+        "https://doi.org/10.1145/3356995.3364536",
+        "https://people.cs.rutgers.edu/~dz220/Data.html",
+        "https://github.com/Zhiyang-Z/Traj-Transformer/issues/3",
+        "https://ieee-dataport.org/documents/taxi-trajectories",
+        "https://figshare.com/articles/dataset/Porto_taxi_trajectories/12302165",
+        "https://huggingface.co/datasets/kraina/porto_taxi"
+      ],
+      "answer_chars": 8007,
+      "links": {
+        "total": 18,
+        "ok": 18,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 0.8571428571428571,
+      "graders": [
+        {
+          "name": "01-recall-porto-taxi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-beijing-tdrive",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sf-cabspotting",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-porto-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-sf-cab-login",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-nyc-tlc-zones",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 11,
+      "cost_usd": 1.8296735000000002,
+      "seconds": 101.564,
+      "cost_with_judge_usd": 1.9665874999999997,
+      "error": null,
+      "tokens": 106950,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 7,
+        "WebFetch": 2
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+        "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+        "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/User_guide_T-drive.pdf",
+        "https://www.cs.rutgers.edu/~dz220/data.html",
+        "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+        "https://ieee-dataport.org/open-access/crawdad-romataxi",
+        "https://engineering.grab.com/grab-posisi",
+        "https://engineering.grab.com/files/Grab-Posisi_An_Extensive_Real-Life_GPS_Trajectory_Dataset_in_Southeast_Asia.pdf",
+        "https://github.com/Zhiyang-Z/Traj-Transformer/issues/3",
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0331473"
+      ],
+      "answer_chars": 4389,
+      "links": {
+        "total": 10,
+        "ok": 10,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 0.8571428571428571,
+      "graders": [
+        {
+          "name": "01-recall-porto-taxi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-beijing-tdrive",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sf-cabspotting",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-porto-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-sf-cab-login",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-nyc-tlc-zones",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 8,
+      "cost_usd": 0.8423945,
+      "seconds": 71.515,
+      "cost_with_judge_usd": 1.0097424999999998,
+      "error": null,
+      "tokens": 68993,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 4,
+        "WebSearch": 2
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://archive.ics.uci.edu/dataset/339/taxi+service+trajectory+prediction+challenge+ecml+pkdd+2015",
+        "https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/",
+        "https://ieee-dataport.org/open-access/crawdad-epflmobility",
+        "https://ieee-dataport.org/open-access/crawdad-romataxi",
+        "https://engineering.grab.com/grab-posisi",
+        "https://engineering.grab.com/files/Grab-Posisi_An_Extensive_Real-Life_GPS_Trajectory_Dataset_in_Southeast_Asia.pdf",
+        "https://github.com/Zhiyang-Z/Traj-Transformer/issues/3",
+        "https://www.mdpi.com/2227-7390/14/22/4119",
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0215656"
+      ],
+      "answer_chars": 4285,
+      "links": {
+        "total": 9,
+        "ok": 8,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    }
+  ],
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 14
+    },
+    "health / access": {
+      "with": 0.9166666666666666,
+      "without": 0.9166666666666666,
+      "n": 12
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 2
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    },
+    "other fields / recall": {
+      "with": 1.0,
+      "without": 0.6666666666666666,
+      "n": 6
+    },
+    "other fields / access": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 2
+    },
+    "other fields / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 2
+    }
+  },
+  "links": {
+    "with": {
+      "total": 150,
+      "ok": 145,
+      "dead": 1,
+      "blocked": 4
+    },
+    "without": {
+      "total": 19,
+      "ok": 18,
+      "dead": 0,
+      "blocked": 1
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 34.0,
+      "seconds": 512.869,
+      "cost_usd": 4.1099036,
+      "tokens": 1004860.1666666666
+    },
+    "without": {
+      "turns": 5.833333333333333,
+      "seconds": 118.36583333333333,
+      "cost_usd": 0.8547705,
+      "tokens": 94673.5
+    }
+  },
+  "runs_without_verdicts": [],
+  "runs_never_started": {},
+  "partial": false,
+  "trigger_rate": 1.0,
+  "suspicious_reads": [],
+  "run_errors": []
+}

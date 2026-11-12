@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-o-02
+expected_outcome: |
+  A good answer recommends real linked employer-employee administrative datasets that follow workers across firms, such as the German IAB data (LIAB/SIAB via the FDZ), the US Census LEHD microdata and the Brazilian RAIS, and states realistically how each is accessed: an FDZ application and use agreement with on-site or remote-execution use, an approved FSRDC project, and a cooperation agreement with the Brazilian labour ministry for identified RAIS.
+  It does not offer the public LEHD tables (LODES, QWI, J2J) as worker-level panel data, and ideally names a less known option such as Canada's CEEDD, Finland's FLEED or the Austrian Social Security Database.

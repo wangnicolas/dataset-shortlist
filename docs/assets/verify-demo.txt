@@ -1,0 +1,30 @@
+$ scout.py verify candidates.json
+verified 3 of 7 (checked 2026-11-11T17:01:29Z)
+ 1. VERIFIED [physionet | open | CC-BY-4.0 | 2022] Haaglanden Medisch Centrum sleep staging database
+    https://physionet.org/content/hmc-sleep-staging/1.1/
+    note: confirmed by the physionet registry record physionet:hmc-sleep-staging
+ 2. VERIFIED [physionet | open | ODC-By-1.0 | 2026] A Multi-Night Instantaneous Heart Rate and Accelerometry Dataset with EEG Sleep Stage Labels
+    https://physionet.org/content/bidsleep-dataset/1.0.1/
+    note: confirmed by the physionet registry record physionet:bidsleep-dataset
+ 3. VERIFIED [zenodo | open | CC-BY-4.0 | 2025] Residential Household Dataset: Occupancy, Water, and Electricity Data
+    https://zenodo.org/records/15180141
+    note: confirmed by the zenodo registry record zenodo:15180141
+ 4. NOT VERIFIED [manual | access unknown | no licence stated | -] Global Household Load Atlas (as an assistant might cite it)
+    https://zenodo.org/records/99999999999
+    page title: Page not found | Zenodo
+    problem: does not exist at this address: HTTP 404 from https://zenodo.org/records/99999999999
+    problem: the zenodo registry has no record for this link
+    note: the zenodo registry returned no record for this link; checked the page itself
+ 5. NOT VERIFIED [manual | access unknown | no licence stated | -] A dataset cited with a DOI that was never registered
+    https://doi.org/10.5281/zenodo.99999999999
+    problem: the DOI 10.5281/zenodo.99999999999 is not registered at doi.org; a DOI that does not resolve is a strong sign that the reference is fabricated or mistyped
+ 6. NOT VERIFIED [manual | access unknown | no licence stated | -] A repository home page given as if it were a dataset
+    https://zenodo.org/
+    page title: Zenodo
+    problem: the link is the home page of the zenodo.org repository, not a dataset record
+    problem: the zenodo registry has no record for this link
+    note: the zenodo registry returned no record for this link; checked the page itself
+ 7. NOT VERIFIED [manual | access unknown | no licence stated | -] Sleep Apnea Smartwatch Dataset
+    https://physionet.org/content/slpdb/1.0.0/
+    registry title: MIT-BIH Polysomnographic Database
+    problem: the link exists but describes a different resource: the physionet record is titled "MIT-BIH Polysomnographic Database", not "Sleep Apnea Smartwatch Dataset"

@@ -1,0 +1,183 @@
+{
+  "must_haves": [
+    "Adults, at least a few thousand participants with device data (read as roughly 3,000 or more)",
+    "Wrist-worn accelerometer or activity tracker worn in free-living daily life",
+    "Wear duration of several days to a week or longer",
+    "Linked follow-up outcomes: hospital records, diagnoses or death registrations",
+    "Obtainable by a US university researcher through an application process (applications acceptable)"
+  ],
+  "A": [
+    {
+      "dataset": "UK Biobank accelerometer substudy",
+      "official_url": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+      "exists": true,
+      "access_stated": "Register on AMS, project application, institution signs MTA and pays fee, analysis on the Research Analysis Platform only; about weeks",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "The route described (AMS application, MTA, fee, RAP-only analysis) matches the official process, but it is not open now. Direct fetches of ukbiobank.ac.uk and community.ukbiobank.ac.uk returned 403 more than twice, so access text comes from search-indexed official pages, which state \"Applications are currently paused whilst necessary changes are made to the UK Biobank Research Analysis Platform\" and \"UKB-RAP is currently closed whilst we implement necessary changes\" (latest dated evidence: community FAQ updated 22 October 2026, aiming to reopen applications in late 2026), so an application with approval in weeks is not available today; the device facts (Axivity AX3, dominant wrist, seven days, 103,720 participants 2013-2015) are confirmed in the UK Biobank Physical Activity Monitor document (biobank.ctsu.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf)."
+    },
+    {
+      "dataset": "NHANES 2011-2014 wrist accelerometer + NCHS linked mortality files",
+      "official_url": "https://www.cdc.gov/nchs/data-linkage/mortality-public.htm",
+      "exists": true,
+      "access_stated": "Public download with no account; public-use linked mortality files; restricted-use files only via NCHS RDC application",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The NCHS page links the public-use LMFs on a public FTP directory (\"a limited set of mortality (death) data for adults\") and states \"Restricted-use LMFs can be accessed only through the NCHS Research Data Center (RDC) network for approved projects\"; the PAXDAY_G documentation confirms an ActiGraph GT3X+ worn on the non-dominant wrist \"all day and night for seven full days\" (6,917 participants aged 6+ in 2011-2012, 7,776 in 2013-2014)."
+    },
+    {
+      "dataset": "All of Us Research Program (Fitbit)",
+      "official_url": "https://www.researchallofus.org/register/",
+      "exists": true,
+      "access_stated": "Registered Tier with a data passport in the Researcher Workbench; institutional agreement and training (the last two from memory)",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The register page states \"Only researchers whose institutions have signed a DURA may access the Researcher Workbench\" and requires identity verification and Responsible Conduct of Research training, and the data-access page says \"Authorized users will receive a 'data passport'\" with the Registered Tier including EHR and wearables data; the Fitbit participant count (more than 59,000) comes from a 2026 Nature Medicine paper, not the owner's page."
+    },
+    {
+      "dataset": "MrOS Sleep Study (via NSRR)",
+      "official_url": "https://github.com/nsrr/mros-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Free sleepdata.org account, then a data use agreement per dataset; approval in days",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead; it states \"The MrOS dataset on NSRR is limited in scope (e.g. no actigraphy raw data or results are included)\" and points to MrOS Online (account plus a Data Use Agreement) for other data, so the actigraphy and outcomes are not obtained through an NSRR request; the study itself fits (3,135 men with 3 to 5-day actigraphy, mortality and fracture objectives), with wrist placement (non-dominant, SleepWatch-O) taken from published MrOS papers."
+    },
+    {
+      "dataset": "Study of Osteoporotic Fractures (SOF) (via NSRR)",
+      "official_url": "https://github.com/nsrr/sof-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Free sleepdata.org account, then a data use agreement per dataset; approval in days",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead; the NSRR SOF release is polysomnography only (\"Sleep studies were completed on 461 SOF participants at Visit 8\", \"The dataset contains 461 records\", no actigraphy variables in the NSRR data dictionary), so the Visit 8 actigraphy comes from SOF Online (account plus a Data Use Agreement); the SOF Online Study Overview reports follow-up above 98% for vital status, and the wrist actigraphy count (about 3,127 women, non-dominant wrist) comes from published SOF papers."
+    },
+    {
+      "dataset": "MESA Sleep (via NSRR)",
+      "official_url": "https://github.com/nsrr/mesa-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Free sleepdata.org account, then a data use agreement per dataset; approval in days",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead, which confirms NSRR hosts \"7-day wrist-worn actigraphy\" for MESA Sleep, and search-indexed sleepdata.org text states \"the NSRR provides all data cost-free to incoming users who complete an online data request\" under a web-based Data Access and Use Agreement; however only 2,237 participants were enrolled (2,159 with epoch files), below \"at least a few thousand\", and outcome data come from other MESA exams via BioLINCC or the MESA Coordinating Center, not the NSRR release."
+    },
+    {
+      "dataset": "PhysioNet Minute-Level Step Count NHANES",
+      "official_url": "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+      "exists": true,
+      "access_stated": "Open access, CC0-1.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page states \"Anyone can access the files, as long as they conform to the terms of the specified license\" (CC0 1.0) and covers 14,693 NHANES 2011-2014 participants who \"wore an ActiGraph GT3X+ on the non-dominant wrist for seven consecutive days\"; it carries no outcome variables itself, but every file includes the NHANES ID SEQN, so it links to the public-use NCHS mortality files exactly as the NHANES files do."
+    },
+    {
+      "dataset": "Whitehall II accelerometer substudy",
+      "official_url": "https://www.ucl.ac.uk/brain-sciences/psychiatry/our-research/mental-health-older-people/whitehall-ii/data-sharing",
+      "exists": true,
+      "access_stated": "Data-sharing request to UCL; months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "UCL pages returned 403 on two direct fetches; search-indexed UCL text states \"All proposals are reviewed by the data sharing committee\" and that approved applicants \"sign the WII Data Sharing Agreement ... and proceed with the payment\" (GBP 500 + VAT, or free via DPUK, lead time 1-2 months on HDR UK Gateway), consistent with the answer; a 2017 Whitehall II paper reports 3,749 participants with a wrist accelerometer worn for 9 days, but linkage to hospital or mortality records could not be confirmed on an official page."
+    },
+    {
+      "dataset": "China Kadoorie Biobank accelerometer subsample",
+      "official_url": "https://www.ckbiobank.org/data-access",
+      "exists": true,
+      "access_stated": "Application; months; unsure whether accelerometer data are released",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "ckbiobank.org returned 403 on two direct fetches and no search-indexed access text was found, so access and data release could not be established; the accelerometer study exists (a 2023 IJBNPA paper reports 22,511 3rd-resurvey participants who agreed to wear an Axivity AX3 wrist accelerometer for seven days in 2020-2021)."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "UK Biobank",
+      "official_url": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+      "exists": true,
+      "access_stated": "Institution registered, AMS application, tiered fee, analysis on RAP with no download; approval usually a few weeks",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "The route described (AMS application, fee, RAP-only analysis, open to bona fide researchers anywhere) matches the official process, but it is not open now. Direct fetches of ukbiobank.ac.uk and community.ukbiobank.ac.uk returned 403 more than twice, so access text comes from search-indexed official pages, which state \"Applications are currently paused whilst necessary changes are made to the UK Biobank Research Analysis Platform\" and \"UKB-RAP is currently closed whilst we implement necessary changes\" (latest dated evidence: community FAQ updated 22 October 2026, aiming to reopen applications in late 2026), so an application with approval in weeks is not available today; the device facts (Axivity AX3, dominant wrist, seven days, 103,720 participants 2013-2015) are confirmed in the UK Biobank Physical Activity Monitor document (biobank.ctsu.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf)."
+    },
+    {
+      "dataset": "NHANES 2011-2014 wrist accelerometer + linked NDI mortality",
+      "official_url": "https://www.cdc.gov/nchs/data-linkage/mortality-public.htm",
+      "exists": true,
+      "access_stated": "Free download with no application; cause-specific detail and CMS hospital linkage via NCHS RDC proposal",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The NCHS page links the 2019 public-use LMFs on a public FTP directory and states \"Restricted-use LMFs can be accessed only through the NCHS Research Data Center (RDC) network for approved projects\"; the PAXDAY_G documentation confirms an ActiGraph GT3X+ on the non-dominant wrist worn \"all day and night for seven full days\" (6,917 participants aged 6+ in 2011-2012)."
+    },
+    {
+      "dataset": "MrOS Sleep Study",
+      "official_url": "https://github.com/nsrr/mros-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Mostly via NSRR: register, sign DUA, free, quick; outcome data may need a separate request to MrOS Online",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead; it states \"The MrOS dataset on NSRR is limited in scope (e.g. no actigraphy raw data or results are included)\", so the actigraphy itself (not only the outcomes) must come from MrOS Online (account plus a Data Use Agreement); the study itself fits (3,135 men with 3 to 5-day actigraphy, mortality and fracture objectives), with wrist placement (non-dominant, SleepWatch-O) taken from published MrOS papers."
+    },
+    {
+      "dataset": "Study of Osteoporotic Fractures (SOF)",
+      "official_url": "https://github.com/nsrr/sof-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Mostly via NSRR: register, sign DUA, free, quick; outcome data may need a separate request to SOF",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead; the NSRR SOF release is polysomnography only (\"Sleep studies were completed on 461 SOF participants at Visit 8\", \"The dataset contains 461 records\", no actigraphy variables in the NSRR data dictionary), so the Visit 8 actigraphy comes from SOF Online (account plus a Data Use Agreement); the SOF Online Study Overview reports follow-up above 98% for vital status, and the wrist actigraphy count (about 3,127 women, non-dominant wrist) comes from published SOF papers."
+    },
+    {
+      "dataset": "MESA Sleep",
+      "official_url": "https://github.com/nsrr/mesa-documentation/blob/master/pages/README.md",
+      "exists": true,
+      "access_stated": "Mostly via NSRR: register, sign DUA, free, quick; event data may need a separate request to the MESA coordinating center",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "sleepdata.org failed twice with an SSL certificate error, so NSRR's official documentation repository on GitHub (the source of the sleepdata.org dataset pages) was read instead, which confirms NSRR hosts \"7-day wrist-worn actigraphy\" for MESA Sleep and refers other MESA exams to BioLINCC or the MESA Coordinating Center, and search-indexed sleepdata.org text states \"the NSRR provides all data cost-free to incoming users who complete an online data request\"; however only 2,237 participants were enrolled (2,159 with epoch files), below \"at least a few thousand\"."
+    },
+    {
+      "dataset": "All of Us Research Program (Fitbit)",
+      "official_url": "https://www.researchallofus.org/register/",
+      "exists": true,
+      "access_stated": "Free; institution signs a data use agreement; researcher registration, identity verification and ethics training; cloud Researcher Workbench",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The register page states \"Only researchers whose institutions have signed a DURA may access the Researcher Workbench\", requires Login.gov or ID.me identity verification and Responsible Conduct of Research training, and lists no fees (USD 300 initial compute credits), and the Registered Tier includes EHR and wearables data; the Fitbit participant count (more than 59,000) comes from a 2026 Nature Medicine paper, not the owner's page."
+    },
+    {
+      "dataset": "China Kadoorie Biobank accelerometer resurvey subset",
+      "official_url": "https://www.ckbiobank.org/data-access",
+      "exists": true,
+      "access_stated": "By application; confirm sample size and international access terms",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "ckbiobank.org returned 403 on two direct fetches and no search-indexed access text was found, so access and data release could not be established; the accelerometer study exists (a 2023 IJBNPA paper reports 22,511 3rd-resurvey participants who agreed to wear an Axivity AX3 wrist accelerometer for seven days in 2020-2021)."
+    },
+    {
+      "dataset": "Our Future Health (UK)",
+      "official_url": "https://ourfuturehealth.org.uk/get-involved/researchers",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": false,
+      "note": "The researcher page lists the data available in its Trusted Research Environment as \"baseline health questionnaire, linked NHS England health records\", genotyping array and clinic measurements, with no wearable or accelerometer data, current or planned, so it misses the wrist-device requirement."
+    }
+  ]
+}

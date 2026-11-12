@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: dev-parkinsons-voice-audio
+expected_outcome: |
+  A good answer lists Parkinson's disease speech datasets that provide raw audio with healthy controls, such as the Italian Parkinson's Voice and Speech set, MDVR-KCL, mPower and Bridge2AI-Voice, and explains how each is obtained.
+  It gets the access routes right: MDVR-KCL is an open Zenodo download, mPower needs approval as a qualified researcher on Synapse, and the Bridge2AI-Voice PhysioNet release holds only derived features, with raw audio behind a separate request.
+  It does not offer the UCI "Parkinsons" table of precomputed voice measures as a source of audio recordings.

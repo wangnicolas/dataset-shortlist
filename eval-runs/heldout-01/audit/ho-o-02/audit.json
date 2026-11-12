@@ -1,0 +1,312 @@
+{
+  "must_haves": [
+    "Linked employer-employee microdata: a worker identifier and a firm/establishment identifier on each job record",
+    "Individual workers can be followed as they move between employers (worker mobility across firms, needed for AKM worker and firm fixed effects)",
+    "Panel span of at least ten years",
+    "Wages or earnings for each job (to decompose wage inequality)"
+  ],
+  "A": [
+    {
+      "dataset": "Portugal: Quadros de Pessoal (via Banco de Portugal BPLIM)",
+      "official_url": "https://bplim.github.io/Manuals/Guides/02_BPLIM_Datasets_Guide",
+      "exists": true,
+      "access_stated": "Project proposal and institutional affiliation; remote environment; BPLIM open to external and foreign academics (recalled, unchecked)",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "QP is a matched employer-employee census from 1982 with firms, establishments and workers, but the BPLIM Datasets Guide (sec. 3.2) says \"BPLIM has data available up to 2013. This dataset is only available for Internal Researchers\", so the BPLIM route is not open to an external student."
+    },
+    {
+      "dataset": "Germany: SIAB (IAB 2% sample; scientific-use file route)",
+      "official_url": "https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+      "exists": true,
+      "access_stated": "Scientific-use file needs a data-use contract signed by your institution; weeks to months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The access statement matches the page (\"The factually anonymous data set can be downloaded by the applying institutions as a Scientific Use File\"), but the SUF fails must-have 1: its data report (FDZ-Datenreport 06|2025, SIAB-R) has no cross-worker firm ID, only \"bnn\", which \"Numbers the establishments in a person's working life in ascending order\"; establishment IDs (betnr_siab) are only in the weakly anonymous version, which \"may only be used during research visits (included remote data access)\"."
+    },
+    {
+      "dataset": "Germany: LIAB (IAB linked employer-employee data)",
+      "official_url": "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+      "exists": true,
+      "access_stated": "Remote execution (JoSuA) or on-site visit in Nuremberg; months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The LIAB LM 7524 page lists access as \"On-site Use / Remote Desktop Access including Remote Execution\" with biographies 1975-2024 and AKM effects 1985-2023, which matches the statement (remote desktop is limited to German institutions per the FDZ on-site page)."
+    },
+    {
+      "dataset": "Germany: full IEB (Integrated Employment Biographies)",
+      "official_url": "https://fdz.iab.de/en/our-data-products/",
+      "exists": true,
+      "access_stated": "Full data needs remote execution (JoSuA) or on-site visit in Nuremberg; months",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "The IEB exists (the SIAB page calls SIAB \"a 2 percent random sample drawn from the Integrated Employment Biographies (IEB)\") and would meet the must-haves, but the FDZ data-product overview lists no IEB product at all (only samples and linked products such as SIAB, LIAB, BHP), so it is not offered through the stated FDZ remote/on-site route."
+    },
+    {
+      "dataset": "France: DADS / Panel tous salaries (via CASD)",
+      "official_url": "https://www.casd.eu/en/source/all-employee-panel-edp",
+      "exists": true,
+      "access_stated": "Statistical-secrecy committee approves the project; secure terminal or remote box; fees; foreign researchers eligible; 3-6+ months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "CASD names the \"Statistical Confidentiality Committee\" as approving body, its leaflet gives a price from 3,200 EUR per year per project, and its international page says EU researchers have criteria \"identical to those of residents in France\"; INSEE describes the panel as each person's job in a firm per year since 1976."
+    },
+    {
+      "dataset": "Italy: INPS data via VisitINPS Scholars",
+      "official_url": "https://www.inps.it/content/dam/inps-site/pdf/dati-analisi-bilanci/attivita-ricerca/visitinps-scholars/2026/Bando_VisitInps_Fellowship_English_version.pdf",
+      "exists": true,
+      "access_stated": "Competitive program aimed at PhD students and early-career researchers; historically involves a stay at INPS",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The 2026 call is open to researchers up to age 35 including PhD candidates, lasts one year, gives fellows \"access to the Institute through an identification badge\" plus reimbursement for those outside Rome, and the INPS programme page cites \"Gli archivi dei lavoratori dipendenti\" (its 2025 database list, seen only through a search summary because the PDF could not be read, lists private-sector employment relationships 1974-2020 plus firm registries); note the 2026 call was limited to gender-inequality policy topics and closed 14 Sept 2026."
+    },
+    {
+      "dataset": "US: Census LEHD (via FSRDC)",
+      "official_url": "https://lehd.ces.census.gov/data/",
+      "exists": true,
+      "access_stated": "Proposal approval, Special Sworn Status and background check; residency/citizenship rules can bar non-US persons; 6-12+ months",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The LEHD page says \"Researchers interested in using restricted-use LEHD data must submit a proposal\" for FSRDC use with job-level quarterly earnings, and the FSRDC SSS page requires \"a U.S. citizen or foreign national with 3 of the past 5 years of physical residency in the United States\" plus a fingerprint background check."
+    },
+    {
+      "dataset": "US: state UI wage records",
+      "official_url": "https://lehd.ces.census.gov/",
+      "exists": true,
+      "access_stated": "In practice a coauthor with an existing agreement with the state agency",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "State UI earnings records exist (the LEHD site says \"states agree to share Unemployment Insurance earnings data\"), but there is no single official access page for state-by-state research access, so neither the access claim nor coverage could be checked."
+    },
+    {
+      "dataset": "Denmark: national registers (e.g. IDA)",
+      "official_url": "https://dst.dk/en/TilSalg/Forskningsservice/Dataadgang/Autorisering",
+      "exists": true,
+      "access_stated": "Through a national institution; usually needs a Danish affiliation or local coauthor; hard for foreign student",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Statistics Denmark states only \"environments located in the Danish Realm may be considered for authorisation\", matching the claim; coverage is from a non-owner source, Aarhus University's NCRR register guide, which describes IDA as linking persons, jobs and establishments from 1980."
+    },
+    {
+      "dataset": "Sweden: national registers (Statistics Sweden)",
+      "official_url": "https://www.scb.se/en/services/ordering-data-and-statistics/ordering-microdata/",
+      "exists": true,
+      "access_stated": "Through a national institution; usually needs a Swedish affiliation or local coauthor; hard for foreign student",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "SCB states \"Statistics Sweden can only approve the release of data to a Swedish entity responsible for research. Therefore, as a researcher, you must be associated with a Swedish organization\"; SCB's LISA documentation (seen only through a search summary) says employer variables are built from employer wage statements, with data from 1990."
+    },
+    {
+      "dataset": "Norway: national registers (Statistics Norway)",
+      "official_url": "https://www.ssb.no/en/data-til-forskning/utlan-av-data-til-forskere/soknad",
+      "exists": true,
+      "access_stated": "Through a national institution; usually needs a Norwegian affiliation or local coauthor; hard for foreign student",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": null,
+      "note": "SSB says \"Institutions outside of Norway are, as a general rule, only permitted access to anonymous data\" but \"may get access to indirectly identifiable data through projects conducted by Norwegian institutions\"; SSB statistics documentation (seen only through search summaries) links a-ordningen jobs (since 2015, Ee-register before) to establishments, but I opened no page confirming a wage-linked job panel of 10+ years."
+    },
+    {
+      "dataset": "Finland: national registers (Statistics Finland, e.g. FLEED)",
+      "official_url": "https://guides.stat.fi/remote-access-to-research-data/application-process-and-agreement-practices",
+      "exists": true,
+      "access_stated": "Through a national institution; needs local affiliation or local coauthor; hard for foreign student",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Statistics Finland says \"Researchers working abroad (in the EU) can use remote access through a Finnish organisation\" and connections are \"made through the Finnish organisation\"; Statistics Finland's research-dataset pages (seen through search summaries) describe FLEED as linked employer-employee data covering employment spells and income, linked to enterprises and establishments."
+    },
+    {
+      "dataset": "Brazil: RAIS identified",
+      "official_url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/estatisticas-trabalho/solicitar-bases-de-dados-identificados",
+      "exists": true,
+      "access_stated": "Access by agreement; unsure what is public",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Ministry of Labour page says identified-data access requires that \"é necessário firmar um Acordo de Cooperação Técnica (ACT) ou Acordo de Cooperação (AC)\", requested by someone linked to a public body or civil-society organisation; the ministry page does not describe content, but an IPEA paper says RAIS records run from 1985 with worker (PIS/CPF) and employer (CNPJ) identifiers."
+    },
+    {
+      "dataset": "Hungary: Admin3 (KRTK)",
+      "official_url": "https://adatbank.krtk.mta.hu/en/2020/02/",
+      "exists": true,
+      "access_stated": "Access by agreement",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The KRTK Databank entry says \"The database can be requested for a designated research purpose on a server by submitting a data request form\", covering half the population monthly 2003-2017 with wages and firm data."
+    },
+    {
+      "dataset": "Italy: Veneto Workers History (VWH)",
+      "official_url": "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+      "exists": true,
+      "access_stated": "Shared with researchers on request, lighter requirements; email the maintainers (not sure it is available)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "FRDB says \"it is necessary to fill and sign the attached form and send it to info@frdb.org\" (no fee mentioned), and the dataset description covers 1975-2001 with firm matricola and gross wages."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "Spain: MCVL (Muestra Continua de Vidas Laborales)",
+      "official_url": "https://www.seg-social.es/descarga/es/120853",
+      "exists": true,
+      "access_stated": "Application via Social Security data portal, free, non-commercial research, directorate approval; weeks",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The portal returned HTTP 403 on two attempts; the official request form says data are ceded only to research institutions \"con fines no comerciales\", under the Dirección General de Ordenación de la Seguridad Social, with citation and copies of publications required (no fee stated; it also bars entities outside the EEA without an adequacy decision unless Eurostat-recognised)."
+    },
+    {
+      "dataset": "Germany: LIAB",
+      "official_url": "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2024-version-1/",
+      "exists": true,
+      "access_stated": "Application; on-site or remote desktop with vetted output; weeks to months",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The LIAB LM 7524 page lists \"On-site Use / Remote Desktop Access including Remote Execution\", all workers in establishments up to 49 employees and 20 percent samples in larger ones, four base periods, and AKM effects \"for the years 1985 to 2023\", all matching the answer."
+    },
+    {
+      "dataset": "Germany: SIAB",
+      "official_url": "https://fdz.iab.de/en/our-data-products/individual-and-household-data/siab/",
+      "exists": true,
+      "access_stated": "Downloadable file needs a use agreement; version with establishment IDs is on-site or remote only",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page says the weakly anonymous version \"may only be used during research visits (included remote data access)\" while the SUF is downloaded by applying institutions, and the SUF report shows only a per-person establishment counter (bnn), matching the answer."
+    },
+    {
+      "dataset": "Italy: Veneto Worker Histories (VWH)",
+      "official_url": "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+      "exists": true,
+      "access_stated": "Signed form emailed to the foundation; weeks",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "FRDB says \"it is necessary to fill and sign the attached form and send it to info@frdb.org\"; the data cover 1975-2001 with firm tax codes, matricola and gross wages."
+    },
+    {
+      "dataset": "Hungary: Admin3 (KRTK)",
+      "official_url": "https://adatbank.krtk.mta.hu/en/2020/02/",
+      "exists": true,
+      "access_stated": "Data request form; tied to KRTK researchers; months",
+      "access_marked": "today",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "The ADMIN3 entry says only \"The database can be requested for a designated research purpose on a server by submitting a data request form\"; the KRTK-only/co-author/PhD-student restriction appears on other entries (e.g. LFS, NABC, FELVI) but not on ADMIN3."
+    },
+    {
+      "dataset": "US: Census LEHD",
+      "official_url": "https://lehd.ces.census.gov/data/",
+      "exists": true,
+      "access_stated": "Research data center proposal (must show benefit to Census); 6-12+ months",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The LEHD page says \"Researchers interested in using restricted-use LEHD data must submit a proposal\" for FSRDC use, with job-level quarterly earnings histories and establishment data."
+    },
+    {
+      "dataset": "Denmark: Statistics Denmark IDA",
+      "official_url": "https://dst.dk/en/TilSalg/Forskningsservice/Dataadgang/Autorisering",
+      "exists": true,
+      "access_stated": "Needs a Danish host institution; only Danish institutions are authorised; months",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Statistics Denmark states only \"environments located in the Danish Realm may be considered for authorisation\"; coverage is from a non-owner source, Aarhus University's NCRR register guide, which describes IDA as linking persons, jobs and establishments from 1980."
+    },
+    {
+      "dataset": "Finland: FLEED (Statistics Finland)",
+      "official_url": "https://guides.stat.fi/remote-access-to-research-data/application-process-and-agreement-practices",
+      "exists": true,
+      "access_stated": "Foreign access possible, but remote access needs a Finnish affiliation; business data often on-site only",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Statistics Finland says \"Researchers working abroad (in the EU) can use remote access through a Finnish organisation\", matching the affiliation claim; the on-site-only claim for business data was not addressed on the pages checked."
+    },
+    {
+      "dataset": "Sweden: Statistics Sweden data via MONA",
+      "official_url": "https://www.scb.se/en/services/ordering-data-and-statistics/ordering-microdata/",
+      "exists": true,
+      "access_stated": "Online remote platform; no current rules found for foreign researchers",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "MONA is SCB's remote access platform, as stated; the answer omits that SCB \"can only approve the release of data to a Swedish entity responsible for research\", but it does not contradict it."
+    },
+    {
+      "dataset": "Norway: Statistics Norway registers",
+      "official_url": "https://www.ssb.no/en/data-til-forskning/utlan-av-data-til-forskere/soknad",
+      "exists": true,
+      "access_stated": "Remote system serves researchers with a Norwegian ID",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "SSB pages state foreign institutions are \"as a general rule, only permitted access to anonymous data\" and can work through Norwegian institutions' projects, but neither SSB nor microdata.no pages state a Norwegian-ID login requirement, so the specific claim is unsettled; I opened no page confirming a wage-linked job panel of 10+ years."
+    },
+    {
+      "dataset": "Canada: CEEDD (Statistics Canada)",
+      "official_url": "https://www.statcan.gc.ca/en/statistical-programs/document/5228_D1_V1",
+      "exists": true,
+      "access_stated": "Through StatCan research data centres or CDER; researchers cover the full cost",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "StatCan says \"researchers can pay for custom cuts of the CEEDD linked files through Statistics Canada's Research Data Centers (RDCs)\", with SIN/Business Number job links over 2001-2016 (2018 vintage)."
+    },
+    {
+      "dataset": "Portugal: Quadros de Pessoal",
+      "official_url": "https://bplim.github.io/Manuals/Guides/02_BPLIM_Datasets_Guide",
+      "exists": true,
+      "access_stated": "Ask the labour ministry's planning office (GEP); Banco de Portugal route restricted to the bank's researchers",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "BPLIM's Datasets Guide confirms QP \"is only available for Internal Researchers\" (data to 2013), and QP is held by the Ministry of Labour's GEP, consistent with the answer."
+    },
+    {
+      "dataset": "France: restricted matched employer-employee data (e.g. DADS / Panel tous salaries)",
+      "official_url": "https://www.casd.eu/en/source/all-employee-panel-edp",
+      "exists": true,
+      "access_stated": "Restricted-access data exist (from memory, not searched)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The panel is restricted, with CASD naming the \"Statistical Confidentiality Committee\" as approving body; INSEE describes it as each person's job in a firm per year since 1976."
+    },
+    {
+      "dataset": "Netherlands: restricted CBS microdata (e.g. SPOLISBUS jobs and wages)",
+      "official_url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/spolisbus-banen-en-lonen-volgens-polisadministratie",
+      "exists": true,
+      "access_stated": "Restricted-access data exist (from memory, not searched)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "CBS SPOLISBUS holds jobs and wages of employees at Dutch companies (full count since 2006) as non-public microdata accessible \"under certain conditions\" via CBS remote access for authorised institutions."
+    },
+    {
+      "dataset": "Austria: restricted social security data (e.g. Austrian Social Security Database, ASSD)",
+      "official_url": "https://research.jku.at/en/publications/austrian-social-security-database/",
+      "exists": true,
+      "access_stated": "Restricted-access data exist (from memory, not searched)",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The ASSD is documented as a matched firm-worker dataset (1972-2007, about 11 million people, yearly earnings), but no official page found states its current access terms, so the access claim is unsettled."
+    }
+  ]
+}

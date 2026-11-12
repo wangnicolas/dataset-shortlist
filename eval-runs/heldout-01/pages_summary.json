@@ -1,0 +1,2407 @@
+{
+  "runs": [
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__with__1",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 41,
+        "datacite": 18,
+        "huggingface": 42,
+        "openaire": 28,
+        "manual": 9
+      },
+      "candidates_total": 138,
+      "candidate_queries": [
+        "immune checkpoint inhibitor RNA-seq response",
+        "anti-PD-1 melanoma RNA-seq",
+        "immunotherapy response transcriptome",
+        "nivolumab pembrolizumab expression"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Gide 2019 melanoma anti-PD-1 +/- anti-CTLA-4 RNA-seq (PRJEB23709)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Riaz 2017 melanoma nivolumab RNA-seq (GSE91061)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Hugo 2016 melanoma pembrolizumab RNA-seq (GSE78220)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Liu 2019 melanoma anti-PD-1 (dbGaP phs000452)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Mariathasan 2018 IMvigor210 urothelial atezolizumab"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Kim 2018 gastric pembrolizumab RNA-seq (PRJEB25780)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Braun 2020 renal nivolumab (CheckMate 009/010/025)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Miao 2018 ccRCC ICI"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Cho 2020 NSCLC (GSE126044) / Jung 2019 NSCLC"
+        }
+      ],
+      "page_bytes": 110759,
+      "access_words": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "datasets": 8,
+      "verified": 0,
+      "access_unknown": 8,
+      "with_access_steps": 8,
+      "with_papers": 0,
+      "with_licence": 0,
+      "not_recommended": 1,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__with__2",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 12,
+        "datacite": 4,
+        "huggingface": 12,
+        "openaire": 6
+      },
+      "candidates_total": 34,
+      "candidate_queries": [
+        "immune checkpoint inhibitor RNA-seq response"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__with__3",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 35,
+        "datacite": 11,
+        "huggingface": 30,
+        "openaire": 26,
+        "physionet": 1
+      },
+      "candidates_total": 103,
+      "candidate_queries": [
+        "immune checkpoint inhibitor RNA-seq response",
+        "anti-PD-1 melanoma RNA-seq",
+        "immunotherapy response transcriptome cohort"
+      ],
+      "verify_outcomes": []
+    },
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__without__1",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__without__2",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-checkpoint-response-rnaseq__without__3",
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__with__1",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 16,
+        "zenodo": 62,
+        "physionet": 36,
+        "huggingface": 72,
+        "openaire": 22
+      },
+      "candidates_total": 208,
+      "candidate_queries": [
+        "chest x-ray radiology reports",
+        "chest radiograph free-text report",
+        "radiology report generation",
+        "chest X-ray report Spanish",
+        "chest CT radiology reports",
+        "PadChest",
+        "CheXpert Plus",
+        "ReXGradient-160K",
+        "BIMCV COVID-19 radiographic report",
+        "Open-I Indiana University chest X-ray"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR Database"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "REFLACX: Reports and eye-tracking data for localization of abnormalities in chest x-rays"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "rajpurkarlab/ReXGradient-160K"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "CXRGraph: Using Information Extraction to Normalize the Training Data for Automatic Radiology Report Generati\u2026"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR-Ext-MIMIC-CXR-DB: Linking MIMIC-IV Chest Radiographs with Rich and Harmonized Clinical Context"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "BRAX, a Brazilian labeled chest X-ray dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "FMCEB-CXR: A Structured Chest X-ray Benchmark from Nigeria for Evaluating AI Generalization in African Clinic\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Naija-CXR dataset-JPG-A Nigerian Chest X-ray Dataset for Equitable AI and Vision-Language Research"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "X-iZhang/CheXpert-plus-RRG"
+        }
+      ],
+      "page_bytes": 110204,
+      "access_words": [
+        "gated",
+        "gated",
+        "account",
+        "open",
+        "gated",
+        "account",
+        "open"
+      ],
+      "datasets": 7,
+      "verified": 3,
+      "access_unknown": 0,
+      "with_access_steps": 7,
+      "with_papers": 0,
+      "with_licence": 7,
+      "not_recommended": 3,
+      "gaps": 1
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__with__2",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 19,
+        "zenodo": 51,
+        "physionet": 38,
+        "huggingface": 81,
+        "openaire": 22
+      },
+      "candidates_total": 211,
+      "candidate_queries": [
+        "chest X-ray radiology reports",
+        "chest radiograph free-text report",
+        "MIMIC-CXR",
+        "radiology report generation",
+        "PadChest",
+        "BIMCV chest radiography reports",
+        "CheXpert Plus",
+        "Indiana University chest X-ray Open-i"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "FMCEB-CXR: A Structured Chest X-ray Benchmark from Nigeria for Evaluating AI Generalization in African Clinic\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Naija-CXR dataset-JPG-A Nigerian Chest X-ray Dataset for Equitable AI and Vision-Language Research"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR Database"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "CheXpert Plus"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "X-iZhang/CheXpert-plus-RRG"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "PADCHEST \u2013 BIMCV"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "rajpurkarlab/ReXGradient-160K"
+        }
+      ],
+      "page_bytes": 113638,
+      "access_words": [
+        "gated",
+        "unknown",
+        "account",
+        "unknown",
+        "open"
+      ],
+      "datasets": 5,
+      "verified": 5,
+      "access_unknown": 2,
+      "with_access_steps": 5,
+      "with_papers": 0,
+      "with_licence": 3,
+      "not_recommended": 4,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__with__3",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 14,
+        "zenodo": 34,
+        "physionet": 26,
+        "huggingface": 36,
+        "openaire": 17
+      },
+      "candidates_total": 127,
+      "candidate_queries": [
+        "chest x-ray radiology reports",
+        "chest radiograph free-text report",
+        "radiology report generation",
+        "chest X-ray report"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR Database"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR-JPG - chest radiographs with structured labels"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "REFLACX: Reports and eye-tracking data for localization of abnormalities in chest x-rays"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "CXR-PRO: MIMIC-CXR with Prior References Omitted"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Radiology Report Generation Models Evaluation Dataset For Chest X-rays (RadEvalX)"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "CXRGraph: Using Information Extraction to Normalize the Training Data for Automatic Radiology Report Generati\u2026"
+        },
+        {
+          "verified": false,
+          "source": "openaire",
+          "title": "MIMIC-CXR dataset"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "MLforHealthcare/Indiana_University_Chest_X-ray_Collection"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "BRAX, a Brazilian labeled chest X-ray dataset"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-CXR-Ext-MIMIC-CXR-DB: Linking MIMIC-IV Chest Radiographs with Rich and Harmonized Clinical Context"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "CXR-Align: A Benchmark for CXR-Report Alignment with Negations"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "rajpurkarlab/ReXGradient-160K"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "MilitaryHospital175/VNMedical_bv175"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "PADCHEST \u2013 BIMCV"
+        }
+      ],
+      "page_bytes": 114719,
+      "access_words": [
+        "gated",
+        "account",
+        "account",
+        "open",
+        "application",
+        "open",
+        "application"
+      ],
+      "datasets": 7,
+      "verified": 4,
+      "access_unknown": 0,
+      "with_access_steps": 7,
+      "with_papers": 3,
+      "with_licence": 5,
+      "not_recommended": 2,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__without__1",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__without__2",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-cxr-free-text-reports__without__3",
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-derm-skin-tone__with__1",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 17,
+        "huggingface": 36,
+        "physionet": 7,
+        "zenodo": 28,
+        "openaire": 10,
+        "manual": 3
+      },
+      "candidates_total": 101,
+      "candidate_queries": [
+        "Fitzpatrick skin tone dermatology",
+        "skin lesion images skin type diagnosis",
+        "dermatology images diverse skin tones",
+        "Monk skin tone dermatology",
+        "dermoscopy skin lesion"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "DDI - Diverse Dermatology Images"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "GitHub - google-research-datasets/scin: The SCIN dataset contains 10,000+ images of dermatology conditions, c\u2026"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "GitHub - mattgroh/fitzpatrick17k"
+        }
+      ],
+      "page_bytes": 107495,
+      "access_words": [
+        "free account",
+        "open",
+        "open"
+      ],
+      "datasets": 3,
+      "verified": 3,
+      "access_unknown": 0,
+      "with_access_steps": 3,
+      "with_papers": 2,
+      "with_licence": 3,
+      "not_recommended": 5,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-derm-skin-tone__with__2",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 6,
+        "huggingface": 38,
+        "physionet": 5,
+        "zenodo": 17,
+        "manual": 4
+      },
+      "candidates_total": 70,
+      "candidate_queries": [
+        "dermatology skin tone Fitzpatrick",
+        "skin lesion images diagnosis dark skin",
+        "Monk skin tone dermatology",
+        "SCIN skin condition image network",
+        "Fitzpatrick17k",
+        "pigmented skin lesions dermoscopy Fitzpatrick"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Assessing the Generalizability of Deep Neural Networks-Based Models for Black Skin Lesions"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "PAD-UFES-20: a skin lesion dataset composed of patient data and clinical images collected from smartphones"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "DDI - Diverse Dermatology Images"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-derm-skin-tone__with__3",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 26,
+        "zenodo": 34,
+        "huggingface": 32,
+        "physionet": 17,
+        "openaire": 9,
+        "manual": 4
+      },
+      "candidates_total": 122,
+      "candidate_queries": [
+        "Fitzpatrick skin type dermatology images",
+        "skin tone dermatology dataset",
+        "Monk skin tone dermatology",
+        "dermoscopy skin lesion images",
+        "skin disease clinical images diverse skin"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "DDI2: Diverse Dermatology Images- 2"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "FitzDerm-CF: A Controlled Multimodal Dermatology Resource for Skin-Tone Counterfactual and Leakage Evaluation"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "MRA-MIDAS: Multimodal Image Dataset for Ai-based Skin Cancer"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Assessing the Generalizability of Deep Neural Networks-Based Models for Black Skin Lesions"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "DermaCon-IN Dataset Release v1.0"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "SOS-ALL: A Pediatric Clinical Dataset of South African amaXhosa Children with Atopic Dermatitis"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Fitzpatrick 17k"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "SCIN: Skin Condition Image Network"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Diverse Dermatology Images (DDI)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "PAD-UFES-20"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-derm-skin-tone__without__1",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-derm-skin-tone__without__2",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-derm-skin-tone__without__3",
+      "case": "ho-h-derm-skin-tone",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__with__1",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 28,
+        "physionet": 33,
+        "zenodo": 36,
+        "huggingface": 35,
+        "openaire": 27
+      },
+      "candidates_total": 159,
+      "candidate_queries": [
+        "12-lead ECG arrhythmia",
+        "electrocardiogram atrial fibrillation",
+        "ECG bundle branch block",
+        "PhysioNet challenge 12-lead ECG",
+        "PTB-XL"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "The Chapman-Shaoxing ECG Dataset"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "A large scale 12-lead electrocardiogram database for arrhythmia study"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Classification of 12-lead ECGs: The PhysioNet/Computing in Cardiology Challenge 2020"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-test: An annotated 12-lead ECG dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-15%: a large scale annotated dataset of 12-lead ECGs"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "PTB-XL, a large publicly available electrocardiography dataset"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Will Two Do? Varying Dimensions in Electrocardiography: The PhysioNet/Computing in Cardiology Challenge 2021"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__with__2",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 52,
+        "physionet": 58,
+        "zenodo": 80,
+        "huggingface": 84,
+        "openaire": 54,
+        "manual": 1
+      },
+      "candidates_total": 329,
+      "candidate_queries": [
+        "12-lead ECG",
+        "electrocardiogram arrhythmia",
+        "atrial fibrillation ECG",
+        "ECG bundle branch block",
+        "PTB-XL",
+        "Chapman Shaoxing Ningbo 12-lead ECG arrhythmia",
+        "CODE-15% ECG Brazil",
+        "China Physiological Signal Challenge 2018",
+        "PhysioNet Computing in Cardiology Challenge 2021 ECG",
+        "SPH ECG database Shandong",
+        "CODE-II ECG"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Classification of 12-lead ECGs: The PhysioNet/Computing in Cardiology Challenge 2020"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "A large scale 12-lead electrocardiogram database for arrhythmia study"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "PTB-XL, a large publicly available electrocardiography dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-test: An annotated 12-lead ECG dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Sami-Trop: 12-lead ECG traces with age and mortality annotations"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Leipzig Heart Center ECG-Database: Arrhythmias in Children and Patients with Congenital Heart Disease"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "St Petersburg INCART 12-lead Arrhythmia Database"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "SPH: A large publicly available 12-lead ECG database (Shandong Provincial Hospital)"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-15%: a large scale annotated dataset of 12-lead ECGs"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Will Two Do? Varying Dimensions in Electrocardiography: The PhysioNet/Computing in Cardiology Challenge 2021"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__with__3",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 44,
+        "physionet": 49,
+        "zenodo": 44,
+        "huggingface": 41,
+        "openaire": 41
+      },
+      "candidates_total": 219,
+      "candidate_queries": [
+        "12-lead ECG",
+        "electrocardiogram arrhythmia",
+        "atrial fibrillation ECG",
+        "ECG bundle branch block",
+        "ECG arrhythmia database Chapman Shaoxing Ningbo",
+        "CODE-15% ECG",
+        "PhysioNet Computing in Cardiology Challenge 2021 12-lead"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Classification of 12-lead ECGs: The PhysioNet/Computing in Cardiology Challenge 2020"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "PTB-XL, a large publicly available electrocardiography dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-test: An annotated 12-lead ECG dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "The Chapman-Shaoxing ECG Dataset"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CODE-15%: a large scale annotated dataset of 12-lead ECGs"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Sami-Trop: 12-lead ECG traces with age and mortality annotations"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__without__1",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__without__2",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-ecg-rhythm-labels__without__3",
+      "case": "ho-h-ecg-rhythm-labels",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__with__1",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 30,
+        "datacite": 21,
+        "huggingface": 36,
+        "openaire": 23,
+        "physionet": 13
+      },
+      "candidates_total": 123,
+      "candidate_queries": [
+        "NHANES blood pressure",
+        "hypertension awareness survey measured blood pressure",
+        "health and retirement longitudinal ageing survey"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Longitudinal Aging Study Asia (LASI)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "English Longitudinal Study of Ageing: Waves 0-11, 1998-2024"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__with__2",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 18,
+        "datacite": 13,
+        "huggingface": 19,
+        "openaire": 15,
+        "physionet": 18
+      },
+      "candidates_total": 83,
+      "candidate_queries": [
+        "NHANES blood pressure",
+        "measured blood pressure older adults survey"
+      ],
+      "verify_outcomes": []
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__with__3",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "datacite": 11,
+        "zenodo": 12,
+        "huggingface": 12,
+        "openaire": 11,
+        "physionet": 4
+      },
+      "candidates_total": 50,
+      "candidate_queries": [
+        "hypertension blood pressure measured survey"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "BPQ_L"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        }
+      ]
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__without__1",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__without__2",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-measured-bp-surveys__without__3",
+      "case": "ho-h-measured-bp-surveys",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__with__1",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "huggingface": 39,
+        "openaire": 25,
+        "physionet": 13,
+        "zenodo": 31,
+        "datacite": 5,
+        "manual": 7
+      },
+      "candidates_total": 120,
+      "candidate_queries": [
+        "wrist accelerometer mortality",
+        "actigraphy sleep cohort mortality",
+        "wrist-worn accelerometer cohort",
+        "physical activity accelerometer incident disease",
+        "actigraphy"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "UK Biobank accelerometer substudy"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "NHANES 2011-2014 physical activity monitor (wrist)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NCHS NHANES Linked Mortality Files"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "All of Us Research Program (Fitbit)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "National Sleep Research Resource (MrOS, SOF, MESA actigraphy)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "China Kadoorie Biobank"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "Whitehall II"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Minute level step counts and physical activity data from the National Health and Nutrition Examination Survey\u2026"
+        }
+      ],
+      "page_bytes": 118613,
+      "access_words": [
+        "application",
+        "open",
+        "registered",
+        "registered",
+        "open",
+        "application",
+        "application"
+      ],
+      "datasets": 7,
+      "verified": 2,
+      "access_unknown": 0,
+      "with_access_steps": 7,
+      "with_papers": 4,
+      "with_licence": 1,
+      "not_recommended": 2,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__with__2",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 22,
+        "datacite": 21,
+        "huggingface": 39,
+        "openaire": 30,
+        "physionet": 16,
+        "manual": 7
+      },
+      "candidates_total": 135,
+      "candidate_queries": [
+        "accelerometer mortality",
+        "wrist accelerometer cohort",
+        "actigraphy sleep cohort",
+        "NHANES accelerometer"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "UK Biobank accelerometer data (Axivity AX3, wrist)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NHANES 2011-2014 wrist accelerometer (PAXMIN/PAXDAY)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NCHS NHANES public-use linked mortality files"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "All of Us Research Program (Fitbit + EHR)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "MrOS Sleep Study (NSRR)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "MESA Sleep (NSRR)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "China Kadoorie Biobank"
+        }
+      ],
+      "page_bytes": 116452,
+      "access_words": [
+        "open",
+        "application",
+        "application",
+        "application",
+        "application",
+        "application"
+      ],
+      "datasets": 6,
+      "verified": 3,
+      "access_unknown": 0,
+      "with_access_steps": 6,
+      "with_papers": 5,
+      "with_licence": 0,
+      "not_recommended": 2,
+      "gaps": 2
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__with__3",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 29,
+        "datacite": 18,
+        "huggingface": 41,
+        "openaire": 39,
+        "physionet": 18
+      },
+      "candidates_total": 145,
+      "candidate_queries": [
+        "wrist accelerometer",
+        "actigraphy sleep mortality",
+        "accelerometer cohort",
+        "NHANES accelerometer mortality"
+      ],
+      "verify_outcomes": []
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__without__1",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__without__2",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-h-wrist-activity-outcomes__without__3",
+      "case": "ho-h-wrist-activity-outcomes",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-01__with__1",
+      "case": "ho-o-01",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 19,
+        "datacite": 18,
+        "huggingface": 33,
+        "openaire": 9,
+        "physionet": 1
+      },
+      "candidates_total": 80,
+      "candidate_queries": [
+        "taxi GPS trajectory",
+        "taxi trajectories",
+        "ride-hailing GPS trajectory",
+        "vehicle trajectory GPS trip"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "UCI Machine Learning Repository"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "T-Drive trajectory data sample"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Grab-Posisi - Southeast Asia\u2019s First Comprehensive GPS Trajectory Dataset"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NYC telematics data with asynchronous sampling"
+        }
+      ]
+    },
+    {
+      "run": "ho-o-01__with__2",
+      "case": "ho-o-01",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 30,
+        "datacite": 13,
+        "huggingface": 31,
+        "openaire": 10,
+        "physionet": 1
+      },
+      "candidates_total": 85,
+      "candidate_queries": [
+        "taxi GPS trajectory",
+        "taxi trajectories",
+        "ride-hailing GPS trajectory",
+        "vehicle GPS trajectories city"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Tourist Trajectories Extracted from Taxi GPS Data in Bangkok"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "GPS trajectory data of taxi trips in Pingshan District, Shenzhen (recorded on a day in 2019)"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Large-Scale Taxi Demand and Mobility Flow Dataset in Shanghai, China"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Segmented Taxi Trajectories in Bangkok"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "San Francisco taxi trajectories"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Porto taxi trajectories"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "Davidham3/Porto_Taxi_Trajectory"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "kraina/porto_taxi"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "NYC telematics data with asynchronous sampling"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "Taxi trajectories"
+        },
+        {
+          "verified": false,
+          "source": "openaire",
+          "title": "T-Drive: Driving Directions Based on Taxi Trajectories"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "\"POETIC - Tdrive and nyc database\""
+        },
+        {
+          "verified": false,
+          "source": "openaire",
+          "title": "Porto dataset"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "UCI Machine Learning Repository"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "T-Drive trajectory data sample"
+        }
+      ]
+    },
+    {
+      "run": "ho-o-01__with__3",
+      "case": "ho-o-01",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false,
+      "candidates_by_source": {
+        "zenodo": 20,
+        "datacite": 14,
+        "huggingface": 36,
+        "openaire": 9,
+        "physionet": 1
+      },
+      "candidates_total": 80,
+      "candidate_queries": [
+        "taxi GPS trajectory",
+        "taxi trajectories",
+        "ride-hailing GPS trajectory",
+        "vehicle trajectory GPS travel time"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "UCI Machine Learning Repository"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "CRAWDAD epfl/mobility | IEEE DataPort"
+        }
+      ]
+    },
+    {
+      "run": "ho-o-01__without__1",
+      "case": "ho-o-01",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-01__without__2",
+      "case": "ho-o-01",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-01__without__3",
+      "case": "ho-o-01",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-02__with__1",
+      "case": "ho-o-02",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 22,
+        "huggingface": 47,
+        "openaire": 14,
+        "zenodo": 33,
+        "manual": 7
+      },
+      "candidates_total": 123,
+      "candidate_queries": [
+        "linked employer-employee",
+        "matched employer-employee panel",
+        "employer-employee administrative earnings",
+        "worker firm identifiers wages panel"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- L\u00e4ngsschnittmodell 1975-2024, Version 1"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Linked Employer-Employee Data of the IAB: LIAB Longitudinal Model, 1975-2017"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "ECIN Replication Package for \"Dynamics and Sources of Wage Inequality in Taiwan: Evidence from Employer-Emplo\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Replication data for: Firms and the Decline in Earnings Inequality in Brazil"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "SIAB Sample of Integrated Labour Market Biographies (IAB FDZ)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "MCVL Muestra Continua de Vidas Laborales (Spain Social Security)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Veneto Worker Histories (INPS, via FRDB)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Admin3 Linked Administrative Panel (KRTK Databank, Hungary)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "RAIS public microdata (Brazil, MTE)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "LEHD restricted-use (US Census, FSRDC)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Statistics Denmark IDA"
+        }
+      ],
+      "page_bytes": 120880,
+      "access_words": [
+        "restricted",
+        "restricted",
+        "application",
+        "application",
+        "restricted",
+        "restricted",
+        "restricted"
+      ],
+      "datasets": 7,
+      "verified": 7,
+      "access_unknown": 0,
+      "with_access_steps": 7,
+      "with_papers": 0,
+      "with_licence": 0,
+      "not_recommended": 4,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-02__with__2",
+      "case": "ho-o-02",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 14,
+        "huggingface": 47,
+        "openaire": 12,
+        "zenodo": 30
+      },
+      "candidates_total": 103,
+      "candidate_queries": [
+        "linked employer-employee",
+        "matched employer-employee panel",
+        "worker firm panel administrative earnings",
+        "social security records employers wages"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- L\u00e4ngsschnittmodell 1975-2024, Version 1"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Sample of Integrated Labour Market Biographies (SIAB) - FDZ - Forschungsdatenzentrum"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "INPS Data: Veneto Workers Histories (VWH) - FRDB"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "LEHD Data Products for Workforce Analytics | U.S. Census Bureau"
+        }
+      ],
+      "page_bytes": 109423,
+      "access_words": [
+        "application",
+        "application",
+        "application",
+        "application"
+      ],
+      "datasets": 4,
+      "verified": 4,
+      "access_unknown": 0,
+      "with_access_steps": 4,
+      "with_papers": 0,
+      "with_licence": 0,
+      "not_recommended": 2,
+      "gaps": 1
+    },
+    {
+      "run": "ho-o-02__with__3",
+      "case": "ho-o-02",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 12,
+        "huggingface": 11,
+        "openaire": 11,
+        "zenodo": 6,
+        "manual": 5
+      },
+      "candidates_total": 45,
+      "candidate_queries": [
+        "linked employer-employee"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB- L\u00e4ngsschnittmodell 1975-2024, Version 1"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Linked Employer-Employee Data of the IAB: LIAB Cross-sectional Model 2, 1993-2019"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Linked Employer-Employee Data of the IAB: LIAB Longitudinal Model, 1975-2017"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "Linked-Employer-Employee-Daten des IAB (LIAB): LIAB-Querschnittmodell 1993-2023, Version 1"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Sample of Integrated Labour Market Biographies (SIAB)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Campus File SIAB CF 7508"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Muestra Continua de Vidas Laborales (MCVL)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Veneto Workers Histories (VWH)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "LEHD restricted-use microdata (Census FSRDC)"
+        }
+      ],
+      "page_bytes": 116062,
+      "access_words": [
+        "application",
+        "application",
+        "application",
+        "application",
+        "restricted",
+        "open"
+      ],
+      "datasets": 6,
+      "verified": 6,
+      "access_unknown": 0,
+      "with_access_steps": 6,
+      "with_papers": 0,
+      "with_licence": 0,
+      "not_recommended": 1,
+      "gaps": 1
+    },
+    {
+      "run": "ho-o-02__without__1",
+      "case": "ho-o-02",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-02__without__2",
+      "case": "ho-o-02",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-02__without__3",
+      "case": "ho-o-02",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-03__with__1",
+      "case": "ho-o-03",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 20,
+        "zenodo": 32,
+        "huggingface": 37,
+        "openaire": 14,
+        "physionet": 7
+      },
+      "candidates_total": 110,
+      "candidate_queries": [
+        "meeting corpus speaker diarization",
+        "multi-party meeting recordings",
+        "far-field microphone array speech meeting",
+        "AMI meeting corpus",
+        "NOTSOFAR",
+        "ICSI meeting corpus"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "DiPCo -- Dinner Party Corpus"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "microsoft/NOTSOFAR"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "ICSI Meeting Speech"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "ICSI Meeting Transcripts"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "MeetingBank: A Benchmark Dataset for Meeting Summarization"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "huuuyeah/MeetingBank_Audio"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "AMI Corpus"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "ICSI Meeting Speech - Linguistic Data Consortium"
+        }
+      ],
+      "page_bytes": 108847,
+      "access_words": [
+        "open",
+        "open",
+        "fee",
+        "open"
+      ],
+      "datasets": 4,
+      "verified": 4,
+      "access_unknown": 0,
+      "with_access_steps": 4,
+      "with_papers": 0,
+      "with_licence": 3,
+      "not_recommended": 4,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-03__with__2",
+      "case": "ho-o-03",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 13,
+        "zenodo": 26,
+        "huggingface": 15,
+        "openaire": 9,
+        "physionet": 7,
+        "manual": 5
+      },
+      "candidates_total": 75,
+      "candidate_queries": [
+        "meeting corpus speaker diarization",
+        "multi-party meeting recordings",
+        "far-field meeting speech microphone array"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "VIP-MINGLE: A Corpus for Videoconference and In-Person Multimodal Interaction in Group Language Engagement"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "First DIHARD Challenge Development - Eight Sources"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "2005 Spring NIST Rich Transcription (RT-05S) Evaluation Set"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "ground-truth/multichannel-meetings-10h"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "huuuyeah/meetingbank"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "aaronyee/icsi-meeting-corpus"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "DiPCo -- Dinner Party Corpus"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "AMI Meeting Corpus"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NOTSOFAR-1 (CHiME-8 Task 2)"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "ICSI Meeting Corpus"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "NIST Rich Transcription meeting evaluation sets (LDC)"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "CHiME-6 dinner party corpus"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "microsoft/NOTSOFAR"
+        }
+      ],
+      "page_bytes": 110500,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "open",
+        "fee"
+      ],
+      "datasets": 5,
+      "verified": 5,
+      "access_unknown": 0,
+      "with_access_steps": 5,
+      "with_papers": 1,
+      "with_licence": 4,
+      "not_recommended": 3,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-03__with__3",
+      "case": "ho-o-03",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 15,
+        "zenodo": 31,
+        "huggingface": 68,
+        "openaire": 5
+      },
+      "candidates_total": 119,
+      "candidate_queries": [
+        "meeting corpus speaker diarization",
+        "multi-party meeting recordings far-field",
+        "AMI meeting corpus",
+        "conversational speech microphone array diarization",
+        "NOTSOFAR",
+        "ICSI meeting corpus",
+        "CHiME-6 dinner party",
+        "VoxConverse"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "DiPCo -- Dinner Party Corpus"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "edinburghcstr/ami"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "microsoft/NOTSOFAR"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "ICSI Meeting Speech"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "ICSI Meeting Transcripts"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "First DIHARD Challenge Development - Eight Sources"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Second DIHARD Challenge Development - Eleven Sources"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "huuuyeah/MeetingBank_Audio"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "diarizers-community/voxconverse"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "benjamin-paine/dinner-party-corpus"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "ground-truth/multichannel-meetings-10h"
+        }
+      ],
+      "page_bytes": 109526,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "unknown"
+      ],
+      "datasets": 4,
+      "verified": 4,
+      "access_unknown": 1,
+      "with_access_steps": 4,
+      "with_papers": 0,
+      "with_licence": 2,
+      "not_recommended": 5,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-03__without__1",
+      "case": "ho-o-03",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-03__without__2",
+      "case": "ho-o-03",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-03__without__3",
+      "case": "ho-o-03",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-04__with__1",
+      "case": "ho-o-04",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 35,
+        "datacite": 11,
+        "huggingface": 24,
+        "openaire": 7,
+        "physionet": 12
+      },
+      "candidates_total": 89,
+      "candidate_queries": [
+        "galaxy zoo morphology",
+        "galaxy morphology classification images",
+        "galaxy morphology citizen science",
+        "Galaxy Zoo DESI"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DESI: Detailed Morphology Classifications for 8.7M Galaxies in the DESI Legacy Imaging Surveys"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Gala\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo 2: Images from Original Sample"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "juliensimon/galaxy-zoo-2-morphology"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "matthieulel/galaxy_mnist"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Galaxy10 DECaLS"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "GalaxiesML: an imaging and photometric dataset of galaxies for machine learning"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DECaLS: Trained Representations"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo: Morphologies based on UKIDSS NIR Imaging for 71,052 Galaxies"
+        }
+      ],
+      "page_bytes": 106884,
+      "access_words": [
+        "open",
+        "open",
+        "open"
+      ],
+      "datasets": 3,
+      "verified": 3,
+      "access_unknown": 0,
+      "with_access_steps": 3,
+      "with_papers": 0,
+      "with_licence": 3,
+      "not_recommended": 3,
+      "gaps": 1
+    },
+    {
+      "run": "ho-o-04__with__2",
+      "case": "ho-o-04",
+      "arm": "with",
+      "index": 2,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 38,
+        "datacite": 18,
+        "huggingface": 26,
+        "openaire": 14,
+        "physionet": 15
+      },
+      "candidates_total": 111,
+      "candidate_queries": [
+        "Galaxy Zoo",
+        "galaxy morphology classification",
+        "galaxy images morphology labels",
+        "galaxy zoo decals",
+        "galaxy mergers visual classification"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Galaxy Zoo: Cosmic Dawn -- morphological classifications for over 41,000 galaxies in the Euclid Deep Field No\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Galaxy Zoo 1"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Galaxy Zoo 2"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "juliensimon/galaxy-zoo-2-morphology"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo: Morphologies based on UKIDSS NIR Imaging for 71,052 Galaxies"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Euclid Quick Data Release (Q1): First visual morphology catalogue"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo 2: Images from Original Sample"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Gala\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy10 SDSS"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy10 DECaLS"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DESI: Detailed Morphology Classifications for 8.7M Galaxies in the DESI Legacy Imaging Surveys"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "mwalmsley/galaxy10_decals"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "(no title)"
+        }
+      ],
+      "page_bytes": 115151,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "open",
+        "open"
+      ],
+      "datasets": 5,
+      "verified": 5,
+      "access_unknown": 0,
+      "with_access_steps": 5,
+      "with_papers": 1,
+      "with_licence": 5,
+      "not_recommended": 3,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-04__with__3",
+      "case": "ho-o-04",
+      "arm": "with",
+      "index": 3,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 36,
+        "datacite": 17,
+        "huggingface": 33,
+        "openaire": 7,
+        "physionet": 24
+      },
+      "candidates_total": 117,
+      "candidate_queries": [
+        "Galaxy Zoo morphology",
+        "galaxy morphology classification images",
+        "galaxy morphological classifications volunteers",
+        "galaxy images labels deep learning"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DESI: Detailed Morphology Classifications for 8.7M Galaxies in the DESI Legacy Imaging Surveys"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Gala\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo 2: Images from Original Sample"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo 2: detailed morphological classifications for 304 122 galaxies from the Sloan Digital Sky Survey"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy10 SDSS"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Images and Labels for SDSS Main Galaxy Sample (From Dey et al, 2022)"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo: Cosmic Dawn -- morphological classifications for over 41,000 galaxies in the Euclid Deep Field No\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Galaxy Zoo: Morphologies based on UKIDSS NIR Imaging for 71,052 Galaxies"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "juliensimon/galaxy-zoo-2-morphology"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "matthieulel/galaxy10_decals"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "mrJordi0/galaxy-zoo-dataset"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "matthieulel/galaxy_mnist"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Euclid Quick Data Release (Q1): First visual morphology catalogue"
+        }
+      ],
+      "page_bytes": 111508,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "open"
+      ],
+      "datasets": 4,
+      "verified": 4,
+      "access_unknown": 0,
+      "with_access_steps": 4,
+      "with_papers": 0,
+      "with_licence": 4,
+      "not_recommended": 4,
+      "gaps": 2
+    },
+    {
+      "run": "ho-o-04__without__1",
+      "case": "ho-o-04",
+      "arm": "without",
+      "index": 1,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-04__without__2",
+      "case": "ho-o-04",
+      "arm": "without",
+      "index": 2,
+      "kept": true,
+      "page": false,
+      "json": false
+    },
+    {
+      "run": "ho-o-04__without__3",
+      "case": "ho-o-04",
+      "arm": "without",
+      "index": 3,
+      "kept": true,
+      "page": false,
+      "json": false
+    }
+  ],
+  "per_arm": {
+    "with": {
+      "runs": 30,
+      "kept": 30,
+      "pages": 16,
+      "datasets": 85,
+      "verified": 62,
+      "access_unknown": 11,
+      "with_papers": 16
+    },
+    "without": {
+      "runs": 30,
+      "kept": 30,
+      "pages": 0,
+      "datasets": 0,
+      "verified": 0,
+      "access_unknown": 0,
+      "with_papers": 0
+    }
+  },
+  "access_words": {
+    "unknown": 11,
+    "gated": 5,
+    "account": 5,
+    "open": 33,
+    "application": 20,
+    "free account": 1,
+    "registered": 2,
+    "restricted": 6,
+    "fee": 2
+  },
+  "access_words_total": 85,
+  "access_words_shown_as_unknown_though_stated": 31
+}

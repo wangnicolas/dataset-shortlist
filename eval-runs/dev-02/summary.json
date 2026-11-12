@@ -1,0 +1,1694 @@
+{
+  "source": "<repo>/eval-runs/dev-02/result.json",
+  "model": "sonnet",
+  "judge": "sonnet",
+  "cost_usd": 7.013448699999999,
+  "n_cases": 4,
+  "strata": {
+    "health": {
+      "cases": 2,
+      "with": 0.9722222222222222,
+      "without": 0.898989898989899,
+      "delta": 0.07323232323232326,
+      "better": 2,
+      "same": 0,
+      "worse": 0
+    },
+    "other fields": {
+      "cases": 2,
+      "with": 0.8138888888888889,
+      "without": 0.7583333333333333,
+      "delta": 0.055555555555555525,
+      "better": 1,
+      "same": 1,
+      "worse": 0
+    }
+  },
+  "per_case": [
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "with": 0.7777777777777777,
+      "without": 0.6666666666666666,
+      "delta": 0.11111111111111105
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "with": 0.8500000000000001,
+      "without": 0.8500000000000001,
+      "delta": 0.0
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 0.9090909090909091,
+      "delta": 0.09090909090909094
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "with": 0.9444444444444444,
+      "without": 0.8888888888888888,
+      "delta": 0.05555555555555558
+    }
+  ],
+  "runs": [
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-breizhcrops",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-pastis",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sen4agrinet",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-timesen2crop",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-pastis-zenodo-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-sen4agrinet-mit",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-timesen2crop-zenodo-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-eurosat-no-crop-types",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 0.31658080000000005,
+      "seconds": 196.725,
+      "cost_with_judge_usd": 0.6224828,
+      "error": null,
+      "tokens": 426037,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "Read": 1
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/5012942",
+        "https://zenodo.org/records/15095445",
+        "https://doi.org/10.1038/s41597-025-04952-7",
+        "https://doi.org/10.1016/j.ophoto.2026.100117",
+        "https://zenodo.org/records/14585341",
+        "https://doi.org/10.5194/isprs-archives-xliii-b2-2020-1545-2020",
+        "https://zenodo.org/records/4715631",
+        "https://doi.org/10.1109/jstars.2021.3073965",
+        "https://zenodo.org/records/7892012",
+        "https://doi.org/10.3390/rs15122980",
+        "https://huggingface.co/datasets/isp-uv-es/sen4agrinet-taco",
+        "https://doi.org/10.1109/jstars.2022.3164771",
+        "https://doi.org/10.5281/zenodo.10251170",
+        "https://zenodo.org/records/18632974",
+        "https://zenodo.org/records/19949051",
+        "https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification",
+        "https://huggingface.co/datasets/isaaccorley/zuericrop"
+      ],
+      "answer_chars": 7800,
+      "links": {
+        "total": 17,
+        "ok": 17,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 0.6666666666666666,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-breizhcrops",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-pastis",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sen4agrinet",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-timesen2crop",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-pastis-zenodo-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-sen4agrinet-mit",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-timesen2crop-zenodo-cc-by",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-eurosat-no-crop-types",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 10,
+      "cost_usd": 0.28832199999999997,
+      "seconds": 205.141,
+      "cost_with_judge_usd": 0.607712,
+      "error": null,
+      "tokens": 344339,
+      "tools": {
+        "Skill": 1,
+        "Bash": 7
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/5735646",
+        "https://zenodo.org/records/14585341",
+        "https://zenodo.org/records/5815488",
+        "https://zenodo.org/records/5815523",
+        "https://zenodo.org/records/15095445",
+        "https://zenodo.org/records/7892012",
+        "https://doi.org/10.5281/zenodo.21885996",
+        "https://zenodo.org/records/10251170",
+        "https://huggingface.co/datasets/isp-uv-es/sen4agrinet-taco",
+        "https://doi.org/10.1109/iccv48922.2021.00483",
+        "https://doi.org/10.5194/isprs-archives-xliii-b2-2020-1545-2020",
+        "https://doi.org/10.1038/s41597-025-04952-7",
+        "https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification"
+      ],
+      "answer_chars": 5418,
+      "links": {
+        "total": 13,
+        "ok": 13,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 0.6666666666666666,
+      "graders": [
+        {
+          "name": "01-recall-breizhcrops",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-pastis",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sen4agrinet",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-timesen2crop",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-pastis-zenodo-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-sen4agrinet-mit",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-timesen2crop-zenodo-cc-by",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-eurosat-no-crop-types",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.06833639999999999,
+      "seconds": 27.377,
+      "cost_with_judge_usd": 0.20378640000000023,
+      "error": null,
+      "tokens": 20233,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3971,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 0.6666666666666666,
+      "graders": [
+        {
+          "name": "01-recall-breizhcrops",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-pastis",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-sen4agrinet",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-timesen2crop",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-pastis-zenodo-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-sen4agrinet-mit",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-timesen2crop-zenodo-cc-by",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-eurosat-no-crop-types",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.0798904,
+      "seconds": 35.951,
+      "cost_with_judge_usd": 0.22155240000000023,
+      "error": null,
+      "tokens": 21431,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3393,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 0.9,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-low-carbon-london",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-cer-irish-smart-meter",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-smart-grid-smart-city",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-pecan-street",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-low-carbon-london-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-cer-issda-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-pecan-street-free-tier-limited",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-smart-grid-smart-city-open",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-trap-uci-individual-household",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "10-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 23,
+      "cost_usd": 0.5450151999999999,
+      "seconds": 173.205,
+      "cost_with_judge_usd": 0.7182832,
+      "error": null,
+      "tokens": 520855,
+      "tools": {
+        "Skill": 1,
+        "Bash": 12,
+        "ToolSearch": 1,
+        "WebSearch": 4,
+        "WebFetch": 3
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/7362094",
+        "https://data.london.gov.uk/dataset/smartmeter-energy-consumption-data-in-london-households-vqm0d",
+        "https://zenodo.org/records/8248802",
+        "https://zenodo.org/records/15056919",
+        "https://www.ucd.ie/issda/data/commissionforenergyregulationcer/",
+        "https://datacatalogue.ukdataservice.ac.uk/studies/study/8666",
+        "https://data.gov.au/data/dataset/smart-grid-smart-city-customer-trial-data",
+        "https://data.gov.au/data/dataset/nsw-solar-home-electricty-data",
+        "https://www.pecanstreet.org/dataport/",
+        "https://doi.org/10.3390/app12199844",
+        "https://doi.org/10.5255/ukda-sn-8963-1"
+      ],
+      "answer_chars": 6587,
+      "links": {
+        "total": 11,
+        "ok": 10,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 0.8,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-low-carbon-london",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-cer-irish-smart-meter",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-smart-grid-smart-city",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-pecan-street",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-low-carbon-london-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-cer-issda-request",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-pecan-street-free-tier-limited",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-smart-grid-smart-city-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-trap-uci-individual-household",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "10-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 23,
+      "cost_usd": 0.7261296000000002,
+      "seconds": 284.162,
+      "cost_with_judge_usd": 0.9728555999999997,
+      "error": null,
+      "tokens": 475280,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "Read": 1
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/7362094",
+        "https://www.nature.com/articles/s41597-023-02846-0",
+        "https://data.london.gov.uk/dataset/smartmeter-energy-consumption-data-in-london-households-vqm0d",
+        "https://doi.org/10.3390/app12199844",
+        "https://doi.org/10.6084/m9.figshare.16965400",
+        "https://doi.org/10.1038/s41597-022-01122-x",
+        "https://zenodo.org/records/21398769",
+        "https://zenodo.org/records/15056919",
+        "https://zenodo.org/records/8248802",
+        "https://data.gov.au/data/dataset/smart-grid-smart-city-customer-trial-data",
+        "https://www.ucd.ie/issda/data/commissionforenergyregulationcer/",
+        "https://www.data.gov.au/data/en/dataset/nsw-solar-home-electricty-data"
+      ],
+      "answer_chars": 6060,
+      "links": {
+        "total": 12,
+        "ok": 11,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 0.9,
+      "graders": [
+        {
+          "name": "01-recall-low-carbon-london",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-cer-irish-smart-meter",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-smart-grid-smart-city",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-pecan-street",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-low-carbon-london-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-cer-issda-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-pecan-street-free-tier-limited",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-smart-grid-smart-city-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-trap-uci-individual-household",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "10-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.058192400000000005,
+      "seconds": 21.295,
+      "cost_with_judge_usd": 0.25665439999999995,
+      "error": null,
+      "tokens": 19182,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 2778,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 0.8,
+      "graders": [
+        {
+          "name": "01-recall-low-carbon-london",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-cer-irish-smart-meter",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-smart-grid-smart-city",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-pecan-street",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-low-carbon-london-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-cer-issda-request",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-pecan-street-free-tier-limited",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-smart-grid-smart-city-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-trap-uci-individual-household",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "10-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.0647784,
+      "seconds": 27.109,
+      "cost_with_judge_usd": 0.15269640000000018,
+      "error": null,
+      "tokens": 19882,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3085,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-physionet-2019-sepsis-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mimic",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-eicu",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-hirid",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-recall-amsterdamumcdb",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "06-access-physionet-2019-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-mimic-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-hirid-contributor-review",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-access-amsterdamumcdb-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "10-trap-physionet-2012-no-sepsis-label",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "11-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 16,
+      "cost_usd": 0.32777470000000003,
+      "seconds": 182.814,
+      "cost_with_judge_usd": 0.5285786999999988,
+      "error": null,
+      "tokens": 396681,
+      "tools": {
+        "Skill": 1,
+        "Bash": 13
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/challenge-2019/1.0.0/",
+        "https://physionet.org/content/eicu-crd-demo/2.0.1/",
+        "https://physionet.org/content/mimic-iv-demo/2.2/",
+        "https://doi.org/10.17026/dans-22u-f8vd",
+        "https://doi.org/10.5524/102204",
+        "https://www.sicdb.com/Documentation/"
+      ],
+      "answer_chars": 5944,
+      "links": {
+        "total": 6,
+        "ok": 6,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-physionet-2019-sepsis-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mimic",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-eicu",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-hirid",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-recall-amsterdamumcdb",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "06-access-physionet-2019-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-mimic-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-hirid-contributor-review",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-access-amsterdamumcdb-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "10-trap-physionet-2012-no-sepsis-label",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "11-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 0.30393819999999994,
+      "seconds": 213.67,
+      "cost_with_judge_usd": 0.5860321999999987,
+      "error": null,
+      "tokens": 367440,
+      "tools": {
+        "Skill": 1,
+        "Bash": 11
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/challenge-2019/",
+        "https://physionet.org/content/mimiciv/",
+        "https://physionet.org/content/eicu-crd/",
+        "https://physionet.org/news/post/llm-responsible-use/",
+        "https://physionet.org/content/hirid/",
+        "https://doi.org/10.17026/dans-22u-f8vd"
+      ],
+      "answer_chars": 6054,
+      "links": {
+        "total": 6,
+        "ok": 6,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 0.9090909090909091,
+      "graders": [
+        {
+          "name": "01-recall-physionet-2019-sepsis-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mimic",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-eicu",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-hirid",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-recall-amsterdamumcdb",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "06-access-physionet-2019-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-mimic-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-hirid-contributor-review",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-access-amsterdamumcdb-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "10-trap-physionet-2012-no-sepsis-label",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "11-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.0691324,
+      "seconds": 27.481,
+      "cost_with_judge_usd": 0.26363239999999966,
+      "error": null,
+      "tokens": 20336,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 4016,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 0.9090909090909091,
+      "graders": [
+        {
+          "name": "01-recall-physionet-2019-sepsis-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mimic",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-eicu",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-hirid",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-recall-amsterdamumcdb",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "06-access-physionet-2019-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-mimic-credentialing",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-access-hirid-contributor-review",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "09-access-amsterdamumcdb-request",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "10-trap-physionet-2012-no-sepsis-label",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "11-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.0627424,
+      "seconds": 23.279,
+      "cost_with_judge_usd": 0.20067639999999956,
+      "error": null,
+      "tokens": 19655,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3910,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-italian-parkinsons-voice-speech",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mdvr-kcl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-mpower",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-bridge2ai-voice",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-mdvr-kcl-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-mpower-qualified-researcher",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-bridge2ai-no-raw-audio",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-uci-parkinsons-features-only",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 18,
+      "cost_usd": 0.3734082,
+      "seconds": 225.603,
+      "cost_with_judge_usd": 0.7220562000000004,
+      "error": null,
+      "tokens": 606154,
+      "tools": {
+        "Skill": 1,
+        "Bash": 14,
+        "Read": 1
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://doi.org/10.5281/zenodo.21775027",
+        "https://doi.org/10.5281/zenodo.22036480",
+        "https://doi.org/10.5281/zenodo.2867215",
+        "https://doi.org/10.48550/arxiv.2111.10207",
+        "https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+        "https://doi.org/10.1016/j.jvoice.2024.11.008",
+        "https://doi.org/10.5281/zenodo.13647600",
+        "https://doi.org/10.21437/interspeech.2025-801",
+        "https://physionet.org/content/b2ai-voice/4.0.0/",
+        "https://www.synapse.org/Synapse:syn4993293",
+        "https://doi.org/10.6084/m9.figshare.32588973.v2",
+        "https://doi.org/10.6084/m9.figshare.33212514.v1"
+      ],
+      "answer_chars": 5405,
+      "links": {
+        "total": 12,
+        "ok": 12,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-italian-parkinsons-voice-speech",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mdvr-kcl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-mpower",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-bridge2ai-voice",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-mdvr-kcl-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-mpower-qualified-researcher",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-bridge2ai-no-raw-audio",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-uci-parkinsons-features-only",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 12,
+      "cost_usd": 0.2682348,
+      "seconds": 179.212,
+      "cost_with_judge_usd": 0.5792828000000002,
+      "error": null,
+      "tokens": 278313,
+      "tools": {
+        "Skill": 1,
+        "Bash": 9
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://zenodo.org/records/2867216",
+        "https://doi.org/10.48550/arxiv.2111.10207",
+        "https://doi.org/10.5281/zenodo.21775027",
+        "https://zenodo.org/records/22036480",
+        "https://www.ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech",
+        "https://doi.org/10.1016/j.jvoice.2024.11.008",
+        "https://physionet.org/content/b2ai-voice/4.0.0/",
+        "https://doi.org/10.1109/icsadl67539.2026.11451863",
+        "https://doi.org/10.6084/m9.figshare.32588973.v2",
+        "https://doi.org/10.60593/ur.d.29410703.v2",
+        "https://doi.org/10.17632/zdp72s54cd.1",
+        "https://doi.org/10.6084/m9.figshare.33212514.v1",
+        "https://doi.org/10.5281/zenodo.17753641"
+      ],
+      "answer_chars": 8760,
+      "links": {
+        "total": 13,
+        "ok": 13,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "01-recall-italian-parkinsons-voice-speech",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mdvr-kcl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-mpower",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-bridge2ai-voice",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-mdvr-kcl-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-mpower-qualified-researcher",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-bridge2ai-no-raw-audio",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-uci-parkinsons-features-only",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.0623664,
+      "seconds": 23.17,
+      "cost_with_judge_usd": 0.2226384000000004,
+      "error": null,
+      "tokens": 19633,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3068,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "01-recall-italian-parkinsons-voice-speech",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-mdvr-kcl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-mpower",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-bridge2ai-voice",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-mdvr-kcl-open",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-mpower-qualified-researcher",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-bridge2ai-no-raw-audio",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-uci-parkinsons-features-only",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.07369039999999999,
+      "seconds": 32.042,
+      "cost_with_judge_usd": 0.15452839999999973,
+      "error": null,
+      "tokens": 20847,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3162,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    }
+  ],
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 0.9444444444444444,
+      "n": 18
+    },
+    "health / access": {
+      "with": 0.9285714285714286,
+      "without": 0.7857142857142857,
+      "n": 14
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    },
+    "other fields / recall": {
+      "with": 0.875,
+      "without": 0.875,
+      "n": 16
+    },
+    "other fields / access": {
+      "with": 0.6428571428571429,
+      "without": 0.5,
+      "n": 14
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    },
+    "other fields / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 4
+    }
+  },
+  "links": {
+    "with": {
+      "total": 90,
+      "ok": 88,
+      "dead": 0,
+      "blocked": 2
+    },
+    "without": {
+      "total": 0,
+      "ok": 0,
+      "dead": 0,
+      "blocked": 0
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 16.25,
+      "seconds": 207.56650000000002,
+      "cost_usd": 0.3936754375,
+      "tokens": 426887.375
+    },
+    "without": {
+      "turns": 1.0,
+      "seconds": 27.212999999999997,
+      "cost_usd": 0.06739115,
+      "tokens": 20149.875
+    }
+  },
+  "trigger_rate": 1.0,
+  "suspicious_reads": [],
+  "run_errors": []
+}

@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-derm-skin-tone
+expected_outcome: |
+  Recommends dermatology image datasets that carry per-image or per-patient skin tone labels together with diagnoses, such as Fitzpatrick17k, the Diverse Dermatology Images (DDI) set and Google's SCIN, and states how each is obtained (DDI needs registration and acceptance of a non-commercial research use agreement; SCIN is an open download).
+  Does not present HAM10000 or the ISIC 2018 challenge data as having skin tone labels, and ideally mentions less-known sets such as PASSION or DermaCon-IN.

@@ -1,0 +1,637 @@
+{
+  "meta": {
+    "model": "sonnet",
+    "judge": "sonnet",
+    "cost_usd": 46.44468450000003
+  },
+  "score": {
+    "health": {
+      "with": 0.9169973544973544,
+      "without": 0.8626543209876543,
+      "prompted": 0.8819444444444445
+    },
+    "other fields": {
+      "with": 0.8913690476190476,
+      "without": 0.7321428571428571,
+      "prompted": 0.7901785714285714
+    }
+  },
+  "score_by_run": {
+    "health": {
+      "with": [
+        0.9368386243386243,
+        0.8951719576719577,
+        0.9189814814814815
+      ],
+      "without": [
+        0.8898809523809524,
+        0.8505291005291005,
+        0.8475529100529101
+      ],
+      "prompted": [
+        0.8819444444444443,
+        0.8819444444444443,
+        0.8819444444444443
+      ]
+    },
+    "other fields": {
+      "with": [
+        0.875,
+        0.8303571428571429,
+        0.96875
+      ],
+      "without": [
+        0.7321428571428571,
+        0.7633928571428571,
+        0.7008928571428571
+      ],
+      "prompted": [
+        0.90625,
+        0.6919642857142857,
+        0.7723214285714286
+      ]
+    },
+    "all": {
+      "with": [
+        0.9121031746031747,
+        0.8692460317460317,
+        0.9388888888888889
+      ],
+      "without": [
+        0.8267857142857142,
+        0.8156746031746032,
+        0.788888888888889
+      ],
+      "prompted": [
+        0.8916666666666666,
+        0.8059523809523809,
+        0.838095238095238
+      ]
+    }
+  },
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 0.9
+    },
+    "health / access": {
+      "with": 0.8627450980392157,
+      "without": 0.7254901960784313,
+      "prompted": 0.8235294117647058
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    },
+    "health / long tail": {
+      "with": 0.7222222222222222,
+      "without": 0.7222222222222222,
+      "prompted": 0.8333333333333334
+    },
+    "other fields / recall": {
+      "with": 0.8888888888888888,
+      "without": 0.8055555555555556,
+      "prompted": 0.8333333333333334
+    },
+    "other fields / access": {
+      "with": 0.8333333333333334,
+      "without": 0.6333333333333333,
+      "prompted": 0.7333333333333333
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    },
+    "other fields / long tail": {
+      "with": 0.9166666666666666,
+      "without": 0.5,
+      "prompted": 0.5833333333333334
+    }
+  },
+  "family_n": {
+    "health / recall": 60,
+    "health / access": 51,
+    "health / trap": 15,
+    "health / long tail": 18,
+    "other fields / recall": 36,
+    "other fields / access": 30,
+    "other fields / trap": 12,
+    "other fields / long tail": 12
+  },
+  "links": {
+    "with": {
+      "per_answer": 8.033333333333333,
+      "total": 241,
+      "ok": 217,
+      "dead": 4,
+      "blocked": 20
+    },
+    "without": {
+      "per_answer": 0.0,
+      "total": 0,
+      "ok": 0,
+      "dead": 0,
+      "blocked": 0
+    },
+    "prompted": {
+      "per_answer": 11.266666666666667,
+      "total": 338,
+      "ok": 278,
+      "dead": 22,
+      "blocked": 38
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 16.333333333333332,
+      "minutes": 2.8755150000000005,
+      "cost_usd": 0.4429375166666667,
+      "tool_calls": 14.333333333333334
+    },
+    "without": {
+      "turns": 1.0,
+      "minutes": 0.4959655555555555,
+      "cost_usd": 0.06839846666666667,
+      "tool_calls": 0.0
+    },
+    "prompted": {
+      "turns": 10.133333333333333,
+      "minutes": 0.85977,
+      "cost_usd": 0.3454417666666666,
+      "tool_calls": 9.133333333333333
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "prompted": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    },
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          0.875,
+          0.875
+        ],
+        "without": [
+          0.875,
+          0.875,
+          0.875
+        ],
+        "prompted": [
+          1.0,
+          0.875,
+          1.0
+        ]
+      },
+      "with": 0.9166666666666666,
+      "without": 0.875,
+      "prompted": 0.9583333333333334
+    },
+    {
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          0.8571428571428571,
+          0.8571428571428571,
+          1.0
+        ],
+        "without": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.5714285714285714
+        ],
+        "prompted": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 0.9047619047619048,
+      "without": 0.6666666666666666,
+      "prompted": 1.0
+    },
+    {
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          0.8888888888888888,
+          0.8888888888888888,
+          0.8888888888888888
+        ],
+        "without": [
+          1.0,
+          0.8888888888888888,
+          0.8888888888888888
+        ],
+        "prompted": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "with": 0.8888888888888888,
+      "without": 0.9259259259259259,
+      "prompted": 0.6666666666666666
+    },
+    {
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          0.875,
+          0.75,
+          0.75
+        ],
+        "without": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "prompted": [
+          0.625,
+          0.75,
+          0.625
+        ]
+      },
+      "with": 0.7916666666666666,
+      "without": 0.75,
+      "prompted": 0.6666666666666666
+    },
+    {
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          0.875,
+          1.0
+        ],
+        "prompted": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 0.9583333333333334,
+      "prompted": 1.0
+    },
+    {
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          0.8571428571428571,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "prompted": [
+          1.0,
+          0.7142857142857143,
+          0.8571428571428571
+        ]
+      },
+      "with": 0.9523809523809524,
+      "without": 1.0,
+      "prompted": 0.8571428571428572
+    },
+    {
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          0.875,
+          1.0,
+          1.0
+        ],
+        "without": [
+          0.75,
+          0.875,
+          0.625
+        ],
+        "prompted": [
+          0.875,
+          0.875,
+          0.875
+        ]
+      },
+      "with": 0.9583333333333334,
+      "without": 0.75,
+      "prompted": 0.875
+    },
+    {
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          0.625,
+          0.75,
+          0.875
+        ],
+        "without": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "prompted": [
+          0.75,
+          0.75,
+          0.5
+        ]
+      },
+      "with": 0.75,
+      "without": 0.75,
+      "prompted": 0.6666666666666666
+    },
+    {
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          0.7142857142857143,
+          1.0
+        ],
+        "without": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "prompted": [
+          1.0,
+          0.42857142857142855,
+          0.8571428571428571
+        ]
+      },
+      "with": 0.9047619047619048,
+      "without": 0.42857142857142855,
+      "prompted": 0.7619047619047619
+    }
+  ],
+  "decision": {
+    "without": {
+      "one_sided_cases": [],
+      "verdict": "mixed",
+      "statement": "Mixed: the per-question table is the result.",
+      "against": "without",
+      "n": 10,
+      "with": 0.9067460317460316,
+      "other": 0.8104497354497354,
+      "mean_diff": 0.0962962962962963,
+      "better": 6,
+      "worse": 2,
+      "same": 2,
+      "needed_better": 7,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 6,
+          "with": 0.9169973544973544,
+          "other": 0.8626543209876543,
+          "diff": 0.054343033509700156
+        },
+        "other fields": {
+          "n": 4,
+          "with": 0.8913690476190476,
+          "other": 0.7321428571428571,
+          "diff": 0.15922619047619047
+        }
+      },
+      "diff_by_run": [
+        0.08531746031746046,
+        0.05357142857142849,
+        0.1499999999999999
+      ]
+    },
+    "prompted": {
+      "one_sided_cases": [],
+      "verdict": "mixed",
+      "statement": "Mixed: the per-question table is the result.",
+      "against": "prompted",
+      "n": 10,
+      "with": 0.9067460317460316,
+      "other": 0.8452380952380952,
+      "mean_diff": 0.06150793650793651,
+      "better": 6,
+      "worse": 2,
+      "same": 2,
+      "needed_better": 7,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 6,
+          "with": 0.9169973544973544,
+          "other": 0.8819444444444445,
+          "diff": 0.03505291005290989
+        },
+        "other fields": {
+          "n": 4,
+          "with": 0.8913690476190476,
+          "other": 0.7901785714285714,
+          "diff": 0.10119047619047616
+        }
+      },
+      "diff_by_run": [
+        0.020436507936508086,
+        0.06329365079365079,
+        0.10079365079365088
+      ]
+    }
+  },
+  "score_all": {
+    "with": 0.9067460317460316,
+    "without": 0.8104497354497354,
+    "prompted": 0.8452380952380952
+  },
+  "judge_failures": [
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "arm": "with",
+      "run": 2,
+      "grader": "06-access-padchest-request",
+      "explanation": "grader threw: judge call failed: Not logged in \u00b7 Please run /login"
+    }
+  ],
+  "if_judge_failures_passed": {
+    "without": {
+      "one_sided_cases": [],
+      "verdict": "mixed",
+      "statement": "Mixed: the per-question table is the result.",
+      "against": "without",
+      "n": 10,
+      "with": 0.9109126984126984,
+      "other": 0.8104497354497354,
+      "mean_diff": 0.10046296296296298,
+      "better": 6,
+      "worse": 2,
+      "same": 2,
+      "needed_better": 7,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 6,
+          "with": 0.923941798941799,
+          "other": 0.8626543209876543,
+          "diff": 0.06128747795414469
+        },
+        "other fields": {
+          "n": 4,
+          "with": 0.8913690476190476,
+          "other": 0.7321428571428571,
+          "diff": 0.15922619047619047
+        }
+      }
+    },
+    "prompted": {
+      "one_sided_cases": [],
+      "verdict": "mixed",
+      "statement": "Mixed: the per-question table is the result.",
+      "against": "prompted",
+      "n": 10,
+      "with": 0.9109126984126984,
+      "other": 0.8452380952380952,
+      "mean_diff": 0.06567460317460319,
+      "better": 6,
+      "worse": 1,
+      "same": 3,
+      "needed_better": 7,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 6,
+          "with": 0.923941798941799,
+          "other": 0.8819444444444445,
+          "diff": 0.04199735449735442
+        },
+        "other fields": {
+          "n": 4,
+          "with": 0.8913690476190476,
+          "other": 0.7901785714285714,
+          "diff": 0.10119047619047616
+        }
+      }
+    },
+    "per_case": [
+      {
+        "case": "ho-h-checkpoint-response-rnaseq",
+        "stratum": "health",
+        "with": 1.0,
+        "without": 1.0,
+        "prompted": 1.0
+      },
+      {
+        "case": "ho-h-cxr-free-text-reports",
+        "stratum": "health",
+        "with": 0.9583333333333334,
+        "without": 0.875,
+        "prompted": 0.9583333333333334
+      },
+      {
+        "case": "ho-h-derm-skin-tone",
+        "stratum": "health",
+        "with": 0.9047619047619048,
+        "without": 0.6666666666666666,
+        "prompted": 1.0
+      },
+      {
+        "case": "ho-h-ecg-rhythm-labels",
+        "stratum": "health",
+        "with": 0.8888888888888888,
+        "without": 0.9259259259259259,
+        "prompted": 0.6666666666666666
+      },
+      {
+        "case": "ho-h-measured-bp-surveys",
+        "stratum": "health",
+        "with": 0.7916666666666666,
+        "without": 0.75,
+        "prompted": 0.6666666666666666
+      },
+      {
+        "case": "ho-h-wrist-activity-outcomes",
+        "stratum": "health",
+        "with": 1.0,
+        "without": 0.9583333333333334,
+        "prompted": 1.0
+      },
+      {
+        "case": "ho-o-01",
+        "stratum": "other fields",
+        "with": 0.9523809523809524,
+        "without": 1.0,
+        "prompted": 0.8571428571428572
+      },
+      {
+        "case": "ho-o-02",
+        "stratum": "other fields",
+        "with": 0.9583333333333334,
+        "without": 0.75,
+        "prompted": 0.875
+      },
+      {
+        "case": "ho-o-03",
+        "stratum": "other fields",
+        "with": 0.75,
+        "without": 0.75,
+        "prompted": 0.6666666666666666
+      },
+      {
+        "case": "ho-o-04",
+        "stratum": "other fields",
+        "with": 0.9047619047619048,
+        "without": 0.42857142857142855,
+        "prompted": 0.7619047619047619
+      }
+    ]
+  },
+  "checks": {
+    "skill_triggered": 30,
+    "with_runs": 30,
+    "invalid_runs": 0,
+    "error_runs": 0,
+    "runs_without_verdicts": 0,
+    "runs_per_arm": {
+      "with": 30,
+      "without": 30,
+      "prompted": 30
+    }
+  }
+}

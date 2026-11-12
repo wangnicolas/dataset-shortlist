@@ -1,0 +1,170 @@
+{
+  "model": "sonnet",
+  "fired_when_it_should": 10,
+  "should": 10,
+  "fired_when_it_should_not": 0,
+  "should_not": 10,
+  "no_result": [],
+  "rows": [
+    {
+      "id": "q00",
+      "query": "im starting my masters thesis on predicting hospital readmission for heart failure patients. my supervisor said i should use 'some public EHR data' but didnt say which. what are my options and how long does it take to get them?",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q01",
+      "query": "Is there an open dataset of smart-meter readings at 15-minute resolution for at least a few thousand households? It needs to allow commercial use because this is for a startup pilot.",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q02",
+      "query": "we want to benchmark our speech emotion recognition model on something other than the corpus we used so far because of its license. alternatives? english or mandarin, acted or spontaneous is fine",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q03",
+      "query": "I need longitudinal survey data on adolescent mental health with at least three waves, ideally from East Asia. Where should I look, and which ones can a PhD student get without a faculty sponsor?",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q04",
+      "query": "can you find me data for training a model to detect rooftop solar panels in aerial imagery? has to be downloadable without signing anything, my company's legal team is slow",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q05",
+      "query": "How do I get access to the imaging data of a big national biobank, and is there anything similar that is faster to obtain while I wait for approval? I need brain MRI with age and sex for about 5,000 adults.",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q06",
+      "query": "For a class project (due in 3 weeks) on fake news detection in Japanese, what labelled corpora exist?",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q07",
+      "query": "My PI wants a second external validation cohort for our sepsis model. We already hold credentialed access to one large US ICU database. What other ICU databases could we apply for, and which is quickest?",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q08",
+      "query": "looking for raw EEG recordings during sleep with expert-scored hypnograms, kids not adults",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q09",
+      "query": "What data could I use to study the effect of remote work on urban transit ridership since 2020? City level is fine, I need monthly or finer.",
+      "should_trigger": true,
+      "outcome": "skill",
+      "detail": "dataset-shortlist:dataset-shortlist",
+      "fired": true
+    },
+    {
+      "id": "q10",
+      "query": "I downloaded the taxi trip parquet files into ./data, can you profile them and tell me which columns have the most missing values?",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "Bash",
+      "fired": false
+    },
+    {
+      "id": "q11",
+      "query": "Write a PyTorch Dataset class that loads images and labels from a folder structure like train/<class>/<img>.jpg, with optional augmentation",
+      "should_trigger": false,
+      "outcome": "answer",
+      "detail": "final answer without a tool call",
+      "fired": false
+    },
+    {
+      "id": "q12",
+      "query": "Split my dataset.csv into train/val/test 70/15/15 stratified by the 'label' column and save the three files next to it",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "Bash",
+      "fired": false
+    },
+    {
+      "id": "q13",
+      "query": "I already have the ICU database loaded in BigQuery. Can you explain what its stays table contains and how it links to the admissions table?",
+      "should_trigger": false,
+      "outcome": "answer",
+      "detail": "final answer without a tool call",
+      "fired": false
+    },
+    {
+      "id": "q14",
+      "query": "Find me recent papers on diffusion models for time series forecasting and summarise how they handle irregular sampling",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "ToolSearch",
+      "fired": false
+    },
+    {
+      "id": "q15",
+      "query": "I need to generate a synthetic dataset of 10,000 fake customer records with realistic names and addresses for testing our CRM import",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "Write",
+      "fired": false
+    },
+    {
+      "id": "q16",
+      "query": "Our Postgres database has an events table with 2 billion rows; how should I index it for range queries on created_at?",
+      "should_trigger": false,
+      "outcome": "answer",
+      "detail": "final answer without a tool call",
+      "fired": false
+    },
+    {
+      "id": "q17",
+      "query": "Upload my cleaned dataset in ./release to the Hugging Face Hub and write a dataset card for it",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "Bash",
+      "fired": false
+    },
+    {
+      "id": "q18",
+      "query": "What's the license of scikit-learn and can I ship it inside a commercial product?",
+      "should_trigger": false,
+      "outcome": "answer",
+      "detail": "final answer without a tool call",
+      "fired": false
+    },
+    {
+      "id": "q19",
+      "query": "Convert these 300 DICOM files in ./scans to NIfTI and strip the patient names from the headers",
+      "should_trigger": false,
+      "outcome": "other-tool",
+      "detail": "Bash",
+      "fired": false
+    }
+  ]
+}

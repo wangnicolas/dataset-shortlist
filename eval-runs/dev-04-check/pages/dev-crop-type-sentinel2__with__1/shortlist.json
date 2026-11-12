@@ -1,0 +1,971 @@
+{
+ "question": "Benchmark datasets with specific crop-type labels (field or pixel level), already paired with multi-temporal Sentinel-2 data, under a licence that permits publishing results and sharing trained models.",
+ "generated_at": "2026-11-12T09:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Crop-type labels with specific crops (not cropland vs non-cropland)",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Field/parcel or pixel level labels",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Sentinel-2 time series already paired with labels (no own download/preprocessing)",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Licence allows publishing results and sharing trained models",
+   "must": true
+  },
+  {
+   "id": "R5",
+   "text": "Downloadable today without application",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "datacite",
+   "openaire",
+   "huggingface",
+   "europepmc/openalex (papers)"
+  ],
+  "queries": [
+   "crop type classification Sentinel-2",
+   "crop type time series benchmark",
+   "agricultural parcels Sentinel-2 satellite image time series",
+   "crop type mapping labels field",
+   "land use land cover crop Sentinel-2 benchmark",
+   "PASTIS",
+   "EuroCrops",
+   "EuroCropsML",
+   "BreizhCrops",
+   "CropHarvest",
+   "TimeSen2Crop",
+   "Sen4AgriNet"
+  ],
+  "n_candidates": 179
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "zenodo:5012942",
+    "source": "zenodo",
+    "title": "PASTIS - Panoptic Segmentation of Satellite image TIme Series",
+    "url": "https://zenodo.org/records/5012942",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Public dataset for Panoptic segmentation of agricultural parcels from satellite image time series. See companion github repository for more information.",
+    "doi": "10.5281/zenodo.5012942",
+    "publisher": "Zenodo",
+    "creators": [
+     "Sainte Fare Garnot Vivien",
+     "Landrieu Loic"
+    ],
+    "year": 2021,
+    "version": "1.0",
+    "updated": "2021-06-28",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 28760245504,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 93494,
+     "views": 13975
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "5012942",
+     "concept_record_id": "5012941",
+     "concept_doi": "10.5281/zenodo.5012941",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::61372e8078849534e554c3e8767edc53",
+      "url": "https://doi.org/10.5281/zenodo.5012941"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/5012942",
+     "checked_at": "2026-11-11T17:37:08Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:5012942"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "PASTIS - Panoptic Segmentation of Satellite image TIme Series"
+    }
+   },
+   "fit": "strong",
+   "why": "Parcel-level semantic and panoptic crop labels with Sentinel-2 time series, ready as patches; the most used benchmark for crop segmentation. PASTIS-R adds Sentinel-1.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Agricultural parcels with crop-type labels (from memory: 18 crop classes, France)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Parcel-level panoptic segmentation (record description)"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Satellite image time series packaged with labels (record + companion GitHub)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Zenodo licence CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/5012942",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)",
+    "Optional: PASTIS-R (https://zenodo.org/records/5735646, 53.7 GB) for the S1+S2 version"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "28.8 GB download",
+    "Study area is four regions of France (from memory), so geographic generalisation is limited",
+    "Companion GitHub repo has loaders and baselines"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "zenodo:15095445",
+    "source": "zenodo",
+    "title": "EuroCropsML",
+    "url": "https://zenodo.org/records/15095445",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "EuroCropsML * is a ready-to-use ML dataset combining EuroCrops reference data with Sentinel-2 reflectance data from 2021. It contains data from Latvia, Portugal, and Estonia and is intended for benchmarking few-shot crop type classification. We used Eurostat's GISCO dataset to map the EuroCrops parcels to their NUTS1-3 region. The provided data comes in two stages: raw_data.zip (stage 1): One dataframe per country containing a annual time series of observations for each parcel, as well as separate files for the parcels' geometries and classes ( EC_hcat_c = 10-digit HCAT code indicating the hierarchy of the crop). preprocess.zip (stage 2): Read-to-use .npz -files. Each data point is saved in\u2026",
+    "doi": "10.5281/zenodo.15095445",
+    "publisher": "Zenodo",
+    "creators": [
+     "Reuss, Joana",
+     "Macdonald, Jan"
+    ],
+    "year": 2025,
+    "version": null,
+    "updated": "2025-04-07",
+    "licence": {
+     "id": "CC-BY-SA-4.0",
+     "name": "cc-by-sa-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": true
+    },
+    "size": {
+     "bytes": 4768938112,
+     "files": 3
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 6188,
+     "views": 5198
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "15095445",
+     "concept_record_id": "10629609",
+     "concept_doi": "10.5281/zenodo.10629609",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.15095445",
+      "url": "https://doi.org/10.5281/zenodo.15095445"
+     },
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::601f2b95218681be873f963e1208fa2d",
+      "url": "https://doi.org/10.5281/zenodo.12168505"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/15095445",
+     "checked_at": "2026-11-11T17:37:11Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:15095445"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "EuroCropsML"
+    }
+   },
+   "fit": "strong",
+   "why": "Analysis-ready parcel-level Sentinel-2 time series with crop labels across 3 countries, designed for crop-type benchmarking.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "176 crop classes, 706,683 labelled points (Sci. Data paper abstract)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "per-parcel median pixel values"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Sentinel-2 L1C reflectance time series from 2021, Latvia, Portugal, Estonia"
+    },
+    "R4": {
+     "status": "partial",
+     "evidence": "CC-BY-SA-4.0: publishing results is fine; share-alike applies to derived data/adaptations, and whether it reaches trained weights is legally unsettled"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/15095445",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Share-alike licence; check with your supervisor/institution before releasing models trained on it under a different licence",
+    "Per-parcel median values, not image patches, so no spatial context (suits time-series models, not segmentation)"
+   ],
+   "papers": [
+    {
+     "title": "The EUROCROPSML time series benchmark dataset for few-shot crop type classification in Europe",
+     "year": 2025,
+     "doi": "10.1038/s41597-025-04952-7",
+     "url": "https://doi.org/10.1038/s41597-025-04952-7",
+     "note": "dataset paper"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "zenodo:14585341",
+    "source": "zenodo",
+    "title": "BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING",
+    "url": "https://zenodo.org/records/14585341",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": "10.5194/isprs-archives-xliii-b2-2020-1545-2020",
+    "publisher": "Zenodo",
+    "creators": [
+     "Ru\u00dfwurm, Marc",
+     "Pelletier, Charlotte",
+     "Zollner, Johann Maximilian",
+     "Lef\u00e8vre, S\u00e9bastien",
+     "K\u00f6rner, Marco"
+    ],
+    "year": 2020,
+    "version": null,
+    "updated": "2025-01-01",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 7650624294,
+     "files": 15
+    },
+    "formats": [
+     "zip",
+     "pth"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 1916,
+     "views": 90
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "14585341",
+     "concept_record_id": "14585340",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/14585341",
+     "checked_at": "2026-11-11T17:37:12Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:14585341"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING"
+    }
+   },
+   "fit": "strong",
+   "why": "Classic parcel-level time-series benchmark (Brittany) with Sentinel-2 series per field, widely used for sequence models.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Title: time series dataset for crop type mapping"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "field-parcel level (from memory)"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Sentinel-2 time series included (from memory: L1C and L2A)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/14585341",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "7.7 GB",
+    "Single region, single year (from memory: Brittany, 2017), few crop groups",
+    "Record has no description; check the GitHub repo/paper for class list"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "zenodo:4715631",
+    "source": "zenodo",
+    "title": "TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification",
+    "url": "https://zenodo.org/records/4715631",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "TimeSen2Crop is a pixel based dataset made up of more than 1 million samples of Sentinel 2 Time Series associated to 16 crop types, during an agronomic year ranging from September 2017 to August 2018. The dataset contains atmospherically corrected samples, as well as information related to snow, clouds and shadows. This benchmark dataset has been developed in the framework of the ExtremeEarth project, which received funding from the European Union\u2019s Horizon 2020 research and innovation programme under grant agreement No 825258.",
+    "doi": "10.1109/jstars.2021.3073965",
+    "publisher": "Zenodo",
+    "creators": [
+     "Giulio Weikmann",
+     "Claudia Paris",
+     "Lorenzo Bruzzone"
+    ],
+    "year": 2021,
+    "version": null,
+    "updated": "2024-07-19",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 1080051855,
+     "files": 2
+    },
+    "formats": [
+     "pdf",
+     "zip"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 2777,
+     "views": 4174
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "4715631",
+     "concept_record_id": "4715630",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:dedup_wf_002::41459b239bb01bf32cf13193b7331ed8",
+      "url": "http://dx.doi.org/10.1109/JSTARS.2021.3073965"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/4715631",
+     "checked_at": "2026-11-11T17:37:08Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:4715631"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification"
+    }
+   },
+   "fit": "strong",
+   "why": "Pixel-level Sentinel-2 time series with 16 crop types; small, easy to use, good for pixel classifiers.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "16 crop types"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "pixel based, >1 million samples"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Sentinel-2 time series Sept 2017 - Aug 2018 with cloud/snow info"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/4715631",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "1.1 GB",
+    "Single agronomic year; region (Austria, from memory)"
+   ],
+   "papers": [
+    {
+     "title": "TimeSen2Crop (IEEE JSTARS)",
+     "year": 2021,
+     "doi": "10.1109/jstars.2021.3073965",
+     "url": "https://doi.org/10.1109/jstars.2021.3073965",
+     "note": "dataset paper"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "zenodo:7892012",
+    "source": "zenodo",
+    "title": "AgriSen-COG.LPIS.GT.",
+    "url": "https://zenodo.org/records/7892012",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "AgriSen-COG - a large-scale dataset for crop type mapping. This repository includes the original and processed LPIS files and the rasterized corresponding tiles in Geotiff format.",
+    "doi": "10.5281/zenodo.7892012",
+    "publisher": "Zenodo",
+    "creators": [
+     "Selea, Teodora"
+    ],
+    "year": 2023,
+    "version": null,
+    "updated": "2023-06-20",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 28175787944,
+     "files": 9
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "benchmark dataset",
+     "crop monitoring",
+     "crop detection",
+     "deep learning",
+     "semantic segmentation",
+     "multi-temporal analysis",
+     "crop classification",
+     "agricultural application",
+     "sentinel-2"
+    ],
+    "usage": {
+     "downloads": 1908,
+     "views": 950
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "7892012",
+     "concept_record_id": "7892011",
+     "concept_doi": "10.5281/zenodo.7892011",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/7892012",
+     "checked_at": "2026-11-11T17:37:15Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:7892012"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "AgriSen-COG.LPIS.GT."
+    }
+   },
+   "fit": "strong",
+   "why": "Large multi-country crop-type mapping dataset built from LPIS parcels and Sentinel-2 tiles as Cloud-Optimised GeoTIFFs.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Described as a large-scale dataset for crop type mapping"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "rasterised LPIS parcel labels"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Record lists LPIS/GT tiles; confirm the Sentinel-2 time series sits in the same or a linked record"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/7892012",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "28 GB; this record is the labels (LPIS.GT), the imagery may be a separate record, check the dataset paper"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 6,
+   "record": {
+    "id": "zenodo:10251170",
+    "source": "zenodo",
+    "title": "CropHarvest Dataset",
+    "url": "https://zenodo.org/records/10251170",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Dataset being developed for the CropHarvest package and benchmarks.",
+    "doi": "10.5281/zenodo.10251170",
+    "publisher": "Zenodo",
+    "creators": [
+     "Gabriel Tseng",
+     "Ivan Zvonkov",
+     "Catherine Nakalembe",
+     "Hannah Kerner"
+    ],
+    "year": 2023,
+    "version": "v14",
+    "updated": "2023-12-04",
+    "licence": {
+     "id": "CC-BY-SA-4.0",
+     "name": "cc-by-sa-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": true
+    },
+    "size": {
+     "bytes": 27677587661,
+     "files": 4
+    },
+    "formats": [
+     "gz",
+     "geojson"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 39532,
+     "views": 13485
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "10251170",
+     "concept_record_id": "5021761",
+     "concept_doi": "10.5281/zenodo.5021761",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/10251170",
+     "checked_at": "2026-11-11T17:37:14Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:10251170"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "CropHarvest Dataset"
+    }
+   },
+   "fit": "partial",
+   "why": "Global crop-label benchmark with pixel time series (S1, S2, climate); strongest for few-shot and transfer settings, mostly binary crop tasks plus a multiclass set.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Multiclass labels exist but many tasks are crop vs non-crop (from memory)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "point-level labels with pixel time series"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Pre-extracted satellite time series (from memory)"
+    },
+    "R4": {
+     "status": "partial",
+     "evidence": "CC-BY-SA-4.0 share-alike"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/10251170",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "27.7 GB record; share-alike licence",
+    "Time series are Sentinel-2 plus other sources, not S2-only"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 7,
+   "record": {
+    "id": "zenodo:18461147",
+    "source": "zenodo",
+    "title": "Brazil-Crop dataset: a benchmark for agricultural remote sensing applications",
+    "url": "https://zenodo.org/records/18461147",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Abstract Remote sensing facilitates the regular acquisition of agricultural information using non-invasive measurement techniques. Field data are essential for effective agricultural monitoring via remote sensing methods. Open and reliable field data are golden in the new Geospatial Artificial Intelligence (GeoAI) era. However, publicly available field data remain limited, particularly in tropical regions where agriculture exhibits considerable dynamism. This dataset seeks to address this gap by introducing a comprehensive crop type dataset that provides seasonal land use information across two distinct agricultural regions in Brazil. The dataset captures the temporal dynamics of Brazilian\u2026",
+    "doi": "10.5281/zenodo.18461147",
+    "publisher": "Zenodo",
+    "creators": [
+     "Volochen Oldoni, Lucas",
+     "Kuhl, Samuel",
+     "Prudente, Victor Hugo Rohden",
+     "Dalla Bernardina Garcia, Andre",
+     "Pastana, Afonso"
+    ],
+    "year": 2026,
+    "version": null,
+    "updated": "2026-09-16",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 10398911660,
+     "files": 9
+    },
+    "formats": [
+     "zip",
+     "html",
+     "md"
+    ],
+    "subjects": [
+     "Remote Sensing",
+     "Agriculture",
+     "Earth Observation",
+     "Land Use Land Cover (LULC)",
+     "Crop Type Mapping",
+     "GeoAI (Geospatial Artificial Intelligence)",
+     "Field Data",
+     "Ground Truth",
+     "In-situ Data",
+     "Training Data",
+     "Brazil",
+     "Mato Grosso"
+    ],
+    "usage": {
+     "downloads": 433,
+     "views": 127
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "18461147",
+     "concept_record_id": "18461146",
+     "concept_doi": "10.5281/zenodo.18461146",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::8832471fa4233a1b79d8aeb93591ef82",
+      "url": "https://doi.org/10.5281/zenodo.18461146"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/18461147",
+     "checked_at": "2026-11-11T17:37:17Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:18461147"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Brazil-Crop dataset: a benchmark for agricultural remote sensing applications"
+    }
+   },
+   "fit": "partial",
+   "why": "Recent tropical crop benchmark; useful as a second geography for generalisation tests.",
+   "requirements": {
+    "R1": {
+     "status": "unknown",
+     "evidence": "Not checked beyond abstract"
+    },
+    "R2": {
+     "status": "unknown",
+     "evidence": "Field data, level not checked"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "Not checked"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/18461147",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "10.4 GB; 2026 release with little independent usage yet; read the abstract/README before committing"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 8,
+   "record": {
+    "id": "zenodo:19949051",
+    "source": "zenodo",
+    "title": "Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Per\u00fa",
+    "url": "https://zenodo.org/records/19949051",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This repository contains multi-annual crop classification data for the Chugay district, Peru. The main dataset, s2_cube.nc , contains processed Sentinel-2 imagery (August 2021\u2013December 2024) used to generate crop classifications. The imagery was retrieved from Google Earth Engine collections: COPERNICUS/S2_SR , COPERNICUS/S2_CLOUD_PROBABILITY , and GOOGLE/CLOUD_SCORE_PLUS/V1/S2_HARMONIZED and processed using the Python function export_s2_images from the s2_gee_utils module in the Github repository https://github.com/kundun14/multi-annual-crop-classification-with-phenological-features . Additional datasets include: aoi.gpkg \u2013 Area of interest of the study region. fields.gpkg \u2013 Cropland bound\u2026",
+    "doi": "10.5281/zenodo.19949051",
+    "publisher": "Zenodo",
+    "creators": [
+     "Bueno Due\u00f1as, Marcelo",
+     "Loayza Loza, Hildo Mac Lean"
+    ],
+    "year": 2026,
+    "version": "V2",
+    "updated": "2026-05-01",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 7196747600,
+     "files": 3
+    },
+    "formats": [
+     "nc",
+     "gpkg"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 428,
+     "views": 688
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "19949051",
+     "concept_record_id": "17352135",
+     "concept_doi": "10.5281/zenodo.17352135",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::022d6fa0c430f8d1f81ba529f477591f",
+      "url": "https://doi.org/10.5281/zenodo.17352136"
+     },
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.19949051",
+      "url": "https://doi.org/10.5281/zenodo.19949051"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/19949051",
+     "checked_at": "2026-11-11T17:37:16Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:19949051"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Per\u00fa"
+    }
+   },
+   "fit": "partial",
+   "why": "Sentinel-2 cube plus multi-annual crop classes for one Peruvian district.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "multi-annual crop classification data"
+    },
+    "R2": {
+     "status": "unknown",
+     "evidence": "Label unit not checked"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "s2_cube.nc, Aug 2021 - Dec 2024"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "CC-BY-4.0"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open"
+    }
+   },
+   "access_steps": [
+    "Open https://zenodo.org/records/19949051",
+    "Download the archive(s) directly, no account needed (Zenodo access_right=open)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Single small district: a niche or transfer test, not a main benchmark"
+   ],
+   "papers": []
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "EuroCrops",
+   "url": "https://zenodo.org/records/14094196",
+   "reason": "Excellent parcel labels for 16 EU countries (CC-BY-SA-4.0) but no imagery; you would have to build the Sentinel-2 pipeline. EuroCropsML is the ready-made version."
+  },
+  {
+   "name": "IBM-NASA multi-temporal-crop-classification",
+   "url": "https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification",
+   "reason": "Open, CC-BY-4.0 and ready to use, but imagery is Harmonized Landsat-Sentinel (30 m) over the US with CDL-derived labels, not native Sentinel-2."
+  },
+  {
+   "name": "CROPSIGHT-US",
+   "url": "https://zenodo.org/records/19501943",
+   "reason": "Ground-truth labels only (0.3 GB, US); not a packaged time-series benchmark."
+  }
+ ],
+ "gaps": [
+  "Sen4AgriNet (https://github.com/Orion-AI-Lab/S4A) exists and is a Sentinel-2 multi-year, multi-country crop benchmark, but its GitHub page states no licence and downloads sit on Dropbox/Google Drive/HuggingFace; licence unconfirmed.",
+  "ZueriCrop (Switzerland, S2 time series, crop parcels) could not be located at an official data record; unconfirmed.",
+  "DENETHOR, TimeMatch, SICKLE and other datasets were not verified in this session."
+ ],
+ "notes": "Registry records (Zenodo/HuggingFace) checked 2026-11-11. Facts marked 'from memory' were not confirmed."
+}

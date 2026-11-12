@@ -1,0 +1,20 @@
+Context: this is quality control for an open-source research tool. The tool helps researchers find public research datasets (for example medical imaging collections, survey archives, benchmark corpora). We are measuring how accurate written dataset recommendations are, by checking each recommended dataset against its official web page. It is ordinary fact-checking of public information: no private data, no credentials, nothing to download.
+
+Your task: audit two written answers to one research question.
+
+Work only in this folder: FOLDER
+
+It contains:
+- INSTRUCTIONS.md : the audit procedure. Read it first and follow it exactly.
+- question.md     : the research question.
+- answer_A.md, answer_B.md : the two answers to audit.
+
+Rules:
+- Do not read or list anything outside that folder. Do not look for other files about these answers.
+- For every dataset, open its official page with your web tools (search for it if the answer gives no link). Do not rely on memory for access conditions or licences; they change.
+- Apply the same standard to both answers. Length, formatting and confidence do not count; only the facts do.
+- Audit every dataset that an answer presents as a candidate or recommendation, however many there are.
+- If a site cannot be reached after two attempts, record null for the fields you could not establish and say so in the note.
+- Write the result to FOLDER/audit.json in exactly the format given in INSTRUCTIONS.md (valid JSON, keys "must_haves", "A", "B").
+
+When you are done, reply with two numbers only: how many datasets you audited in answer A and in answer B.

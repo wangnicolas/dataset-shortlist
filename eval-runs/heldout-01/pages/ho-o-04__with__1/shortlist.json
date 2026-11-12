@@ -1,0 +1,407 @@
+{
+ "question": "Free galaxy images with human morphology labels (bars, arms, bulge, mergers), at least 40k galaxies, for CNN training.",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "At least 40k galaxies",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Detailed morphology: bars, spiral arms, bulge size, mergers",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Labels from humans, not model predictions",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Images bundled with labels",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "datacite",
+   "openaire",
+   "huggingface"
+  ],
+  "queries": [
+   "galaxy zoo morphology",
+   "galaxy morphology classification images",
+   "galaxy morphology citizen science",
+   "Galaxy Zoo DESI"
+  ],
+  "n_candidates": 89
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "zenodo:3565489",
+    "source": "zenodo",
+    "title": "Galaxy Zoo 2: Images from Original Sample",
+    "url": "https://zenodo.org/records/3565489",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The Galaxy Zoo team regularly receives requests for subject images for various versions of Galaxy Zoo, in order to facilitate other investigations, e.g. machine learning projects. This repository is an updated attempt to provide those in a way that is useful to the wider community. The images here are meant to be used with the data tables available at data.galaxyzoo.org . They are the \"original\" sample of subject images in Galaxy Zoo 2 (Willett et al. 2013, MNRAS, 435, 2835, DOI: 10.1093/mnras/stt1458 ) as identified in Table 1 of Willett et al. and also in Hart et al. (2016, MNRAS, 461, 3663, DOI: 10.1093/mnras/stw1588 ). The original GZ2 subjects also gave the option to view an inverted v\u2026",
+    "doi": "10.5281/zenodo.3565489",
+    "publisher": "Zenodo",
+    "creators": [
+     "Willett, Kyle W.",
+     "Lintott, Chris J.",
+     "Bamford, Steven P.",
+     "Masters, Karen L.",
+     "Simmons, Brooke D."
+    ],
+    "year": 2013,
+    "version": "Original",
+    "updated": "2020-02-12",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 3366578919,
+     "files": 3
+    },
+    "formats": [
+     "csv",
+     "txt",
+     "zip"
+    ],
+    "subjects": [
+     "Galaxy Evolution",
+     "Astronomy",
+     "Astrophysics",
+     "Morphology"
+    ],
+    "usage": {
+     "downloads": 15831,
+     "views": 9173
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "3565489",
+     "concept_record_id": "3565488",
+     "concept_doi": "10.5281/zenodo.3565488",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.3565489",
+      "url": "https://doi.org/10.5281/zenodo.3565489"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/3565489",
+     "checked_at": "2026-11-11T18:35:20Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:3565489"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Galaxy Zoo 2: Images from Original Sample"
+    }
+   },
+   "fit": "strong",
+   "why": "243,434 SDSS images with GZ2 volunteer votes (bar, spiral arms, bulge prominence, mergers/odd features) from the data.galaxyzoo.org tables.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "README: 243,434 images; mapping CSV to GZ2 Table 1"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "GZ2 tree: bars, spiral arms, bulge size, mergers/odd",
+     "url": "https://data.galaxyzoo.org"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Labels are volunteer vote counts/fractions (16M classifications)"
+    },
+    "R4": {
+     "status": "partial",
+     "evidence": "Images (Zenodo) and labels (data.galaxyzoo.org) are separate downloads joined by gz2_filename_mapping.csv"
+    }
+   },
+   "access_steps": [
+    "Download images_gz2.zip (3.35 GB) and gz2_filename_mapping.csv from the Zenodo record",
+    "Download GZ2 Table 1 (Hart et al. 2016 debiased) CSV from data.galaxyzoo.org",
+    "Join via objid/asset_id"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Use the vote columns, not any model columns",
+    "Labels from the Zenodo catalogue record 3566991 are flagged restricted; use data.galaxyzoo.org instead (not verified further)"
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "zenodo:4573248",
+    "source": "zenodo",
+    "title": "Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Galaxies",
+    "url": "https://zenodo.org/records/4573248",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This repository contains the data released in the paper \"Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Galaxies\" (DOI to follow on publication). We release detailed morphology catalogues, both volunteer and automated, for Galaxy Zoo DECaLS. - gz_decals_volunteers_1_and_2 contains volunteer classifications for galaxies classified during the GZD-1 and GZD-2 campaigns. - gz_decals_volunteers_5 similarly contains classifications from the GZD-5 campaign. Note that GZD-5 used a modified schema designed to better detect mergers and weak bars, and includes many galaxies with only approx. five volunteer responses. - gz_decals_auto_posteriors\u2026",
+    "doi": "10.5281/zenodo.4573248",
+    "publisher": "Zenodo",
+    "creators": [
+     "Walmsley, Mike",
+     "Lintott, Chris",
+     "Tobias, Geron",
+     "Kruk, Sandor J",
+     "Krawczyk, Coleman"
+    ],
+    "year": 2020,
+    "version": "0.0.2",
+    "updated": "2021-06-22",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 108214172224,
+     "files": 11
+    },
+    "formats": [
+     "csv",
+     "parquet",
+     "md",
+     "zip"
+    ],
+    "subjects": [
+     "galaxies",
+     "deep learning",
+     "citizen science",
+     "Galaxy Zoo",
+     "astrophysics"
+    ],
+    "usage": {
+     "downloads": 30061,
+     "views": 12369
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "4573248",
+     "concept_record_id": "4196266",
+     "concept_doi": "10.5281/zenodo.4196266",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::e8a0b35bce9ca6629c02400f2c337581",
+      "url": "https://doi.org/10.5281/zenodo.4196267"
+     },
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::b6e67d798fb66e7fc00f1f29ac92eba3",
+      "url": "https://doi.org/10.5281/zenodo.4573248"
+     },
+     {
+      "source": "datacite",
+      "id": "datacite:10.5281/zenodo.4573248",
+      "url": "https://doi.org/10.5281/zenodo.4573248"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/4573248",
+     "checked_at": "2026-11-11T18:35:18Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:4573248"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Galaxy Zoo DECaLS: Detailed Visual Morphology Measurements from Volunteers and Deep Learning for 314,000 Galaxies"
+    }
+   },
+   "fit": "strong",
+   "why": "DECaLS images (DR5 PNGs, ~104 GB) plus volunteer-vote catalogues for GZD-1/2/5 with a modern schema including bars, mergers, spiral arm count, bulge size.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "314k galaxies in total; volunteer files cover a subset (check row counts)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Record: schema covers bars, spiral arms, mergers, bulge"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "gz_decals_volunteers_1_and_2 / _5 are volunteer votes; gz_decals_auto_posteriors are model predictions - exclude"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Record includes dr5_png zip files, with images named by iauname"
+    }
+   },
+   "access_steps": [
+    "Download volunteer CSV/parquet and schema.md",
+    "Download image zips (4 files, ~104 GB total)"
+   ],
+   "time_to_access": "days",
+   "caveats": [
+    "Image zips are for GZD-5 galaxies, many with only ~5 votes: filter by vote count",
+    "Do not use gz_decals_auto_posteriors as labels"
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "zenodo:13357341",
+    "source": "zenodo",
+    "title": "Galaxy Zoo: Morphologies based on UKIDSS NIR Imaging for 71,052 Galaxies",
+    "url": "https://zenodo.org/records/13357341",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Galaxy Zoo UKIDSS contains morphology measurements for 71,052 galaxies with YJK (1\u20132.4 \u03bcm) imaging from the United Kingdom Infrared Telescope Infrared Deep Sky Survey ( UKIDSS ). Galaxies were selected out of the Galaxy Zoo 2 (GZ2) sample, so also have classifications based on gri (0.48\u20130.76 \u03bcm) imaging from the Sloan Digital Sky Survey. An identical classification tree, and vote weighting/aggregation was applied to both UKIDSS and GZ2 classifications enabling direct comparisons. Masters et al. (2024) is an open access RNAAS publication which briefly describes this phase of Galaxy Zoo, which ran from 2013-2014 on the Galaxy Zoo site. Please cite this, and Galloway 2018 (PhD Thesis) if you u\u2026",
+    "doi": "10.3847/2515-5172/ad6f10",
+    "publisher": "Zenodo",
+    "creators": [
+     "Masters, Karen",
+     "Galloway, Melanie",
+     "Fortson, Lucy",
+     "Lintott, Chris",
+     "Read, Mike"
+    ],
+    "year": 2024,
+    "version": null,
+    "updated": "2025-05-28",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 7946469798,
+     "files": 3
+    },
+    "formats": [
+     "parquet",
+     "csv",
+     "zip"
+    ],
+    "subjects": [
+     "0103 physical sciences",
+     "01 natural sciences"
+    ],
+    "usage": {
+     "downloads": 893,
+     "views": 510
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "13357341",
+     "concept_record_id": "13357340",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:od______2659::23bbd7d788e616e03acabeca8ca2bacc",
+      "url": "https://zenodo.org/records/13357341"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/13357341",
+     "checked_at": "2026-11-11T18:36:10Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:13357341"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Galaxy Zoo: Morphologies based on UKIDSS NIR Imaging for 71,052 Galaxies"
+    }
+   },
+   "fit": "partial",
+   "why": "71,052 galaxies with near-infrared UKIDSS images and volunteer votes; images and votes in one record.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "71,052 galaxies"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Same GZ2 decision tree"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Catalogue contains volunteer vote counts and fractions"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "ukidss_images.zip (7.9 GB) in same record"
+    }
+   },
+   "access_steps": [
+    "Download ukidss_catalog.parquet and ukidss_images.zip"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Infrared imaging, lower resolution than optical; fewer galaxies show fine structure",
+    "Record description says subjects were also classified by Zoobot; use vote columns only"
+   ]
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "Galaxy Zoo DESI (8.7M)",
+   "url": "https://zenodo.org/records/8360385",
+   "reason": "Main catalogue is deep-learning predicted vote fractions; only ~96k GZD-8 volunteer votes are human labels and images are not bundled."
+  },
+  {
+   "name": "Galaxy10 DECaLS",
+   "url": "https://doi.org/10.5281/zenodo.10845026",
+   "reason": "About 17.7k images (from memory), below 40k, and only 10 coarse classes."
+  },
+  {
+   "name": "Galaxy MNIST",
+   "url": "https://huggingface.co/datasets/matthieulel/galaxy_mnist",
+   "reason": "10k images and 4 coarse classes: too small and coarse."
+  }
+ ],
+ "gaps": [
+  "Galaxy Zoo Hubble/CANDELS and Euclid Q1 visual morphology were not checked in detail."
+ ],
+ "notes": "Literature search returned little relevant; not all sizes verified."
+}

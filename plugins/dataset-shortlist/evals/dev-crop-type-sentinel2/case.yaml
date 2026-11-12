@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: dev-crop-type-sentinel2
+expected_outcome: |
+  A good answer recommends ready-made crop type benchmarks that pair field- or pixel-level crop labels with Sentinel-2 time series, such as BreizhCrops, PASTIS, Sen4AgriNet and TimeSen2Crop, with where to download each.
+  It states their licences correctly, for example PASTIS and TimeSen2Crop as open Zenodo downloads under CC BY 4.0 and Sen4AgriNet under the MIT licence.
+  It does not present EuroSAT, a single-date land-use patch dataset whose only agricultural classes are annual crop, permanent crop and pasture, as a crop type time-series benchmark.

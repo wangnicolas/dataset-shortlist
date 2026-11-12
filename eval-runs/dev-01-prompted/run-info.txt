@@ -1,0 +1,7 @@
+started: 2026-11-11T15:46:24Z
+skill commit: e3dd0fe373a5418e1a24c6f37ae848bf81ba6d44 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals-prompted
+extra options: --ablation none --model sonnet --runs 1 -j 2 --max-cost-usd 30
+claude plugin eval exit status: 1 (1 only means some case scored below the threshold)
+finished: 2026-11-11T15:51:25Z

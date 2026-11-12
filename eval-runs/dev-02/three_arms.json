@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "model": "sonnet",
+    "judge": "sonnet",
+    "cost_usd": 9.883384499999998
+  },
+  "score": {
+    "health": {
+      "with": 0.9722222222222222,
+      "without": 0.898989898989899,
+      "prompted": 0.8434343434343434
+    },
+    "other fields": {
+      "with": 0.8138888888888889,
+      "without": 0.7583333333333333,
+      "prompted": 0.6833333333333333
+    }
+  },
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 0.9444444444444444,
+      "prompted": 0.8888888888888888
+    },
+    "health / access": {
+      "with": 0.9285714285714286,
+      "without": 0.7857142857142857,
+      "prompted": 0.8571428571428571
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 0.5
+    },
+    "other fields / recall": {
+      "with": 0.875,
+      "without": 0.875,
+      "prompted": 0.625
+    },
+    "other fields / access": {
+      "with": 0.6428571428571429,
+      "without": 0.5,
+      "prompted": 0.5714285714285714
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    },
+    "other fields / long tail": {
+      "with": 1.0,
+      "without": 1.0,
+      "prompted": 1.0
+    }
+  },
+  "links": {
+    "with": {
+      "per_answer": 11.25,
+      "total": 90,
+      "ok": 88,
+      "dead": 0,
+      "blocked": 2
+    },
+    "without": {
+      "per_answer": 0.0,
+      "total": 0,
+      "ok": 0,
+      "dead": 0,
+      "blocked": 0
+    },
+    "prompted": {
+      "per_answer": 12.25,
+      "total": 49,
+      "ok": 45,
+      "dead": 2,
+      "blocked": 2
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 16.25,
+      "minutes": 3.459441666666667,
+      "cost_usd": 0.3936754375,
+      "tool_calls": 14.25
+    },
+    "without": {
+      "turns": 1.0,
+      "minutes": 0.45354999999999995,
+      "cost_usd": 0.06739115,
+      "tool_calls": 0.0
+    },
+    "prompted": {
+      "turns": 13.5,
+      "minutes": 1.3079291666666668,
+      "cost_usd": 0.43728895,
+      "tool_calls": 12.5
+    }
+  },
+  "per_case": [
+    {
+      "case": "dev-crop-type-sentinel2",
+      "stratum": "other fields",
+      "with": 0.7777777777777777,
+      "without": 0.6666666666666666,
+      "prompted": 0.6666666666666666
+    },
+    {
+      "case": "dev-household-load-forecasting",
+      "stratum": "other fields",
+      "with": 0.8500000000000001,
+      "without": 0.8500000000000001,
+      "prompted": 0.7
+    },
+    {
+      "case": "dev-icu-sepsis-early-warning",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 0.9090909090909091,
+      "prompted": 0.9090909090909091
+    },
+    {
+      "case": "dev-parkinsons-voice-audio",
+      "stratum": "health",
+      "with": 0.9444444444444444,
+      "without": 0.8888888888888888,
+      "prompted": 0.7777777777777778
+    }
+  ]
+}

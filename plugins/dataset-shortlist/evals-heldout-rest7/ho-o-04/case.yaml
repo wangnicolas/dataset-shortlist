@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-o-04
+expected_outcome: |
+  A good answer recommends human-labelled galaxy morphology catalogues with tens of thousands of galaxies or more, such as Galaxy Zoo 2 (with its image set on Zenodo), the Galaxy Zoo DECaLS volunteer catalogues with the volunteer-facing images, and Galaxy Zoo: Hubble, and says they are free to download (the Zenodo releases are CC BY 4.0).
+  It does not present Galaxy10 DECaLS (17,736 images in 10 broad classes) as meeting the 40,000-galaxy requirement, and ideally adds a less known human-labelled release such as Galaxy Zoo: UKIDSS or Galaxy Zoo: CANDELS.

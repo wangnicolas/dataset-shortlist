@@ -1,0 +1,16 @@
+{
+  "name": "dataset-shortlist",
+  "version": "0.1.2",
+  "description": "Find publicly available datasets for a research question: searches dataset registries and the literature, checks each dataset against its registry record or landing page, states how it can be accessed and under which licence, marks what was checked and what is recalled, and renders an interactive shortlist.",
+  "author": {
+    "name": "Nicolas Wang"
+  },
+  "license": "MIT",
+  "keywords": [
+    "datasets",
+    "research",
+    "data-discovery",
+    "open-data",
+    "health-data"
+  ]
+}

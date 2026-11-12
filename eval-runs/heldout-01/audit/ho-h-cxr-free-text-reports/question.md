@@ -1,0 +1,1 @@
+I'm working on automatic radiology report generation for chest X-rays, so I need datasets where each image or study comes with the actual free-text report the radiologist wrote, not just labels extracted from it. English reports are preferred, but a non-English set would be fine for a secondary experiment. Which datasets have that, and what's involved in getting each of them?

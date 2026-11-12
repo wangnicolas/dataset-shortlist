@@ -1,0 +1,14 @@
+{
+  "name": "dataset-shortlist-marketplace",
+  "owner": {
+    "name": "Nicolas Wang"
+  },
+  "plugins": [
+    {
+      "name": "dataset-shortlist",
+      "source": "./plugins/dataset-shortlist",
+      "description": "Find publicly available datasets for a research question, each checked against its registry record or landing page, with access conditions and licence."
+    }
+  ],
+  "description": "Agent skills for finding research data you can actually obtain."
+}

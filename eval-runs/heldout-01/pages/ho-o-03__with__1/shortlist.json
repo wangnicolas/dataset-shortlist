@@ -1,0 +1,482 @@
+{
+ "question": "Real multi-party English business-style meeting recordings with diarization annotations, far-field/array audio, commercial use allowed (paid licence OK).",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Real (non-simulated) multi-party English meetings",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Speaker-turn annotations",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Commercial use permitted",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Far-field / microphone-array audio",
+   "must": false
+  },
+  {
+   "id": "R5",
+   "text": "Business-style content",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "datacite",
+   "huggingface",
+   "openaire",
+   "physionet",
+   "zenodo"
+  ],
+  "queries": [
+   "meeting corpus speaker diarization",
+   "multi-party meeting recordings",
+   "far-field microphone array speech meeting",
+   "AMI meeting corpus",
+   "NOTSOFAR",
+   "ICSI meeting corpus"
+  ],
+  "n_candidates": 110
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "huggingface:microsoft/NOTSOFAR",
+    "source": "huggingface",
+    "title": "NOTSOFAR-1 (recorded meetings, dev/eval/train sets)",
+    "url": "https://huggingface.co/datasets/microsoft/NOTSOFAR",
+    "access": {
+     "tier": "open",
+     "evidence": "gated=false; the Hub detected data files (format:audiofolder)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Introduction Welcome to the \"NOTSOFAR-1: Distant Meeting Transcription with a Single Device\" Challenge. This repo contains the baseline system code for the NOTSOFAR-1 Challenge. For more information about NOTSOFAR, visit CHiME's official challenge website Register to participate. Baseline system description. Contact us: join the chime-8-notsofar channel on the CHiME Slack, or open a GitHub issue. \ud83d\udcca Baseline Results on NOTSOFAR dev-set-1 Values are presented in\u2026",
+    "doi": null,
+    "publisher": "Hugging Face Hub",
+    "creators": [
+     "microsoft"
+    ],
+    "year": 2025,
+    "version": "ba8fd0f034",
+    "updated": "2026-06-21",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "CC BY 4.0 (from GitHub repo licence banner; confirm on dataset card)",
+     "url": "https://github.com/microsoft/NOTSOFAR1-Challenge",
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "text": "10K<n<100K"
+    },
+    "formats": [
+     "audio",
+     "audiofolder"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 47377,
+     "likes": 27
+    },
+    "extra": {
+     "gated": false,
+     "repo_id": "microsoft/NOTSOFAR",
+     "licence_note": "no licence declared on the Hub"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://huggingface.co/datasets/microsoft/NOTSOFAR",
+     "checked_at": "2026-11-11T18:30:12Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the huggingface registry record huggingface:microsoft/NOTSOFAR"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "huggingface",
+     "found_title": "microsoft/NOTSOFAR"
+    }
+   },
+   "fit": "strong",
+   "why": "Recorded real meetings (~30 hours dev/eval; train set of real meetings plus a ~1000 h simulated set) with single-device multi-channel and multi-device far-field audio, diarization and transcripts.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Recorded-meeting set distinct from the simulated training set (repo README); real-vs-simulated split from memory beyond that"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Challenge task is diarization + ASR; annotations from memory"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "GitHub shows 'MIT, CC-BY-4.0 licenses found'; HF dataset page shows no licence field. Confirm data licence."
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Title: Distant Meeting Transcription; multi-channel devices (from memory)"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "Office-style meetings across many rooms (from memory)"
+    }
+   },
+   "access_steps": [
+    "Use download_meeting_subset from the repo, or the HF dataset page",
+    "Confirm licence text on the dataset card/repo"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Verify the data licence yourself; the HF record states none",
+    "Simulated train set is mixtures; use only the recorded part if you need non-simulated"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "manual:https://groups.inf.ed.ac.uk/ami/corpus/",
+    "source": "manual",
+    "title": "AMI Meeting Corpus",
+    "url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+    "access": {
+     "tier": "open",
+     "evidence": "Download page: \"Use this page to download signals and annotations from the AMI\"; no login described"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "Creative Commons Attribution 4.0",
+     "url": "https://groups.inf.ed.ac.uk/ami/corpus/license.shtml",
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+     "checked_at": "2026-11-11T18:30:56Z",
+     "problems": [],
+     "notes": [
+      "title read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "AMI Corpus",
+     "access_text": {
+      "url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "sentences": [
+       "Training, test and evaluation sets",
+       "different roles in a design team, taking",
+       "a design project from kick-off to completion over the course of a day.",
+       "designed to be useful for a wide range of research areas."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "~100 h of real recorded meetings, 8-channel circular array plus lapel/headset mics, with speaker-segment annotations.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Roughly two thirds are scenario role-play (design team), one third natural meetings (page: 'different roles in a design team')"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Manual annotations v1.6.2 on download page"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "'released under the Creative Commons Attribution 4.0 license'"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "8-mic array (from memory)"
+    },
+    "R5": {
+     "status": "partial",
+     "evidence": "Design-team meetings, business-like but scripted scenario"
+    }
+   },
+   "access_steps": [
+    "Open https://groups.inf.ed.ac.uk/ami/download/",
+    "Tick meetings and signals, download",
+    "Credit AMI under CC BY 4.0"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Scenario meetings are acted roles",
+    "Attribution required"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "datacite:10.35111/dgej-5m98",
+    "source": "datacite",
+    "title": "ICSI Meeting Speech",
+    "url": "https://doi.org/10.35111/dgej-5m98",
+    "access": {
+     "tier": "fee",
+     "evidence": "LDC page: \"Login for the applicable fee\""
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Introduction ICSI Meeting Speech was produced by Linguistic Data Consortium (LDC) catalog number LDC2004S02 and ISBN 1-58563-285-6. The ICSI Meeting corpus is a collection of 75 meetings collected at the International Computer Science Institute in Berkeley during the years 2000-2002. The meetings included are \"natural\" meetings in the sense that they would have occurred anyway: they are generally regular weekly meetings of various ICSI working teams, including the team working on the ICSI Meeting Project. In recording meetings of this type, we hoped to capture meeting dynamics and speaking styles that are as natural as possible given that speakers are wearing close-talking microphones and a\u2026",
+    "doi": "10.35111/dgej-5m98",
+    "publisher": "Linguistic Data Consortium",
+    "creators": [
+     "Janin, Adam",
+     "Edwards, Jane",
+     "Ellis, Dan",
+     "Gelbart, David",
+     "Morgan, Nelson"
+    ],
+    "year": 2004,
+    "version": null,
+    "updated": "2021-07-01",
+    "licence": null,
+    "size": {
+     "text": "33554432 KB"
+    },
+    "formats": [],
+    "subjects": [],
+    "usage": {
+     "downloads": 0,
+     "views": 0,
+     "citations": 0
+    },
+    "extra": {
+     "landing_page": "https://catalog.ldc.upenn.edu/LDC2004S02",
+     "state": "findable",
+     "client": "ldc.catalog"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_________::79a8cdd60bbd0c2632887ce0619818f7",
+      "url": "https://doi.org/10.35111/dgej-5m98"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": 200,
+     "final_url": "https://catalog.ldc.upenn.edu/LDC2004S02",
+     "checked_at": "2026-11-11T18:30:15Z",
+     "problems": [],
+     "notes": [
+      "the DOI 10.35111/dgej-5m98 is registered and resolves to https://catalog.ldc.upenn.edu/LDC2004S02",
+      "access tier unknown (no standard access statement in rightsList); read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "datacite",
+     "found_title": "ICSI Meeting Speech",
+     "access_text": {
+      "url": "https://catalog.ldc.upenn.edu/LDC2004S02",
+      "sentences": [
+       "LDC User Agreement for Non-Members",
+       "Subscription & Standard Members, and Non-Members",
+       "Login for the applicable fee"
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "75 h of real, naturally occurring research-group meetings (ICSI), with far-field tabletop mics and transcripts/turn times.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Naturally occurring meetings (from memory)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Companion LDC2004T04 transcripts (verified record)"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "LDC non-member licence terms must be read; LDC licences often allow commercial use for a fee"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Tabletop far-field mics (from memory)"
+    },
+    "R5": {
+     "status": "partial",
+     "evidence": "Academic group meetings, not business"
+    }
+   },
+   "access_steps": [
+    "Log in at LDC and order LDC2004S02 and LDC2004T04",
+    "Check the non-member user agreement for commercial terms"
+   ],
+   "time_to_access": "days",
+   "caveats": [
+    "Fee; check commercial clause before buying"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "zenodo:8122551",
+    "source": "zenodo",
+    "title": "DiPCo -- Dinner Party Corpus",
+    "url": "https://zenodo.org/records/8122551",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "We present a speech data corpus that simulates a \"dinner party\" scenario taking place in an everyday home environment. The corpus was created by recording multiple groups of four Amazon employee volunteers having a natural conversation in English around a dining table. The participants were recorded by a single-channel close-talk microphone and by five far-field 7-microphone array devices positioned at different locations in the recording room. The dataset contains the audio recordings and human labeled transcripts of a total of 10 sessions with a duration between 15 and 45 minutes. The corpus was created to advance in the field of noise robust and distant speech processing and is intended\u2026",
+    "doi": "10.21437/interspeech.2020-2800",
+    "publisher": "Zenodo",
+    "creators": [
+     "Van Segbroeck, Maarten",
+     "Zaid, Ahmed",
+     "Kutsenko, Ksenia",
+     "Huerta, Cirenia",
+     "Nguyen, Tinh"
+    ],
+    "year": 2020,
+    "version": null,
+    "updated": "2024-07-11",
+    "licence": {
+     "id": "CDLA-Permissive-1.0",
+     "name": "cdla-permissive-1.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 13415862531,
+     "files": 2
+    },
+    "formats": [
+     "tgz",
+     "pdf"
+    ],
+    "subjects": [
+     "database",
+     "noise robustness",
+     "speaker separation",
+     "distant speech recognition",
+     "microphone array processing"
+    ],
+    "usage": {
+     "downloads": 10377,
+     "views": 3866
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "8122551",
+     "concept_record_id": "8122550",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/8122551",
+     "checked_at": "2026-11-11T18:30:12Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:8122551"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "DiPCo -- Dinner Party Corpus"
+    }
+   },
+   "fit": "weak",
+   "why": "Real far-field array recordings, but dinner-party conversation, only 10 sessions.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Real recordings"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Transcripts with speaker labels (from memory)"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "CDLA-Permissive-1.0 (Zenodo record)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Array devices"
+    },
+    "R5": {
+     "status": "unmet",
+     "evidence": "Dinner party, not business"
+    }
+   },
+   "access_steps": [
+    "Download from Zenodo record"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Small and off-domain; useful for far-field robustness only"
+   ],
+   "papers": []
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "MeetingBank_Audio",
+   "url": "https://huggingface.co/datasets/huuuyeah/MeetingBank_Audio",
+   "reason": "CC-BY-NC-SA-4.0 audio; council meetings, no diarization labels as far as known"
+  },
+  {
+   "name": "ELITR Minuting Corpus",
+   "url": "http://hdl.handle.net/11234/1-4692",
+   "reason": "CC-BY-NC-SA-4.0; minutes-focused"
+  },
+  {
+   "name": "ground-truth/multichannel-meetings-10h",
+   "url": "https://huggingface.co/datasets/ground-truth/multichannel-meetings-10h",
+   "reason": "CC-BY-NC-4.0"
+  },
+  {
+   "name": "CHiME-6, AliMeeting, AISHELL-4",
+   "url": "",
+   "reason": "Not confirmed this session. CHiME-6 is dinner parties; the other two are Mandarin. From memory, not a fit."
+  }
+ ],
+ "gaps": [
+  "Literature search returned little; the Interspeech 2024 NOTSOFAR paper was found but its abstract was not read.",
+  "Did not confirm ICSI's or NOTSOFAR's licence text directly; did not check ISL, NIST RT or CHiL via LDC."
+ ],
+ "notes": "Hugging Face search partly failed (response too large)."
+}

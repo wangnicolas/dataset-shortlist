@@ -1,0 +1,123 @@
+{
+  "must_haves": [
+    "Galaxy images that can be obtained for CNN training (images bundled with labels preferred, not required)",
+    "Detailed morphology labels covering bars, spiral arms, bulge size and mergers",
+    "At least 40,000 labelled galaxies",
+    "Labels from humans (volunteer votes or experts), not from model predictions",
+    "Free to obtain (no paid licence)"
+  ],
+  "A": [
+    {
+      "dataset": "Galaxy Zoo DECaLS (GZD-5 / GZD-8)",
+      "official_url": "https://zenodo.org/records/4573248",
+      "exists": true,
+      "access_stated": "Images and votes hosted together on Hugging Face under mwalmsley (`gz_decals`, `gz_evo`), loadable with the `datasets` library",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Zenodo release is open (CC-BY-4.0) with volunteer files gz_decals_volunteers_1_and_2 and gz_decals_volunteers_5, four DR5 PNG zips (~104 GB) and a separate model file gz_decals_auto_posteriors, and the paper abstract (arXiv 2102.08414) says 'Volunteers provided 7.5 million classifications for 314,000 galaxies' with ~140,000 receiving at least 30, covering bars and mergers; the open Hugging Face route A describes is real, but there is no public dataset named `gz_decals` under mwalmsley (API 401, absent from the account's dataset list): the DECaLS votes and images are in `mwalmsley/gz_desi` (dr12/dr5/dr8 campaign columns) and `mwalmsley/gz_evo`, both ungated, CC-BY-NC-SA-4.0, with the card requiring trained models to be released as source code by publication."
+    },
+    {
+      "dataset": "GZ Evo (Hugging Face mwalmsley/gz_evo)",
+      "official_url": "https://huggingface.co/datasets/mwalmsley/gz_evo",
+      "exists": true,
+      "access_stated": "Hugging Face under mwalmsley, images and votes together, loadable with `datasets`; use only the volunteer vote-count columns",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The dataset is ungated (parquet files download without login, CC-BY-NC-SA-4.0 with trained models to be released as source code) and holds 664,219 train + 141,760 test galaxies with images and bar, spiral, bulge-size and merging questions; the card says it 'combines all the published datasets (currently GZ2, GZ DESI, GZ CANDELS, GZ Hubble, and GZ UKIDSS)' and that 'The values are the count of volunteers who selected each answer', which does not support A's warning that 'parts of GZ Evo mix volunteer votes with Zoobot model predictions'."
+    },
+    {
+      "dataset": "Galaxy Zoo 2 (SDSS; Willett et al. 2013 catalogue)",
+      "official_url": "https://data.galaxyzoo.org/",
+      "exists": true,
+      "access_stated": "Via the Hugging Face `gz2` dataset (or the Kaggle subset)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "data.galaxyzoo.org gives direct downloads of the GZ2 tables (Willett 2013, 304,122 galaxies; Hart 2016 Table 1 with bar, spiral, bulge-prominence and odd-feature 'merger' vote columns) and links the images on Zenodo 3565489 (243,434 JPGs, CC-BY-4.0); the HF route is real (`mwalmsley/gz2`, ungated, 172,377 + 18,797 rows with 424x424 images and volunteer vote counts, CC-BY-NC-SA-4.0), but its columns carry only the 'something-odd' yes/no task, not the merger answer."
+    },
+    {
+      "dataset": "Kaggle 'Galaxy Zoo - The Galaxy Challenge' (GZ2 subset)",
+      "official_url": "https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge/data",
+      "exists": true,
+      "access_stated": "Free Kaggle account and acceptance of the competition rules",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The Kaggle data and rules pages returned only their title on three fetch attempts, so the account-and-rules requirement could not be checked; existence and content rest on a kaggle.com-restricted search summary of the data page (about 61,578 training JPGs, each solution row holding '37 values between 0 and 1' from 'crowdsourced volunteer classifications as part of the Galaxy Zoo 2 project') and on the GZ2 tree read in the official Hart table description (11 tasks, 37 answers, including bar, spiral, bulge prominence and merger)."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "Galaxy Zoo 2 (SDSS) images (Zenodo 3565489) + volunteer table (data.galaxyzoo.org)",
+      "official_url": "https://zenodo.org/records/3565489",
+      "exists": true,
+      "access_stated": "Open download: images from Zenodo (CC-BY-4.0) plus label table from data.galaxyzoo.org; table terms not checked",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Zenodo 3565489 is open, CC-BY-4.0, says 'There are 243,434 images in total' (images_gz2.zip 3.35 GB) and includes gz2_filename_mapping.csv, data.galaxyzoo.org links Hart 2016 Table 1 as a direct download (HTTP 200, no registration) with bar, spiral, bulge-prominence and merger vote columns, and Zenodo 3566991 is indeed access_right 'restricted'."
+    },
+    {
+      "dataset": "Galaxy Zoo DECaLS",
+      "official_url": "https://zenodo.org/records/4573248",
+      "exists": true,
+      "access_stated": "Open download from Zenodo, CC-BY-4.0, ~104 GB of images",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Zenodo 4573248 is open, CC-BY-4.0, and lists gz_decals_volunteers_1_and_2, gz_decals_volunteers_5, gz_decals_auto_posteriors ('the predicted posteriors'), schema.md and four DR5 PNG zips totalling ~103.7 GB, and says GZD-5 'includes many galaxies with only approx. five volunteer responses'; the record gives no volunteer count, but the paper abstract (arXiv 2102.08414) says volunteers classified 314,000 galaxies, ~140,000 of them at least 30 times, so the 40k minimum is met."
+    },
+    {
+      "dataset": "Galaxy Zoo UKIDSS (near-infrared)",
+      "official_url": "https://zenodo.org/records/13357341",
+      "exists": true,
+      "access_stated": "Open download from Zenodo, CC-BY-4.0, catalogue and 7.9 GB image zip in one record",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Zenodo 13357341 is open, CC-BY-4.0, covers 71,052 galaxies with a catalogue of 'volunteer vote counts ... and fractions' and ukidss_images.zip (7.9 GB, 70,845 JPGs 'exactly as shown to volunteers'), and states 'An identical classification tree' to GZ2 was used, so bar, spiral, bulge and odd-feature/merger questions are covered; near-infrared imaging is a fit caveat, not a must-have failure."
+    },
+    {
+      "dataset": "Galaxy Zoo: Hubble",
+      "official_url": "https://data.galaxyzoo.org/",
+      "exists": true,
+      "access_stated": "Listed on data.galaxyzoo.org; size and image bundling not checked",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "data.galaxyzoo.org offers direct table downloads (Table 4 'contains classifications of 113,705 galaxies', with bar, spiral, bulge-prominence and odd-feature merger vote columns) but no images there; the Galaxy Zoo team's own HF release `mwalmsley/gz_hubble` bundles images with volunteer vote counts for 96,449 galaxies (ungated, CC-BY-NC-SA-4.0), though that copy omits the merger answer."
+    },
+    {
+      "dataset": "Galaxy Zoo: CANDELS",
+      "official_url": "https://data.galaxyzoo.org/",
+      "exists": true,
+      "access_stated": "Listed on data.galaxyzoo.org; size and image bundling not checked",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "data.galaxyzoo.org offers direct downloads of Table 2 with raw and weighted volunteer classifications 'for each of the 49,555 unique sources', including bar, spiral, bulge-prominence and merging/tidal-debris tasks, but no images there; the Galaxy Zoo team's HF release `mwalmsley/gz_candels` bundles images with vote counts for 48,098 galaxies (ungated, CC-BY-NC-SA-4.0)."
+    },
+    {
+      "dataset": "Euclid Q1 visual morphology catalogue",
+      "official_url": "https://zenodo.org/records/15106473",
+      "exists": true,
+      "access_stated": "Zenodo record linked; access terms, size and label source not checked",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "Zenodo 15106473 is open (CC-BY-4.0) with a catalogue and cutout tars, but it states 'The measurements were made by Zoobot foundation models, finetuned on Euclid galaxies using the responses of Galaxy Zoo volunteers' and defines the fraction columns as 'The fraction of volunteers expected to give this answer', so the labels are model predictions and fail the human-label requirement."
+    },
+    {
+      "dataset": "Hugging Face GZ2 copy juliensimon/galaxy-zoo-2-morphology",
+      "official_url": "https://huggingface.co/datasets/juliensimon/galaxy-zoo-2-morphology",
+      "exists": true,
+      "access_stated": "Hugging Face, shows as open; columns not checked",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The page is public and ungated (CC-BY-4.0) with 243,500 GZ2 galaxies of volunteer vote counts, fractions and debiased probabilities (Willett 2013 Table 5) covering bar, bulge and merger, but it is a third-party 'tabular-classification' release whose only data file is one parquet table with no images, so it misses the image requirement and cannot stand in for the Zenodo image zip as B suggests ('may be easier to load than the Zenodo zip')."
+    }
+  ]
+}

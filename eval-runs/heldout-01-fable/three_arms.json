@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "model": "fable",
+    "judge": "sonnet",
+    "cost_usd": 33.1406526
+  },
+  "score": {
+    "health": {
+      "with": 0.96875,
+      "without": 0.96875
+    },
+    "other fields": {
+      "with": 1.0,
+      "without": 0.8571428571428571
+    }
+  },
+  "score_by_run": {
+    "health": {
+      "with": [
+        1.0,
+        0.9375
+      ],
+      "without": [
+        1.0,
+        0.9375
+      ]
+    },
+    "other fields": {
+      "with": [
+        1.0,
+        1.0
+      ],
+      "without": [
+        0.8571428571428571,
+        0.8571428571428571
+      ]
+    },
+    "all": {
+      "with": [
+        1.0,
+        0.9583333333333334
+      ],
+      "without": [
+        0.9523809523809524,
+        0.9107142857142857
+      ]
+    }
+  },
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "health / access": {
+      "with": 0.9166666666666666,
+      "without": 0.9166666666666666
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "other fields / recall": {
+      "with": 1.0,
+      "without": 0.6666666666666666
+    },
+    "other fields / access": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0
+    },
+    "other fields / long tail": {
+      "with": 1.0,
+      "without": 1.0
+    }
+  },
+  "family_n": {
+    "health / recall": 14,
+    "health / access": 12,
+    "health / trap": 2,
+    "health / long tail": 4,
+    "other fields / recall": 6,
+    "other fields / access": 4,
+    "other fields / trap": 2,
+    "other fields / long tail": 2
+  },
+  "links": {
+    "with": {
+      "per_answer": 25.0,
+      "total": 150,
+      "ok": 145,
+      "dead": 1,
+      "blocked": 4
+    },
+    "without": {
+      "per_answer": 3.1666666666666665,
+      "total": 19,
+      "ok": 18,
+      "dead": 0,
+      "blocked": 1
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 34.0,
+      "minutes": 8.547816666666668,
+      "cost_usd": 4.1099036,
+      "tool_calls": 32.0
+    },
+    "without": {
+      "turns": 5.833333333333333,
+      "minutes": 1.9727638888888888,
+      "cost_usd": 0.8547705,
+      "tool_calls": 4.833333333333333
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          1.0
+        ],
+        "without": [
+          1.0,
+          1.0
+        ]
+      },
+      "with": 1.0,
+      "without": 1.0
+    },
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "stratum": "health",
+      "runs": {
+        "with": [
+          1.0,
+          0.875
+        ],
+        "without": [
+          1.0,
+          0.875
+        ]
+      },
+      "with": 0.9375,
+      "without": 0.9375
+    },
+    {
+      "case": "ho-o-01",
+      "stratum": "other fields",
+      "runs": {
+        "with": [
+          1.0,
+          1.0
+        ],
+        "without": [
+          0.8571428571428571,
+          0.8571428571428571
+        ]
+      },
+      "with": 1.0,
+      "without": 0.8571428571428571
+    }
+  ],
+  "decision": {
+    "without": {
+      "one_sided_cases": [],
+      "verdict": "level",
+      "statement": "On content the skill and Claude without it are level.",
+      "against": "without",
+      "n": 3,
+      "with": 0.9791666666666666,
+      "other": 0.9315476190476191,
+      "mean_diff": 0.04761904761904764,
+      "better": 1,
+      "worse": 0,
+      "same": 2,
+      "needed_better": 3,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 2,
+          "with": 0.96875,
+          "other": 0.96875,
+          "diff": 0.0
+        },
+        "other fields": {
+          "n": 1,
+          "with": 1.0,
+          "other": 0.8571428571428571,
+          "diff": 0.1428571428571429
+        }
+      },
+      "diff_by_run": [
+        0.04761904761904756,
+        0.04761904761904767
+      ]
+    }
+  },
+  "score_all": {
+    "with": 0.9791666666666666,
+    "without": 0.9315476190476191
+  },
+  "judge_failures": [
+    {
+      "case": "ho-o-01",
+      "arm": "without",
+      "run": 1,
+      "grader": "03-recall-sf-cabspotting",
+      "explanation": "grader threw: judge call failed: API Error: No response from API (waited 3m, then 10m on the retry). If a prox"
+    },
+    {
+      "case": "ho-o-01",
+      "arm": "without",
+      "run": 2,
+      "grader": "03-recall-sf-cabspotting",
+      "explanation": "grader threw: judge call failed: API Error: No response from API (waited 3m, then 10m on the retry). If a prox"
+    }
+  ],
+  "if_judge_failures_passed": {
+    "without": {
+      "one_sided_cases": [],
+      "verdict": "level",
+      "statement": "On content the skill and Claude without it are level.",
+      "against": "without",
+      "n": 3,
+      "with": 0.9791666666666666,
+      "other": 0.9791666666666666,
+      "mean_diff": 0.0,
+      "better": 0,
+      "worse": 0,
+      "same": 3,
+      "needed_better": 3,
+      "lower_in_a_stratum": false,
+      "by_stratum": {
+        "health": {
+          "n": 2,
+          "with": 0.96875,
+          "other": 0.96875,
+          "diff": 0.0
+        },
+        "other fields": {
+          "n": 1,
+          "with": 1.0,
+          "other": 1.0,
+          "diff": 0.0
+        }
+      }
+    },
+    "per_case": [
+      {
+        "case": "ho-h-checkpoint-response-rnaseq",
+        "stratum": "health",
+        "with": 1.0,
+        "without": 1.0
+      },
+      {
+        "case": "ho-h-cxr-free-text-reports",
+        "stratum": "health",
+        "with": 0.9375,
+        "without": 0.9375
+      },
+      {
+        "case": "ho-o-01",
+        "stratum": "other fields",
+        "with": 1.0,
+        "without": 1.0
+      }
+    ]
+  },
+  "checks": {
+    "skill_triggered": 6,
+    "with_runs": 6,
+    "invalid_runs": 0,
+    "error_runs": 0,
+    "runs_without_verdicts": 0,
+    "runs_per_arm": {
+      "with": 6,
+      "without": 6
+    }
+  }
+}

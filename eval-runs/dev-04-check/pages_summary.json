@@ -1,0 +1,493 @@
+{
+  "runs": [
+    {
+      "run": "dev-crop-type-sentinel2__with__1",
+      "case": "dev-crop-type-sentinel2",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "zenodo": 85,
+        "datacite": 15,
+        "huggingface": 61,
+        "openaire": 7,
+        "physionet": 9,
+        "manual": 2
+      },
+      "candidates_total": 179,
+      "candidate_queries": [
+        "crop type classification Sentinel-2",
+        "crop type time series benchmark",
+        "agricultural parcels Sentinel-2 satellite image time series",
+        "crop type mapping labels field",
+        "land use land cover crop Sentinel-2 benchmark",
+        "PASTIS panoptic agricultural satellite time series",
+        "EuroCrops",
+        "EuroCropsML",
+        "BreizhCrops",
+        "PASTIS",
+        "CropHarvest",
+        "Sen4AgriNet",
+        "DENETHOR",
+        "ZueriCrop",
+        "EuroCropsML",
+        "PASTIS-R panoptic"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "TimeSen2Crop: a Million Labeled Samples Dataset of Sentinel 2 Image Time Series for Crop Type Classification"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "PASTIS - Panoptic Segmentation of Satellite image TIme Series"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "EuroCrops"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "EuroCropsML"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "BREIZHCROPS: A TIME SERIES DATASET FOR CROP TYPE MAPPING"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "PASTIS-R - Panoptic Segmentation of Radar and Optical Satellite image TIme Series"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CropHarvest Dataset"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "ibm-nasa-geospatial/multi-temporal-crop-classification"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "AgriSen-COG.LPIS.GT."
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Dataset of Sentinel 2 Image Time Series for Multi-annual Crop Type Classification in Per\u00fa"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Brazil-Crop dataset: a benchmark for agricultural remote sensing applications"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CROPSIGHT-US: An Object-Based Crop Type Ground Truth Dataset Using Street View and Sentinel-2 Satellite Image\u2026"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "Sen4AgriNet"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "ZueriCrop"
+        }
+      ],
+      "page_bytes": 120936,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "open",
+        "open",
+        "open",
+        "open",
+        "open"
+      ],
+      "datasets": 8,
+      "verified": 8,
+      "access_unknown": 0,
+      "with_access_steps": 8,
+      "with_papers": 2,
+      "with_licence": 8,
+      "not_recommended": 3,
+      "gaps": 3
+    },
+    {
+      "run": "dev-household-load-forecasting__with__1",
+      "case": "dev-household-load-forecasting",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "huggingface": 37,
+        "zenodo": 44,
+        "openaire": 33,
+        "datacite": 26,
+        "physionet": 4
+      },
+      "candidates_total": 144,
+      "candidate_queries": [
+        "smart meter household electricity",
+        "household electricity consumption",
+        "residential load profiles",
+        "smart meter"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "London Smart Meters Dataset (with Missing Values)"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "GoiEner Smart Meter Dataset (Version 7.1)"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "CKW Smart Meter Data"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "LADPU Smart Meter Data"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic p\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "HEAPO \u2013 An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection P\u2026"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Co-LivEn : COllective LIVing ENergy Dataset"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "Metadata record for: ECD-UY: Detailed household electricity consumption dataset of Uruguay"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "An electricity smart meter dataset of Chinese households: insights into prosumers"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "CEEW Smart Meter Data"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "High frequency smart meter data from two districts in India (Mathura and Bareilly)"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Dataset on residential electricity load profiles in Switzerland"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Household-Level Coverage of Conformal Prediction Intervals for Smart-Meter Load Forecasting: An Audit on Lond\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Sufiyan83/Low-Carbon-London-Smart-Meter-Cleaned-FeatureReady"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Household electricity demand and generation data - Cyprus"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Household Electricity Consumption Data 2024 in Ireland"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "OpenMeter Evaluation Data: Industrial Smart Meter Measurements"
+        }
+      ],
+      "page_bytes": 115313,
+      "access_words": [
+        "open",
+        "open",
+        "open",
+        "open",
+        "open",
+        "open"
+      ],
+      "datasets": 6,
+      "verified": 6,
+      "access_unknown": 0,
+      "with_access_steps": 6,
+      "with_papers": 0,
+      "with_licence": 6,
+      "not_recommended": 3,
+      "gaps": 1
+    },
+    {
+      "run": "dev-icu-sepsis-early-warning__with__1",
+      "case": "dev-icu-sepsis-early-warning",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 41,
+        "huggingface": 39,
+        "openaire": 36,
+        "physionet": 51,
+        "zenodo": 48,
+        "manual": 8
+      },
+      "candidates_total": 223,
+      "candidate_queries": [
+        "sepsis ICU",
+        "sepsis prediction",
+        "intensive care electronic health records",
+        "critical care database",
+        "MIMIC",
+        "sepsis",
+        "eICU"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Early Prediction of Sepsis from Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "HiRID, a high time-resolution ICU dataset"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-IV Clinical Database Demo"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "eICU Collaborative Research Database"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Salzburg Intensive Care database (SICdb), a freely accessible intensive care database"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "MIMIC-III Clinical Database"
+        },
+        {
+          "verified": true,
+          "source": "manual",
+          "title": "MIMIC-IV"
+        },
+        {
+          "verified": false,
+          "source": "manual",
+          "title": "AmsterdamUMCdb"
+        }
+      ],
+      "page_bytes": 121661,
+      "access_words": [
+        "open",
+        "gated",
+        "gated",
+        "gated",
+        "gated",
+        "gated",
+        "open"
+      ],
+      "datasets": 7,
+      "verified": 7,
+      "access_unknown": 0,
+      "with_access_steps": 7,
+      "with_papers": 0,
+      "with_licence": 7,
+      "not_recommended": 2,
+      "gaps": 3
+    },
+    {
+      "run": "dev-parkinsons-voice-audio__with__1",
+      "case": "dev-parkinsons-voice-audio",
+      "arm": "with",
+      "index": 1,
+      "kept": true,
+      "page": true,
+      "json": true,
+      "candidates_by_source": {
+        "datacite": 34,
+        "zenodo": 22,
+        "huggingface": 54,
+        "openaire": 25,
+        "physionet": 15
+      },
+      "candidates_total": 150,
+      "candidate_queries": [
+        "Parkinson's disease speech",
+        "Parkinson voice recordings",
+        "Parkinson audio",
+        "dysarthria speech healthy controls",
+        "Italian Parkinson's Voice and Speech",
+        "PC-GITA Parkinson Spanish",
+        "mPower voice Parkinson"
+      ],
+      "verify_outcomes": [
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "VOC-PD Dataset: Multi-task Mandarin Speech Recordings of Parkinson's Disease Patients and Healthy Controls"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Processed Multimodal MRI and Speech Datasets for Parkinson's Disease Classification"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Arabic Parkinson's Disease Speech Dataset"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Aging and Parkinson's disease acoustic-prosodic parameters results"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "birgermoell/Italian_Parkinsons_Voice_and_Speech"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "BenchmarkDatasets/Parkinson_Speech"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "NeuroVoz: a Castillian Spanish corpus of parkinsonian speech"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Parkinson-Disease-voice-Dataset"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Dataset for Parkinson Disease"
+        },
+        {
+          "verified": true,
+          "source": "huggingface",
+          "title": "saeedzou/kcl-parkinson-voice-dataset"
+        },
+        {
+          "verified": true,
+          "source": "openaire",
+          "title": "Mobile Device Voice Recordings at King's College London (MDVR-KCL) from both early and advanced Parkinson's d\u2026"
+        },
+        {
+          "verified": true,
+          "source": "physionet",
+          "title": "Bridge2AI-Voice: An ethically-sourced, diverse voice dataset linked to health information"
+        },
+        {
+          "verified": true,
+          "source": "zenodo",
+          "title": "Synthetic Voice Dataset for Parkinson's Disease Classification using Topological Data Analysis, Random Matrix\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Automated Detection of Parkinson's Disease Using Convolutional Neural Networks and Synthetic Spectral Image F\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Repository of speech features from speakers with and without Parkinson's Disease. Neurovoz - Rasta PLP - V2 -\u2026"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Long-term averaged spectrum in Parkinson\u2019s disease (Svihlik et al., 2022)"
+        },
+        {
+          "verified": true,
+          "source": "datacite",
+          "title": "Italian Parkinson's Voice and Speech"
+        }
+      ],
+      "page_bytes": 118714,
+      "access_words": [
+        "open",
+        "open",
+        "free account",
+        "open",
+        "gated",
+        "open"
+      ],
+      "datasets": 6,
+      "verified": 6,
+      "access_unknown": 0,
+      "with_access_steps": 6,
+      "with_papers": 1,
+      "with_licence": 5,
+      "not_recommended": 4,
+      "gaps": 3
+    }
+  ],
+  "per_arm": {
+    "with": {
+      "runs": 4,
+      "kept": 4,
+      "pages": 4,
+      "datasets": 27,
+      "verified": 27,
+      "access_unknown": 0,
+      "with_papers": 3
+    }
+  },
+  "access_words": {
+    "open": 20,
+    "gated": 6,
+    "free account": 1
+  },
+  "access_words_total": 27,
+  "access_words_shown_as_unknown_though_stated": 1
+}

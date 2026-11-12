@@ -1,0 +1,5 @@
+started: 2026-11-11T15:51:13Z
+skill commit: 14974652f098d0e7e525f2b003e81ee77608ee17 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals
+extra options: --model sonnet --runs 2 -j 2 --max-cost-usd 40

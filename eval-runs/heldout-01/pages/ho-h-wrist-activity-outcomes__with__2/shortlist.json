@@ -1,0 +1,586 @@
+{
+ "question": "Do wrist-worn accelerometer measures of physical activity and sleep predict later disease and death? Need thousands of adults, wrist placement, linked hospital/diagnosis/death outcomes; US university.",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Wrist-worn device, several days to a week or more",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "At least a few thousand adults",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Linked follow-up: hospital records, diagnoses or death registration",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Wrist placement (comparable with other wrist studies)",
+   "must": true
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "datacite",
+   "openaire",
+   "huggingface",
+   "physionet",
+   "web search",
+   "literature"
+  ],
+  "queries": [
+   "accelerometer mortality",
+   "wrist accelerometer cohort",
+   "actigraphy sleep cohort",
+   "NHANES accelerometer"
+  ],
+  "n_candidates": 135
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "manual:nhanes-2011-2014-wrist-accelerometer-paxmin-paxday",
+    "source": "manual",
+    "title": "NHANES 2011-2014 wrist accelerometer (PAXMIN/PAXDAY)",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHD_G.htm",
+    "access": {
+     "tier": "open",
+     "evidence": "NHANES public-use files; linked mortality public-use files are downloaded from CDC FTP (page: no registration mentioned)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHD_G.htm",
+     "checked_at": "2026-11-11T18:16:11Z",
+     "problems": [
+      "the page is titled \"PAXHD_G\", which does not name \"NHANES 2011-2014 wrist accelerometer (PAXMIN/PAXDAY)\"; only words in its text or address match, so check that this page is the dataset you meant"
+     ],
+     "notes": [
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [
+      "title_differs"
+     ],
+     "registry": null,
+     "found_title": "PAXHD_G",
+     "access_text": {
+      "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHD_G.htm",
+      "sentences": [
+       "This file contains one record for each eligible participant.",
+       "Not every eligible NHANES participant has a data file.",
+       "These variables in the hour summary file (PAXHR_G) indicate the number of valid minutes in the hour by algorithm assigned PAM wearing status.",
+       "These variables in the day summary file (PAXDAY_G) indicate the number of valid minutes in the day by algorithm assigned PAM wearing status."
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Open now: ActiGraph GT3X+ on the non-dominant wrist for 7 days (2011-2014, US national sample), linkable to NDI mortality.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Search result summarising CDC documentation: ActiGraph GT3X+, non-dominant wrist, 7 days",
+     "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXHD_G.htm"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "One published analysis used 3,032 adults aged 50+; total adult N not confirmed by me",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11402588/"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Death only (NDI). No hospital or diagnosis outcomes in public-use files; restricted RDC files exist",
+     "url": "https://www.cdc.gov/nchs/data-linkage/mortality-public.htm"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Wrist placement"
+    }
+   },
+   "access_steps": [
+    "Download PAX files (2011-12 \"G\", 2013-14 \"H\") from CDC NHANES pages",
+    "Download public-use linked mortality files from CDC FTP (ftp.cdc.gov, datalinkage/linked_mortality)",
+    "Merge on SEQN; apply survey weights"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Mortality only; the page says LMFs were updated through 31 Dec 2022 but the public-use end date is not stated there (a paper cites follow-up through 2019)",
+    "Restricted-use linked files need an NCHS RDC application"
+   ],
+   "papers": [
+    {
+     "title": "NHANES 2011-2014: Objective Physical Activity is the Strongest Predictor of All-Cause Mortality",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11402588/",
+     "note": "wrist accelerometry and mortality"
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "manual:all-of-us-research-program-fitbit-ehr",
+    "source": "manual",
+    "title": "All of Us Research Program (Fitbit + EHR)",
+    "url": "https://www.researchallofus.org/data-tools/workbench/",
+    "access": {
+     "tier": "application",
+     "evidence": "Institution must sign a DURA; researcher registers, verifies identity, completes RCR training (researchallofus.org)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://www.researchallofus.org/data-tools/workbench/",
+     "checked_at": "2026-11-11T18:16:14Z",
+     "problems": [],
+     "notes": [
+      "the landing page mentions \"Institutional Review Board\" (\"...ohorts by adding inclusion or exclusion criteria. Do I need Institutional Review Board (IRB) approval from my own institution in order to access t...\"); confirm the access route on that page before calling the data open",
+      "the landing page mentions \"to access this data\" (\"...eview Board (IRB) approval from my own institution in order to access this data through the Researcher Workbench? Researchers should always...\"); confirm the access route on that page before calling the data open",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "Researcher Workbench \u2013 All of Us Research Hub",
+     "access_text": {
+      "url": "https://www.researchallofus.org/data-tools/workbench/",
+      "sentences": [
+       "The Researcher Workbench is a cloud-based platform where registered researchers can access Registered and Controlled Tier data.",
+       "Currently, only registered researchers whose institutions have Data Use and Registration Agreements in place with All of Us that include the Controlled Tier can access genomic data.",
+       "If your institution does not have a Data Use and Registration Agreement (DURA) in place with All of Us, or if your institution\u2019s current DURA does not yet allow for Controlled Tier access, you can initiate the process here.",
+       "Researchers are granted access to the Researcher Workbench after their affiliated institution signs a Data Use and Registration Agreement, and they create an account, including setting up two-factor authentication, verify their identity through Login.gov or ID.me, complete the All of Us Responsible Conduct of Research training, and sign a Data User Code of\u2026"
+      ]
+     }
+    }
+   },
+   "fit": "partial",
+   "why": "Largest US source with linked EHR outcomes: Fitbit (wrist) activity and sleep for ~59,000 participants, ~22,000 with EHR and 6+ months of data in one study.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Consumer Fitbit, participant-supplied, months to years of data; not a research-grade accelerometer"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "59,000 with Fitbit data; 22,019 with EHR and >=6 months (Hou et al.)",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12083687/"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "EHR diagnoses (incident disease studies published); death data less certain, unconfirmed"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Wrist-worn Fitbit (most models)"
+    }
+   },
+   "access_steps": [
+    "Check your institution has a DURA (Register page, researchallofus.org)",
+    "If not, ask your institutional signing official to sign one",
+    "Create account, verify identity (Login.gov/ID.me), complete Responsible Conduct of Research training, sign Data User Code of Conduct",
+    "Analyse inside the cloud Researcher Workbench"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Metrics from consumer trackers are not directly comparable with ACC research-grade (GGIR) outputs",
+    "Registered Tier dates are shifted",
+    "Fitbit users are a self-selected subset"
+   ],
+   "papers": [
+    {
+     "title": "Association of step counts over time with the risk of chronic disease in the All of Us Research Program",
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9671804/",
+     "note": "steps and incident disease from EHR"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "manual:uk-biobank-accelerometer-data-axivity-ax3-wrist",
+    "source": "manual",
+    "title": "UK Biobank accelerometer data (Axivity AX3, wrist)",
+    "url": "https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf",
+    "access": {
+     "tier": "application",
+     "evidence": "Application via UK Biobank AMS; per search results applications currently paused (not confirmed on UKB site: pages returned HTTP 403)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf",
+     "checked_at": "2026-11-11T18:16:12Z",
+     "problems": [],
+     "notes": [
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": null,
+     "access_text": {
+      "url": "https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf",
+      "sentences": [
+       "/CIDInit /ProcSet findresource begin 12 dict begin begincmap /CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def /CMapName /Adobe-Identity-UCS def /CMapType 2 def 1 begincodespacerange <0000> <FFFF> endcodespacerange 11 beginbfchar <0003> <0020> <03EC> <0030> <03ED> <0031> <03EE> <0032> <03EF> <0033> <03F0> <0034> <03F1> <0035> <03F2> <\u2026",
+       "/CIDInit /ProcSet findresource begin 12 dict begin begincmap /CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def /CMapName /Adobe-Identity-UCS def /CMapType 2 def 1 begincodespacerange <0000> <FFFF> endcodespacerange 9 beginbfchar <0003> <0020> <0011> <002E> <0014> <0031> <0015> <0032> <0016> <0033> <0017> <0034> <0018> <0035> <0019> <0\u2026",
+       "/CIDInit /ProcSet findresource begin 12 dict begin begincmap /CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def /CMapName /Adobe-Identity-UCS def /CMapType 2 def 1 begincodespacerange <0000> <FFFF> endcodespacerange 4 beginbfchar <0003> <0020> <0011> <002E> <0015> <0032> <0016> <0033> endbfchar endcmap CMapName currentdict /CMap define\u2026",
+       "/CIDInit /ProcSet findresource begin 12 dict begin begincmap /CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def /CMapName /Adobe-Identity-UCS def /CMapType 2 def 1 begincodespacerange <0000> <FFFF> endcodespacerange 1 beginbfchar <0078> <F0B7> endbfchar endcmap CMapName currentdict /CMap defineresource pop end end"
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Gold standard for this question: Axivity AX3 wrist, 7 days, ~100,000 people, linked hospital records, cancer and death registers. But new applications are reported paused.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "UKB documentation: Axivity AX3 wrist-worn, 7 days",
+     "url": "https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/PhysicalActivityMonitor.pdf"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "~100,000; e.g. 95,559 in PLOS Med analysis",
+     "url": "https://doi.org/10.1371/journal.pmed.1005213"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Incident disease and mortality used in the cited papers",
+     "url": "https://doi.org/10.1371/journal.pmed.1005213"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Wrist"
+    }
+   },
+   "access_steps": [
+    "Register your institution/researcher account on the UK Biobank AMS",
+    "Submit an application with research proposal",
+    "If approved, pay fee and sign the MTA within 90 days; analyse in the Research Analysis Platform (DNAnexus)"
+   ],
+   "time_to_access": "unknown",
+   "caveats": [
+    "Per search results (not confirmed on UKB pages, which blocked my tools): applications paused since April 2026, aim to reopen late 2026; RAP closed for some time",
+    "Fee per search of fees page: Tier 1 \u00a33,000 for 3 years (+VAT); RAP compute extra",
+    "Historically ~15 weeks to data release"
+   ],
+   "papers": [
+    {
+     "title": "Accelerometer-derived real-world sleep stages and risk of incident diseases: UK Biobank",
+     "doi": "10.1371/journal.pmed.1005213",
+     "url": "https://doi.org/10.1371/journal.pmed.1005213",
+     "note": "wrist accelerometer sleep and incident disease"
+    }
+   ]
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "manual:mros-sleep-study-nsrr",
+    "source": "manual",
+    "title": "MrOS Sleep Study (NSRR)",
+    "url": "https://sleepdata.org/datasets/mros",
+    "access": {
+     "tier": "application",
+     "evidence": "From memory/search: MrOS Online data request; NSRR copy has no actigraphy"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": null,
+     "final_url": null,
+     "checked_at": "2026-11-11T18:16:13Z",
+     "problems": [
+      "could not check: no response from sleepdata.org (no answer (curl exit 60: curl: (60) SSL certificate problem: unable to get local issuer certificate More details here:\u2026)"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "unreachable"
+     ],
+     "registry": null,
+     "found_title": null
+    }
+   },
+   "fit": "partial",
+   "why": "About 3,000 older US men with SleepWatch-O wrist actigraphy (3-5 days) and long mortality follow-up; the sister SOF cohort has ~3,000 women.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "3-5 days, older men only",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20370475"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "2,964 in rest/activity rhythm mortality analysis",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20370475"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Mortality and incident CVD analyses published"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Non-dominant wrist"
+    }
+   },
+   "access_steps": [
+    "Request data via MrOS Online (mrosonline.ucsf.edu) and SOF Online (sofonline.ucsf.edu): exact steps not confirmed by me",
+    "NSRR copy has no actigraphy"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Access steps from memory/search only; sleepdata.org and MrOS Online were not readable by my tools"
+   ],
+   "papers": [
+    {
+     "title": "Rest/activity rhythms and mortality rates in older men: MrOS Sleep Study",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20370475",
+     "note": "wrist actigraphy, mortality"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "manual:mesa-sleep-nsrr",
+    "source": "manual",
+    "title": "MESA Sleep (NSRR)",
+    "url": "https://sleepdata.org/datasets/mesa",
+    "access": {
+     "tier": "application",
+     "evidence": "From search: NSRR account + data access request; outcome variables unconfirmed"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": null,
+     "final_url": null,
+     "checked_at": "2026-11-11T18:16:14Z",
+     "problems": [
+      "could not check: skipped: sleepdata.org did not respond to 2 earlier requests in this run; verify this item again later"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "unreachable"
+     ],
+     "registry": null,
+     "found_title": null
+    }
+   },
+   "fit": "partial",
+   "why": "7-day wrist Actiwatch Spectrum in 2,156 multi-ethnic US adults (2010-2013), followed for CVD events and death.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "MESA documentation: Actiwatch Spectrum, non-dominant wrist, 7 days",
+     "url": "https://sleepdata.org/datasets/mesa/files/m/browser/documentation/MESA_Sleep_Data_Documentation_Guide.pdf"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "2,156 wore the device; below \"a few thousand\" threshold"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "Outcomes used in JAHA paper; whether NSRR hosts them is unconfirmed (may need MESA Coordinating Center)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Wrist"
+    }
+   },
+   "access_steps": [
+    "Create NSRR account, request access to MESA (data use agreement)",
+    "For events/mortality, check the NSRR variable list; otherwise propose to the MESA Coordinating Center"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Outcome availability unconfirmed"
+   ],
+   "papers": [
+    {
+     "title": "Redefining Cardiovascular Health to Include Sleep: MESA Sleep Study",
+     "url": "https://www.ahajournals.org/doi/10.1161/JAHA.122.025252",
+     "note": "actigraphy and incident CVD"
+    }
+   ]
+  },
+  {
+   "rank": 6,
+   "record": {
+    "id": "manual:china-kadoorie-biobank",
+    "source": "manual",
+    "title": "China Kadoorie Biobank",
+    "url": "https://www.ckbiobank.org/data-access/data-2",
+    "access": {
+     "tier": "application",
+     "evidence": "From search: CKB Data Access System registration + application; \u00a32,500 per approved request outside China; release status unconfirmed"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": 403,
+     "final_url": "https://www.ckbiobank.org/data-access/data-2",
+     "checked_at": "2026-11-11T18:16:15Z",
+     "problems": [
+      "could not check: www.ckbiobank.org refused the automated request (HTTP 403); many sites block non-browser clients, so this does not mean the dataset is missing"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "blocked"
+     ],
+     "registry": null,
+     "found_title": "ERROR: The request could not be satisfied"
+    }
+   },
+   "fit": "partial",
+   "why": "~20,000 Chinese adults with 7-day Axivity AX3 wrist data, linked to registries; release to overseas researchers not confirmed.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "AX3, 7 days, 20,370 processed",
+     "url": "https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-023-01537-8"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "20,370"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "Follow-up is registry-based, but follow-up length for the third resurvey cohort is short and unconfirmed"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Wrist"
+    }
+   },
+   "access_steps": [
+    "Register on the CKB Data Access System",
+    "Submit application (students with supervisor)",
+    "Sign Data Access Agreement with Oxford; pay \u00a32,500 per approved request outside China"
+   ],
+   "time_to_access": "months",
+   "caveats": [
+    "Search said data go to China/UK collaborators first; I could not confirm release (CKB site blocked my tools)"
+   ],
+   "papers": []
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "Registry hits (Zenodo/Figshare analysis code, NHANES sleep-mortality supplements)",
+   "url": "https://zenodo.org/records/23532284",
+   "reason": "Code and supplements for papers, not the cohort data."
+  },
+  {
+   "name": "Hip-worn cohorts (e.g. NHANES 2003-06, WHI OPACH, Women's Health Study)",
+   "url": "",
+   "reason": "From memory: hip-worn, fail the wrist requirement."
+  }
+ ],
+ "gaps": [
+  "Whitehall II (GENEActiv wrist, 2012/13) and Rotterdam Study (GENEActiv wrist) exist but I did not confirm sample sizes, outcome linkage or access terms beyond contact routes.",
+  "Could not read UK Biobank, CKB, NSRR or MrOS Online pages (blocked)."
+ ],
+ "notes": "Registries searched were general-purpose; the main cohorts were found by web search and literature. UK Biobank pause is reported by search results, unconfirmed on its own site."
+}

@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-checkpoint-response-rnaseq
+expected_outcome: |
+  Recommends published checkpoint-inhibitor-treated cohorts with tumour RNA-seq and response labels, such as IMvigor210 (atezolizumab, urothelial cancer), Riaz et al. 2017 (nivolumab, melanoma, GSE91061), Hugo et al. 2016 (anti-PD-1, melanoma, GSE78220) and Gide et al. 2019 (anti-PD-1 with or without anti-CTLA-4, melanoma, PRJEB23709).
+  States access correctly: the GEO and ENA data download without an application, and IMvigor210 processed data and response annotations come freely in its R package while its raw reads are controlled at EGA. Ideally adds a less-known cohort or compendium such as the Kim et al. 2018 gastric cancer cohort or the TIGER portal.

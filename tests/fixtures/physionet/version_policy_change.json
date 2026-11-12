@@ -1,0 +1,237 @@
+[
+ {
+  "public_project_uuid": "14b4578d-4049-43ec-ae5d-35458924a7ae",
+  "slug": "ct-ich",
+  "version": "1.0.0",
+  "core_doi": "10.13026/g1kq-sc84",
+  "version_doi": "10.13026/w8q8-ky94",
+  "is_latest_version": false,
+  "short_description": "Head computed tomography scans with intracranial hemmorhage segmentation.",
+  "publish_date": "2019-08-01",
+  "title": "Computed Tomography Images for Intracranial Hemorrhage Detection and Segmentation",
+  "abstract": "<p>After traumatic brain injury (TBI), intracranial hemorrhage (ICH) may occur that could lead to death or disability if it is not accurately diagnosed and treated in a time-sensitive procedure. Currently, Computerized Tomography (CT) scans are examined by radiologists to diagnose ICH and localize affected regions. In this work, we collected a dataset of 82 CT scans of patients with TBI. ICH regions in these scans were delineated in each slice by two radiologists. The radiologists also annotated each CT slice for the presence of different types of ICH and fractures.</p>",
+  "license": {
+   "name": "Creative Commons Attribution 4.0 International Public License"
+  },
+  "dua": null,
+  "main_storage_size": 107586941,
+  "compressed_storage_size": 93964224,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "jpg",
+   "segmentation",
+   "computed tomography",
+   "intracranial hemmorhage"
+  ],
+  "source_url": "https://physionet.org/content/ct-ich/1.0.0/"
+ },
+ {
+  "public_project_uuid": "83a2fe9a-8837-40d1-87f4-a02a4227036a",
+  "slug": "ct-ich",
+  "version": "1.2.0",
+  "core_doi": "10.13026/g1kq-sc84",
+  "version_doi": "10.13026/w8q8-ky94",
+  "is_latest_version": false,
+  "short_description": "Head computed tomography (CT) scans with intracranial hemorrhage (ICH) segmentation, ICH subtypes and skull fracture.",
+  "publish_date": "2019-11-14",
+  "title": "Computed Tomography Images for Intracranial Hemorrhage Detection and Segmentation",
+  "abstract": "<p>After traumatic brain injury (TBI), intracranial hemorrhage (ICH) may occur that could lead to death or disability if it is not accurately diagnosed and treated in a time-sensitive procedure. Currently, Computerized Tomography (CT) scans are examined by radiologists to diagnose intracranial hemorrhage to localize affected regions. In this work, we collected a dataset of 82 CT scans of patients with traumatic brain injury. Intracranial hemorrhage regions in these scans were delineated in each slice by two radiologists. The radiologists also annotated each CT slice for the presence of different types of intracranial hemorrhage and fracture.</p>",
+  "license": {
+   "name": "Creative Commons Attribution 4.0 International Public License"
+  },
+  "dua": null,
+  "main_storage_size": 0,
+  "compressed_storage_size": 0,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "ich",
+   "skull fracture",
+   "computed tomography",
+   "intracranial hemmorhage",
+   "segmentation",
+   "nifti"
+  ],
+  "source_url": "https://physionet.org/content/ct-ich/1.2.0/"
+ },
+ {
+  "public_project_uuid": "0e0851ff-7a8c-4ded-bed2-c41c00b45ce4",
+  "slug": "ct-ich",
+  "version": "1.3.0",
+  "core_doi": "10.13026/g1kq-sc84",
+  "version_doi": "10.13026/w8q8-ky94",
+  "is_latest_version": false,
+  "short_description": "Head computed tomography (CT) scans with intracranial hemorrhage (ICH) segmentation, ICH subtypes and skull fracture.",
+  "publish_date": "2019-12-20",
+  "title": "Computed Tomography Images for Intracranial Hemorrhage Detection and Segmentation",
+  "abstract": "<p>After traumatic brain injury (TBI), intracranial hemorrhage (ICH) may occur that could lead to death or disability if it is not accurately diagnosed and treated in a time-sensitive procedure. Currently, Computerized Tomography (CT) scans are examined by radiologists to diagnose intracranial hemorrhage to localize affected regions. In this work, we collected a dataset of 82 CT scans of patients with traumatic brain injury. Intracranial hemorrhage regions in these scans were delineated in each slice by two radiologists. The radiologists also annotated each CT slice for the presence of different types of intracranial hemorrhage and fracture.</p>",
+  "license": {
+   "name": "Creative Commons Attribution 4.0 International Public License"
+  },
+  "dua": null,
+  "main_storage_size": 0,
+  "compressed_storage_size": 0,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "ich",
+   "segmentation",
+   "intracranial hemmorhage",
+   "nifti",
+   "computed tomography",
+   "skull fracture"
+  ],
+  "source_url": "https://physionet.org/content/ct-ich/1.3.0/"
+ },
+ {
+  "public_project_uuid": "35f41fde-de0f-4687-9692-f1a7c95e65fe",
+  "slug": "ct-ich",
+  "version": "1.3.1",
+  "core_doi": "10.13026/g1kq-sc84",
+  "version_doi": "10.13026/4nae-zg36",
+  "is_latest_version": true,
+  "short_description": "Head computed tomography (CT) scans with intracranial hemorrhage (ICH) segmentation, ICH subtypes and skull fracture.",
+  "publish_date": "2020-03-10",
+  "title": "Computed Tomography Images for Intracranial Hemorrhage Detection and Segmentation",
+  "abstract": "<p>After traumatic brain injury (TBI), intracranial hemorrhage (ICH) may occur that could lead to death or disability if it is not accurately diagnosed and treated in a time-sensitive procedure. Currently, Computerized Tomography (CT) scans are examined by radiologists to diagnose intracranial hemorrhage to localize affected regions. In this work, we collected a dataset of 82 CT scans of patients with traumatic brain injury. Intracranial hemorrhage regions in these scans were delineated in each slice by two radiologists. The radiologists also annotated each CT slice for the presence of different types of intracranial hemorrhage and fracture. The CT scans of 75 subjects in&nbsp;NIfTI format are made public in this dataset.</p>",
+  "license": {
+   "name": "PhysioNet Restricted Health Data License 1.5.0"
+  },
+  "dua": {
+   "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+  },
+  "main_storage_size": 2950918290,
+  "compressed_storage_size": 601120822,
+  "resource_type": "Database",
+  "access_policy": "Restricted",
+  "topics": [
+   "segmentation",
+   "computed tomography",
+   "nifti",
+   "skull fracture",
+   "ich",
+   "intracranial hemmorhage",
+   "ct scans"
+  ],
+  "source_url": "https://physionet.org/content/ct-ich/1.3.1/"
+ },
+ {
+  "public_project_uuid": "5408449b-1e23-479a-986d-70e1b728870c",
+  "slug": "kinecal",
+  "version": "1.0.0",
+  "core_doi": "10.13026/8bsb-ch59",
+  "version_doi": "10.13026/pq4z-4g10",
+  "is_latest_version": false,
+  "short_description": "A dataset for balance falls-risk assessment and balance impairment analysis",
+  "publish_date": "2022-05-16",
+  "title": "KINECAL",
+  "abstract": "<p>The field of human action recognition has made great strides in recent years, much helped by the availability of a wide variety of datasets that use Kinect to record human movement. Conversely, progress towards using Kinect in clinical practice has been hampered by the lack of appropriate data. In particular, datasets that contain clinically significant movements and appropriate metadata. This paper proposes a dataset to address this issue, namely KINECAL. It contains the recordings of 90 individuals carrying out 11 movements, commonly used in the clinical assessment of balance. The dataset contains relevant metadata, including clinical labelling, falls history&nbsp;and postural sway metrics. In addition, the recordings were made in both the lab and in informal settings.</p>",
+  "license": {
+   "name": "PhysioNet Restricted Health Data License 1.5.0"
+  },
+  "dua": {
+   "name": "PhysioNet Restricted Health Data Use Agreement 1.5.0"
+  },
+  "main_storage_size": 192423497685,
+  "compressed_storage_size": 92063954192,
+  "resource_type": "Database",
+  "access_policy": "Restricted",
+  "topics": [
+   "posturography",
+   "postural sway",
+   "balance",
+   "age-related changes",
+   "clinical tests",
+   "falls-risk"
+  ],
+  "source_url": "https://physionet.org/content/kinecal/1.0.0/"
+ },
+ {
+  "public_project_uuid": "8f20c35a-c98b-4736-949f-08dc6b1f6c69",
+  "slug": "kinecal",
+  "version": "1.0.1",
+  "core_doi": "10.13026/8bsb-ch59",
+  "version_doi": "10.13026/z037-6191",
+  "is_latest_version": false,
+  "short_description": "A dataset for balance falls-risk assessment and balance impairment analysis",
+  "publish_date": "2022-10-31",
+  "title": "KINECAL",
+  "abstract": "<p>The field of human action recognition has made great strides in recent years, much helped by the availability of a wide variety of datasets that use Kinect to record human movement. Conversely, progress towards using Kinect in clinical practice has been hampered by the lack of appropriate data. In particular, datasets that contain clinically significant movements and appropriate metadata. This paper proposes a dataset to address this issue, namely KINECAL. It contains the recordings of 90 individuals carrying out 11 movements, commonly used in the clinical assessment of balance. The dataset contains relevant metadata, including clinical labelling, falls history&nbsp;and postural sway metrics. In addition, the recordings were made in both the lab and in informal settings.</p>",
+  "license": {
+   "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License"
+  },
+  "dua": null,
+  "main_storage_size": 98077,
+  "compressed_storage_size": 22356,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "age-related changes",
+   "falls-risk",
+   "postural sway",
+   "posturography",
+   "balance",
+   "clinical tests"
+  ],
+  "source_url": "https://physionet.org/content/kinecal/1.0.1/"
+ },
+ {
+  "public_project_uuid": "131879fd-5686-464d-be13-d335114f7a2d",
+  "slug": "kinecal",
+  "version": "1.0.2",
+  "core_doi": "10.13026/8bsb-ch59",
+  "version_doi": "10.13026/ky1q-3h26",
+  "is_latest_version": false,
+  "short_description": "A dataset for balance falls-risk assessment and balance impairment analysis",
+  "publish_date": "2022-12-22",
+  "title": "KINECAL",
+  "abstract": "<p>The field of human action recognition has made great strides in recent years, much helped by the availability of a wide variety of datasets that use Kinect to record human movement. Conversely, progress towards using Kinect in clinical practice has been hampered by the lack of appropriate data. In particular, datasets that contain clinically significant movements and appropriate metadata. This paper proposes a dataset to address this issue, namely KINECAL. It contains the recordings of 90 individuals carrying out 11 movements, commonly used in the clinical assessment of balance. The dataset contains relevant metadata, including clinical labelling, falls history&nbsp;and postural sway metrics. In addition, the recordings were made in both the lab and in informal settings.</p>",
+  "license": {
+   "name": "Creative Commons Zero 1.0 Universal Public Domain Dedication"
+  },
+  "dua": null,
+  "main_storage_size": 192423502008,
+  "compressed_storage_size": 92063955575,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "balance",
+   "postural sway",
+   "posturography",
+   "clinical tests",
+   "falls-risk",
+   "age-related changes"
+  ],
+  "source_url": "https://physionet.org/content/kinecal/1.0.2/"
+ },
+ {
+  "public_project_uuid": "db6d465e-ca01-4c8b-8aba-d08e01b13276",
+  "slug": "kinecal",
+  "version": "1.0.3",
+  "core_doi": "10.13026/8bsb-ch59",
+  "version_doi": "10.13026/vvkp-ct80",
+  "is_latest_version": true,
+  "short_description": "A dataset for balance falls-risk assessment and balance impairment analysis",
+  "publish_date": "2023-06-08",
+  "title": "KINECAL",
+  "abstract": "<p>The field of human action recognition has made great strides in recent years, much helped by the availability of a wide variety of datasets that use Kinect to record human movement. Conversely, progress towards using Kinect in clinical practice has been hampered by the lack of appropriate data. In particular, datasets that contain clinically significant movements and appropriate metadata. This paper proposes a dataset to address this issue, namely KINECAL. It contains the recordings of 90 individuals carrying out 11 movements, commonly used in the clinical assessment of balance. The dataset contains relevant metadata, including clinical labelling, falls history&nbsp;and postural sway metrics. In addition, the recordings were made in both the lab and in informal settings.</p>",
+  "license": {
+   "name": "Creative Commons Zero 1.0 Universal Public Domain Dedication"
+  },
+  "dua": null,
+  "main_storage_size": 193424110739,
+  "compressed_storage_size": 92516089893,
+  "resource_type": "Database",
+  "access_policy": "Open",
+  "topics": [
+   "balance",
+   "posturography",
+   "clinical tests",
+   "postural sway",
+   "falls-risk",
+   "age-related changes"
+  ],
+  "source_url": "https://physionet.org/content/kinecal/1.0.3/"
+ }
+]

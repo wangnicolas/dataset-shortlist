@@ -1,0 +1,357 @@
+{
+ "question": "Public dermatology image datasets with Fitzpatrick/Monk labels and diagnosis, with FST V-VI well represented, for a classifier fairness audit",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Skin tone label (Fitzpatrick or Monk) on every image",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Diagnosis label",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Fitzpatrick V and VI substantially represented",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Downloadable now for research",
+   "must": true
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "huggingface",
+   "physionet",
+   "datacite",
+   "openaire",
+   "europepmc",
+   "web"
+  ],
+  "queries": [
+   "Fitzpatrick skin tone dermatology",
+   "skin lesion images skin type diagnosis",
+   "dermatology images diverse skin tones",
+   "Monk skin tone dermatology",
+   "dermoscopy skin lesion"
+  ],
+  "n_candidates": 101
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "manual:diverse-dermatology-images-ddi",
+    "source": "manual",
+    "title": "Diverse Dermatology Images (DDI)",
+    "url": "https://stanford.redivis.com/datasets/3r16-5mby7gfer",
+    "access": {
+     "tier": "free account",
+     "evidence": "ddi-dataset.github.io: \"By registering for downloads ... you are agreeing to this Research Use Agreement\""
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Artificial intelligence (AI) may aid in triaging skin diseases. However, most AI models have not been rigorously assessed on images of diverse skin tones or uncommon diseases. To ascertain potential biases in algorithm performance in this context, we curated the Diverse Dermatology Images (DDI) dataset\u2014the first publicly available, deeply curated, and pathologically confirmed image dataset with diverse skin tones. The DDI was retrospectively selected from reviewing pathology reports in Stanford Clinics from 2010-2020 with further details provided in the methods. After filtering out images that were poor quality (see methods), there were a total of 656 images representing 570 unique patients\u2026",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": {
+     "id": null,
+     "name": "Stanford DDI Research Use Agreement (non-commercial, no redistribution)",
+     "commercial_use": false
+    },
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://stanford.redivis.com/datasets/3r16-5mby7gfer",
+     "checked_at": "2026-11-11T17:59:30Z",
+     "problems": [],
+     "notes": [
+      "description read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "DDI - Diverse Dermatology Images",
+     "access_text": {
+      "url": "https://stanford.redivis.com/datasets/3r16-5mby7gfer",
+      "sentences": [],
+      "problem": "the page has very little text (0 characters); it is probably drawn by JavaScript, so the access terms may not be in what was fetched"
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Biopsy-proven diagnoses, 656 images, deliberately balanced across FST; about 207 images are FST V-VI (159 benign, 48 malignant).",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "FST I-VI for every image (project site)",
+     "url": "https://ddi-dataset.github.io/"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "78 disease labels plus malignant/benign, pathology-confirmed"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "~207 V-VI images (web search summary of the DDI paper; confirm in metadata)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "register and accept the Research Use Agreement"
+    }
+   },
+   "access_steps": [
+    "Open the Stanford AIMI / Redivis page and sign in",
+    "Accept the Research Use Agreement",
+    "Download images and metadata"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Small; wide confidence intervals per subgroup",
+    "Non-commercial; no redistribution; do not share download link",
+    "Reported: no BCC images in FST V-VI"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "manual:scin-skin-condition-image-network",
+    "source": "manual",
+    "title": "SCIN: Skin Condition Image Network",
+    "url": "https://github.com/google-research-datasets/scin",
+    "access": {
+     "tier": "open",
+     "evidence": "GitHub README: open access dataset, data in public GCS bucket, released under SCIN Data Use License"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The SCIN dataset contains 10,000+ images of dermatology conditions, crowdsourced with informed consent from US internet users. Contributions include self-reported demographic and symptom information and dermatologist labels. The dataset also contains estimated Fitzpatrick skin type and Monk Skin Tone. - google-research-datasets/scin",
+    "doi": null,
+    "publisher": "GitHub",
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": {
+     "id": null,
+     "name": "SCIN Data Use Public License",
+     "commercial_use": null
+    },
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://github.com/google-research-datasets/scin",
+     "checked_at": "2026-11-11T17:59:29Z",
+     "problems": [],
+     "notes": [
+      "description, publisher read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "GitHub - google-research-datasets/scin: The SCIN dataset contains 10,000+ images of dermatology conditions, crowdsourced with informed consent from US internet users. Contributions include self-reported demographic and symptom information and dermatologist labels. The dataset also contains estimated Fitzpatrick skin type and Monk Skin Tone. \u00b7 GitHub",
+     "access_text": {
+      "url": "https://github.com/google-research-datasets/scin",
+      "sentences": [
+       "The SCIN (Skin Condition Image Network) open access dataset aims to supplement publicly available dermatology datasets from health system sources with representative images from internet users.",
+       "To this end, the SCIN dataset was collected from Google Search users in the United States through a voluntary, consented image donation application.",
+       "The SCIN Dataset is released under SCIN Data Use License",
+       "Assessments of novel crowdsourcing methods to create health datasets are needed.To evaluate if web search advertisements (ads) are effective at creating a diverse and representative dermatology image dataset.This prospective observational survey study, conducted from March to November 2023, used Google Search ads to invite internet users in the US to contri\u2026"
+      ]
+     }
+    }
+   },
+   "fit": "strong",
+   "why": "Largest set with both FST and Monk labels; but diagnoses are dermatologist differentials, not biopsy.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Self-reported FST (many NONE_SELECTED), dermatologist-estimated FST and Monk labels; gradable only for some"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "Weighted differential labels from 1-3 dermatologists; non-diagnosable cases included"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Paper: eFST5 5.27%, eFST6 0.57%; self-reported FST5 9.84%, FST6 6.57% of ~5,000 cases"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "public GCS bucket, SCIN Data Use License"
+    }
+   },
+   "access_steps": [
+    "Clone github.com/google-research-datasets/scin",
+    "Pull scin_cases.csv / scin_labels.csv and images from the dx-scin-public-data bucket (see scin_demo.ipynb)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "eFST VI under 1% means very few reliably dark cases",
+    "Self-selected US web users; photos of mixed quality",
+    "Licence prohibits re-identification; read it for other limits"
+   ],
+   "papers": [
+    {
+     "title": "Creating an Empirical Dermatology Dataset Through Crowdsourcing With Web Search Advertisements",
+     "year": 2024,
+     "doi": "10.1001/jamanetworkopen.2024.46615",
+     "url": "https://doi.org/10.1001/jamanetworkopen.2024.46615",
+     "note": "dataset paper"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "manual:fitzpatrick17k",
+    "source": "manual",
+    "title": "Fitzpatrick17k",
+    "url": "https://github.com/mattgroh/fitzpatrick17k",
+    "access": {
+     "tier": "open",
+     "evidence": "CSV on GitHub; images fetched from source atlas URLs in the CSV"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Contribute to mattgroh/fitzpatrick17k development by creating an account on GitHub.",
+    "doi": null,
+    "publisher": "GitHub",
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": {
+     "id": "CC-BY-NC-SA-3.0",
+     "name": "CC BY-NC-SA 3.0 (repo README)",
+     "commercial_use": false,
+     "share_alike": true
+    },
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://github.com/mattgroh/fitzpatrick17k",
+     "checked_at": "2026-11-11T17:59:30Z",
+     "problems": [],
+     "notes": [
+      "description, publisher read from the landing page's own metadata",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "GitHub - mattgroh/fitzpatrick17k \u00b7 GitHub",
+     "access_text": {
+      "url": "https://github.com/mattgroh/fitzpatrick17k",
+      "sentences": [
+       "You signed in with another tab or window.",
+       "You signed out in another tab or window.",
+       "NotificationsYou must be signed in to change notification settings",
+       "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
+      ]
+     }
+    }
+   },
+   "fit": "partial",
+   "why": "Largest FST-labelled set (16,577 images, 114 conditions), ~2,170 FST V-VI, but labels are noisy.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "FST by Scale AI / Centaur Labs crowd annotators, not dermatologists; ~3% unknown"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "Atlas-derived labels, not biopsy; known errors"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "~13% FST V+VI (secondary summary)"
+    },
+    "R4": {
+     "status": "partial",
+     "evidence": "CSV is open, images must be downloaded from source atlases (links may rot)"
+    }
+   },
+   "access_steps": [
+    "Download fitzpatrick17k.csv from GitHub",
+    "Fetch images from the url column, or use the cleaned Fitzpatrick17k-C on Zenodo (CC BY-NC 4.0)"
+   ],
+   "time_to_access": "days",
+   "caveats": [
+    "CC BY-NC-SA 3.0",
+    "Duplicates and mislabels; prefer Fitzpatrick17k-C",
+    "Skin-tone labels are noisy, which itself affects an audit"
+   ],
+   "papers": [
+    {
+     "title": "Investigating the Quality of DermaMNIST and Fitzpatrick17k Dermatological Image Datasets",
+     "year": 2025,
+     "doi": "10.1038/s41597-025-04382-5",
+     "url": "https://www.nature.com/articles/s41597-025-04382-5",
+     "note": "cleaned version"
+    }
+   ]
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "PAD-UFES-20",
+   "url": "https://data.mendeley.com/datasets/zr7vgbcyr2/1",
+   "reason": "Has FST but only 10 type V and 1 type VI images of 1,494 labelled."
+  },
+  {
+   "name": "HAM10000 / ISIC archive",
+   "reason": "No skin-tone labels in the standard release and almost no FST V-VI (as I recall; not checked today)."
+  },
+  {
+   "name": "MRA-MIDAS",
+   "url": "https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer",
+   "reason": "FST labelled and biopsy-proven, but only 16.8% are III-VI and authors flag few IV-VI."
+  },
+  {
+   "name": "Pipsqueak",
+   "url": "https://github.com/TommasoRuga/Pipsqueak",
+   "reason": "All V-VI but only ~16 original images (80 with augmentation), mostly re-taken from Fitzpatrick17k."
+  },
+  {
+   "name": "Black skin acral lesions (Zenodo 10570316)",
+   "url": "https://zenodo.org/records/10570316",
+   "reason": "Access restricted; no FST label stated."
+  }
+ ],
+ "gaps": [
+  "No large public dataset with biopsy-proven diagnoses and expert FST labels with thousands of V-VI images was found.",
+  "Not checked: DDI-2 (Asian patients, V-VI counts unknown), SkinCAP, Fitzpatrick17k-C exact counts."
+ ],
+ "notes": "Redivis page is JavaScript-rendered; DDI access is from the project site. V-VI counts for DDI and Fitzpatrick17k come from secondary summaries."
+}

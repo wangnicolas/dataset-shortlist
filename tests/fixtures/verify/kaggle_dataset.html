@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Parkinson Disease Detection | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Build a Model to Detect Parkinson disease" />
+    <meta name="keywords" content="earth and nature,classification,computer science,feature engineering,diseases" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="HhUFPuHzblO6AZBETscesw==" type="text/javascript">
+    window["pageRequestStartTime"] = 1794407411324;
+    window["pageRequestEndTime"] = 1794407411336;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="HhUFPuHzblO6AZBETscesw==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="HhUFPuHzblO6AZBETscesw==">window.KAGGLE_JUPYTERLAB_PATH = "/static/assets/jupyterlab-v4/jupyterlab-index-8ee648d2f8da3020.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon-new.ico" rel="shortcut icon" type="image/x-icon" id="dynamic-favicon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL,wght@0..1,200..700&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL,wght@0..1,200..700&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="HhUFPuHzblO6AZBETscesw==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <script nonce="HhUFPuHzblO6AZBETscesw==" id="site-wide-recaptcha"
+      src="https://www.google.com/recaptcha/enterprise.js?render=6LcVUOAUAAAAAP8nMSGuW46uJC5Zf6-PCYKN5xxv" async defer></script>
+    <style>.grecaptcha-badge { visibility: hidden; }</style>
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=e31a0a53cbc22063" />
+
+  
+    
+ 
+      <script nonce="HhUFPuHzblO6AZBETscesw==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="HhUFPuHzblO6AZBETscesw==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets',
+            'user_properties': {
+                'logged_in': false,
+            }
+        });
+    </script>
+    <script nonce="HhUFPuHzblO6AZBETscesw==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection" />
+    <meta property="og:title" content="Parkinson Disease Detection" />
+    <meta property="og:description" content="Build a Model to Detect Parkinson disease" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+        <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/907215/1538346/857ac4f3ed7ad6506f9ce6ab2d6e8a8a/dataset-card.png?t=2020-10-05-12-47-52" />
+        <meta property="twitter:image" content="https://storage.googleapis.com/kaggle-datasets-images/907215/1538346/857ac4f3ed7ad6506f9ce6ab2d6e8a8a/dataset-card.png?t=2020-10-05-12-47-52" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="HhUFPuHzblO6AZBETscesw==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Parkinson Disease Detection","description":"### Context\n\nParkinson’s Disease (PD) is a degenerative neurological disorder marked by decreased dopamine levels in the brain. It manifests itself through a deterioration of movement, including the presence of tremors and stiffness. There is commonly a marked effect on speech, including dysarthria (difficulty articulating sounds), hypophonia (lowered volume), and monotone (reduced pitch range). Additionally, cognitive impairments and changes in mood can occur, and risk of\ndementia is increased. \n\nTraditional diagnosis of Parkinson’s Disease involves a clinician taking a neurological history of the patient and observing motor skills in various situations. Since there is no definitive laboratory test to diagnose PD, diagnosis is often difficult, particularly in the early stages when motor effects are not yet severe. Monitoring progression of the disease over time requires repeated clinic visits by the patient. An effective screening process, particularly one that doesn’t require a clinic visit, would be beneficial. Since PD patients exhibit characteristic vocal features, voice recordings are a useful and non-invasive tool for diagnosis. If machine learning algorithms could be applied to a voice recording dataset to accurately diagnosis PD, this would be an effective screening step prior to an appointment with a clinician. \n\n### Data\n\nThe data &amp; attributes information for this project is available at https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/\n\n### Attribute Information:\n\nMatrix column entries (attributes):\nname - ASCII subject name and recording number\nMDVP:Fo(Hz) - Average vocal fundamental frequency\nMDVP:Fhi(Hz) - Maximum vocal fundamental frequency\nMDVP:Flo(Hz) - Minimum vocal fundamental frequency\nMDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP - Several \nmeasures of variation in fundamental frequency\nMDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA - Several measures of variation in amplitude\nNHR,HNR - Two measures of ratio of noise to tonal components in the voice\nstatus - Health status of the subject (one) - Parkinson's, (zero) - healthy\nRPDE,D2 - Two nonlinear dynamical complexity measures\nDFA - Signal fractal scaling exponent\nspread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation \n\n### Citation Request:\n\nIf you use this dataset, please cite the following paper: \n'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', \nLittle MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. \nBioMedical Engineering OnLine 2007, 6:23 (26 June 2007)","url":"https://www.kaggle.com/debasisdotcom/parkinson-disease-detection","version":2,"keywords":["subject, earth and nature","task, classification","subject, science and technology, computer science","technique, feature engineering","subject, health and fitness, health, health conditions, diseases"],"license":{"@type":"CreativeWork","name":"Other (specified in description)","url":""},"identifier":["907215"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Debasis Samal","url":"https://www.kaggle.com/debasisdotcom","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3766670-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection/download?datasetVersionNumber=2","contentSize":"15179 bytes"}],"commentCount":4,"dateModified":"2020-10-05T13:33:21.737Z","discussionUrl":"https://www.kaggle.com/debasisdotcom/parkinson-disease-detection/discussion","alternateName":"Build a Model to Detect Parkinson disease","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/907215/1538346/857ac4f3ed7ad6506f9ce6ab2d6e8a8a/dataset-card.png?t=2020-10-05-12-47-52","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":4},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":16909},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":112048},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":157}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+
+    <script nonce="HhUFPuHzblO6AZBETscesw==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="HhUFPuHzblO6AZBETscesw==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="HhUFPuHzblO6AZBETscesw==" src="/static/assets/runtime.js?v=e4024a15496495d8"></script>
+  <script nonce="HhUFPuHzblO6AZBETscesw==" src="/static/assets/vendor.js?v=d65bb8768740f992"></script>
+  <script nonce="HhUFPuHzblO6AZBETscesw==" src="/static/assets/app.js?v=daa1b03d0ff40d43"></script>
+</head>
+<body>
+  <div id="root">
+    
+
+
+
+
+
+
+
+
+<script nonce="HhUFPuHzblO6AZBETscesw==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ['input/TeX', 'output/SVG'],
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="HhUFPuHzblO6AZBETscesw==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS_SVG`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

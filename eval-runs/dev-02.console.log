@@ -1,0 +1,3 @@
+tools/run_eval.sh: line 63: syntax error near unexpected token `('
+tools/run_eval.sh: line 63: `  "$@" --allow-tools Bash Write Edit WebSearch "WebFetch(domain:*)" > "$OUT/eval.log" 2>&1'
+exit=2

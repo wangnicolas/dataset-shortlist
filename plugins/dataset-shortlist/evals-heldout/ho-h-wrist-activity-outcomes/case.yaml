@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-h-wrist-activity-outcomes
+expected_outcome: |
+  Recommends large wrist-worn accelerometer or tracker datasets linked to health outcomes, such as the UK Biobank accelerometer sub-study, NHANES 2011-2014 wrist accelerometry with its public-use linked mortality files, and All of Us Fitbit data linked to EHRs, and explains access for each (UK Biobank needs an approved application; All of Us needs an institution with a signed Data Use and Registration Agreement; NHANES is a free public download).
+  Does not describe the NHANES 2003-2006 accelerometer data as wrist-worn (those monitors were worn on the hip), and ideally adds less-known wrist actigraphy cohorts with mortality follow-up such as MrOS or the Study of Osteoporotic Fractures.

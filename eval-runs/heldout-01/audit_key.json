@@ -1,0 +1,45 @@
+{
+  "seed": 20261111,
+  "cases": {
+    "ho-h-checkpoint-response-rnaseq": {
+      "A": "with",
+      "B": "without"
+    },
+    "ho-h-cxr-free-text-reports": {
+      "A": "with",
+      "B": "without"
+    },
+    "ho-h-derm-skin-tone": {
+      "A": "with",
+      "B": "without"
+    },
+    "ho-h-ecg-rhythm-labels": {
+      "A": "without",
+      "B": "with"
+    },
+    "ho-h-measured-bp-surveys": {
+      "A": "with",
+      "B": "without"
+    },
+    "ho-h-wrist-activity-outcomes": {
+      "A": "with",
+      "B": "without"
+    },
+    "ho-o-01": {
+      "A": "without",
+      "B": "with"
+    },
+    "ho-o-02": {
+      "A": "without",
+      "B": "with"
+    },
+    "ho-o-03": {
+      "A": "without",
+      "B": "with"
+    },
+    "ho-o-04": {
+      "A": "without",
+      "B": "with"
+    }
+  }
+}

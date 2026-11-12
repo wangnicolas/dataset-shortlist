@@ -1,0 +1,12 @@
+{
+  "ho-h-checkpoint-response-rnaseq": "Checkpoint-inhibitor response from tumour RNA-seq",
+  "ho-h-cxr-free-text-reports": "Chest X-rays with free-text reports",
+  "ho-h-derm-skin-tone": "Skin images with skin-tone labels",
+  "ho-h-ecg-rhythm-labels": "12-lead ECGs with rhythm labels, no application",
+  "ho-h-measured-bp-surveys": "National surveys with measured blood pressure",
+  "ho-h-wrist-activity-outcomes": "Wrist accelerometry linked to outcomes",
+  "ho-o-01": "Taxi GPS trajectories",
+  "ho-o-02": "Linked employer-employee microdata",
+  "ho-o-03": "Meeting recordings for diarization, commercial use",
+  "ho-o-04": "Galaxy images with human morphology labels"
+}

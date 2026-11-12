@@ -1,0 +1,21 @@
+name: tests
+on:
+  push:
+  pull_request:
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install the test runner (the skill itself needs only the standard library)
+        run: python -m pip install pytest
+      - name: Offline tests with recorded registry responses
+        run: python -m pytest tests -q
+      - name: The command line tool starts without any package installed
+        run: python plugins/dataset-shortlist/skills/dataset-shortlist/scripts/scout.py sources

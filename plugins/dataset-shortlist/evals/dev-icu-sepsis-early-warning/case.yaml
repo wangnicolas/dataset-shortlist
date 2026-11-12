@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: dev-icu-sepsis-early-warning
+expected_outcome: |
+  A good answer recommends adult ICU time-series datasets from which a time-stamped sepsis onset label is given or can be derived (the openly downloadable PhysioNet/CinC 2019 sepsis challenge data, MIMIC, eICU-CRD, HiRID, AmsterdamUMCdb), and separates what can be started this week from what needs an application.
+  It states the access route correctly for each: the 2019 challenge data is open (CC BY 4.0), MIMIC and eICU need PhysioNet credentialing with CITI training and a DUA, HiRID additionally needs the contributors to review each study, and AmsterdamUMCdb needs its own request with an end-user licence.
+  It does not present the PhysioNet 2012 mortality challenge data as providing sepsis onset labels.

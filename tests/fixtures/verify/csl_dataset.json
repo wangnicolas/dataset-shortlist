@@ -1,0 +1,51 @@
+{
+  "type": "dataset",
+  "id": "https://doi.org/10.13026/kpb9-mt58",
+  "author": [
+    {
+      "family": "Johnson",
+      "given": "Alistair"
+    },
+    {
+      "family": "Bulgarelli",
+      "given": "Lucas"
+    },
+    {
+      "family": "Pollard",
+      "given": "Tom"
+    },
+    {
+      "family": "Gow",
+      "given": "Brian"
+    },
+    {
+      "family": "Moody",
+      "given": "Benjamin"
+    },
+    {
+      "family": "Horng",
+      "given": "Steven"
+    },
+    {
+      "family": "Celi",
+      "given": "Leo Anthony"
+    },
+    {
+      "family": "Mark",
+      "given": "Roger"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2024
+      ]
+    ]
+  },
+  "abstract": "Retrospectively collected medical data has the opportunity to improve patient\ncare through knowledge discovery and algorithm development. Broad reuse of\nmedical data is desirable for the greatest public good, but data sharing must\nbe done in a manner which protects patient privacy. Here we present Medical\nInformation Mart for Intensive Care (MIMIC)-IV, a large deidentified dataset\nof patients admitted to the emergency department or an intensive care unit at\nthe Beth Israel Deaconess Medical Center in Boston, MA. MIMIC-IV contains data\nfor over 65,000 patients admitted to an ICU and over 200,000 patients admitted\nto the emergency department. MIMIC-IV incorporates contemporary data and\nadopts a modular approach to data organization, highlighting data provenance\nand facilitating both individual and combined use of disparate data sources.\nMIMIC-IV is intended to carry on the success of MIMIC-III and support a broad\nset of applications within healthcare.\n\n",
+  "DOI": "10.13026/KPB9-MT58",
+  "publisher": "PhysioNet",
+  "title": "MIMIC-IV",
+  "URL": "https://physionet.org/content/mimiciv/3.1/",
+  "version": "3.1"
+}

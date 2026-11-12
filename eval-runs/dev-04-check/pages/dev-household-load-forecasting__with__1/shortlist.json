@@ -1,0 +1,726 @@
+{
+ "question": "Benchmark day-ahead electricity demand forecasting for individual homes using smart-meter data per household (hundreds of homes or more, at least a year each, hourly or finer).",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Per-household smart-meter consumption (not feeder/grid totals)",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "Hundreds of households or more",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "At least one year of history per household",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Hourly or finer resolution",
+   "must": true
+  },
+  {
+   "id": "R5",
+   "text": "Downloadable without an application (nice to have)",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "openaire",
+   "datacite",
+   "huggingface",
+   "physionet"
+  ],
+  "queries": [
+   "smart meter household electricity",
+   "household electricity consumption",
+   "residential load profiles",
+   "smart meter"
+  ],
+  "n_candidates": 144
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "zenodo:4312086",
+    "source": "zenodo",
+    "title": "LADPU Smart Meter Data",
+    "url": "https://zenodo.org/records/4312086",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "This dataset contains the electric power consumption data from the Los Alamos Public Utility Department (LADPU) in New Mexico, USA. The data was collected by Landis+Gyr smart meters devices on 1,757 households at North Mesa, Los Alamos, NM. The sampling rate is one observation every fifteen minutes (i.e., 96 observations per day). For most customers, the data spans about six years, from July 30, 2013 to December 30, 2019. However, for some customers, the period is reduced. The dataset contains missing values and duplicated measurements.",
+    "doi": "10.5061/dryad.m0cfxpp2c",
+    "publisher": "Zenodo",
+    "creators": [
+     "Souza, Vinicius",
+     "Estrada, Trilce",
+     "Bashir, Adnan",
+     "Mueen, Abdullah"
+    ],
+    "year": 2020,
+    "version": null,
+    "updated": "2022-06-03",
+    "licence": {
+     "id": "CC0-1.0",
+     "name": "cc-zero",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 1820137834,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [],
+    "usage": {
+     "downloads": 288,
+     "views": 700
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "4312086",
+     "concept_record_id": "4312085",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/4312086",
+     "checked_at": "2026-11-11T17:36:04Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:4312086"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "LADPU Smart Meter Data"
+    }
+   },
+   "fit": "strong",
+   "why": "1,757 households, 15-minute readings, about six years for most customers: the longest per-home histories among the open sets.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Registry description: 'Landis+Gyr smart meters ... on 1,757 households'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "1,757 households"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "'for most customers, the data spans about six years' (30 Jul 2013 to 30 Dec 2019)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "one observation every fifteen minutes"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "access_right=open, CC0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the 1.8 GB zip"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Contains missing values and duplicated measurements",
+    "Some customers have shorter spans",
+    "No weather or household metadata in the record; join your own (Los Alamos, NM)"
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "zenodo:21398769",
+    "source": "zenodo",
+    "title": "Dataset on residential electricity load profiles in Switzerland",
+    "url": "https://zenodo.org/records/21398769",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Abstract Residential electricity profiles are undergoing significant changes due to the increasing adoption of distributed renewable generation, heat pumps, and electric vehicles. Up-to-date real-world measurements are essential for characterizing these evolving consumption patterns and providing a timely empirical foundation for research. This paper presents a dataset of 15-minute smart meter measurements from 2,447 residential installations in Switzerland, covering the years 2023 and 2024. The dataset encompasses both active and reactive energy (withdrawal and injection) of diverse installation types, including apartments, single-family houses, heat pumps, and common building areas. A sub\u2026",
+    "doi": "10.5281/zenodo.21398769",
+    "publisher": "Zenodo",
+    "creators": [
+     "Kaiser, Katharina",
+     "Kreft, Markus",
+     "Gonz\u00e1lez Vay\u00e1, Marina",
+     "Hug, Gabriela"
+    ],
+    "year": 2026,
+    "version": "v1",
+    "updated": "2026-07-22",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 904206916,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "demand response",
+     "electricity tariff",
+     "electric vehicle",
+     "heat pump",
+     "open energy data",
+     "smart grid",
+     "smart meter",
+     "water heater"
+    ],
+    "usage": {
+     "downloads": 1081,
+     "views": 905
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "21398769",
+     "concept_record_id": "21398768",
+     "concept_doi": "10.5281/zenodo.21398768",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [
+     {
+      "source": "openaire",
+      "id": "openaire:doi_dedup___::54eaf000678921058f5dfc9b53bf9711",
+      "url": "https://doi.org/10.5281/zenodo.21398769"
+     }
+    ],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/21398769",
+     "checked_at": "2026-11-11T17:36:13Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:21398769"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "Dataset on residential electricity load profiles in Switzerland"
+    }
+   },
+   "fit": "strong",
+   "why": "2,447 residential installations at 15 minutes for 2023 and 2024, so recent behaviour (heat pumps, PV, EVs).",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "'15-minute smart meter measurements from 2,447 residential installations'"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "2,447"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "covers 2023 and 2024 (two years)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "15-minute"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the 0.9 GB zip"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Installations include common building areas and heat-pump meters, not only homes; filter by installation type",
+    "Includes injection (PV) as well as withdrawal"
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "zenodo:15056919",
+    "source": "zenodo",
+    "title": "HEAPO \u2013 An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols",
+    "url": "https://zenodo.org/records/15056919",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Abstract Heat pumps are essential for decarbonizing residential heating but consume substantial electrical energy, impacting operational costs and grid demand. Many systems run inefficiently due to planning flaws, operational faults, or misconfigurations. While optimizing performance requires skilled professionals, labor shortages hinder large-scale interventions. However, digital tools and improved data availability create new service opportunities for energy efficiency, predictive maintenance, and demand-side management. To support research and practical solutions, we present an open-source dataset of electricity consumption from 1,408 households with heat pumps and smart electricity mete\u2026",
+    "doi": "10.5281/zenodo.15056919",
+    "publisher": "Zenodo",
+    "creators": [
+     "Bruderm\u00fcller, Tobias",
+     "Fleisch, Elgar",
+     "Gonz\u00e1lez Vay\u00e1, Marina",
+     "Staake, Thorsten"
+    ],
+    "year": 2025,
+    "version": "v1",
+    "updated": "2025-03-24",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 458317017,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "heat pump",
+     "performance optimization",
+     "smart electricity meter",
+     "open energy data",
+     "residential building",
+     "digital appliance monitoring",
+     "inspection protocol",
+     "optimization",
+     "smart meter data",
+     "heating",
+     "smart grid"
+    ],
+    "usage": {
+     "downloads": 3587,
+     "views": 3012
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "15056919",
+     "concept_record_id": "15056918",
+     "concept_doi": "10.5281/zenodo.15056918",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/15056919",
+     "checked_at": "2026-11-11T17:36:09Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:15056919"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "HEAPO \u2013 An Open Dataset for Heat Pump Optimization with Smart Electricity Meter Data and On-Site Inspection Protocols"
+    }
+   },
+   "fit": "strong",
+   "why": "1,408 Swiss heat-pump households, 15-minute data from 2018 to 2024.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "smart electricity meter data from 1,408 households"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "1,408"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Per the paper (web search): 2018-11-03 to 2024-03-21; per-home span varies"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "15-minute (1,407 of 1,408 homes)"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the 0.46 GB zip"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Heat-pump homes only, so demand is not typical of the general population",
+    "Not every home covers the full period"
+   ]
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "zenodo:22313409",
+    "source": "zenodo",
+    "title": "GoiEner Smart Meter Dataset (Version 7.1)",
+    "url": "https://zenodo.org/records/22313409",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "GoiEner Smart Meter Dataset (Version 7.1) contains processed smart-meter electricity data derived from SIMEL measurements supplied by GoiEner. This release provides three complementary representations of the data: individual multi-variable time-series profiles, an annual hourly consumption matrix before normalization, and reduced public metadata. The individual profiles comprise 28,900 CSV time series , distributed across six compressed archives ( profiles_part01.tar.zst to profiles_part06.tar.zst ). Depending on data availability, the profiles preserve harmonized variables describing electricity consumption, self-consumption, generation, imports/exports, and reactive-energy quadrants. Thes\u2026",
+    "doi": "10.5281/zenodo.22313409",
+    "publisher": "Zenodo",
+    "creators": [
+     "Quesada Granja, Carlos"
+    ],
+    "year": 2026,
+    "version": "7.1",
+    "updated": "2026-09-05",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 8993041906,
+     "files": 10
+    },
+    "formats": [
+     "zst",
+     "csv",
+     "txt"
+    ],
+    "subjects": [
+     "smart meters",
+     "electricity demand",
+     "load profiles",
+     "time series",
+     "energy data",
+     "SIMEL",
+     "GoiEner",
+     "CNAE"
+    ],
+    "usage": {
+     "downloads": 983,
+     "views": 122
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "22313409",
+     "concept_record_id": "22313408",
+     "concept_doi": "10.5281/zenodo.22313408",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/22313409",
+     "checked_at": "2026-11-11T17:36:00Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:22313409"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "GoiEner Smart Meter Dataset (Version 7.1)"
+    }
+   },
+   "fit": "partial",
+   "why": "GoiEner: the largest open set (28,900 hourly series in v7.1), but customers include businesses.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Smart-meter series per supply point; not all are households (paper: shops, offices, industry too)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "28,900 series"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Original release averaged nearly three years, Nov 2014 to Jun 2022 (web search)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "hourly"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the six profile archives (.tar.zst, ~9 GB total)",
+    "Use the metadata file to keep residential tariffs only"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "One third-party analysis cut 25,559 points to 20,509 by dropping non-residential and self-consumption points",
+    "v7.1 differs from the original release (10.5281/zenodo.7362094); check which one papers cite"
+   ]
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "zenodo:4656072",
+    "source": "zenodo",
+    "title": "London Smart Meters Dataset (with Missing Values)",
+    "url": "https://zenodo.org/records/4656072",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "Kaggle London Smart Meters dataset contains 5560 half hourly time series that represent the energy consumption readings of London households in kilowatt hour (kWh) from November 2011 to February 2014.",
+    "doi": "10.5281/zenodo.4656072",
+    "publisher": "Zenodo",
+    "creators": [
+     "Godahewa, Rakshitha",
+     "Bergmeir, Christoph",
+     "Webb, Geoff",
+     "Hyndman, Rob",
+     "Montero-Manso, Pablo"
+    ],
+    "year": 2020,
+    "version": "3",
+    "updated": "2021-04-01",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 219673439,
+     "files": 1
+    },
+    "formats": [
+     "zip"
+    ],
+    "subjects": [
+     "smart meters",
+     "electricity",
+     "forecasting",
+     "half hourly series"
+    ],
+    "usage": {
+     "downloads": 20199,
+     "views": 3639
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "4656072",
+     "concept_record_id": "3892987",
+     "concept_doi": "10.5281/zenodo.3892987",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/4656072",
+     "checked_at": "2026-11-11T17:35:59Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:4656072"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "London Smart Meters Dataset (with Missing Values)"
+    }
+   },
+   "fit": "partial",
+   "why": "The classic London (UKPN Low Carbon London) set: 5,560 households at half-hourly resolution.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "5,560 half hourly series of London households"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "5,560"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Nov 2011 to Feb 2014 overall, but individual homes joined at different times; many have under a year"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "half hourly"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record (copy by Godahewa et al.)",
+    "Download the 0.22 GB zip",
+    "Original source: London Datastore, 'SmartMeter Energy Consumption Data in London Households' (about 10 GB CSV)"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Filter to homes with 12+ months of data",
+    "About 1,100 homes were on dynamic time-of-use prices during 2013; the price schedule is published, and they need separate handling in a forecasting benchmark",
+    "The Zenodo copy is a reformatted subset; the London Datastore holds the original"
+   ]
+  },
+  {
+   "rank": 6,
+   "record": {
+    "id": "zenodo:8248802",
+    "source": "zenodo",
+    "title": "A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment",
+    "url": "https://zenodo.org/records/8248802",
+    "access": {
+     "tier": "open",
+     "evidence": "access_right=open"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "An experiment was conducted to understand if and how households change their power consumption in response to variable hourly electricity prices. The data were collected from several Norwegian regions, and various price signals were tested over two winter periods from early 2020 to spring 2021. The dataset includes hourly consumption data of all participating households and answers to three surveys about household characteristics such as electric appliances, living conditions, socio-demographic variables, and willingness to be flexible. Temperature data are added to the dataset from public sources. This comprehensive dataset can be used for in-depth analysis of household flexibility potenti\u2026",
+    "doi": "10.5281/zenodo.8248802",
+    "publisher": "Zenodo",
+    "creators": [
+     "Hofmann, Matthias",
+     "Siebenbrunner, Turid"
+    ],
+    "year": 2023,
+    "version": null,
+    "updated": "2025-03-21",
+    "licence": {
+     "id": "CC-BY-4.0",
+     "name": "cc-by-4.0",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 1104588602,
+     "files": 11
+    },
+    "formats": [
+     "csv",
+     "rdata"
+    ],
+    "subjects": [
+     "Demand-side flexibility",
+     "Demand response",
+     "Price elasticity",
+     "Panel data",
+     "Real-time pricing",
+     "Households"
+    ],
+    "usage": {
+     "downloads": 9561,
+     "views": 4182
+    },
+    "extra": {
+     "access_right": "open",
+     "record_id": "8248802",
+     "concept_record_id": "5744261",
+     "concept_doi": "10.5281/zenodo.5744261",
+     "resource_type": "dataset"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://zenodo.org/records/8248802",
+     "checked_at": "2026-11-11T17:36:08Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the zenodo registry record zenodo:8248802"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "zenodo",
+     "found_title": "A rich dataset of hourly residential electricity consumption data and survey answers from the iFlex dynamic pricing experiment"
+    }
+   },
+   "fit": "partial",
+   "why": "Norwegian households with hourly data plus surveys and temperature.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "hourly consumption of participating households"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Several thousand households per the paper (counts vary by phase)"
+    },
+    "R3": {
+     "status": "unknown",
+     "evidence": "Experiment ran early 2020 to spring 2021; per-home history may be under one year"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "hourly"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "open, CC-BY-4.0"
+    }
+   },
+   "access_steps": [
+    "Open the Zenodo record",
+    "Download the 1.1 GB of CSV/RData files"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Households were on price experiments; the data are shaped by treatment",
+    "Check per-household coverage before relying on it"
+   ]
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "UCI ElectricityLoadDiagrams / THULab electricity",
+   "url": "https://huggingface.co/datasets/THULab/electricity",
+   "reason": "370 clients, mixed with businesses, so it is not a household set."
+  },
+  {
+   "name": "Pecan Street Dataport (free tier)",
+   "url": "https://www.pecanstreet.org/dataport/licenses/",
+   "reason": "Free university tier covers about 75 homes (web search, July 2025 post): too few for R2. Full data is paid."
+  },
+  {
+   "name": "CKW Smart Meter Data (Zenodo copy)",
+   "url": "https://zenodo.org/records/13304499",
+   "reason": "Zenodo copy is a small 42 MB sample; the full set is on ckw.ch/opendata, which I could not read (HTTP 403)."
+  }
+ ],
+ "gaps": [
+  "Irish CER trial (ISSDA) and Ausgrid Solar Home were not run through the verifier; see reply."
+ ],
+ "notes": "Checked 2026-11-11/12 via Zenodo, OpenAIRE, DataCite, Hugging Face and PhysioNet registries. Several landing pages (ISSDA, data.gov.au, ckw.ch) returned HTTP 403 to automated fetches."
+}

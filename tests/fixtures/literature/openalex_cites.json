@@ -1,0 +1,1474 @@
+{
+ "meta": {
+  "count": 923,
+  "db_response_time_ms": 84,
+  "page": 1,
+  "per_page": 2,
+  "groups_count": null,
+  "cost_usd": 0.0001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W4200191097",
+   "doi": "https://doi.org/10.1038/s41591-021-01595-0",
+   "title": "Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations",
+   "publication_year": 2021,
+   "type": "article",
+   "cited_by_count": 1105,
+   "primary_location": {
+    "id": "doi:10.1038/s41591-021-01595-0",
+    "doi": "https://doi.org/10.1038/s41591-021-01595-0",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1038/s41591-021-01595-0",
+    "pdf_url": "https://www.nature.com/articles/s41591-021-01595-0.pdf",
+    "source": {
+     "id": "https://openalex.org/S203256638",
+     "display_name": "Nature Medicine",
+     "issn_l": "1078-8956",
+     "issn": [
+      "1078-8956",
+      "1546-170X",
+      "1744-7933"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "doyens",
+      "jufo-3",
+      "ki-jl-3",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310319908",
+     "host_organization_name": "Nature Portfolio",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319908",
+      "https://openalex.org/P4310319965"
+     ],
+     "host_organization_lineage_names": [
+      "Nature Portfolio",
+      "Springer Nature"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Nature Medicine",
+    "raw_type": "journal-article"
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5004971542",
+      "display_name": "Laleh Seyyed-Kalantari",
+      "orcid": "https://orcid.org/0000-0002-1059-7125",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1059-7125"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I185261750",
+       "display_name": "University of Toronto",
+       "ror": "https://ror.org/03dbr7087",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I185261750"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210127509",
+       "display_name": "Vector Institute",
+       "ror": "https://ror.org/03kqdja62",
+       "country_code": "CA",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210127509"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Laleh Seyyed-Kalantari",
+     "raw_affiliation_strings": [
+      "University of Toronto, Toronto, Ontario, Canada. laleh@cs.toronto.edu",
+      "Vector Institute, Toronto, Ontario, Canada. laleh@cs.toronto.edu",
+      "University of Toronto, Toronto, Ontario, Canada"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-1059-7125",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Toronto, Toronto, Ontario, Canada. laleh@cs.toronto.edu",
+       "institution_ids": [
+        "https://openalex.org/I185261750"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Vector Institute, Toronto, Ontario, Canada. laleh@cs.toronto.edu",
+       "institution_ids": [
+        "https://openalex.org/I4210127509"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Toronto, Toronto, Ontario, Canada",
+       "institution_ids": [
+        "https://openalex.org/I185261750"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100340498",
+      "display_name": "Haoran Zhang",
+      "orcid": "https://orcid.org/0000-0003-1027-9976",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1027-9976"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63966007",
+       "display_name": "Massachusetts Institute of Technology",
+       "ror": "https://ror.org/042nb2s44",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Haoran Zhang",
+     "raw_affiliation_strings": [
+      "Massachusetts Institute of Technology, Cambridge, MA, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Massachusetts Institute of Technology, Cambridge, MA, USA",
+       "institution_ids": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5083993242",
+      "display_name": "Matthew B. A. McDermott",
+      "orcid": "https://orcid.org/0000-0001-6048-9707",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6048-9707"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63966007",
+       "display_name": "Massachusetts Institute of Technology",
+       "ror": "https://ror.org/042nb2s44",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Matthew B. A. McDermott",
+     "raw_affiliation_strings": [
+      "Massachusetts Institute of Technology, Cambridge, MA, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Massachusetts Institute of Technology, Cambridge, MA, USA",
+       "institution_ids": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5081135036",
+      "display_name": "Irene Y. Chen",
+      "orcid": "https://orcid.org/0000-0003-0173-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0173-9133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63966007",
+       "display_name": "Massachusetts Institute of Technology",
+       "ror": "https://ror.org/042nb2s44",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Irene Y. Chen",
+     "raw_affiliation_strings": [
+      "Massachusetts Institute of Technology, Cambridge, MA, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Massachusetts Institute of Technology, Cambridge, MA, USA",
+       "institution_ids": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5070063054",
+      "display_name": "Marzyeh Ghassemi",
+      "orcid": "https://orcid.org/0000-0001-6349-7251",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6349-7251"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210127509",
+       "display_name": "Vector Institute",
+       "ror": "https://ror.org/03kqdja62",
+       "country_code": "CA",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210127509"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I63966007",
+       "display_name": "Massachusetts Institute of Technology",
+       "ror": "https://ror.org/042nb2s44",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ],
+     "countries": [
+      "CA",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Marzyeh Ghassemi",
+     "raw_affiliation_strings": [
+      "Massachusetts Institute of Technology, Cambridge, MA, USA",
+      "Vector Institute, Toronto, Ontario, Canada"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-6349-7251",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Massachusetts Institute of Technology, Cambridge, MA, USA",
+       "institution_ids": [
+        "https://openalex.org/I63966007"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Vector Institute, Toronto, Ontario, Canada",
+       "institution_ids": [
+        "https://openalex.org/I4210127509"
+       ]
+      }
+     ]
+    }
+   ],
+   "abstract_inverted_index": {
+    "Artificial": [
+     0
+    ],
+    "intelligence": [
+     1
+    ],
+    "(AI)": [
+     2
+    ],
+    "systems": [
+     3,
+     21,
+     138
+    ],
+    "have": [
+     4
+    ],
+    "increasingly": [
+     5
+    ],
+    "achieved": [
+     6
+    ],
+    "expert-level": [
+     7
+    ],
+    "performance": [
+     8,
+     34
+    ],
+    "in": [
+     9,
+     35,
+     56,
+     85,
+     174
+    ],
+    "medical": [
+     10,
+     140,
+     162
+    ],
+    "imaging": [
+     11,
+     141
+    ],
+    "applications.": [
+     12
+    ],
+    "However,": [
+     13
+    ],
+    "there": [
+     14
+    ],
+    "is": [
+     15
+    ],
+    "growing": [
+     16
+    ],
+    "concern": [
+     17
+    ],
+    "that": [
+     18,
+     104,
+     120
+    ],
+    "such": [
+     19,
+     39,
+     146
+    ],
+    "AI": [
+     20,
+     63,
+     137
+    ],
+    "may": [
+     22
+    ],
+    "reflect": [
+     23
+    ],
+    "and": [
+     24,
+     28,
+     113,
+     119,
+     154
+    ],
+    "amplify": [
+     25
+    ],
+    "human": [
+     26
+    ],
+    "bias,": [
+     27
+    ],
+    "reduce": [
+     29
+    ],
+    "the": [
+     30,
+     57,
+     62,
+     121,
+     169,
+     175
+    ],
+    "quality": [
+     31
+    ],
+    "of": [
+     32,
+     47,
+     59,
+     136,
+     150,
+     171
+    ],
+    "their": [
+     33
+    ],
+    "historically": [
+     36
+    ],
+    "under-served": [
+     37,
+     116,
+     128
+    ],
+    "populations": [
+     38,
+     118
+    ],
+    "as": [
+     40,
+     73,
+     96,
+     98
+    ],
+    "female": [
+     41,
+     133
+    ],
+    "patients,": [
+     42,
+     44
+    ],
+    "Black": [
+     43
+    ],
+    "or": [
+     45
+    ],
+    "patients": [
+     46
+    ],
+    "low": [
+     48
+    ],
+    "socioeconomic": [
+     49
+    ],
+    "status.": [
+     50
+    ],
+    "Such": [
+     51
+    ],
+    "biases": [
+     52,
+     147,
+     153
+    ],
+    "are": [
+     53
+    ],
+    "especially": [
+     54
+    ],
+    "troubling": [
+     55
+    ],
+    "context": [
+     58
+    ],
+    "underdiagnosis,": [
+     60
+    ],
+    "whereby": [
+     61
+    ],
+    "algorithm": [
+     64
+    ],
+    "would": [
+     65
+    ],
+    "inaccurately": [
+     66
+    ],
+    "label": [
+     67
+    ],
+    "an": [
+     68
+    ],
+    "individual": [
+     69
+    ],
+    "with": [
+     70,
+     145
+    ],
+    "a": [
+     71
+    ],
+    "disease": [
+     72,
+     143
+    ],
+    "healthy,": [
+     74
+    ],
+    "potentially": [
+     75,
+     156
+    ],
+    "delaying": [
+     76
+    ],
+    "access": [
+     77,
+     160
+    ],
+    "to": [
+     78,
+     158,
+     161
+    ],
+    "care.": [
+     79
+    ],
+    "Here,": [
+     80
+    ],
+    "we": [
+     81
+    ],
+    "examine": [
+     82
+    ],
+    "algorithmic": [
+     83
+    ],
+    "underdiagnosis": [
+     84,
+     122
+    ],
+    "chest": [
+     86,
+     93
+    ],
+    "X-ray": [
+     87,
+     94
+    ],
+    "pathology": [
+     88
+    ],
+    "classification": [
+     89
+    ],
+    "across": [
+     90
+    ],
+    "three": [
+     91
+    ],
+    "large": [
+     92
+    ],
+    "datasets,": [
+     95
+    ],
+    "well": [
+     97
+    ],
+    "one": [
+     99
+    ],
+    "multi-source": [
+     100
+    ],
+    "dataset.": [
+     101
+    ],
+    "We": [
+     102
+    ],
+    "find": [
+     103
+    ],
+    "classifiers": [
+     105
+    ],
+    "produced": [
+     106
+    ],
+    "using": [
+     107,
+     139
+    ],
+    "state-of-the-art": [
+     108
+    ],
+    "computer": [
+     109
+    ],
+    "vision": [
+     110
+    ],
+    "techniques": [
+     111
+    ],
+    "consistently": [
+     112
+    ],
+    "selectively": [
+     114
+    ],
+    "underdiagnosed": [
+     115
+    ],
+    "patient": [
+     117
+    ],
+    "rate": [
+     123
+    ],
+    "was": [
+     124
+    ],
+    "higher": [
+     125
+    ],
+    "for": [
+     126,
+     130,
+     142,
+     168
+    ],
+    "intersectional": [
+     127
+    ],
+    "subpopulations,": [
+     129
+    ],
+    "example,": [
+     131
+    ],
+    "Hispanic": [
+     132
+    ],
+    "patients.": [
+     134
+    ],
+    "Deployment": [
+     135
+    ],
+    "diagnosis": [
+     144
+    ],
+    "risks": [
+     148
+    ],
+    "exacerbation": [
+     149
+    ],
+    "existing": [
+     151
+    ],
+    "care": [
+     152
+    ],
+    "can": [
+     155
+    ],
+    "lead": [
+     157
+    ],
+    "unequal": [
+     159
+    ],
+    "treatment,": [
+     163
+    ],
+    "thereby": [
+     164
+    ],
+    "raising": [
+     165
+    ],
+    "ethical": [
+     166
+    ],
+    "concerns": [
+     167
+    ],
+    "use": [
+     170
+    ],
+    "these": [
+     172
+    ],
+    "models": [
+     173
+    ],
+    "clinic.": [
+     176
+    ]
+   }
+  },
+  {
+   "id": "https://openalex.org/W4400461591",
+   "doi": "https://doi.org/10.1145/3677119",
+   "title": "Counterfactual Explanations and Algorithmic Recourses for Machine Learning: A Review",
+   "publication_year": 2024,
+   "type": "article",
+   "cited_by_count": 825,
+   "primary_location": {
+    "id": "doi:10.1145/3677119",
+    "doi": "https://doi.org/10.1145/3677119",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1145/3677119",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S157921468",
+     "display_name": "ACM Computing Surveys",
+     "issn_l": "0360-0300",
+     "issn": [
+      "0360-0300",
+      "1557-7341"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-a",
+      "jufo-3",
+      "ki-jl-2",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310319798",
+     "host_organization_name": "Association for Computing Machinery",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319798"
+     ],
+     "host_organization_lineage_names": [
+      "Association for Computing Machinery"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "ACM Computing Surveys",
+    "raw_type": "journal-article"
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5055186262",
+      "display_name": "Sahil Verma",
+      "orcid": "https://orcid.org/0000-0001-7797-926X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7797-926X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I201448701",
+       "display_name": "University of Washington",
+       "ror": "https://ror.org/00cvxb145",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Sahil Verma",
+     "raw_affiliation_strings": [
+      "Computer Science and Engineering, University of Washington, Seattle, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-7797-926X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Computer Science and Engineering, University of Washington, Seattle, United States",
+       "institution_ids": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5099835614",
+      "display_name": "Varich Boonsanong",
+      "orcid": "https://orcid.org/0009-0005-3885-0195",
+      "observed_orcids": [
+       "https://orcid.org/0009-0005-3885-0195"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I201448701",
+       "display_name": "University of Washington",
+       "ror": "https://ror.org/00cvxb145",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Varich Boonsanong",
+     "raw_affiliation_strings": [
+      "Computer Science and Engineering, University of Washington, Seattle, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0005-3885-0195",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Computer Science and Engineering, University of Washington, Seattle, United States",
+       "institution_ids": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5079337204",
+      "display_name": "Minh Hoang",
+      "orcid": "https://orcid.org/0000-0002-8918-7566",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8918-7566"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I201448701",
+       "display_name": "University of Washington",
+       "ror": "https://ror.org/00cvxb145",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Minh Hoang",
+     "raw_affiliation_strings": [
+      "Computer Science and Engineering, University of Washington, Seattle, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-8918-7566",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Computer Science and Engineering, University of Washington, Seattle, United States",
+       "institution_ids": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5055067259",
+      "display_name": "Keegan Hines",
+      "orcid": "https://orcid.org/0000-0001-8721-499X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8721-499X"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Keegan Hines",
+     "raw_affiliation_strings": [
+      "Arthur AI, Washington DC, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-8721-499X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Arthur AI, Washington DC, United States",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5071538560",
+      "display_name": "John P. Dickerson",
+      "orcid": "https://orcid.org/0000-0003-2231-680X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2231-680X"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "John Dickerson",
+     "raw_affiliation_strings": [
+      "Arthur AI, Washington DC, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-2231-680X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Arthur AI, Washington DC, United States",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5061319881",
+      "display_name": "Chirag Suresh Shah",
+      "orcid": "https://orcid.org/0000-0002-3797-4293",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3797-4293"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I201448701",
+       "display_name": "University of Washington",
+       "ror": "https://ror.org/00cvxb145",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chirag Shah",
+     "raw_affiliation_strings": [
+      "University of Washington, Seattle, United States"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-3797-4293",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Washington, Seattle, United States",
+       "institution_ids": [
+        "https://openalex.org/I201448701"
+       ]
+      }
+     ]
+    }
+   ],
+   "abstract_inverted_index": {
+    "Machine": [
+     0
+    ],
+    "learning": [
+     1,
+     37,
+     47,
+     113
+    ],
+    "plays": [
+     2
+    ],
+    "a": [
+     3,
+     25,
+     81,
+     88,
+     98,
+     103,
+     141
+    ],
+    "role": [
+     4
+    ],
+    "in": [
+     5,
+     11,
+     24,
+     64,
+     102,
+     111,
+     121,
+     130,
+     184,
+     196
+    ],
+    "many": [
+     6,
+     122
+    ],
+    "deployed": [
+     7
+    ],
+    "decision": [
+     8
+    ],
+    "systems,": [
+     9
+    ],
+    "often": [
+     10
+    ],
+    "ways": [
+     12
+    ],
+    "that": [
+     13,
+     86,
+     158
+    ],
+    "are": [
+     14
+    ],
+    "difficult": [
+     15
+    ],
+    "or": [
+     16
+    ],
+    "impossible": [
+     17
+    ],
+    "to": [
+     18,
+     41,
+     56,
+     72,
+     97,
+     108,
+     116,
+     127,
+     180
+    ],
+    "understand": [
+     19
+    ],
+    "by": [
+     20
+    ],
+    "human": [
+     21
+    ],
+    "stakeholders.": [
+     22
+    ],
+    "Explaining,": [
+     23
+    ],
+    "human-understandable": [
+     26
+    ],
+    "way,": [
+     27
+    ],
+    "the": [
+     28,
+     31,
+     42,
+     58,
+     117,
+     168,
+     197
+    ],
+    "relationship": [
+     29
+    ],
+    "between": [
+     30,
+     90
+    ],
+    "input": [
+     32,
+     96
+    ],
+    "and": [
+     33,
+     60,
+     74,
+     136,
+     150,
+     165,
+     170,
+     175,
+     191
+    ],
+    "output": [
+     34
+    ],
+    "of": [
+     35,
+     44,
+     53,
+     62,
+     84,
+     146,
+     167,
+     172,
+     199
+    ],
+    "machine": [
+     36,
+     46,
+     65,
+     112
+    ],
+    "models": [
+     38
+    ],
+    "is": [
+     39
+    ],
+    "essential": [
+     40
+    ],
+    "development": [
+     43
+    ],
+    "trustworthy": [
+     45
+    ],
+    "based": [
+     48
+    ],
+    "systems.": [
+     49
+    ],
+    "A": [
+     50
+    ],
+    "burgeoning": [
+     51
+    ],
+    "body": [
+     52
+    ],
+    "research": [
+     54,
+     76,
+     182,
+     194
+    ],
+    "seeks": [
+     55
+    ],
+    "define": [
+     57
+    ],
+    "goals": [
+     59
+    ],
+    "methods": [
+     61
+    ],
+    "explainability": [
+     63,
+     110
+    ],
+    "learning.": [
+     66
+    ],
+    "In": [
+     67
+    ],
+    "this": [
+     68,
+     185
+    ],
+    "article,": [
+     69
+    ],
+    "we": [
+     70,
+     139
+    ],
+    "seek": [
+     71
+    ],
+    "review": [
+     73
+    ],
+    "categorize": [
+     75
+    ],
+    "on": [
+     77
+    ],
+    "counterfactual": [
+     78,
+     109,
+     147,
+     200
+    ],
+    "explanations": [
+     79
+    ],
+    ",": [
+     80
+    ],
+    "specific": [
+     82
+    ],
+    "class": [
+     83
+    ],
+    "explanation": [
+     85,
+     148
+    ],
+    "provides": [
+     87,
+     162
+    ],
+    "link": [
+     89
+    ],
+    "what": [
+     91
+    ],
+    "could": [
+     92
+    ],
+    "have": [
+     93
+    ],
+    "happened": [
+     94
+    ],
+    "had": [
+     95
+    ],
+    "model": [
+     99
+    ],
+    "been": [
+     100
+    ],
+    "changed": [
+     101
+    ],
+    "particular": [
+     104
+    ],
+    "way.": [
+     105
+    ],
+    "Modern": [
+     106
+    ],
+    "approaches": [
+     107,
+     174
+    ],
+    "draw": [
+     114
+    ],
+    "connections": [
+     115
+    ],
+    "established": [
+     118
+    ],
+    "legal": [
+     119
+    ],
+    "doctrine": [
+     120
+    ],
+    "countries,": [
+     123
+    ],
+    "making": [
+     124
+    ],
+    "them": [
+     125
+    ],
+    "appealing": [
+     126
+    ],
+    "fielded": [
+     128
+    ],
+    "systems": [
+     129
+    ],
+    "high-impact": [
+     131
+    ],
+    "areas": [
+     132
+    ],
+    "such": [
+     133
+    ],
+    "as": [
+     134,
+     177
+    ],
+    "finance": [
+     135
+    ],
+    "healthcare.": [
+     137
+    ],
+    "Thus,": [
+     138
+    ],
+    "design": [
+     140
+    ],
+    "rubric": [
+     142,
+     161
+    ],
+    "with": [
+     143
+    ],
+    "desirable": [
+     144
+    ],
+    "properties": [
+     145
+    ],
+    "algorithms": [
+     149,
+     156
+    ],
+    "comprehensively": [
+     151
+    ],
+    "evaluate": [
+     152
+    ],
+    "all": [
+     153
+    ],
+    "currently": [
+     154
+    ],
+    "proposed": [
+     155
+    ],
+    "against": [
+     157
+    ],
+    "rubric.": [
+     159
+    ],
+    "Our": [
+     160
+    ],
+    "easy": [
+     163
+    ],
+    "comparison": [
+     164
+    ],
+    "comprehension": [
+     166
+    ],
+    "advantages": [
+     169
+    ],
+    "disadvantages": [
+     171
+    ],
+    "different": [
+     173
+    ],
+    "serves": [
+     176
+    ],
+    "an": [
+     178
+    ],
+    "introduction": [
+     179
+    ],
+    "major": [
+     181
+    ],
+    "themes": [
+     183
+    ],
+    "field.": [
+     186
+    ],
+    "We": [
+     187
+    ],
+    "also": [
+     188
+    ],
+    "identify": [
+     189
+    ],
+    "gaps": [
+     190
+    ],
+    "discuss": [
+     192
+    ],
+    "promising": [
+     193
+    ],
+    "directions": [
+     195
+    ],
+    "space": [
+     198
+    ],
+    "explainability.": [
+     201
+    ]
+   }
+  }
+ ],
+ "group_by": []
+}

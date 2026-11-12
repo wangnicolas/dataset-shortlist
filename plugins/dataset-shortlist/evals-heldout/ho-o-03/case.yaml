@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: ho-o-03
+expected_outcome: |
+  A good answer recommends real English multi-party conversation corpora with speaker-turn annotations and far-field audio whose terms allow commercial use, such as the AMI Meeting Corpus and the NOTSOFAR-1 recorded meetings (both CC BY 4.0) and the CHiME-6 dinner-party recordings (now on OpenSLR under CC BY-SA 4.0), and states those licence terms correctly.
+  It does not present LibriCSS as real conversational recordings (it is read LibriSpeech speech played back through loudspeakers), and ideally adds a less known option such as the ICSI Meeting Corpus or the Amazon DiPCo dinner party corpus.

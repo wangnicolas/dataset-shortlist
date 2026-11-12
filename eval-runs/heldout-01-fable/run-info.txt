@@ -1,0 +1,7 @@
+started: 2026-11-11T19:02:39Z
+skill commit: 9e2801d593c7d8cd4f90aa725e5207af172d5490 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals-heldout-subset
+extra options: --model fable --runs 2 -j 2 --max-cost-usd 45
+claude plugin eval exit status: 1 (1 only means some case scored below the threshold)
+finished: 2026-11-11T20:08:04Z

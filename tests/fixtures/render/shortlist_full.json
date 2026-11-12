@@ -1,0 +1,688 @@
+{
+  "question": "I want to study how the shift to remote work changed commuting patterns in mid-sized European cities between 2018 and 2023. What data can I actually get?",
+  "generated_at": "2026-11-11T14:00:00Z",
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "Origin–destination commuting flows at municipality level or finer",
+      "must": true
+    },
+    {
+      "id": "R2",
+      "text": "Covers years before 2020 and after 2021",
+      "must": true
+    },
+    {
+      "id": "R3",
+      "text": "Monthly or finer time resolution",
+      "must": true
+    },
+    {
+      "id": "R4",
+      "text": "Includes cities of 100,000 to 500,000 residents",
+      "must": true
+    },
+    {
+      "id": "R5",
+      "text": "Records the transport mode (car, public transport, cycling, walking)",
+      "must": false
+    },
+    {
+      "id": "R6",
+      "text": "Trip-level records rather than aggregates",
+      "must": false
+    },
+    {
+      "id": "R7",
+      "text": "Licence allows work with a commercial partner",
+      "must": false
+    }
+  ],
+  "searched": {
+    "sources": [
+      "coppice",
+      "lanternfish",
+      "quayside"
+    ],
+    "queries": [
+      "commuting flows origin destination municipality",
+      "travel diary microdata 2018 2023",
+      "smart card journeys public transport",
+      "mobile network mobility matrix commuting"
+    ],
+    "n_candidates": 87
+  },
+  "datasets": [
+    {
+      "rank": 1,
+      "record": {
+        "id": "coppice:48213",
+        "source": "coppice",
+        "title": "Quillhaven Mobile Network Commuting Matrices, 2018–2023",
+        "url": "https://coppice.example.org/records/48213",
+        "access": {
+          "tier": "account",
+          "evidence": "access_right=registered; terms=click-through"
+        },
+        "description": "Monthly origin–destination matrices of home-to-work movements between 214 municipalities, derived from anonymised mobile network signalling data and scaled to census population. Flows below 15 commuters are suppressed. Released as one table per month with municipality codes, flow counts and a confidence band.",
+        "doi": "10.5555/coppice.48213",
+        "publisher": "Quillhaven Institute for Spatial Statistics",
+        "creators": [
+          "Institut für Raumstatistik Quillhaven",
+          "Zoë Lindqvist-Ünsal"
+        ],
+        "year": 2024,
+        "version": "3.1",
+        "updated": "2024-06-18",
+        "licence": {
+          "id": "CC-BY-NC-SA-4.0",
+          "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0",
+          "url": "https://licences.example.org/by-nc-sa/4.0/",
+          "commercial_use": false,
+          "share_alike": true
+        },
+        "size": {
+          "bytes": 6200000000,
+          "files": 72,
+          "records": 41800000
+        },
+        "formats": [
+          "CSV",
+          "Parquet"
+        ],
+        "subjects": [
+          "commuting",
+          "mobility",
+          "origin-destination matrix",
+          "mobile network data"
+        ],
+        "usage": {
+          "downloads": 3120,
+          "citations": 41
+        },
+        "extra": {},
+        "retrieved_at": "2026-11-11",
+        "also_found_in": [
+          {
+            "source": "lanternfish",
+            "id": "lanternfish:qh-commute-matrices",
+            "url": "https://lanternfish.example.org/dataset/qh-commute-matrices"
+          }
+        ],
+        "verification": {
+          "verified": true,
+          "method": "registry-api",
+          "http_status": 200,
+          "final_url": "https://coppice.example.org/records/48213",
+          "checked_at": "2026-11-11T13:41:00Z",
+          "problems": [],
+          "notes": [
+            "licence filled from the registry record"
+          ]
+        }
+      },
+      "fit": "strong",
+      "why": "Monthly flows between 214 municipalities for the whole period, counting every way of travelling, with 31 mid-sized cities among them. It does not say how people travelled.",
+      "requirements": {
+        "R1": {
+          "status": "met",
+          "evidence": "Data dictionary: \"origin and destination municipality code\"",
+          "url": "https://coppice.example.org/records/48213/files/data-dictionary.pdf"
+        },
+        "R2": {
+          "status": "met",
+          "evidence": "Coverage field: 2018-01 to 2023-12",
+          "url": "https://coppice.example.org/records/48213"
+        },
+        "R3": {
+          "status": "met",
+          "evidence": "One table per calendar month"
+        },
+        "R4": {
+          "status": "met",
+          "evidence": "31 of the 214 municipalities have 100,000 to 500,000 residents (municipality list, sheet 2)",
+          "url": "https://coppice.example.org/records/48213/files/municipalities.xlsx"
+        },
+        "R5": {
+          "status": "unmet",
+          "evidence": "No mode field; signalling data cannot tell a car from a tram"
+        },
+        "R6": {
+          "status": "unmet",
+          "evidence": "Aggregated flows only"
+        },
+        "R7": {
+          "status": "unmet",
+          "evidence": "licence=CC-BY-NC-SA-4.0",
+          "url": "https://licences.example.org/by-nc-sa/4.0/"
+        }
+      },
+      "access_steps": [
+        "Create a free account on the Coppice repository",
+        "Accept the click-through terms of use on the dataset page",
+        "Wait for the account to be activated (one or two working days)",
+        "Download the monthly tables, or request the link to the full archive"
+      ],
+      "time_to_access": "days",
+      "caveats": [
+        "Flows under 15 commuters are suppressed, which hides most links between small municipalities.",
+        "The operator's market share changed in 2021. The publisher rescaled the series, and the method note warns of a break of up to 4%.",
+        "Non-commercial and share-alike: tables you derive must carry the same licence."
+      ],
+      "papers": [
+        {
+          "title": "Fewer trips, longer trips: commuting after the remote-work shift in 214 municipalities",
+          "year": 2025,
+          "doi": "10.5555/jtg.2025.0142",
+          "url": "https://journals.example.org/jtg/2025/0142",
+          "note": "Used the monthly matrices to estimate the change in commuting volume by city size."
+        },
+        {
+          "title": "Validating mobile network commuting flows against census journey-to-work tables",
+          "year": 2023,
+          "doi": "10.5555/sds.2023.077",
+          "url": "https://journals.example.org/sds/2023/077",
+          "note": "Validation study: agreement with census flows is high for links above 100 commuters and poor below 30."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "record": {
+        "id": "lanternfish:bta-tap-aggregates",
+        "source": "lanternfish",
+        "title": "Brackenmoor Open Transit Tap Aggregates",
+        "url": "https://lanternfish.example.org/dataset/bta-tap-aggregates",
+        "access": {
+          "tier": "open",
+          "evidence": "isOpenAccess=true; direct file links"
+        },
+        "description": "Daily counts of smart-card taps between pairs of stops and stations on bus, tram and suburban rail in the Brackenmoor region, published by the transport authority since 2017. Counts under 5 for a station pair are rounded up to 5.",
+        "doi": null,
+        "publisher": "Brackenmoor Transport Authority",
+        "creators": [
+          "Brackenmoor Transport Authority"
+        ],
+        "year": 2017,
+        "version": null,
+        "updated": "2026-10-31",
+        "licence": {
+          "id": "CC-BY-4.0",
+          "name": "Creative Commons Attribution 4.0 International",
+          "url": "https://licences.example.org/by/4.0/",
+          "commercial_use": true,
+          "share_alike": false
+        },
+        "size": {
+          "bytes": 918000000,
+          "files": 118
+        },
+        "formats": [
+          "CSV"
+        ],
+        "subjects": [
+          "public transport",
+          "smart card",
+          "ridership"
+        ],
+        "usage": {
+          "downloads": 15400,
+          "views": 61200
+        },
+        "extra": {},
+        "retrieved_at": "2026-11-11",
+        "verification": {
+          "verified": true,
+          "method": "http",
+          "http_status": 200,
+          "final_url": "https://lanternfish.example.org/dataset/bta-tap-aggregates",
+          "checked_at": "2026-11-11T13:42:00Z",
+          "problems": [],
+          "notes": [
+            "no registry record for this host; the landing page answered and lists the files"
+          ]
+        }
+      },
+      "fit": "partial",
+      "why": "Free to download today and daily, so you can start at once. It covers public transport in one region only, which is one slice of commuting in three mid-sized cities.",
+      "requirements": {
+        "R1": {
+          "status": "met",
+          "evidence": "Stop-to-stop counts; the stop table gives the municipality of each stop",
+          "url": "https://lanternfish.example.org/dataset/bta-tap-aggregates/stops"
+        },
+        "R2": {
+          "status": "met",
+          "evidence": "Files for 2017 to 2026"
+        },
+        "R3": {
+          "status": "met",
+          "evidence": "Daily counts"
+        },
+        "R4": {
+          "status": "partial",
+          "evidence": "Three cities in the size band, all in one region"
+        },
+        "R5": {
+          "status": "partial",
+          "evidence": "Bus, tram and rail are separated; car, cycling and walking are absent"
+        },
+        "R6": {
+          "status": "unmet",
+          "evidence": "Counts per station pair and day"
+        },
+        "R7": {
+          "status": "met",
+          "evidence": "licence=CC-BY-4.0",
+          "url": "https://licences.example.org/by/4.0/"
+        }
+      },
+      "access_steps": [
+        "Open the dataset page",
+        "Download the yearly CSV files; no account is needed"
+      ],
+      "time_to_access": "minutes",
+      "caveats": [
+        "Taps are not commuters: one person tapping in twice counts twice, and paper tickets are not counted.",
+        "The fare system changed in March 2022, when tapping out became compulsory on trams."
+      ],
+      "papers": [
+        {
+          "title": "Station-level recovery of public transport demand after 2020",
+          "year": 2024,
+          "doi": "10.5555/ptr.2024.058",
+          "url": "https://journals.example.org/ptr/2024/058",
+          "note": "Used the daily counts to date the return of peak-hour travel."
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "record": {
+        "id": "quayside:VMT-SCJ-TRIPLEVEL",
+        "source": "quayside",
+        "title": "Vantry Metropolitan Smart-Card Journey Records: Trip-Level Extract with Pseudonymised Card Identifiers, Boarding and Alighting Stops, Fare Products and Transfer Chains, 2016–2024",
+        "url": "https://researchdata.example.org/collections/transport/vantry-metropolitan-transit/smartcard-journeys/trip-level-extract-with-pseudonymised-card-identifiers?edition=2024&view=landing&ref=VMT-SCJ-TRIPLEVEL-2016-2024",
+        "access": {
+          "tier": "controlled",
+          "evidence": "access=institutional agreement; secure_environment=required"
+        },
+        "description": "Every smart-card journey on the Vantry network since 2016: boarding and alighting stop, time to the second, fare product and a pseudonymised card identifier that stays the same for the life of the card. Analysis is allowed only inside the transit office's secure environment; results are checked before they leave it.",
+        "doi": null,
+        "publisher": "Vantry Metropolitan Transit Research Office",
+        "creators": [],
+        "year": 2025,
+        "version": "2024 edition",
+        "updated": "2025-03-04",
+        "licence": null,
+        "size": {
+          "records": 2900000000
+        },
+        "formats": [
+          "Parquet"
+        ],
+        "subjects": [
+          "smart card",
+          "public transport",
+          "trip chains"
+        ],
+        "usage": {},
+        "extra": {},
+        "retrieved_at": "2026-11-11",
+        "verification": {
+          "verified": true,
+          "method": "http",
+          "http_status": 200,
+          "final_url": "https://researchdata.example.org/collections/transport/vantry-metropolitan-transit/smartcard-journeys/trip-level-extract-with-pseudonymised-card-identifiers?edition=2024&view=landing&ref=VMT-SCJ-TRIPLEVEL-2016-2024",
+          "checked_at": "2026-11-11T13:43:00Z",
+          "problems": [],
+          "notes": [
+            "the landing page mentions \"data sharing agreement\"; confirm the access route on that page before applying"
+          ]
+        }
+      },
+      "fit": "strong",
+      "why": "The richest source found: it follows the same card across years, so you can see individual commuters cut back. It is also the slowest to obtain, and it covers public transport in one metropolitan area.",
+      "requirements": {
+        "R1": {
+          "status": "met",
+          "evidence": "Boarding and alighting stop for every journey"
+        },
+        "R2": {
+          "status": "met",
+          "evidence": "2016 to 2024"
+        },
+        "R3": {
+          "status": "met",
+          "evidence": "Time stamp to the second"
+        },
+        "R4": {
+          "status": "partial",
+          "evidence": "One metropolitan area; four of its municipalities are in the size band"
+        },
+        "R5": {
+          "status": "partial",
+          "evidence": "Public transport only"
+        },
+        "R6": {
+          "status": "met",
+          "evidence": "One row per journey",
+          "url": "https://researchdata.example.org/collections/transport/vantry-metropolitan-transit/smartcard-journeys/schema"
+        }
+      },
+      "access_steps": [
+        "Ask your institution's research office whether it already has a framework agreement with the transit office",
+        "Obtain ethics approval for the project from your own institution",
+        "Have an authorised signatory sign the data sharing agreement",
+        "Complete the transit office's half-day training on working in the secure environment",
+        "Receive a login for the secure environment; data cannot be downloaded"
+      ],
+      "time_to_access": "months",
+      "caveats": [
+        "No licence is stated: the data sharing agreement sets the terms, and it is negotiated with each institution.",
+        "Outputs are checked before release, which adds about a week to every export.",
+        "A new card gets a new identifier, so people who replaced a lost card look like new travellers."
+      ],
+      "papers": [
+        {
+          "title": "Who stopped commuting? Card-level evidence from a metropolitan transit network",
+          "year": 2025,
+          "doi": "10.5555/ums.2025.011",
+          "url": "https://journals.example.org/ums/2025/011",
+          "note": "Followed 310,000 cards from 2019 to 2023 to separate people who travel less often from people who left the network."
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "record": {
+        "id": "quayside:ETD-2017-2023",
+        "source": "quayside",
+        "title": "Estermere Regional Travel Diary Microdata, 2017–2023",
+        "url": "https://quayside.example.org/catalogue/ETD-2017-2023",
+        "access": {
+          "tier": "gated",
+          "evidence": "access_condition=application; approval=archive staff"
+        },
+        "description": "Person- and trip-level records from a continuous household travel survey. About 9,000 respondents a year report every trip made on one assigned day, with purpose, main mode, start and end municipality and departure time. From the 2020 wave on, respondents also report how many days a week they work from home.",
+        "doi": "10.5555/quayside.etd.2023",
+        "publisher": "Estermere Social Data Archive",
+        "creators": [
+          "Estermere Regional Transport Observatory"
+        ],
+        "year": 2024,
+        "version": "7th edition",
+        "updated": "2024-02-29",
+        "licence": {
+          "id": null,
+          "name": "Estermere Archive End User Licence",
+          "url": "https://quayside.example.org/terms/end-user-licence",
+          "commercial_use": null,
+          "share_alike": null
+        },
+        "size": {
+          "records": 1260000,
+          "files": 21,
+          "text": "about 1.26 million trips by 63,000 respondents"
+        },
+        "formats": [
+          "SPSS",
+          "Stata",
+          "CSV"
+        ],
+        "subjects": [
+          "travel survey",
+          "commuting",
+          "working from home",
+          "mode choice"
+        ],
+        "usage": {
+          "citations": 118
+        },
+        "extra": {},
+        "retrieved_at": "2026-11-11",
+        "verification": {
+          "verified": true,
+          "method": "doi",
+          "http_status": 200,
+          "final_url": "https://quayside.example.org/catalogue/ETD-2017-2023",
+          "checked_at": "2026-11-11T13:42:00Z",
+          "problems": [],
+          "notes": []
+        }
+      },
+      "fit": "partial",
+      "why": "Trip-level records with mode and purpose, and the only obtainable source that asks about working from home directly. The sample is small for a single city, so flows between pairs of municipalities are noisy.",
+      "requirements": {
+        "R1": {
+          "status": "partial",
+          "evidence": "Start and end municipality are recorded, but with about 9,000 respondents a year most municipality pairs have fewer than 10 trips",
+          "url": "https://quayside.example.org/catalogue/ETD-2017-2023/user-guide"
+        },
+        "R2": {
+          "status": "met",
+          "evidence": "Waves 2017 to 2023; fieldwork paused from April to August 2020"
+        },
+        "R3": {
+          "status": "partial",
+          "evidence": "Interview month is recorded; a monthly sample is about 750 respondents"
+        },
+        "R4": {
+          "status": "met",
+          "evidence": "The sample covers 12 cities in that size band (sampling report, table 3)",
+          "url": "https://quayside.example.org/catalogue/ETD-2017-2023/sampling-report"
+        },
+        "R5": {
+          "status": "met",
+          "evidence": "Variable \"main mode\" with 9 categories"
+        },
+        "R6": {
+          "status": "met",
+          "evidence": "One row per trip"
+        },
+        "R7": {
+          "status": "unknown",
+          "evidence": "The End User Licence does not mention commercial use; the archive decides such requests case by case",
+          "url": "https://quayside.example.org/terms/end-user-licence"
+        }
+      },
+      "access_steps": [
+        "Register with the Estermere Social Data Archive using an institutional e-mail address",
+        "Submit a project description of about 300 words and name everyone who will handle the data",
+        "Sign the End User Licence online",
+        "Wait for archive staff to approve the application",
+        "Download the files from your archive account"
+      ],
+      "time_to_access": "weeks",
+      "caveats": [
+        "Each respondent reports one day only, so the data cannot follow one person's commute over time.",
+        "No fieldwork from April to August 2020: the first months of the shift are missing.",
+        "Students need a supervisor to co-sign the application."
+      ],
+      "papers": [
+        {
+          "title": "Working from home and the weekly rhythm of travel: evidence from seven survey waves",
+          "year": 2024,
+          "doi": "10.5555/trb.2024.3391",
+          "note": "Compared commuting days per week before and after 2020 using the trip records and the working-from-home question."
+        },
+        {
+          "title": "Télétravail et mobilité quotidienne dans les villes moyennes",
+          "year": 2023,
+          "url": "https://journals.example.org/mobilites/2023/14",
+          "note": "Mode shares for 12 mid-sized cities."
+        },
+        {
+          "title": "Sample design and weighting of the Estermere travel diary",
+          "year": 2019,
+          "note": "Method report. Explains why monthly estimates for single cities are unreliable."
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "record": {
+        "id": "coppice:51907",
+        "source": "coppice",
+        "title": "Pellwater Employer Commute Survey, 2019–2022",
+        "url": "https://coppice.example.org/records/51907",
+        "access": {
+          "tier": "closed",
+          "evidence": "access_right=embargoed; embargo_end is empty; files=0"
+        },
+        "description": "Yearly survey of 1,400 employers on where their staff live, how they travel to work and how many days they work remotely. The registry record describes the survey, but the files are under embargo and no release date is given.",
+        "doi": "10.5555/coppice.51907",
+        "publisher": "Pellwater Chamber of Employers",
+        "creators": [
+          "Pellwater Chamber of Employers"
+        ],
+        "year": 2023,
+        "version": "1.0",
+        "updated": "2023-09-12",
+        "licence": {
+          "id": "ODbL-1.0",
+          "name": "Open Database License 1.0",
+          "url": "https://licences.example.org/odbl/1.0/",
+          "commercial_use": true,
+          "share_alike": true
+        },
+        "size": null,
+        "formats": [],
+        "subjects": [
+          "employer survey",
+          "remote work",
+          "commuting"
+        ],
+        "usage": {
+          "views": 880
+        },
+        "extra": {},
+        "retrieved_at": "2026-11-11",
+        "verification": {
+          "verified": true,
+          "method": "registry-api",
+          "http_status": 200,
+          "final_url": "https://coppice.example.org/records/51907",
+          "checked_at": "2026-11-11T13:43:00Z",
+          "problems": [],
+          "notes": []
+        }
+      },
+      "fit": "weak",
+      "why": "It asks employers how many days their staff work remotely, which no flow dataset can tell you. Listed so that you know it exists: the record is real, but the files cannot be obtained today.",
+      "requirements": {
+        "R1": {
+          "status": "partial",
+          "evidence": "Home and workplace are recorded by postal district, not municipality"
+        },
+        "R2": {
+          "status": "partial",
+          "evidence": "2019 to 2022: one year before 2020, and the last wave is 2022"
+        },
+        "R3": {
+          "status": "unmet",
+          "evidence": "One wave a year"
+        },
+        "R4": {
+          "status": "unknown",
+          "evidence": "The record does not list the places covered"
+        },
+        "R5": {
+          "status": "met",
+          "evidence": "Abstract: \"usual mode of travel to work\""
+        },
+        "R6": {
+          "status": "unmet",
+          "evidence": "Employer-level summaries"
+        },
+        "R7": {
+          "status": "met",
+          "evidence": "licence=ODbL-1.0",
+          "url": "https://licences.example.org/odbl/1.0/"
+        }
+      },
+      "access_steps": [
+        "Nothing can be requested yet: the files are under embargo",
+        "Write to the data steward named on the record and ask to be told when the embargo ends"
+      ],
+      "time_to_access": "unknown",
+      "caveats": [
+        "An open licence does not make the data available: the licence applies once the files are released.",
+        "No release date is given anywhere on the record."
+      ],
+      "papers": []
+    },
+    {
+      "rank": 6,
+      "record": {
+        "title": "Solvane Cycling Counter Feed",
+        "url": "https://opendata.example.org/solvane/cycle-counters",
+        "access": {
+          "tier": "unknown",
+          "evidence": ""
+        },
+        "publisher": "Solvane City Council",
+        "verification": {
+          "verified": false,
+          "method": null,
+          "http_status": 404,
+          "final_url": null,
+          "checked_at": "2026-11-11T13:44:00Z",
+          "problems": [
+            "the landing page answered HTTP 404",
+            "no registry searched lists a dataset with this title"
+          ],
+          "notes": []
+        }
+      },
+      "fit": "weak",
+      "why": "Hourly counts of cyclists at 38 fixed counters could show whether cycling to work grew. It has no origins or destinations, and the page could not be reached.",
+      "requirements": {
+        "R1": {
+          "status": "unmet",
+          "evidence": "Counts at fixed points; no origin or destination"
+        },
+        "R3": {
+          "status": "met",
+          "evidence": "Hourly counts, according to the paper that cites it"
+        }
+      },
+      "access_steps": [],
+      "time_to_access": "unknown",
+      "caveats": [
+        "Known only from a citation in a 2022 paper; the address given there no longer answers.",
+        "No licence could be found."
+      ],
+      "papers": [
+        {
+          "title": "Counting commuters on two wheels: a bias check for automated cycle counters",
+          "year": 2022,
+          "url": "https://journals.example.org/atr/2022/203",
+          "note": "Names the feed as its data source. This is where the address came from."
+        }
+      ]
+    }
+  ],
+  "not_recommended": [
+    {
+      "name": "Hollowbrook Freight Corridor Counts",
+      "url": "https://data.example.org/hollowbrook/freight-counts",
+      "reason": "Counts goods vehicles on motorways only. It has no commuting trips and no origin–destination pairs, so it fails R1."
+    },
+    {
+      "name": "Marrowick Household Travel Snapshot 2016",
+      "url": "https://archive.example.org/marrowick-2016",
+      "reason": "A single survey wave from 2016, so it cannot show change across 2020 and fails R2."
+    },
+    {
+      "name": "Tidewell Ride-Hailing Sample",
+      "reason": "Mentioned in two papers, but no landing page or registry record could be found, so nothing about it can be checked."
+    }
+  ],
+  "gaps": [
+    "No open, trip-level dataset covers both periods: every trip-level source needs an application or an institutional agreement.",
+    "Only one obtainable source records working from home directly. In the others, remote work has to be inferred from the fall in commuting trips.",
+    "Cities under 100,000 residents are missing from every dataset on this page."
+  ],
+  "notes": "Sample report. Every dataset, publisher, registry, paper and link on this page is invented to show what a dataset-scout report looks like."
+}

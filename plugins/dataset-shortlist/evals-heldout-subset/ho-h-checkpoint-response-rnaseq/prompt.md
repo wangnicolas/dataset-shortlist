@@ -1,0 +1,8 @@
+---
+tags: [heldout, health]
+max_turns: 60
+timeout_seconds: 1500
+allowed_tools: [Read, Glob, Grep, Skill]
+---
+
+I'm a bioinformatics postdoc building a classifier that predicts response to immune checkpoint inhibitors (anti-PD-1/PD-L1 or anti-CTLA-4) from pre-treatment tumour RNA-seq. I need cohorts of patients who actually received checkpoint inhibitors, with bulk expression data and a recorded clinical response (RECIST or clinical benefit), ideally several independent cohorts so I can validate across studies. Any cancer type is fine. Where can I get these, and which ones can I download right away versus having to apply for?

@@ -1,0 +1,55 @@
+{
+ "_id": "63716b69afbe42caa5a8dfd5",
+ "id": "bigbio/n2c2_2018_track2",
+ "author": "bigbio",
+ "sha": "d03afd823088e16689cf7e5060f769fc12458681",
+ "lastModified": "2022-12-22T15:46:01.000Z",
+ "private": false,
+ "gated": false,
+ "disabled": false,
+ "tags": [
+  "multilinguality:monolingual",
+  "language:en",
+  "license:other",
+  "region:us"
+ ],
+ "citation": "@article{DBLP:journals/jamia/HenryBFSU20,\n  author    = {\n                Sam Henry and\n                Kevin Buchan and\n                Michele Filannino and\n                Amber Stubbs and\n                Ozlem Uzuner\n               },\n  title     = {2018 n2c2 shared task on adverse drug events and medication extraction\n               in electronic health records},\n  journal   = {J. Am. Medical Informatics Assoc.},\n  volume    = {27},\n  number    = {1},\n  pages     = {3--12},\n  year      = {2020},\n  url       = {https://doi.org/10.1093/jamia/ocz166},\n  doi       = {10.1093/jamia/ocz166},\n  timestamp = {Sat, 30 May 2020 19:53:56 +0200},\n  biburl    = {https://dblp.org/rec/journals/jamia/HenryBFSU20.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}",
+ "description": "The National NLP Clinical Challenges (n2c2), organized in 2018, continued the\nlegacy of i2b2 (Informatics for Biology and the Bedside), adding 2 new tracks and 2\nnew sets of data to the shared tasks organized since 2006. Track 2 of 2018\nn2c2 shared tasks focused on the extraction of medications, with their signature\ninformation, and adverse drug events (ADEs) from clinical narratives.\nThis track built on our previous medication challenge, but added a special focus on ADEs.\n\nADEs are injuries resulting from a medical intervention related to a drugs and\ncan include allergic reactions, drug interactions, overdoses, and medication errors.\nCollectively, ADEs are estimated to account for 30% of all hospital adverse\nevents; however, ADEs are preventable. Identifying potential drug interactions,\noverdoses, allergies, and errors at the point of care and alerting the caregivers of\npotential ADEs can improve health delivery, reduce the risk of ADEs, and improve health\noutcomes.\n\nA step in this direction requires processing narratives of clinical records\nthat often elaborate on the medications given to a patient, as well as the known\nallergies, reactions, and adverse events of the patient. Extraction of this information\nfrom narratives complements the structured medication information that can be\nobtained from prescriptions, allowing a more thorough assessment of potential ADEs\nbefore they happen.\n\nThe 2018 n2c2 shared task Track 2, hereon referred to as the ADE track,\ntackled these natural language processing tasks in 3 different steps,\nwhich we refer to as tasks:\n1. Concept Extraction: identification of concepts related to medications,\ntheir signature information, and ADEs\n2. Relation Classification: linking the previously mentioned concepts to\ntheir medication  by identifying relations on gold standard concepts\n3. End-to-End: building end-to-end systems that process raw narrative text\nto discover concepts and find relations of those concepts to their medications\n\nShared tasks provide a venue for head-to-head comparison of systems developed\nfor the same task and on the same data, allowing researchers to identify the state\nof the art in a particular task, learn from it, and build on it.",
+ "downloads": 112,
+ "likes": 6,
+ "cardData": {
+  "language": [
+   "en"
+  ],
+  "bigbio_language": [
+   "English"
+  ],
+  "license": "other",
+  "multilinguality": "monolingual",
+  "bigbio_license_shortname": "DUA",
+  "pretty_name": "n2c2 2018 ADE",
+  "homepage": "https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/",
+  "bigbio_pubmed": false,
+  "bigbio_public": false,
+  "bigbio_tasks": [
+   "NAMED_ENTITY_RECOGNITION",
+   "RELATION_EXTRACTION"
+  ]
+ },
+ "siblings": [
+  {
+   "rfilename": ".gitattributes"
+  },
+  {
+   "rfilename": "README.md"
+  },
+  {
+   "rfilename": "bigbiohub.py"
+  },
+  {
+   "rfilename": "n2c2_2018_track2.py"
+  }
+ ],
+ "createdAt": "2022-11-13T22:10:49.000Z",
+ "usedStorage": 0
+}

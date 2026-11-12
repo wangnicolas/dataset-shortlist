@@ -1,0 +1,123 @@
+{
+  "must_haves": [
+    "Standard resting 12-lead ECGs of about 10 s per recording (a set with mixed lengths counts if a large 10-s subset can be selected)",
+    "Diagnostic labels covering atrial fibrillation and conduction disorders (bundle branch blocks and AV block)",
+    "At least a few thousand labelled recordings",
+    "Downloadable this week without any application, credentialing, data use agreement or ethics approval (open access)",
+    "Preference, not a hard requirement: labels assigned or confirmed by cardiologists"
+  ],
+  "A": [
+    {
+      "dataset": "PTB-XL (PhysioNet)",
+      "official_url": "https://physionet.org/content/ptb-xl/1.0.3/",
+      "exists": true,
+      "access_stated": "open download, no account, application or credentialing; CC BY 4.0",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access (\"Anyone can access the files, as long as they conform to the terms of the specified license\", CC BY 4.0) with 21,799 10-s 12-lead records from 18,869 patients \"annotated by up to two cardiologists\"; scp_statements.csv lists AFIB, AFLT, CLBBB, CRBBB, ILBBB, IRBBB, LAFB, LPFB, 1AVB, 2AVB, 3AVB and IVCD, and \"Records in fold 9 and 10 underwent at least one human evaluation\"."
+    },
+    {
+      "dataset": "Chapman-Shaoxing / Ningbo (PhysioNet, A large scale 12-lead electrocardiogram database for arrhythmia study)",
+      "official_url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+      "exists": true,
+      "access_stated": "open access on PhysioNet",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access (\"Anyone can access the files...\", CC BY 4.0) with 10-s 12-lead 500 Hz ECGs of 45,152 patients, where \"a licensed physician labeled the rhythm and other cardiac conditions\", a second physician validated and a senior physician resolved disagreements; ConditionNames_SNOMED-CT.csv includes AFIB, AF (flutter), LBBB, RBBB, 1AVB, 2AVB and 3AVB."
+    },
+    {
+      "dataset": "CODE-15% (Zenodo)",
+      "official_url": "https://zenodo.org/records/4916206",
+      "exists": true,
+      "access_stated": "open download from Zenodo",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Zenodo record is open under CC BY 4.0 with 345,779 exams from 233,770 patients, 12-lead at 400 Hz (\"Some signals originally have a duration of 10 seconds ... and others of 7 seconds\") and labels 1dAVb, RBBB, LBBB, SB, AF and ST; the Nature Communications paper says the training labels were extracted from cardiologists' text reports and filtered against automatic Uni-G/Minnesota analysis, consistent with the answer's caveat."
+    },
+    {
+      "dataset": "Shandong Provincial Hospital (SPH) 12-lead ECG database (Figshare)",
+      "official_url": "https://springernature.figshare.com/collections/A_large-scale_multi-label_12-lead_electrocardiogram_database_with_standardized_diagnostic_statements/5779802/1",
+      "exists": true,
+      "access_stated": "open on Figshare (licence to be checked on the record page)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Figshare HTML page returned 403, so the collection was read through api.figshare.com: 25,770 12-lead 500 Hz records from 24,666 patients, CC0 items with direct file download, AHA codes including AF (50), LBBB (104), RBBB (106) and AV block (83-88), and the paper says \"The responsible cardiologist made the final diagnosis\"; the answer's \"10 s\" is imprecise because \"the length of records ranges from 10 to 60 seconds\" (24,242 of 25,770 are 10-15 s)."
+    },
+    {
+      "dataset": "PhysioNet/CinC Challenge 2021 training set",
+      "official_url": "https://physionet.org/content/challenge-2021/1.0.3/",
+      "exists": true,
+      "access_stated": "open download",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access under CC BY 4.0 with \"over 88,000 ECGs shared publicly as training data\" (88,253 across CPSC, CPSC-Extra, INCART, PTB, PTB-XL, Georgia, Chapman-Shaoxing and Ningbo) in SNOMED-CT, and the scored list includes AF, IAVB, LBBB and RBBB; the page gives CPSC lengths as \"6-144 s\" rather than the answer's 6-60 s, and it notes that some sources have human-overread machine labels."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "PTB-XL (PhysioNet)",
+      "official_url": "https://physionet.org/content/ptb-xl/1.0.3/",
+      "exists": true,
+      "access_stated": "direct download, no account; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access (\"Anyone can access the files, as long as they conform to the terms of the specified license\", CC BY 4.0) with 21,799 10-s 12-lead records from 18,869 patients \"annotated by up to two cardiologists\"; scp_statements.csv lists AFIB, CLBBB, CRBBB, ILBBB, IRBBB, 1AVB, 2AVB and 3AVB, and the answer's quotation matches the page."
+    },
+    {
+      "dataset": "Chapman-Shaoxing/Ningbo (PhysioNet, A large scale 12-lead electrocardiogram database for arrhythmia study)",
+      "official_url": "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+      "exists": true,
+      "access_stated": "direct download; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access under CC BY 4.0 with 10-s 12-lead 500 Hz ECGs of 45,152 patients, the answer's quotations on physician labelling match it, and the label list includes AFIB, LBBB, RBBB, 1AVB, 2AVB and 3AVB; the Zenodo record 16789324 that the answer calls \"a smaller Shaoxing-only copy\" is not a subset, because its description points to this PhysioNet page and its single zip is the same size (2,498,709,074 bytes) as PhysioNet's full v1.0.0 archive."
+    },
+    {
+      "dataset": "PhysioNet/CinC Challenge 2020 training data",
+      "official_url": "https://physionet.org/content/challenge-2020/1.0.2/",
+      "exists": true,
+      "access_stated": "direct download; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access under CC BY 4.0 with training folders CPSC 6,877 and CPSC-Extra 3,453 (6-60 s), INCART 74 (30 min), PTB 516, PTB-XL 21,837 (10 s) and Georgia 10,344 (10 s, 500 Hz), 43,101 in total in SNOMED-CT, whose scored list includes AF, IAVB, LBBB and RBBB; the page also says \"Some databases have human overread machine labels\"."
+    },
+    {
+      "dataset": "PhysioNet/CinC Challenge 2021 training data",
+      "official_url": "https://physionet.org/content/challenge-2021/1.0.3/",
+      "exists": true,
+      "access_stated": "direct download; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The page is open access under CC BY 4.0 with \"over 88,000 ECGs shared publicly as training data\" (88,253), covering all of the 2020 training sources plus Chapman-Shaoxing (10,247) and Ningbo (34,905), in SNOMED-CT, and the scored list includes AF, IAVB, LBBB and RBBB."
+    },
+    {
+      "dataset": "CODE-15% (Zenodo)",
+      "official_url": "https://zenodo.org/records/4916206",
+      "exists": true,
+      "access_stated": "direct download from Zenodo; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The Zenodo record is open under CC BY 4.0 with exactly 345,779 exams from 233,770 patients, 12-lead at 400 Hz in a mix of 7-s and 10-s traces, labelled 1dAVb, RBBB, LBBB, SB, AF and ST; the Nature Communications paper says the training labels were extracted from cardiologists' text reports and filtered against automatic Uni-G/Minnesota analysis, consistent with the answer's caveat."
+    },
+    {
+      "dataset": "CODE-test (Zenodo)",
+      "official_url": "https://zenodo.org/records/3765780",
+      "exists": true,
+      "access_stated": "direct download; CC-BY-4.0",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": false,
+      "note": "The Zenodo record is open under CC BY 4.0 and contains \"827 ECG tracings\" annotated by two cardiologists, with \"a third senior specialist\" deciding disagreements, so it fails the few-thousand-recordings requirement (the answer itself offers it only as a test set)."
+    }
+  ]
+}

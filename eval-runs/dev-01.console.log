@@ -1,0 +1,57 @@
+# Evaluation summary
+
+Model: sonnet. Judge: sonnet. Cases: 4. Total list-price cost: $2.88.
+
+## Score by stratum (share of scored graders passed, mean over cases)
+
+| Stratum | Cases | With skill | Without | Difference | Cases better / same / worse |
+|---|---|---|---|---|---|
+| untagged | 4 | 0.79 | 0.79 | +0.00 | 1 / 2 / 1 |
+
+## Pass rate by grader family
+
+| Stratum | Family | With skill | Without | Graders judged per arm |
+|---|---|---|---|---|
+| untagged | recall | 0.88 | 0.88 | 17 |
+| untagged | access | 0.57 | 0.57 | 14 |
+| untagged | trap | 1.00 | 1.00 | 4 |
+| untagged | long tail | 1.00 | 1.00 | 4 |
+
+## Per case
+
+| Case | Stratum | With (mean, spread) | Without (mean, spread) | Difference |
+|---|---|---|---|---|
+| dev-crop-type-sentinel2 | untagged | 0.78 (0.00) | 0.56 (0.00) | +0.22 |
+| dev-household-load-forecasting | untagged | 0.70 (0.00) | 0.70 (0.00) | +0.00 |
+| dev-icu-sepsis-early-warning | untagged | 0.91 (0.00) | 0.91 (0.00) | +0.00 |
+| dev-parkinsons-voice-audio | untagged | 0.78 (0.00) | 1.00 (0.00) | -0.22 |
+
+## Links in the final answers (checked by script)
+
+| Arm | Runs | Links per answer | Resolving | Dead | Blocked to automated clients |
+|---|---|---|---|---|---|
+| with | 4 | 8.5 | 34 of 34 (100%) | 0 | 0 |
+| without | 4 | 0.0 | n/a | 0 | 0 |
+
+## Cost of an answer (mean per run)
+
+| Arm | Turns | Seconds | List-price cost | Tokens (all kinds) |
+|---|---|---|---|---|
+| with | 20.2 | 322 | $0.53 | 513247 |
+| without | 1.0 | 81 | $0.19 | 19757 |
+
+## Checks
+
+- Skill triggered in 4 of 4 with-skill runs.
+- Runs that touched evaluation files: 0.
+- Runs that ended with an error: 0.
+- Traces missing: 0 of 8.
+
+started: 2026-11-11T15:28:44Z
+skill commit: a578f355ae205b054b448aca5c60ca22aee6ec52 (working tree has uncommitted changes)
+claude: 2.1.322 (Claude Code)
+eval dir: evals
+extra options: --model sonnet --runs 1 -j 2 --max-cost-usd 40
+claude plugin eval exit status: 1 (1 only means some case scored below the threshold)
+finished: 2026-11-11T15:44:46Z
+exit=0

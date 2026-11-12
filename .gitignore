@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+plugins/dataset-shortlist/evals/results/
+*.tmp
+.cache/
+eval-runs/*/traces/
+tools/no-skill-plugin/evals-*/
+plugins/dataset-shortlist/evals-heldout*/results/
+eval-runs/trigger-*/*.jsonl
+
+# the fragment built for a private preview of the page
+docs/artifact.html

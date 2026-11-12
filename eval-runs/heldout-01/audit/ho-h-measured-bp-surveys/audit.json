@@ -1,0 +1,142 @@
+{
+  "must_haves": [
+    "Nationally representative survey sample (US preferred, plus one or two comparable national surveys from other countries)",
+    "Adult respondents; samples of middle-aged and older adults (e.g. 45+ or 50+) are acceptable",
+    "Blood pressure actually measured by a nurse, examiner or trained fieldworker (not self-reported)",
+    "A question, in the same survey and person, on whether a doctor or health professional ever said the respondent has high blood pressure"
+  ],
+  "A": [
+    {
+      "dataset": "NHANES (US National Health and Nutrition Examination Survey)",
+      "official_url": "https://wwwn.cdc.gov/nchs/nhanes/",
+      "exists": true,
+      "access_stated": "Direct download from the NHANES site, no account or application",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Cycle pages link .xpt files directly with no login; the NCHS terms say \"By using these data you signify your agreement\"; BPXO_L says \"All BP measurements are taken in the mobile examination center\" by certified BP examiners and BPQ_L has BPQ020 \"Ever told you had high blood pressure\"; minor slip: the home page lists \"NHANES 2025-2027\" as the newest cycle, not 2021-2023 (2021-2023 is the newest with released data)."
+    },
+    {
+      "dataset": "HRS (Health and Retirement Study, US 50+)",
+      "official_url": "https://hrs.isr.umich.edu/data-products/access-to-public-data",
+      "exists": true,
+      "access_stated": "Free registration at hrs.isr.umich.edu, accept terms, then download",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The HRS site and data portal returned HTTP 403 on both fetch attempts, so this rests on official HRS documentation surfaced by search: \"HRS data are available for free... In order to obtain public release data, you must first register at our Web site\"; restricted data need a separate application; BP is measured by interviewers in the enhanced face-to-face half-sample since 2006, and Section C asks \"Has a doctor ever told you that you have high blood pressure or hypertension\"."
+    },
+    {
+      "dataset": "ELSA (English Longitudinal Study of Ageing)",
+      "official_url": "https://www.elsa-project.ac.uk/accessing-elsa-data",
+      "exists": true,
+      "access_stated": "Free UK Data Service account, then download under the End User Licence",
+      "access_marked": "today",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Both quoted sentences appear verbatim (\"Researchers can download ELSA data from waves 1-11 including wave 0 (HSE), from the UK Data Service\"; \"End User Licence level data are available to all via UKDS\"), the DOI 10.5255/UKDA-SN-5050-37 resolves to \"English Longitudinal Study of Ageing: Waves 0-11, 1998-2024\", and the Health Visit user guide says each health-visit (nurse) dataset with blood pressure is \"available via the UK Data Service under End User Licence\"."
+    },
+    {
+      "dataset": "CHARLS (China Health and Retirement Longitudinal Study)",
+      "official_url": "https://charls.pku.edu.cn/en/Faq/Frequently_Asked_Questions.htm",
+      "exists": true,
+      "access_stated": "Sign up on the CHARLS site and apply for the data; approval days to weeks",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The FAQ says to \"register by signing the agreement\", then \"apply for publicly available datasets\", and \"your application will be reviewed and approved in 3 working days\"; the home page does show the banner A quotes and describes a \"nationally representative sample of Chinese residents ages 45 and older\"; the Wave 4 guide says blood pressure was \"collected in waves 1, 2, 3\" alongside doctor-diagnosed chronic disease questions."
+    },
+    {
+      "dataset": "LASI (Longitudinal Ageing Study in India)",
+      "official_url": "https://iipsindia.ac.in/node/6702",
+      "exists": true,
+      "access_stated": "Application or registration via IIPS (marked unconfirmed)",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The IIPS LASI data page requires a data request form with \"A valid Identity proof\", grants access \"only for legitimate academic research purposes\" and reviews requests \"within 24 to 48 hours\"; the IIPS catalogue lists the data as free; LASI Wave 1 is \"a nationally representative survey of 73,396 adults aged 45 and above\", with measured blood pressure (Omron HEM 7121) and a health-professional-diagnosis item for hypertension."
+    },
+    {
+      "dataset": "Health Survey for England (HSE)",
+      "official_url": "https://doc.ukdataservice.ac.uk/doc/8649/mrdoc/pdf/8649_hse_2018_user_guide.pdf",
+      "exists": true,
+      "access_stated": "Via the UK Data Service",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The HSE 2018 user guide (UK Data Service) describes a random address sample of England, says \"Nurses measured blood pressure (aged 5 and over)\", lists \"Doctor diagnosed hypertension\" variables, and refers to the \"End User Licence dataset\"."
+    },
+    {
+      "dataset": "KNHANES (Korea National Health and Nutrition Examination Survey)",
+      "official_url": "https://knhanes.kdca.go.kr/knhanes/eng/main.do",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": null,
+      "note": "The official KNHANES site (English page) exists, and a KDCA release lists measured \"수축기혈압, 이완기혈압\" and \"만성질환별 이환\" interview items, but none of the pages I opened shows the wording of a doctor-told-you-have-hypertension item, so whether it meets that must-have could not be confirmed; A made no access statement."
+    }
+  ],
+  "B": [
+    {
+      "dataset": "NHANES (US National Health and Nutrition Examination Survey)",
+      "official_url": "https://wwwn.cdc.gov/nchs/nhanes/",
+      "exists": true,
+      "access_stated": "Public-use files free, downloaded from the NCHS site with no application or registration",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "Cycle pages link .xpt files directly with no login; the NCHS terms say \"By using these data you signify your agreement\"; BPXO_L says \"All BP measurements are taken in the mobile examination center\" by certified BP examiners and BPQ_L has BPQ020 \"Ever told you had high blood pressure\", matching B's item."
+    },
+    {
+      "dataset": "HRS (Health and Retirement Study, US 50+)",
+      "official_url": "https://hrs.isr.umich.edu/data-products/access-to-public-data",
+      "exists": true,
+      "access_stated": "Free registration at hrs.isr.umich.edu, then download; separate restricted-data application for sensitive files",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The HRS site and data portal returned HTTP 403 on both fetch attempts, so this rests on official HRS documentation surfaced by search: \"HRS data are available for free... In order to obtain public release data, you must first register at our Web site\"; restricted data need a separate application; BP is measured by interviewers in the enhanced face-to-face half-sample since 2006, and Section C asks \"Has a doctor ever told you that you have high blood pressure or hypertension\"."
+    },
+    {
+      "dataset": "ELSA (English Longitudinal Study of Ageing)",
+      "official_url": "https://www.elsa-project.ac.uk/accessing-elsa-data",
+      "exists": true,
+      "access_stated": "Free through the UK Data Service: register, accept the End User Licence and apply for the nurse-visit dataset",
+      "access_marked": "memory",
+      "access_correct": false,
+      "meets_must_haves": true,
+      "note": "The ELSA page confirms \"End User Licence level data are available to all via UKDS\" and the Health Visit user guide says each health-visit (nurse) dataset is \"available via the UK Data Service under End User Licence\", which UKDS says \"can be downloaded by registering and accepting our End User Licence Agreement\", so B's 'apply for the nurse-visit dataset' overstates it; no separate application is needed."
+    },
+    {
+      "dataset": "CHARLS (China Health and Retirement Longitudinal Study)",
+      "official_url": "https://charls.pku.edu.cn/en/Faq/Frequently_Asked_Questions.htm",
+      "exists": true,
+      "access_stated": "Free; register and apply at charls.pku.edu.cn",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The FAQ says to \"register by signing the agreement\", then \"apply for publicly available datasets\", which are \"reviewed and approved in 3 working days\"; the sample is \"nationally representative... ages 45 and older\"; minor: the Wave 4 guide says blood pressure was \"collected in waves 1, 2, 3\", with biomarkers in every other wave after that, not in every wave from 2011 on."
+    },
+    {
+      "dataset": "LASI (Longitudinal Ageing Study in India)",
+      "official_url": "https://iipsindia.ac.in/node/6702",
+      "exists": true,
+      "access_stated": "Apply through the IIPS/LASI data portal",
+      "access_marked": "memory",
+      "access_correct": true,
+      "meets_must_haves": true,
+      "note": "The IIPS LASI data page requires a data request form with \"A valid Identity proof\", grants access \"only for legitimate academic research purposes\" and reviews requests \"within 24 to 48 hours\"; LASI Wave 1 is \"a nationally representative survey of 73,396 adults aged 45 and above\", with measured blood pressure and a health-professional-diagnosis item for hypertension."
+    },
+    {
+      "dataset": "Health Survey for England (HSE)",
+      "official_url": "https://doc.ukdataservice.ac.uk/doc/8649/mrdoc/pdf/8649_hse_2018_user_guide.pdf",
+      "exists": true,
+      "access_stated": "not stated",
+      "access_marked": "memory",
+      "access_correct": null,
+      "meets_must_haves": true,
+      "note": "The HSE 2018 user guide (UK Data Service) describes a random address sample of England, says \"Nurses measured blood pressure (aged 5 and over)\" and lists \"Doctor diagnosed hypertension\" variables; B made no access statement."
+    }
+  ]
+}

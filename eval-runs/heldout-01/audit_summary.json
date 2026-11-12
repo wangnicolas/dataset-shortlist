@@ -1,0 +1,218 @@
+{
+  "per_arm": {
+    "with": {
+      "n": 83,
+      "exists": 0.9876543209876543,
+      "access_correct": 0.9285714285714286,
+      "meets_must_haves": 0.9,
+      "n_access_stated": 70,
+      "exists_true": 80,
+      "exists_judged": 81,
+      "access_true": 65,
+      "access_judged": 70,
+      "access_stated": 77,
+      "fit_true": 63,
+      "fit_judged": 70,
+      "by_mark": {
+        "today": {
+          "correct": 0.975,
+          "n": 40,
+          "right": 39
+        },
+        "memory": {
+          "correct": 0.8666666666666667,
+          "n": 30,
+          "right": 26
+        },
+        "none": {
+          "correct": null,
+          "n": 0,
+          "right": 0
+        }
+      }
+    },
+    "without": {
+      "n": 76,
+      "exists": 1.0,
+      "access_correct": 0.9,
+      "meets_must_haves": 0.9384615384615385,
+      "n_access_stated": 60,
+      "exists_true": 75,
+      "exists_judged": 75,
+      "access_true": 54,
+      "access_judged": 60,
+      "access_stated": 65,
+      "fit_true": 61,
+      "fit_judged": 65,
+      "by_mark": {
+        "today": {
+          "correct": null,
+          "n": 0,
+          "right": 0
+        },
+        "memory": {
+          "correct": 0.9,
+          "n": 60,
+          "right": 54
+        },
+        "none": {
+          "correct": null,
+          "n": 0,
+          "right": 0
+        }
+      }
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-checkpoint-response-rnaseq",
+      "with": {
+        "n": 13,
+        "exists": 0.9230769230769231,
+        "access_correct": 0.875,
+        "meets_must_haves": 0.9166666666666666
+      },
+      "without": {
+        "n": 16,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-h-cxr-free-text-reports",
+      "with": {
+        "n": 9,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 0.75
+      },
+      "without": {
+        "n": 7,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 0.8333333333333334
+      }
+    },
+    {
+      "case": "ho-h-derm-skin-tone",
+      "with": {
+        "n": 5,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "without": {
+        "n": 3,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-h-ecg-rhythm-labels",
+      "without": {
+        "n": 5,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "with": {
+        "n": 6,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 0.8333333333333334
+      }
+    },
+    {
+      "case": "ho-h-measured-bp-surveys",
+      "with": {
+        "n": 7,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "without": {
+        "n": 6,
+        "exists": 1.0,
+        "access_correct": 0.8,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-h-wrist-activity-outcomes",
+      "with": {
+        "n": 9,
+        "exists": 1.0,
+        "access_correct": 0.625,
+        "meets_must_haves": 0.8571428571428571
+      },
+      "without": {
+        "n": 8,
+        "exists": 1.0,
+        "access_correct": 0.5,
+        "meets_must_haves": 0.7142857142857143
+      }
+    },
+    {
+      "case": "ho-o-01",
+      "without": {
+        "n": 6,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "with": {
+        "n": 8,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-o-02",
+      "without": {
+        "n": 15,
+        "exists": 1.0,
+        "access_correct": 0.8571428571428571,
+        "meets_must_haves": 0.9230769230769231
+      },
+      "with": {
+        "n": 15,
+        "exists": 1.0,
+        "access_correct": 0.9230769230769231,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-o-03",
+      "without": {
+        "n": 6,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "with": {
+        "n": 4,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      }
+    },
+    {
+      "case": "ho-o-04",
+      "without": {
+        "n": 4,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 1.0
+      },
+      "with": {
+        "n": 7,
+        "exists": 1.0,
+        "access_correct": 1.0,
+        "meets_must_haves": 0.7142857142857143
+      }
+    }
+  ]
+}

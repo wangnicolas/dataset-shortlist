@@ -1,0 +1,593 @@
+{
+ "runs": 30,
+ "used": {
+  "search": 30,
+  "add": 11,
+  "show": 19,
+  "lookup": 8,
+  "read": 26,
+  "verify": 27,
+  "papers": 29,
+  "render": 16
+ },
+ "skill_loaded": 30,
+ "web_search": 17,
+ "web_fetch": 15,
+ "rows": [
+  {
+   "run": "ho-h-checkpoint-response-rnaseq__with__1",
+   "commands": {
+    "search": 1,
+    "papers": 2,
+    "add": 1,
+    "show": 1,
+    "verify": 2,
+    "read": 1,
+    "render": 1
+   },
+   "web_search": 1,
+   "web_fetch": 4,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-checkpoint-response-rnaseq__with__2",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "verify": 2,
+    "read": 1
+   },
+   "web_search": 5,
+   "web_fetch": 5,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-checkpoint-response-rnaseq__with__3",
+   "commands": {
+    "search": 1,
+    "papers": 1
+   },
+   "web_search": 3,
+   "web_fetch": 16,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-cxr-free-text-reports__with__1",
+   "commands": {
+    "search": 2,
+    "papers": 2,
+    "verify": 1,
+    "show": 1,
+    "read": 7,
+    "render": 3
+   },
+   "web_search": 3,
+   "web_fetch": 2,
+   "skill": true,
+   "references": [
+    "health-data.md",
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-cxr-free-text-reports__with__2",
+   "commands": {
+    "search": 5,
+    "papers": 1,
+    "show": 1,
+    "verify": 4,
+    "lookup": 2,
+    "render": 3
+   },
+   "web_search": 2,
+   "web_fetch": 2,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-cxr-free-text-reports__with__3",
+   "commands": {
+    "search": 4,
+    "papers": 9,
+    "verify": 4,
+    "read": 5,
+    "render": 1
+   },
+   "web_search": 5,
+   "web_fetch": 1,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-derm-skin-tone__with__1",
+   "commands": {
+    "search": 1,
+    "papers": 4,
+    "show": 1,
+    "add": 3,
+    "verify": 2,
+    "read": 2,
+    "render": 1
+   },
+   "web_search": 8,
+   "web_fetch": 1,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-derm-skin-tone__with__2",
+   "commands": {
+    "search": 4,
+    "papers": 4,
+    "add": 4,
+    "read": 3,
+    "verify": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-derm-skin-tone__with__3",
+   "commands": {
+    "search": 3,
+    "papers": 4,
+    "show": 3,
+    "add": 4,
+    "verify": 1,
+    "read": 6,
+    "lookup": 3
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-ecg-rhythm-labels__with__1",
+   "commands": {
+    "search": 2,
+    "papers": 1,
+    "show": 2,
+    "verify": 1,
+    "read": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-ecg-rhythm-labels__with__2",
+   "commands": {
+    "search": 5,
+    "papers": 3,
+    "show": 5,
+    "add": 3,
+    "verify": 2,
+    "read": 4
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-ecg-rhythm-labels__with__3",
+   "commands": {
+    "search": 5,
+    "papers": 1,
+    "show": 1,
+    "verify": 1,
+    "read": 4
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-measured-bp-surveys__with__1",
+   "commands": {
+    "search": 3,
+    "papers": 3,
+    "read": 10,
+    "lookup": 1,
+    "verify": 2
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-measured-bp-surveys__with__2",
+   "commands": {
+    "search": 2,
+    "read": 2
+   },
+   "web_search": 2,
+   "web_fetch": 1,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-measured-bp-surveys__with__3",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "verify": 1,
+    "read": 1
+   },
+   "web_search": 8,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-h-wrist-activity-outcomes__with__1",
+   "commands": {
+    "search": 2,
+    "show": 2,
+    "papers": 4,
+    "add": 1,
+    "read": 3,
+    "verify": 1,
+    "render": 3
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "health-data.md",
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-wrist-activity-outcomes__with__2",
+   "commands": {
+    "search": 2,
+    "papers": 2,
+    "read": 5,
+    "add": 7,
+    "verify": 1,
+    "render": 1
+   },
+   "web_search": 12,
+   "web_fetch": 7,
+   "skill": true,
+   "references": [
+    "health-data.md",
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-h-wrist-activity-outcomes__with__3",
+   "commands": {
+    "search": 4,
+    "papers": 1,
+    "read": 1
+   },
+   "web_search": 7,
+   "web_fetch": 4,
+   "skill": true,
+   "references": [
+    "health-data.md",
+    "shortlist-schema.md"
+   ],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-o-01__with__1",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "show": 1,
+    "verify": 3
+   },
+   "web_search": 7,
+   "web_fetch": 6,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-o-01__with__2",
+   "commands": {
+    "search": 4,
+    "papers": 1,
+    "verify": 2,
+    "read": 2
+   },
+   "web_search": 4,
+   "web_fetch": 3,
+   "skill": true,
+   "references": [],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-o-01__with__3",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "show": 3,
+    "verify": 1,
+    "read": 3,
+    "lookup": 1
+   },
+   "web_search": 7,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": false,
+   "answer_says_no_page": true,
+   "answer_points_to_page": false
+  },
+  {
+   "run": "ho-o-02__with__1",
+   "commands": {
+    "search": 1,
+    "papers": 2,
+    "add": 7,
+    "show": 1,
+    "read": 2,
+    "verify": 1,
+    "render": 1
+   },
+   "web_search": 10,
+   "web_fetch": 4,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-02__with__2",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "show": 1,
+    "lookup": 1,
+    "verify": 2,
+    "read": 1,
+    "render": 1
+   },
+   "web_search": 9,
+   "web_fetch": 4,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-02__with__3",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "verify": 2,
+    "add": 5,
+    "show": 1,
+    "render": 3
+   },
+   "web_search": 6,
+   "web_fetch": 2,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-03__with__1",
+   "commands": {
+    "search": 6,
+    "papers": 2,
+    "read": 3,
+    "verify": 3,
+    "add": 1,
+    "show": 1,
+    "render": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-03__with__2",
+   "commands": {
+    "search": 1,
+    "add": 6,
+    "papers": 3,
+    "show": 1,
+    "verify": 2,
+    "read": 3,
+    "render": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-03__with__3",
+   "commands": {
+    "search": 8,
+    "papers": 1,
+    "read": 11,
+    "verify": 1,
+    "render": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-04__with__1",
+   "commands": {
+    "search": 1,
+    "papers": 1,
+    "show": 2,
+    "verify": 2,
+    "lookup": 2,
+    "read": 2,
+    "render": 3
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-04__with__2",
+   "commands": {
+    "search": 1,
+    "papers": 2,
+    "show": 2,
+    "verify": 2,
+    "lookup": 3,
+    "read": 2,
+    "render": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  },
+  {
+   "run": "ho-o-04__with__3",
+   "commands": {
+    "search": 1,
+    "papers": 2,
+    "show": 1,
+    "verify": 1,
+    "read": 3,
+    "lookup": 2,
+    "render": 1
+   },
+   "web_search": 0,
+   "web_fetch": 0,
+   "skill": true,
+   "references": [
+    "shortlist-schema.md"
+   ],
+   "page_written": true,
+   "answer_points_to_page": true,
+   "answer_says_no_page": false
+  }
+ ],
+ "pages_written": 16,
+ "answers_pointing_to_a_missing_page": [],
+ "no_page_and_not_said": []
+}

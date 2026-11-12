@@ -1,0 +1,199 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 4309536,
+  "items": [
+   {
+    "DOI": "10.5220/0014475400004052",
+    "title": [
+     "Reinforcement Learning-Guided Deep Neural Networks with Particle Swarm Optimization for Early Sepsis Prediction in Intensive Care Units"
+    ],
+    "container-title": [
+     "Proceedings of the 18th International Conference on Agents and Artificial Intelligence"
+    ],
+    "author": [
+     {
+      "given": "Yassin",
+      "family": "Ben Youssef",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "ENSI, University of Manouba, Manouba, Tunisia"
+       },
+       {
+        "name": "LIPSIC, LR20ES04, FST, University of Tunis El Manar, Tunis, Tunisia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Asma",
+      "family": "Amdouni",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIPAH Research Lab, Faculty of Science of Tunis, Tunis El Manar University, Tunis, Tunisia"
+       },
+       {
+        "name": "Mediterranean Institute of Technology, South Mediterranean University, Tunis, Tunisia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Ghaith",
+      "family": "Manita",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "LIPSIC, LR20ES04, FST, University of Tunis El Manar, Tunis, Tunisia"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "issued": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    },
+    "URL": "https://doi.org/10.5220/0014475400004052",
+    "is-referenced-by-count": 0,
+    "type": "proceedings-article"
+   },
+   {
+    "abstract": "<jats:title>Abstract</jats:title>\n        <jats:p><jats:bold>Background:</jats:bold> Sepsis is one of the major causes of mortality in hospitalized patients. Therefore, a reliable means of predicting sepsis onset is of great importance. The purpose of this study was to develop a gated recurrent unit (GRU) based model and explore whether it can improve model performance in predicting sepsis for up to 6h from the time of admission in intensive care units (ICU) compared to traditional sepsis prediction methods. <jats:bold>Methods:</jats:bold> The data used for model development in this study were from retrospective MIMIC-III dataset, restricted to intensive care units (ICUs) patients aged between 15 and 89. Model performance of GRU model were compared to logistic regression (LR), support vector machine (SVM), random forest (RF), and extreme gradient boost (XGBoost). The area under the receiver operating characteristic (AUROC) measures the performance of the prediction capability of the models. <jats:bold>Results:</jats:bold> A total of 31297 MIMIC-III cases are included in this article and 4008  cases had encountered sepsis while 27289 had not. As for the AUC (0.801 (95% CI): 0.760-0.841), 0.782 (95%CI: 0.743-0.821), 0.775 (95%CI: 0.736-0.813), 0.771 (95%CI: 0.732-0.809), 0.749 (95%CI: 0.711-0.886),) results of the models, GRU performed best in predicting sepsis.<jats:bold>Conclusions:</jats:bold> The present study concluded that by using GRU deep learning method, a more accurate prediction model can be established. The GRU deep learning method we build can prove clinically helpful and assist physicians in tailoring accurate management and treatment for patients with sepsis.</jats:p>",
+    "DOI": "10.21203/rs.3.rs-259370/v1",
+    "type": "posted-content",
+    "is-referenced-by-count": 1,
+    "title": [
+     "Using Gated Recurrent Units Models for Early Prediction of Sepsis in The Intensive Care Unit"
+    ],
+    "author": [
+     {
+      "given": "Xuze",
+      "family": "Zhao",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Tianjin University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     },
+     {
+      "given": "Bo",
+      "family": "Qu",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Tianjin University"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "issued": {
+     "date-parts": [
+      [
+       2021,
+       3,
+       4
+      ]
+     ]
+    },
+    "URL": "https://doi.org/10.21203/rs.3.rs-259370/v1"
+   },
+   {
+    "DOI": "10.1097/01.ccm.0000910620.81838.07",
+    "title": [
+     "1221: A MACHINE LEARNING ALGORITHM FOR EARLY PREDICTION OF SEPSIS IN INTENSIVE CARE"
+    ],
+    "container-title": [
+     "Critical Care Medicine"
+    ],
+    "author": [
+     {
+      "given": "Fredrik",
+      "family": "Sj\u00f6vall",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Skane University Hospital, Malm\u00f6"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Inger",
+      "family": "Persson",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "Uppsala University, Uppsala"
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "issued": {
+     "date-parts": [
+      [
+       2022,
+       12,
+       15
+      ]
+     ]
+    },
+    "URL": "https://doi.org/10.1097/01.ccm.0000910620.81838.07",
+    "is-referenced-by-count": 1,
+    "type": "journal-article"
+   }
+  ],
+  "items-per-page": 3,
+  "query": {
+   "start-index": 0,
+   "search-terms": "early sepsis prediction intensive care"
+  }
+ }
+}

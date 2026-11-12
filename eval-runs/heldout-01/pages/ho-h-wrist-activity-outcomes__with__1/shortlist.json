@@ -1,0 +1,679 @@
+{
+ "question": "Do wrist-worn accelerometer-measured physical activity and sleep patterns in daily life predict later disease and death? Need a few thousand adults, 1 week or more of wear, linked hospital/diagnosis/death outcomes, US university access by application.",
+ "generated_at": "2026-11-12T00:00:00Z",
+ "requirements": [
+  {
+   "id": "R1",
+   "text": "Wrist-worn accelerometer/tracker worn in daily life for several days to a week or more",
+   "must": true
+  },
+  {
+   "id": "R2",
+   "text": "At least a few thousand adults",
+   "must": true
+  },
+  {
+   "id": "R3",
+   "text": "Linked follow-up outcomes: hospital records, diagnoses or death registration",
+   "must": true
+  },
+  {
+   "id": "R4",
+   "text": "Obtainable by a US university via application",
+   "must": true
+  },
+  {
+   "id": "R5",
+   "text": "Raw or near-raw signal, for comparability with other wrist studies",
+   "must": false
+  }
+ ],
+ "searched": {
+  "sources": [
+   "zenodo",
+   "openaire",
+   "physionet",
+   "huggingface",
+   "datacite (via search)"
+  ],
+  "queries": [
+   "wrist accelerometer mortality",
+   "actigraphy sleep cohort mortality",
+   "wrist-worn accelerometer cohort",
+   "physical activity accelerometer incident disease",
+   "actigraphy (physionet)"
+  ],
+  "n_candidates": 120
+ },
+ "datasets": [
+  {
+   "rank": 1,
+   "record": {
+    "id": "manual:uk-biobank-accelerometer-substudy",
+    "source": "manual",
+    "title": "UK Biobank accelerometer substudy",
+    "url": "https://www.ukbiobank.ac.uk/enable-your-research/about-our-data/past-data-releases",
+    "access": {
+     "tier": "application",
+     "evidence": "from memory, not confirmed today: application via AMS, MTA and fee"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": 403,
+     "final_url": "https://www.ukbiobank.ac.uk/enable-your-research/about-our-data/past-data-releases",
+     "checked_at": "2026-11-11T18:12:41Z",
+     "problems": [
+      "could not check: www.ukbiobank.ac.uk answered with a bot challenge (HTTP 403); the page may exist, open it in a browser"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "blocked"
+     ],
+     "registry": null,
+     "found_title": "Just a moment..."
+    }
+   },
+   "fit": "strong",
+   "why": "Largest wrist-accelerometer cohort with registry-linked outcomes; the reference dataset most wrist-based papers compare against.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Axivity AX3 worn on dominant wrist for 7 days, 2013-15 (from memory, not confirmed today); cited papers describe 'wrist-worn accelerometer data from 95,559 Biobank participants'",
+     "url": "https://doi.org/10.1371/journal.pmed.1005213"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "~90-100k participants with usable data per the 2026 papers returned by the tool"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Hospital inpatient, death and cancer registry linkage (from memory, not confirmed today); papers analyse incident disease and mortality"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Open to approved researchers worldwide (from memory, not confirmed today)"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "Raw .cwa files available (from memory, not confirmed today)"
+    }
+   },
+   "access_steps": [
+    "Register on the UK Biobank Access Management System (AMS) (from memory)",
+    "Submit an application describing the project (from memory)",
+    "Institution signs the Material Transfer Agreement; a fee applies for access (amount from memory: several thousand GBP, check current tariff)",
+    "Analyse on the UK Biobank Research Analysis Platform (cloud); data is not downloaded (from memory)"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Landing page returned a bot challenge, so nothing here was confirmed today; check ukbiobank.ac.uk",
+    "Healthy-volunteer, ~5% response, UK, mostly white, age 40-69 at recruitment",
+    "Accelerometer worn years after baseline; follow-up from wear date is ~8-10 years"
+   ],
+   "papers": [
+    {
+     "title": "Accelerometer-derived real-world sleep stages and risk of incident diseases: A UK Biobank cohort study",
+     "year": 2026,
+     "doi": "10.1371/journal.pmed.1005213",
+     "url": "https://doi.org/10.1371/journal.pmed.1005213",
+     "note": "incident disease from wrist accelerometer sleep metrics, 95,559 participants"
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "record": {
+    "id": "manual:nhanes-2011-2014-physical-activity-monitor-wrist",
+    "source": "manual",
+    "title": "NHANES 2011-2014 physical activity monitor (wrist)",
+    "url": "https://wwwn.cdc.gov/nchs/nhanes/default.aspx",
+    "access": {
+     "tier": "open",
+     "evidence": "Landing page shows public site; NCHS page confirms public-use mortality files"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://wwwn.cdc.gov/nchs/nhanes/default.aspx",
+     "checked_at": "2026-11-11T18:12:42Z",
+     "problems": [
+      "the URL exists but describes a different resource: the page is titled \"NHANES Questionnaires, Datasets, and Related Documentation\", not \"NHANES 2011-2014 physical activity monitor (wrist)\""
+     ],
+     "notes": [],
+     "outcome": "wrong_page",
+     "problem_types": [
+      "title_mismatch"
+     ],
+     "registry": null,
+     "found_title": "NHANES Questionnaires, Datasets, and Related Documentation"
+    }
+   },
+   "fit": "strong",
+   "why": "Download today; US nationally representative; wrist ActiGraph for 7 days, linked to public-use mortality.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "ActiGraph GT3X+ on non-dominant wrist, 24 h/day for 7 days, 2011-14 cycles (from memory, not confirmed today)"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "~7,000-8,000 adults with valid wear (from memory, not confirmed today); exact count depends on wear criteria"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Public-use linked mortality files exist: 'The linked public-use files contain a limited set of mortality (death) data for adults.' Hospital/diagnosis linkage (e.g. CMS) is restricted.",
+     "url": "https://www.cdc.gov/nchs/linked-data/mortality-files/index.html"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Public download from the NHANES site, which loaded today",
+     "url": "https://wwwn.cdc.gov/nchs/nhanes/default.aspx"
+    },
+    "R5": {
+     "status": "met",
+     "evidence": "Raw sub-second and minute-level files are published (from memory, not confirmed today)"
+    }
+   },
+   "access_steps": [
+    "Download PAX files for the 2011-12 and 2013-14 cycles plus demographics from the NHANES site (from memory: no account needed)",
+    "Download public-use Linked Mortality File and merge on SEQN",
+    "For hospital or cause-specific outcomes beyond the public file: apply to the NCHS Research Data Center ('Restricted-use LMFs can be accessed only through the NCHS Research Data Center (RDC) network for approved projects.')"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Public mortality follow-up is deaths only, with some fields perturbed; roughly 5-8 years of follow-up",
+    "Cause-specific/hospital outcomes need an RDC application (weeks to months)",
+    "The NHANES landing page confirms the site, not the specific wrist-file contents; check the PAX documentation pages"
+   ],
+   "papers": [
+    {
+     "title": "Wearable-based accelerometer activity profile as digital biomarker of inflammation, biological age, and mortality",
+     "year": 2023,
+     "doi": "10.1038/s41598-023-36062-y",
+     "url": "https://doi.org/10.1038/s41598-023-36062-y",
+     "note": "NHANES wrist accelerometry and mortality"
+    }
+   ]
+  },
+  {
+   "rank": 3,
+   "record": {
+    "id": "manual:all-of-us-research-program-fitbit",
+    "source": "manual",
+    "title": "All of Us Research Program (Fitbit)",
+    "url": "https://www.researchallofus.org/data-tools/data-access/",
+    "access": {
+     "tier": "registered",
+     "evidence": "access page: 'Registered (login required)'; institutional agreement and training from memory"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "http",
+     "http_status": 200,
+     "final_url": "https://www.researchallofus.org/data-tools/data-access/",
+     "checked_at": "2026-11-11T18:12:44Z",
+     "problems": [],
+     "notes": [
+      "the landing page mentions \"login required\" (\"...l centers. There are three tiers of data access: Public (no login required); Registered (login required); and Controlled (additional a...\"); confirm the access route on that page before calling the data open",
+      "the landing page mentions \"embargo\" (\"...tion, to be made publicly available immediately without any embargo period. Researcher Workbench users must honor the contribut...\"); confirm the access route on that page before calling the data open",
+      "access tier unknown: no registry metadata states it; read the landing page before calling the data open"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": null,
+     "found_title": "Data Access Tiers \u2013 All of Us Research Hub",
+     "access_text": {
+      "url": "https://www.researchallofus.org/data-tools/data-access/",
+      "sentences": [
+       "The Registered Tier dataset contains individual-level data, available only to registered researchers on the Researcher Workbench.",
+       "There are three tiers of data access: Public (no login required); Registered (login required); and Controlled (additional approval required).",
+       "Authorization for access to the registered and controlled data tiers will be user based, rather than project based.",
+       "Authorized users will receive a \u201cdata passport.\u201d The data passport is required for gaining access to the registered and controlled data tiers and for creating workspaces to carry out research projects."
+      ]
+     }
+    }
+   },
+   "fit": "partial",
+   "why": "US cohort with consumer Fitbit data linked to EHR diagnoses, accessible to US institutions after registration.",
+   "requirements": {
+    "R1": {
+     "status": "partial",
+     "evidence": "Consumer Fitbit wrist tracker, long-term free-living use; the Registered Tier 'includes data from electronic health records (EHRs), wearables, surveys, and physical measurements.' Output is minute-level steps, heart rate and sleep summaries, not raw acceleration",
+     "url": "https://www.researchallofus.org/data-tools/data-access/"
+    },
+    "R2": {
+     "status": "met",
+     "evidence": "Tens of thousands of participants with Fitbit data (from memory, not confirmed today)"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "EHR diagnoses for consented sites; death data are patchy (from memory, not confirmed today)"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Tiered model; Registered Tier is login-based",
+     "url": "https://www.researchallofus.org/data-tools/data-access/"
+    },
+    "R5": {
+     "status": "unmet",
+     "evidence": "No raw accelerometry; device-vendor algorithms"
+    }
+   },
+   "access_steps": [
+    "Your institution signs a Data Use and Registration Agreement (institutional step, from memory)",
+    "Create account, complete identity verification and the required training to receive a 'data passport' (page: 'The data passport is required for gaining access to the registered and controlled data tiers')",
+    "Work only in the Researcher Workbench cloud; access is 'user based, rather than project based'"
+   ],
+   "time_to_access": "weeks",
+   "caveats": [
+    "Fitbit-derived metrics will not be directly comparable with research-grade wrist accelerometer studies",
+    "Participants are self-selected Fitbit owners; wear is irregular, so you must define valid days"
+   ],
+   "papers": [
+    {
+     "title": "Fitbit Physical Activity and Sleep Data in the All of Us Research Program: Data Exploration and Processing Considerations",
+     "year": 2025,
+     "note": "returned by the paper search; I did not capture its DOI, so search the title"
+    }
+   ]
+  },
+  {
+   "rank": 4,
+   "record": {
+    "id": "manual:national-sleep-research-resource-mros-sof-mesa-actigraphy",
+    "source": "manual",
+    "title": "National Sleep Research Resource (MrOS, SOF, MESA actigraphy)",
+    "url": "https://sleepdata.org/",
+    "access": {
+     "tier": "registered",
+     "evidence": "from memory, not confirmed today: free account plus data use agreement"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": null,
+     "final_url": null,
+     "checked_at": "2026-11-11T18:12:43Z",
+     "problems": [
+      "could not check: no response from sleepdata.org (no answer (curl exit 60: curl: (60) SSL certificate problem: unable to get local issuer certificate More details here:\u2026)"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "unreachable"
+     ],
+     "registry": null,
+     "found_title": null
+    }
+   },
+   "fit": "strong",
+   "why": "Older-adult cohorts with wrist actigraphy (MrOS Sleep, SOF, MESA Sleep) and adjudicated mortality and events; smaller but well-characterised.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Wrist actigraphy for ~5-7 nights in each study (from memory, not confirmed today)"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "MrOS Sleep ~2,900 men, SOF ~3,000 women, MESA Sleep ~2,000 (from memory, not confirmed today); each is a few thousand, not pooled by default"
+    },
+    "R3": {
+     "status": "partial",
+     "evidence": "Mortality and cohort events exist; how much is in the NSRR release vs the parent cohort's coordinating centre is unconfirmed"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "US-based studies; NSRR accepts researcher requests (from memory, not confirmed today)"
+    },
+    "R5": {
+     "status": "partial",
+     "evidence": "Actigraphy epoch-level files, not raw acceleration (from memory, not confirmed today)"
+    }
+   },
+   "access_steps": [
+    "Create a free account on sleepdata.org",
+    "Request each dataset and accept its data use agreement (approval days, from memory)",
+    "For some outcomes you may need the parent cohort's coordinating centre"
+   ],
+   "time_to_access": "days",
+   "caveats": [
+    "sleepdata.org could not be reached from this sandbox (SSL certificate error), so nothing is confirmed",
+    "Different actigraph models and epoch lengths than UK Biobank/NHANES",
+    "Mostly over-65s, not representative of the whole adult population"
+   ],
+   "papers": [
+    {
+     "title": "Associations of Objectively and Subjectively Measured Sleep Quality with Subsequent Cognitive Decline in Older Community-Dwelling Men: the MrOS Sleep Study",
+     "year": 2014,
+     "doi": "10.5665/sleep.3562",
+     "url": "https://doi.org/10.5665/sleep.3562",
+     "note": "MrOS Sleep actigraphy and later outcomes"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "record": {
+    "id": "physionet:minute-level-step-count-nhanes",
+    "source": "physionet",
+    "title": "Minute level step counts and physical activity data from the National Health and Nutrition Examination Survey (NHANES) 2011-2014",
+    "url": "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+    "access": {
+     "tier": "open",
+     "evidence": "access_policy=Open (anyone can download)"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "The National Health and Nutrition Examination Survey (NHANES) is a nationally representative study that collects demographic, socioeconomic, dietary, and health-related information from 10,000 Americans annually. In Wave G (2011-2012) and Wave H (2013-2014), participants wore an ActiGraph GT3X+ on the non-dominant wrist for seven consecutive days. Publicly available data include minute-level wear predictions (wake wear, sleep wear, unknown, nonwear), data quality flags, and monitor-independent movement summary units (MIMS). Additionally, raw triaxial accelerometer data recorded at 80 Hz are provided, enabling detailed analyses beyond MIMS. We applied five step counting algorithms and the Ac\u2026",
+    "doi": "10.13026/d7sw-f662",
+    "publisher": "PhysioNet",
+    "creators": [],
+    "year": 2026,
+    "version": "1.0.2",
+    "updated": "2026-08-07",
+    "licence": {
+     "id": "CC0-1.0",
+     "name": "Creative Commons Zero 1.0 Universal Public Domain Dedication",
+     "url": null,
+     "commercial_use": true,
+     "share_alike": false
+    },
+    "size": {
+     "bytes": 2865163804,
+     "text": "2.9 GB"
+    },
+    "formats": [],
+    "subjects": [
+     "nhanes",
+     "physical activity",
+     "accelerometry",
+     "steps"
+    ],
+    "usage": {},
+    "extra": {
+     "access_policy": "Open",
+     "resource_type": "Database",
+     "slug": "minute-level-step-count-nhanes",
+     "project_doi": "10.13026/5htm-7515"
+    },
+    "also_found_in": [],
+    "verification": {
+     "verified": true,
+     "method": "registry-api",
+     "http_status": null,
+     "final_url": "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+     "checked_at": "2026-11-11T18:12:46Z",
+     "problems": [],
+     "notes": [
+      "confirmed by the physionet registry record physionet:minute-level-step-count-nhanes"
+     ],
+     "outcome": "confirmed",
+     "problem_types": [],
+     "registry": "physionet",
+     "found_title": "Minute level step counts and physical activity data from the National Health and Nutrition Examination Survey (NHANES) 2011-2014"
+    }
+   },
+   "fit": "partial",
+   "why": "Ready-made minute-level NHANES physical activity release under CC0; quick start for method development, but outcomes must be merged from NCHS.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "Minute-level step counts and physical activity from NHANES, registry record",
+     "url": "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/"
+    },
+    "R2": {
+     "status": "unknown",
+     "evidence": "Check the record page for counts"
+    },
+    "R3": {
+     "status": "unmet",
+     "evidence": "No outcomes included; merge mortality files yourself"
+    },
+    "R4": {
+     "status": "met",
+     "evidence": "Registry states open, CC0-1.0"
+    },
+    "R5": {
+     "status": "partial",
+     "evidence": "Derived from the NHANES release"
+    }
+   },
+   "access_steps": [
+    "Open the PhysioNet record and download (registry says open)",
+    "Merge with NCHS public-use mortality by SEQN"
+   ],
+   "time_to_access": "minutes",
+   "caveats": [
+    "Derived data; check which NHANES cycles it covers (the title cut off in the digest)"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 6,
+   "record": {
+    "id": "manual:whitehall-ii",
+    "source": "manual",
+    "title": "Whitehall II",
+    "url": "https://www.ucl.ac.uk/epidemiology-health-care/research/epidemiology-and-public-health/research/whitehall-ii",
+    "access": {
+     "tier": "application",
+     "evidence": "from memory, not confirmed today"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": 403,
+     "final_url": "https://www.ucl.ac.uk/population-health-sciences/epidemiology-health-care/research/epidemiology-and-public-health/research/whitehall-ii",
+     "checked_at": "2026-11-11T18:12:46Z",
+     "problems": [
+      "could not check: www.ucl.ac.uk answered with a bot challenge (HTTP 403); the page may exist, open it in a browser"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "blocked"
+     ],
+     "registry": null,
+     "found_title": "Just a moment..."
+    }
+   },
+   "fit": "partial",
+   "why": "UK civil-servant cohort with wrist GENEActiv accelerometry; used as a validation cohort in the 2026 JAMA Neurology dementia paper.",
+   "requirements": {
+    "R1": {
+     "status": "met",
+     "evidence": "GENEActiv wrist (from memory, not confirmed today); a JAMA Neurology paper used Whitehall II as validation",
+     "url": "https://doi.org/10.1001/jamaneurol.2026.1232"
+    },
+    "R2": {
+     "status": "partial",
+     "evidence": "~4,000 with accelerometry (from memory, not confirmed today)"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Linked hospital and mortality records (from memory, not confirmed today)"
+    },
+    "R4": {
+     "status": "unknown",
+     "evidence": "Data-sharing request to the study team at UCL; terms unconfirmed"
+    }
+   },
+   "access_steps": [
+    "Submit a data-sharing request to the Whitehall II team (from memory)",
+    "Sign a data sharing agreement"
+   ],
+   "time_to_access": "months",
+   "caveats": [
+    "UCL page returned a bot challenge; none of this was confirmed today"
+   ],
+   "papers": []
+  },
+  {
+   "rank": 7,
+   "record": {
+    "id": "manual:china-kadoorie-biobank",
+    "source": "manual",
+    "title": "China Kadoorie Biobank",
+    "url": "https://www.ckbiobank.org/data-access",
+    "access": {
+     "tier": "application",
+     "evidence": "from memory, not confirmed today"
+    },
+    "retrieved_at": "2026-11-11",
+    "description": "",
+    "doi": null,
+    "publisher": null,
+    "creators": [],
+    "year": null,
+    "version": null,
+    "updated": null,
+    "licence": null,
+    "size": null,
+    "formats": [],
+    "subjects": [],
+    "usage": {},
+    "extra": {},
+    "also_found_in": [],
+    "verification": {
+     "verified": false,
+     "method": "http",
+     "http_status": 403,
+     "final_url": "https://www.ckbiobank.org/data-access",
+     "checked_at": "2026-11-11T18:12:46Z",
+     "problems": [
+      "could not check: www.ckbiobank.org refused the automated request (HTTP 403); many sites block non-browser clients, so this does not mean the dataset is missing"
+     ],
+     "notes": [],
+     "outcome": "could_not_check",
+     "problem_types": [
+      "blocked"
+     ],
+     "registry": null,
+     "found_title": "ERROR: The request could not be satisfied"
+    }
+   },
+   "fit": "partial",
+   "why": "Large Chinese cohort; I recall a wrist-accelerometer subsample with disease/death registry linkage, but I could not confirm it.",
+   "requirements": {
+    "R1": {
+     "status": "unknown",
+     "evidence": "I recall an accelerometer substudy in a resurvey; unconfirmed"
+    },
+    "R2": {
+     "status": "unknown",
+     "evidence": "~25,000 wearers, from memory"
+    },
+    "R3": {
+     "status": "met",
+     "evidence": "Death and disease registry and health insurance linkage (from memory, not confirmed today)"
+    },
+    "R4": {
+     "status": "unknown",
+     "evidence": "Application via the CKB data access portal; terms unconfirmed"
+    }
+   },
+   "access_steps": [
+    "Check ckbiobank.org/data-access for access rules and whether the accelerometer data are released"
+   ],
+   "time_to_access": "months",
+   "caveats": [
+    "Site refused the automated request (403); everything here is unconfirmed"
+   ],
+   "papers": []
+  }
+ ],
+ "not_recommended": [
+  {
+   "name": "NHANES 2003-2006 accelerometer",
+   "url": "https://wwwn.cdc.gov/nchs/nhanes/default.aspx",
+   "reason": "From memory: hip-worn ActiGraph, not wrist, so it fails R1."
+  },
+  {
+   "name": "Registry hits (Zenodo/HF/OpenAIRE) such as paper-supplement records and the 'Vanuatu GENEActiv' files",
+   "url": "https://zenodo.org/records/14043547",
+   "reason": "Small or non-cohort data with no linked disease outcomes; fail R2/R3."
+  }
+ ],
+ "gaps": [
+  "I could not read UK Biobank, NSRR, CKB or Whitehall II pages from this sandbox, so their sample sizes, fees and access steps come from memory.",
+  "No search of other possible cohorts (e.g. Rotterdam Study, Our Future Health, Generation Scotland) was done."
+ ],
+ "notes": "Registries returned many irrelevant hits for this topic; the useful candidates came from recall and the literature search."
+}
