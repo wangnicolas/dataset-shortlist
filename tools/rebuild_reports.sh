@@ -7,7 +7,7 @@
 # Inputs (all under eval-runs/):
 #   heldout-01            with the skill / no skill, Sonnet          (tools/run_eval.sh)
 #   heldout-01-prompted   no skill, told to search and verify        (tools/run_eval.sh)
-#   heldout-01-fable      subset on the stronger model, if present   (tools/run_eval.sh)
+#   heldout-01-fable-all  the stronger model on all ten questions    (tools/run_eval.sh twice, tools/merge_runs.py)
 #   heldout-01/audit      blind audit, if present                    (tools/audit_packets.py)
 #   trigger-01            trigger test, if present                   (tools/trigger_test.py)
 # The pages written during the run are collected by tools/harvest_pages.py, which needs the
@@ -29,11 +29,11 @@ done
 
 MAIN=eval-runs/heldout-01
 PROMPTED=eval-runs/heldout-01-prompted
-FABLE=eval-runs/heldout-01-fable
+FABLE=eval-runs/heldout-01-fable-all      # joined by tools/merge_runs.py from heldout-01-fable and heldout-01-fable-rest7
 TRIGGER=eval-runs/trigger-01
 TITLES=docs/eval/heldout_case_titles.json
 LABEL="Ten sealed questions, Sonnet 5.5 (claude-sonnet-5-5), three runs per arm, 12 November 2026"
-FABLE_LABEL="Three of the ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026"
+FABLE_LABEL="The ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026"
 
 $PY tools/combine_arms.py $MAIN $PROMPTED > /dev/null
 # The session traces are large and stay on the machine that ran the evaluation; without them the
@@ -75,6 +75,7 @@ $PY tools/build_site.py --arms $MAIN/three_arms.json ${args_audit[@]+"${args_aud
   --full-name evidence.html --fragment-name "" --back index.html \
   ${site_local[@]+"${site_local[@]}"} ${site_out[@]+"${site_out[@]}"} ${args_trigger_json[@]+"${args_trigger_json[@]}"}
 # ... and the showcase page in front of it (docs/index.html, docs/artifact.html).
+$PY tools/render_examples.py > /dev/null
 $PY tools/build_showcase_data.py > /dev/null
 $PY tools/build_showcase.py --owner "$OWNER" ${site_local[@]+"${site_local[@]}"} ${site_out[@]+"${site_out[@]}"}
 

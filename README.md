@@ -13,9 +13,9 @@ ones you want and take away an access plan.
 ![The interactive shortlist page: the requirements, what was searched, and a comparison table with access, licence, size, fit and time to access for each dataset](docs/assets/page-development-sepsis.png)
 
 *A page the skill wrote for one of its four development questions (early sepsis
-prediction in intensive care), unedited. The pages written for the held-out
+prediction in intensive care), unedited. The pages for the held-out
 questions, including the ones where little could be verified, are in
-[`docs/examples/heldout/`](docs/examples/heldout/).*
+[`docs/examples/heldout/`](docs/examples/heldout/), rendered by the current version from the data each run recorded.*
 
 ```text
 > I want to predict sepsis onset in adult ICU patients. What data can I start
@@ -101,8 +101,8 @@ In Claude Code:
 
 Then ask your question in plain words. The skill needs Python 3.9 or newer and
 outbound HTTPS. It uses no packages and needs no API key. When idle it adds about
-250 tokens to a session; when it starts it loads about 5,700 (figures from
-`claude plugin details`).
+210 tokens to a session; when it starts it loads about 4,600 (estimates from
+`claude plugin details` for version 0.1.2).
 
 To try it from a clone for one session, with nothing installed:
 
@@ -122,7 +122,7 @@ variable `OPENALEX_API_KEY`, raises it. Without one the skill falls back to
 other sources.
 
 The skill follows the open Agent Skills format, so other agents that load
-`SKILL.md` folders can use it: copy
+`SKILL.md` folders should be able to use it (tested only in Claude Code): copy
 `plugins/dataset-shortlist/skills/dataset-shortlist/` into the agent's skills directory.
 
 ## Does it beat Claude without the skill?
@@ -198,11 +198,11 @@ The audit and the checks measure different things. The audit asks whether what a
 
 </details>
 
-On a stronger model (Three of the ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026): 97.9% with the skill and 93.2% without it, a difference of +4.8 points; higher on 1, the same on 2, lower on 0. The subset is too small for the rule above and is reported as it is.
+On a stronger model (The ten questions, Fable 5.2 (claude-fable-5-2), two runs per arm, 12 November 2026): 97.5% with the skill and 90.0% without it, a difference of +7.5 points; higher on 4, the same on 6, lower on 0. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.
 
-2 of the verdicts are failed calls to the judge, recorded by the evaluation tool as fails (2 in the arm without the skill). Nothing was judged again. Counted as passes instead, the scores are 97.9% with the skill and 97.9% without it (difference 0.0 points; higher on 0 questions, the same on 3, lower on 0).
+2 of the verdicts are failed calls to the judge, recorded by the evaluation tool as fails (2 in the arm without the skill). Nothing was judged again. Counted as passes instead, the scores are 97.5% with the skill and 91.4% without it (difference +6.1 points; higher on 3 questions, the same on 7, lower on 0).
 
-On that model an answer with the skill took 8.5 minutes and $4.11 at list price, against 2.0 minutes and $0.85 without it, and carried 25.0 links against 3.2.
+On that model an answer with the skill took 7.6 minutes and $3.79 at list price, against 1.6 minutes and $1.14 without it, and carried 22.2 links against 6.8.
 
 Does it start when it should: each of 20 requests was sent once to a fresh session with only this plugin added. The skill started on 10 of 10 requests that ask for datasets and on 0 of 10 that do not.
 

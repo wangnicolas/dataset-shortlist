@@ -104,6 +104,9 @@ def failed_judge_note(data):
 ARM_WORDS = {"with": "with the skill", "without": "without the skill", "prompted": "told to verify"}
 
 
+SECOND_NOTE = ("Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.")
+
+
 def results_block(arms, label, audit=None, second=None, second_label="", records="", pipeline=None, titles=None,
                   trigger=None):
     titles = titles or {}
@@ -231,11 +234,10 @@ def results_block(arms, label, audit=None, second=None, second_label="", records
     if second and second.get("per_case"):
         outcome = decide(second["per_case"], "without")
         if outcome:
-            out += ["On a stronger model (%s): %s with the skill and %s without it, a difference of %s points; higher on "
-                    "%d, the same on %d, lower on %d. The subset is too small for the rule above and is "
-                    "reported as it is." % (second_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
-                                            points(outcome["mean_diff"]), outcome["better"], outcome["same"],
-                                            outcome["worse"]), ""]
+            out += [("On a stronger model (%s): %s with the skill and %s without it, a difference of %s points; higher on "
+                     "%d, the same on %d, lower on %d. " % (
+                         second_label.rstrip("."), pct(outcome["with"], 1), pct(outcome["other"], 1),
+                         points(outcome["mean_diff"]), outcome["better"], outcome["same"], outcome["worse"])) + SECOND_NOTE, ""]
             note = failed_judge_note(second)
             if note:
                 out += [note, ""]

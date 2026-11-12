@@ -1131,27 +1131,27 @@
    },
    {
     "model": "fable",
-    "n": 3,
+    "n": 10,
     "with": {
-     "accuracy": 0.9791666666666666,
-     "cost_usd": 4.1099036,
+     "accuracy": 0.975,
+     "cost_usd": 3.793430605,
      "runs": [
       2,
       2
      ]
     },
     "without": {
-     "accuracy": 0.9791666666666666,
-     "cost_usd": 0.8547705,
+     "accuracy": 0.913888888888889,
+     "cost_usd": 1.1355626950000002,
      "runs": [
       2,
       2
      ]
     },
-    "higher": 0,
+    "higher": 3,
     "lower": 0,
     "judge_failures": 2,
-    "same": 3
+    "same": 7
    }
   ]
  },

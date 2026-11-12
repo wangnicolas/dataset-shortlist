@@ -1,0 +1,2947 @@
+{
+  "source": "<home>/Documents/Claude/Projects/dataset-scout/eval-runs/heldout-01-fable-rest7/result.json",
+  "model": "fable",
+  "judge": "sonnet",
+  "cost_usd": 74.49579540000003,
+  "n_cases": 7,
+  "strata": {
+    "health": {
+      "cases": 4,
+      "with": 0.984375,
+      "without": 0.9208829365079365,
+      "delta": 0.06349206349206349,
+      "better": 2,
+      "same": 2,
+      "worse": 0
+    },
+    "other fields": {
+      "cases": 3,
+      "with": 0.9583333333333334,
+      "without": 0.8392857142857143,
+      "delta": 0.11904761904761907,
+      "better": 1,
+      "same": 2,
+      "worse": 0
+    }
+  },
+  "per_case": [
+    {
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 0.8571428571428572,
+      "delta": 0.1428571428571428
+    },
+    {
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 0.8888888888888888,
+      "delta": 0.11111111111111116
+    },
+    {
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "with": 0.9375,
+      "without": 0.9375,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "with": 1.0,
+      "without": 1.0,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "with": 0.875,
+      "without": 0.875,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "with": 1.0,
+      "without": 1.0,
+      "delta": 0.0
+    },
+    {
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "with": 1.0,
+      "without": 0.6428571428571428,
+      "delta": 0.3571428571428572
+    }
+  ],
+  "runs": [
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 37,
+      "cost_usd": 4.1331334,
+      "seconds": 574.021,
+      "cost_with_judge_usd": 4.2885654,
+      "error": null,
+      "tokens": 1000955,
+      "tools": {
+        "Skill": 1,
+        "Bash": 12,
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "WebFetch": 13
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://github.com/mattgroh/fitzpatrick17k",
+        "https://huggingface.co/datasets/Digital-Dermatology/CleanPatrick",
+        "https://doi.org/10.1109/cvprw53098.2021.00201",
+        "https://doi.org/10.1007/978-3-031-25069-9_13",
+        "https://doi.org/10.1038/s41597-025-04382-5",
+        "https://doi.org/10.7910/DVN/W7OUZM",
+        "https://doi.org/10.52202/085713-3742",
+        "https://github.com/google-research-datasets/scin",
+        "https://ddi-dataset.github.io/",
+        "https://doi.org/10.1126/sciadv.abq6147",
+        "https://passionderm.github.io/",
+        "https://arxiv.org/abs/2411.04584",
+        "https://doi.org/10.7910/dvn/fsxraq",
+        "https://doi.org/10.57761/pgwn-6b62",
+        "https://zenodo.org/records/10570316",
+        "https://doi.org/10.34970/962049",
+        "https://doi.org/10.17632/zr7vgbcyr2.1",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13459198/",
+        "https://doi.org/10.71718/15nz-jv40",
+        "https://doi.org/10.17632/bb844rcjx5.1"
+      ],
+      "answer_chars": 7677,
+      "links": {
+        "total": 20,
+        "ok": 18,
+        "dead": 0,
+        "blocked": 2,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 31,
+      "cost_usd": 3.3435114,
+      "seconds": 376.312,
+      "cost_with_judge_usd": 3.5012274000000003,
+      "error": null,
+      "tokens": 483519,
+      "tools": {
+        "Skill": 1,
+        "Bash": 7,
+        "ToolSearch": 1,
+        "WebSearch": 7,
+        "WebFetch": 13
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://github.com/mattgroh/fitzpatrick17k",
+        "https://huggingface.co/datasets/Digital-Dermatology/CleanPatrick",
+        "https://doi.org/10.1109/cvprw53098.2021.00201",
+        "https://doi.org/10.1007/978-3-031-25069-9_13",
+        "https://ddi-dataset.github.io/",
+        "https://stanford.redivis.com/datasets/3r16-5mby7gfer",
+        "https://doi.org/10.1126/sciadv.abq6147",
+        "https://passionderm.github.io/",
+        "https://doi.org/10.1007/978-3-031-72384-1_66",
+        "https://github.com/google-research-datasets/scin",
+        "https://doi.org/10.5267/j.ijdns.2024.11.003",
+        "https://doi.org/10.7910/DVN/W7OUZM",
+        "https://arxiv.org/abs/2506.06099",
+        "https://doi.org/10.57761/pgwn-6b62",
+        "https://zenodo.org/records/10570316",
+        "https://doi.org/10.7910/dvn/fsxraq",
+        "https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer",
+        "https://doi.org/10.17632/zr7vgbcyr2.1",
+        "https://api.isic-archive.com/collections/413/",
+        "https://huggingface.co/datasets/electricsheepafrica/Africa-skin-cancer-images-EHR"
+      ],
+      "answer_chars": 8384,
+      "links": {
+        "total": 20,
+        "ok": 18,
+        "dead": 0,
+        "blocked": 2,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 0.7142857142857143,
+      "graders": [
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 11,
+      "cost_usd": 1.8839541000000002,
+      "seconds": 95.858,
+      "cost_with_judge_usd": 1.9783261000000003,
+      "error": null,
+      "tokens": 112758,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 6,
+        "WebFetch": 3
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://arxiv.org/pdf/2104.09957",
+        "https://arxiv.org/pdf/2505.11034",
+        "https://www.sciencedirect.com/science/article/pii/S1877750326000761",
+        "https://www.science.org/doi/10.1126/sciadv.abq6147",
+        "https://arxiv.org/abs/2411.04584",
+        "https://github.com/Digital-Dermatology/PASSION_project",
+        "https://arxiv.org/html/2402.18545",
+        "https://github.com/google-research-datasets/scin",
+        "https://arxiv.org/html/2506.06099",
+        "https://ai.nejm.org/doi/full/10.1056/AIdbp2400732",
+        "https://www.jidonline.org/article/S0022-202X(25",
+        "https://arxiv.org/html/2602.10265v1",
+        "https://arxiv.org/pdf/2601.00840"
+      ],
+      "answer_chars": 4277,
+      "links": {
+        "total": 13,
+        "ok": 9,
+        "dead": 0,
+        "blocked": 4,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-derm-skin-tone",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-fitzpatrick17k",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-ddi",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-scin",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ddi-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-scin-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-ham10000",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 8,
+      "cost_usd": 1.6764868000000002,
+      "seconds": 78.215,
+      "cost_with_judge_usd": 1.7708248000000002,
+      "error": null,
+      "tokens": 76508,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 6
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://github.com/google-research-datasets/scin",
+        "https://arxiv.org/pdf/2402.18545",
+        "https://arxiv.org/html/2510.00055v2",
+        "https://arxiv.org/html/2411.04584v1",
+        "https://arxiv.org/html/2506.06099",
+        "https://ai.nejm.org/doi/full/10.1056/AIdbp2400732",
+        "https://api.isic-archive.com/doi/milk10k/",
+        "https://arxiv.org/html/2401.14497",
+        "https://arxiv.org/html/2505.11034v2",
+        "https://arxiv.org/pdf/2601.00840"
+      ],
+      "answer_chars": 4490,
+      "links": {
+        "total": 10,
+        "ok": 9,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ptbxl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chapman-shaoxing",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-cinc-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-code15",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-ptbxl-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-chapman-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-code15-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-mitbih",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 16,
+      "cost_usd": 2.1019352,
+      "seconds": 358.829,
+      "cost_with_judge_usd": 2.4276431999999994,
+      "error": null,
+      "tokens": 658244,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "Read": 3
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/ptb-xl/1.0.3/",
+        "https://doi.org/10.1038/s41597-020-0495-6",
+        "https://doi.org/10.1109/jbhi.2020.3022989",
+        "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+        "https://physionet.org/content/challenge-2021/1.0.3/",
+        "https://doi.org/10.3389/fphys.2021.811661",
+        "https://zenodo.org/records/4916206",
+        "https://doi.org/10.1038/s41467-020-15432-4",
+        "https://doi.org/10.6084/m9.figshare.c.5779802",
+        "https://zenodo.org/records/3765780",
+        "https://doi.org/10.17632/6jd4rn2z9x.1",
+        "https://physionet.org/content/mimic-iv-ecg/1.0/",
+        "https://doi.org/10.6084/m9.figshare.31229326.v3"
+      ],
+      "answer_chars": 7784,
+      "links": {
+        "total": 13,
+        "ok": 13,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ptbxl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chapman-shaoxing",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-cinc-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-code15",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-ptbxl-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-chapman-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-code15-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-mitbih",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 17,
+      "cost_usd": 2.218037,
+      "seconds": 317.701,
+      "cost_with_judge_usd": 2.5436749999999995,
+      "error": null,
+      "tokens": 541549,
+      "tools": {
+        "Skill": 1,
+        "Bash": 11,
+        "Read": 3
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/ptb-xl/1.0.3/",
+        "https://doi.org/10.1038/s41597-020-0495-6",
+        "https://doi.org/10.1109/jbhi.2020.3022989",
+        "https://doi.org/10.1016/j.ijcard.2020.11.053",
+        "https://physionet.org/content/ecg-arrhythmia/1.0.0/",
+        "https://doi.org/10.1038/s41597-020-0386-x",
+        "https://doi.org/10.1038/s41598-020-59821-7",
+        "https://physionet.org/content/challenge-2021/1.0.3/",
+        "https://doi.org/10.1088/1361-6579/ac79fd",
+        "https://doi.org/10.3389/fphys.2021.811661",
+        "https://doi.org/10.6084/m9.figshare.c.5779802.v1",
+        "https://doi.org/10.1038/s41597-022-01403-5",
+        "https://zenodo.org/records/4916206",
+        "https://doi.org/10.1038/s41467-020-15432-4",
+        "https://zenodo.org/records/3765780",
+        "https://doi.org/10.17632/6jd4rn2z9x.1",
+        "https://physionet.org/content/mimic-iv-ecg/1.0/",
+        "https://doi.org/10.6084/m9.figshare.31229326.v3",
+        "https://physionet.org/content/mimic-iv-ecg-ext-icd-labels/",
+        "https://bdsp.io/content/heedb/",
+        "https://doi.org/10.17044/scilifelab.15169716.v1",
+        "https://physionet.org/content/kurias-ecg/1.0/",
+        "https://physionet.org/content/echonext/1.1.1/",
+        "https://physionet.org/content/challenge-2020/1.0.2/",
+        "https://doi.org/10.6084/m9.figshare.c.4560497",
+        "https://zenodo.org/records/4905618"
+      ],
+      "answer_chars": 9134,
+      "links": {
+        "total": 26,
+        "ok": 26,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "01-recall-ptbxl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chapman-shaoxing",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-cinc-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-code15",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-ptbxl-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-chapman-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-code15-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-mitbih",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.3022408,
+      "seconds": 36.613,
+      "cost_with_judge_usd": 0.46615479999999965,
+      "error": null,
+      "tokens": 21963,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3629,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-ecg-rhythm-labels",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 0.8888888888888888,
+      "graders": [
+        {
+          "name": "01-recall-ptbxl",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chapman-shaoxing",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-cinc-challenge",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-recall-code15",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "05-access-ptbxl-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-chapman-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-access-code15-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "08-trap-mitbih",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "09-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 6,
+      "cost_usd": 0.3621796,
+      "seconds": 43.321,
+      "cost_with_judge_usd": 0.5275315999999997,
+      "error": null,
+      "tokens": 64040,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 4
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://physionet.org/content/ptb-xl/",
+        "https://physionet.org/content/ecg-arrhythmia/",
+        "https://physionet.org/content/challenge-2021/",
+        "https://zenodo.org/records/4916206"
+      ],
+      "answer_chars": 3118,
+      "links": {
+        "total": 4,
+        "ok": 4,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-nhanes",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-hse",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-charls",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-nhanes-download",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-hse-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-charls-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-brfss",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 21,
+      "cost_usd": 2.9865435000000007,
+      "seconds": 486.824,
+      "cost_with_judge_usd": 3.1945995000000016,
+      "error": null,
+      "tokens": 553441,
+      "tools": {
+        "Skill": 1,
+        "Bash": 9,
+        "ToolSearch": 1,
+        "WebSearch": 5,
+        "WebFetch": 3
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://wwwn.cdc.gov/nchs/nhanes/",
+        "https://doi.org/10.1001/jamacardio.2025.1536",
+        "https://doi.org/10.5255/ukda-sn-5050-37",
+        "https://doi.org/10.3390/healthcare14040501",
+        "https://hrsdata.isr.umich.edu/",
+        "https://doi.org/10.1161/jaha.123.030765",
+        "https://doi.org/10.5255/ukda-sn-9469-1",
+        "https://knhanes.kdca.go.kr/knhanes/eng/main.do",
+        "https://doi.org/10.3390/healthcare14193198",
+        "https://charls.pku.edu.cn/en/",
+        "https://g2aging.org/additional-resources/gateway-blog/05a8df66-b9ab-47de-879e-b0bde672798d",
+        "https://iipsindia.ac.in/content/lasi-wave-i",
+        "https://iipsindia.ac.in/sites/default/files/LASI_DataRequestForm_0.pdf",
+        "https://dhsprogram.com/data/",
+        "https://doi.org/10.5334/gh.1575"
+      ],
+      "answer_chars": 7869,
+      "links": {
+        "total": 15,
+        "ok": 13,
+        "dead": 1,
+        "blocked": 1,
+        "dead_urls": [
+          "https://charls.pku.edu.cn/en/"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-nhanes",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-hse",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-charls",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-hse-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-charls-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-brfss",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 32,
+      "cost_usd": 3.3264725,
+      "seconds": 505.951,
+      "cost_with_judge_usd": 3.6387105000000006,
+      "error": null,
+      "tokens": 567866,
+      "tools": {
+        "Skill": 1,
+        "Bash": 8,
+        "ToolSearch": 1,
+        "WebFetch": 13,
+        "WebSearch": 7
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://wwwn.cdc.gov/nchs/nhanes/",
+        "https://doi.org/10.3390/healthcare14040501",
+        "https://hrs.isr.umich.edu/data-products",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824637/",
+        "https://doi.org/10.1186/s12889-026-26341-4",
+        "https://doi.org/10.5255/ukda-sn-5050-37",
+        "https://doi.org/10.5255/ukda-sn-8860-1",
+        "https://charls.pku.edu.cn/en/",
+        "https://g2aging.org/additional-resources/gateway-blog/05a8df66-b9ab-47de-879e-b0bde672798d",
+        "https://www.iipsindia.ac.in/content/LASI-data",
+        "https://knhanes.kdca.go.kr/knhanes/eng/main.do",
+        "https://www.nature.com/articles/s41598-023-49055-8",
+        "https://crdcn.ca/data/canadian-health-measures-survey/",
+        "https://www150.statcan.gc.ca/n1/pub/82-003-x/2019002/article/00002-eng.pdf",
+        "https://doi.org/10.3886/icpsr39511.v1",
+        "https://dhsprogram.com/data/",
+        "https://extranet.who.int/ncdsmicrodata/index.php/catalog"
+      ],
+      "answer_chars": 9411,
+      "links": {
+        "total": 17,
+        "ok": 13,
+        "dead": 2,
+        "blocked": 2,
+        "dead_urls": [
+          "https://charls.pku.edu.cn/en/",
+          "https://www150.statcan.gc.ca/n1/pub/82-003-x/2019002/article/00002-eng.pdf"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-nhanes",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-hse",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-charls",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-hse-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-charls-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-brfss",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.2897768,
+      "seconds": 35.318,
+      "cost_with_judge_usd": 0.44467680000000137,
+      "error": null,
+      "tokens": 21631,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3381,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-measured-bp-surveys",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-nhanes",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-hse",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-charls",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-hse-registration",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-charls-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-brfss",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.3116968,
+      "seconds": 40.489,
+      "cost_with_judge_usd": 0.3905967999999993,
+      "error": null,
+      "tokens": 22137,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 3483,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ukbiobank-accelerometer",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-nhanes-wrist",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-allofus-fitbit",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ukbiobank-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-allofus-dura",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-nhanes-hip",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 34,
+      "cost_usd": 5.7325312,
+      "seconds": 588.138,
+      "cost_with_judge_usd": 6.027515200000002,
+      "error": null,
+      "tokens": 619051,
+      "tools": {
+        "Skill": 1,
+        "Bash": 8,
+        "ToolSearch": 1,
+        "WebSearch": 14,
+        "WebFetch": 8
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXMIN_G.htm",
+        "https://www.cdc.gov/nchs/linked-data/mortality-files/",
+        "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11402588/",
+        "https://link.springer.com/article/10.1186/s12966-024-01673-9",
+        "https://www.researchallofus.org/register/",
+        "https://www.nature.com/articles/s41591-022-02012-w",
+        "https://www.nature.com/articles/s41591-026-04352-3",
+        "https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=1008",
+        "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+        "https://doi.org/10.1371/journal.pone.0169649",
+        "https://doi.org/10.1093/sleep/zsad253",
+        "https://doi.org/10.1038/s41746-022-00676-9",
+        "https://mrosonline.ucsf.edu/",
+        "https://sofonline.ucsf.edu/",
+        "https://pubmed.ncbi.nlm.nih.gov/20370475",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13698916",
+        "https://www.ucl.ac.uk/brain-sciences/psychiatry/research/mental-health-older-people/projects/whitehall-ii/data-sharing",
+        "https://www.nature.com/articles/s41467-021-22354-2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13695056",
+        "https://www.oulu.fi/en/university/faculties-and-units/faculty-medicine/northern-finland-birth-cohorts-and-arctic-biobank",
+        "https://link.springer.com/article/10.1186/s12872-026-05762-4",
+        "https://sleepdata.org/datasets/mesa",
+        "https://biolincc.nhlbi.nih.gov/studies/mesa/",
+        "https://doi.org/10.1186/s12966-023-01537-8",
+        "https://www.colaus-psycolaus.ch/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11497381/",
+        "https://community.ukbiobank.ac.uk/hc/en-gb/articles/28002689502237-Applying-to-UK-Biobank-and-accessing-data-FAQ",
+        "https://www.researchprofessionalnews.com/rr-news-uk-charities-and-societies-2026-10-uk-biobank-set-to-reopen-to-researchers-after-data-breach/",
+        "https://www.publictechnology.net/2026/07/13/health-and-social-care/uk-biobank-commissions-200k-security-review-after-major-data-incident/",
+        "https://support.researchallofus.org/hc/en-us/articles/50653909888788-Our-Largest-Genomic-Dataset-Curated-Data-Repository-version-9",
+        "https://support.researchallofus.org/hc/en-us/articles/10237876482196-How-to-find-participant-death-reports",
+        "https://sleepdata.org/datasets/mesa/pages/actigraphy-introduction.md",
+        "https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-023-01537-8",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322295/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3439198",
+        "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.12122",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13457080/",
+        "https://academic.oup.com/epirev/article/43/1/65/6313190"
+      ],
+      "answer_chars": 14490,
+      "links": {
+        "total": 39,
+        "ok": 33,
+        "dead": 2,
+        "blocked": 4,
+        "dead_urls": [
+          "https://sleepdata.org/datasets/mesa",
+          "https://sleepdata.org/datasets/mesa/pages/actigraphy-introduction.md"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ukbiobank-accelerometer",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-nhanes-wrist",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-allofus-fitbit",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ukbiobank-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-allofus-dura",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-nhanes-hip",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 32,
+      "cost_usd": 5.0024668000000005,
+      "seconds": 404.133,
+      "cost_with_judge_usd": 5.2572748,
+      "error": null,
+      "tokens": 674491,
+      "tools": {
+        "Skill": 1,
+        "Bash": 9,
+        "ToolSearch": 1,
+        "WebSearch": 13,
+        "WebFetch": 6
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXMIN_G.htm",
+        "https://www.cdc.gov/nchs/linked-data/mortality-files/",
+        "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+        "https://doi.org/10.1186/s12889-026-29778-9",
+        "https://support.researchallofus.org/hc/en-us/articles/30294451486356-Curated-Data-Repository-CDR-version-8-Release-Notes",
+        "https://www.nih.gov/allofus/research",
+        "https://doi.org/10.1038/s41591-024-03155-8",
+        "https://doi.org/10.1038/s41467-026-78529-2",
+        "https://doi.org/10.1038/s43856-025-01372-x",
+        "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+        "https://doi.org/10.1371/journal.pone.0169649",
+        "https://doi.org/10.1093/sleep/zsad253",
+        "https://doi.org/10.1249/mss.0000000000003478",
+        "https://www.ucl.ac.uk/brain-sciences/psychiatry/our-research/mental-health-older-people/whitehall-ii/data-sharing",
+        "https://doi.org/10.1038/s41598-025-30237-5",
+        "https://doi.org/10.1038/srep45772",
+        "https://mrosonline.ucsf.edu/",
+        "https://sofonline.ucsf.edu/",
+        "https://doi.org/10.3109/07420520903419157",
+        "https://doi.org/10.2337/dc20-0557",
+        "https://doi.org/10.1093/geroni/igy023.363",
+        "https://sleepdata.org/datasets/mesa",
+        "https://doi.org/10.1186/s12966-023-01537-8",
+        "https://www.ckbiobank.org/data-access",
+        "https://doi.org/10.1093/aje/kwu245",
+        "https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/",
+        "https://community.ukbiobank.ac.uk/hc/en-gb/articles/37284734505117-Can-I-apply-to-use-UK-Biobank-data",
+        "https://www.ukbiobank.ac.uk/wp-content/uploads/2026/06/UK-Biobank-Oversight-Committee-report-June-2026.pdf",
+        "https://support.researchallofus.org/hc/en-us/articles/22346942074132-Data-Access-Framework",
+        "https://www.nature.com/articles/s41591-026-04352-3",
+        "https://portal.dementiasplatform.uk/data/cohort-data-availability/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11216065/",
+        "https://sleepdata.org/datasets/mros",
+        "https://sleepdata.org/datasets/mesa/pages/actigraphy-introduction.md",
+        "https://sleepdata.org/datasets/hchs/pages/actigraphy-introduction.md",
+        "https://www.ckbiobank.org/news-1/3rd-resurvey-of-ckb-participants-completed",
+        "https://link.springer.com/article/10.1186/s12966-026-01980-3"
+      ],
+      "answer_chars": 12992,
+      "links": {
+        "total": 37,
+        "ok": 28,
+        "dead": 4,
+        "blocked": 5,
+        "dead_urls": [
+          "https://sleepdata.org/datasets/mesa",
+          "https://sleepdata.org/datasets/mros",
+          "https://sleepdata.org/datasets/mesa/pages/actigraphy-introduction.md",
+          "https://sleepdata.org/datasets/hchs/pages/actigraphy-introduction.md"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "arm": "without",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-ukbiobank-accelerometer",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-nhanes-wrist",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-allofus-fitbit",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ukbiobank-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-allofus-dura",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-nhanes-hip",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 15,
+      "cost_usd": 2.704002,
+      "seconds": 161.257,
+      "cost_with_judge_usd": 2.8442339999999997,
+      "error": null,
+      "tokens": 160574,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 10,
+        "WebFetch": 3
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.ukbiobank.ac.uk/use-our-data/fees/",
+        "https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/",
+        "https://community.ukbiobank.ac.uk/hc/en-gb/articles/37284734505117-Can-I-apply-to-use-UK-Biobank-data",
+        "https://www.ukbiobank.ac.uk/wp-content/uploads/2026/06/UK-Biobank-Oversight-Committee-report-June-2026.pdf",
+        "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/PAXMIN_G.htm",
+        "https://www.cdc.gov/nchs/data-linkage/mortality-public.htm",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11402588/",
+        "https://www.nature.com/articles/s41591-026-04352-3",
+        "https://www.researchallofus.org/register/",
+        "https://doi.org/10.1093/aje/kwaf118",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13716494",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13695056",
+        "https://www.nature.com/articles/s41598-025-30237-5",
+        "https://link.springer.com/article/10.1186/s12966-023-01537-8",
+        "https://www.ckbiobank.org/news-1/3rd-resurvey-of-ckb-participants-completed",
+        "https://sleepdata.org/datasets/mros",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996026/",
+        "https://academic.oup.com/ije/article/50/6/1786/6359466",
+        "https://www.oulu.fi/en/university/faculties-and-units/faculty-medicine/northern-finland-birth-cohorts-and-arctic-biobank/nfbc-aineistopyynto"
+      ],
+      "answer_chars": 6376,
+      "links": {
+        "total": 19,
+        "ok": 14,
+        "dead": 1,
+        "blocked": 4,
+        "dead_urls": [
+          "https://sleepdata.org/datasets/mros"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-h-wrist-activity-outcomes",
+      "stratum": "health",
+      "arm": "without",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-ukbiobank-accelerometer",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-nhanes-wrist",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-allofus-fitbit",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ukbiobank-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-allofus-dura",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-nhanes-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-nhanes-hip",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 2.2031234000000004,
+      "seconds": 129.13,
+      "cost_with_judge_usd": 2.3397134,
+      "error": null,
+      "tokens": 145849,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "WebFetch": 4
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.ukbiobank.ac.uk/use-our-data/fees/",
+        "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+        "https://www.ukbiobank.ac.uk/wp-content/uploads/2026/06/UK-Biobank-Oversight-Committee-report-June-2026.pdf",
+        "https://community.ukbiobank.ac.uk/hc/en-gb/articles/37284734505117-Can-I-apply-to-use-UK-Biobank-data",
+        "https://www.cdc.gov/nchs/data-linkage/mortality-public.htm",
+        "https://epi.grants.cancer.gov/physical/research-resources.html",
+        "https://physionet.org/content/minute-level-step-count-nhanes/1.0.2/",
+        "https://support.researchallofus.org/hc/en-us/articles/50653909888788-Our-Largest-Genomic-Dataset-Curated-Data-Repository-version-9",
+        "https://www.nature.com/articles/s41591-026-04352-3",
+        "https://link.springer.com/article/10.1186/s12966-023-01537-8",
+        "https://www.ckbiobank.org/data-access/data-2",
+        "https://www.ckbiobank.org/data-access/data-overview",
+        "https://www.ucl.ac.uk/brain-sciences/psychiatry/our-research/mental-health-older-people/whitehall-ii/data-sharing",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4208789/",
+        "https://sleepdata.org/datasets/mesa",
+        "https://sleepdata.org/datasets/hchs",
+        "https://sleepdata.org/datasets/mros"
+      ],
+      "answer_chars": 6119,
+      "links": {
+        "total": 17,
+        "ok": 10,
+        "dead": 3,
+        "blocked": 4,
+        "dead_urls": [
+          "https://sleepdata.org/datasets/mesa",
+          "https://sleepdata.org/datasets/hchs",
+          "https://sleepdata.org/datasets/mros"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 36,
+      "cost_usd": 6.2809458000000005,
+      "seconds": 572.176,
+      "cost_with_judge_usd": 6.718693800000002,
+      "error": null,
+      "tokens": 1015411,
+      "tools": {
+        "Skill": 1,
+        "Bash": 11,
+        "Read": 1,
+        "ToolSearch": 1,
+        "WebSearch": 16,
+        "WebFetch": 4
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://www.jarellanobover.com/veneto-workers-histories-dataset-additional-resources",
+        "https://arxiv.org/pdf/1806.01494",
+        "https://davidcard.berkeley.edu/papers/RESTUD-2014.pdf",
+        "https://fdz.iab.de/en/int_bd_pd/the-sample-of-integrated-employer-employee-data-sieed-sieed-7523-version-1/",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://doi.org/10.1093/qje/qjt006",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://www.spensiones.cl/portal/institucional/594/w3-article-7521.html",
+        "https://bplim.bportugal.pt/content/access-0",
+        "https://www.casd.eu/en/source/all-employee-panel/",
+        "https://www.casd.eu/en/your-project/procedures-dhabilitation/",
+        "https://www.casd.eu/en/tarifs-2/",
+        "https://www.census.gov/programs-surveys/ces/data/restricted-use-data/lehd-data.html",
+        "https://www.gov.br/pt-br/servicos/solicitar-acesso-aos-dados-identificados-rais-e-caged",
+        "https://doi.org/10.5164/iab.liablm7524.de.en.v1",
+        "https://adatbank.krtk.mta.hu/en/2020/02/",
+        "https://datacatalogue.ukdataservice.ac.uk/studies/study/6689",
+        "https://www.lavoro.gov.it/documenti-e-norme/studi-e-statistiche/Documents/Microdati%20per%20la%20ricerca/ALLEGATO3-microdati.pdf",
+        "https://kti.krtk.hu/wp-content/uploads/2025/02/KRTKKTIWP202502.pdf",
+        "https://doi.org/10.5255/ukda-sn-858769",
+        "https://doi.org/10.5683/sp3/abotie",
+        "https://doi.org/10.3886/e146661v1",
+        "https://github.com/tlamadon/pytwoway"
+      ],
+      "answer_chars": 12318,
+      "links": {
+        "total": 24,
+        "ok": 23,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 40,
+      "cost_usd": 5.9031006,
+      "seconds": 484.417,
+      "cost_with_judge_usd": 6.259150600000003,
+      "error": null,
+      "tokens": 1004311,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "Read": 1,
+        "ToolSearch": 1,
+        "WebSearch": 17,
+        "WebFetch": 8
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://www.jarellanobover.com/veneto-workers-histories-dataset-additional-resources",
+        "https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA16410",
+        "https://fdz.iab.de/en/int_bd_pd/the-sample-of-integrated-employer-employee-data-sieed-sieed-7523-version-1/",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://www.census.gov/topics/research/guidance/restricted-use-microdata/standard-application-process.html",
+        "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-cross-sectional-model-1993-2023-version-1/",
+        "https://www.casd.eu/en/source/all-employee-panel/",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://tlamadon.github.io/pytwoway/",
+        "https://doi.org/10.1257/jep.20231372",
+        "https://www.spensiones.cl/portal/institucional/594/w3-article-12931.html",
+        "https://github.com/economoser/EM2022",
+        "https://github.com/rsaggio87/LeaveOutTwoWay"
+      ],
+      "answer_chars": 9553,
+      "links": {
+        "total": 14,
+        "ok": 13,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 18,
+      "cost_usd": 3.044961200000001,
+      "seconds": 177.168,
+      "cost_with_judge_usd": 3.2314312000000016,
+      "error": null,
+      "tokens": 163201,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 11,
+        "WebFetch": 5
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://www.jarellanobover.com/veneto-workers-histories-dataset-additional-resources",
+        "https://www.spensiones.cl/portal/institucional/594/w3-article-12931.html",
+        "https://eprints.lse.ac.uk/107824/1/LSE_III_working_paper_54.pdf",
+        "https://www.tandfonline.com/doi/full/10.1080/00220388.2022.2096444",
+        "https://fdz.iab.de/en/int_bd_pd/the-sample-of-integrated-employer-employee-data-sieed-sieed-7523-version-1/",
+        "https://fdz.iab.de/en/int_bd_pd/linked-employer-employee-data-of-the-iab-liab-liab-longitudinal-model-1975-2021-version-1/",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://www.degruyterbrill.com/document/doi/10.1515/jbnst-2023-0018/html",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://diegopuga.org/data/mcvl/",
+        "https://www2.census.gov/adrm/FSRDC/Apply_For_Access/Research_Proposal_Guidelines.pdf",
+        "https://www.census.gov/topics/research/guidance/restricted-use-microdata/standard-application-process.html",
+        "https://www.atlantafed.org/research-and-data/atlanta-research-data-center/data",
+        "https://github.com/rdahis/clean_RAIS",
+        "https://marianahaase.substack.com/p/rais-publica-que-os-micridados-permitem",
+        "https://bplim.bportugal.pt/content/access-0",
+        "https://cicee.autonoma.pt/wp-content/uploads/2024/03/BPlim_Guide_for_Researchers_v2018sep26.pdf",
+        "https://www.disuguaglianzesociali.it/glossario/?idg=71",
+        "https://www.nber.org/system/files/working_papers/w26244/w26244.pdf"
+      ],
+      "answer_chars": 6295,
+      "links": {
+        "total": 20,
+        "ok": 19,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-02",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 0.875,
+      "graders": [
+        {
+          "name": "01-recall-german-iab",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-us-lehd",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-brazil-rais",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-german-fdz-application",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-us-fsrdc-project",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-brazil-ministry-agreement",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-lehd-public-tables",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 16,
+      "cost_usd": 2.2739886000000005,
+      "seconds": 143.444,
+      "cost_with_judge_usd": 2.473168600000001,
+      "error": null,
+      "tokens": 153181,
+      "tools": {
+        "ToolSearch": 1,
+        "WebSearch": 8,
+        "WebFetch": 6
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://www.frdb.org/en/dati/dati-inps-carriere-lavorative-in-veneto/",
+        "https://www.jarellanobover.com/veneto-workers-histories-dataset-additional-resources",
+        "https://portaldatos.seg-social.gob.es/mcvl",
+        "https://diegopuga.org/data/mcvl/",
+        "https://fdz.iab.de/en/data-access/on-site-use/",
+        "https://fdz.iab.de/en/data-access/scientific-use-files/",
+        "https://doku.iab.de/fdz/reporte/2025/MR_03-25_EN.pdf",
+        "https://www.census.gov/topics/research/guidance/restricted-use-microdata/standard-application-process.html",
+        "https://www2.census.gov/adrm/FSRDC/Apply_For_Access/Research_Proposal_Guidelines.pdf",
+        "https://www.casd.eu/source/panel-tous-actifs/",
+        "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/estatisticas-trabalho/solicitar-bases-de-dados-identificados"
+      ],
+      "answer_chars": 5488,
+      "links": {
+        "total": 11,
+        "ok": 11,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ami-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chime6-dinner-party",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-notsofar-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ami-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-chime-commercial-ok",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-notsofar-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-libricss-replayed",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 27,
+      "cost_usd": 3.1662129,
+      "seconds": 353.112,
+      "cost_with_judge_usd": 3.4098569000000003,
+      "error": null,
+      "tokens": 568674,
+      "tools": {
+        "Skill": 1,
+        "Bash": 9,
+        "Read": 2,
+        "ToolSearch": 1,
+        "WebSearch": 6,
+        "WebFetch": 6
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://groups.inf.ed.ac.uk/ami/corpus/",
+        "https://groups.inf.ed.ac.uk/ami/download/",
+        "https://doi.org/10.1007/s10579-007-9040-x",
+        "https://doi.org/10.21437/interspeech.2021-941",
+        "https://github.com/microsoft/NOTSOFAR1-Challenge",
+        "https://doi.org/10.21437/interspeech.2024-1788",
+        "https://groups.inf.ed.ac.uk/ami/icsi/",
+        "https://doi.org/10.1109/icassp.2003.1198793",
+        "https://zenodo.org/records/8122551",
+        "https://openslr.org/150/",
+        "https://doi.org/10.21437/chime.2023-1",
+        "https://github.com/revdotcom/speech-datasets/tree/main/earnings21",
+        "https://catalog.ldc.upenn.edu/LDC2004S09",
+        "https://catalog.ldc.upenn.edu/LDC2013S03",
+        "https://www.ldc.upenn.edu/data-management/using/licensing"
+      ],
+      "answer_chars": 8498,
+      "links": {
+        "total": 15,
+        "ok": 14,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-ami-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chime6-dinner-party",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-notsofar-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ami-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-chime-commercial-ok",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-notsofar-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-libricss-replayed",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 23,
+      "cost_usd": 3.3272828,
+      "seconds": 356.618,
+      "cost_with_judge_usd": 3.578076800000002,
+      "error": null,
+      "tokens": 433437,
+      "tools": {
+        "Skill": 1,
+        "Bash": 7,
+        "ToolSearch": 1,
+        "WebSearch": 7,
+        "WebFetch": 5
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://groups.inf.ed.ac.uk/ami/corpus/",
+        "https://huggingface.co/datasets/edinburghcstr/ami",
+        "https://doi.org/10.1007/s10579-007-9040-x",
+        "https://huggingface.co/datasets/microsoft/NOTSOFAR",
+        "https://github.com/microsoft/NOTSOFAR1-Challenge/blob/main/DATA_LICENSE",
+        "https://www.chimechallenge.org/challenges/chime8/task2/data",
+        "https://github.com/microsoft/NOTSOFAR1-Challenge",
+        "https://doi.org/10.21437/interspeech.2024-1788",
+        "https://doi.org/10.1016/j.csl.2025.101841",
+        "https://groups.inf.ed.ac.uk/ami/icsi/",
+        "https://catalog.ldc.upenn.edu/LDC2004S02",
+        "https://zenodo.org/records/8122551",
+        "https://www.openslr.org/150/",
+        "https://doi.org/10.21437/chime.2023-1",
+        "https://github.com/revdotcom/speech-datasets",
+        "https://catalog.ldc.upenn.edu/LDC2004S05",
+        "https://catalog.ldc.upenn.edu/LDC2004S09",
+        "https://www.ldc.upenn.edu/data-management/using/licensing",
+        "https://www.nexdata.ai/datasets/speechrecog/1770",
+        "https://catalogue.elra.info/en-us/repository/browse/ELRA-E0017/",
+        "https://magichub.com/datasets/multi-stream-spontaneous-conversation-training-datasets_english/"
+      ],
+      "answer_chars": 7412,
+      "links": {
+        "total": 21,
+        "ok": 20,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-ami-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chime6-dinner-party",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-notsofar-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ami-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-chime-commercial-ok",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-notsofar-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-libricss-replayed",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 7,
+      "cost_usd": 0.8208772,
+      "seconds": 66.356,
+      "cost_with_judge_usd": 0.9654152000000003,
+      "error": null,
+      "tokens": 67756,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 3,
+        "WebSearch": 2
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://groups.inf.ed.ac.uk/ami/corpus/",
+        "https://groups.inf.ed.ac.uk/ami/icsi/",
+        "https://github.com/microsoft/NOTSOFAR1-Challenge",
+        "https://huggingface.co/datasets/microsoft/NOTSOFAR",
+        "https://www.chimechallenge.org/challenges/chime8/task2/data",
+        "https://zenodo.org/records/8122551",
+        "https://www.openslr.org/150/",
+        "https://arxiv.org/abs/2401.08887",
+        "https://arxiv.org/pdf/1909.13447"
+      ],
+      "answer_chars": 3935,
+      "links": {
+        "total": 9,
+        "ok": 9,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-03",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "01-recall-ami-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-chime6-dinner-party",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-notsofar-meetings",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-ami-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-chime-commercial-ok",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-access-notsofar-cc-by",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "07-trap-libricss-replayed",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "08-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 9,
+      "cost_usd": 0.9864613000000001,
+      "seconds": 68.395,
+      "cost_with_judge_usd": 1.1182233,
+      "error": null,
+      "tokens": 92718,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 4,
+        "WebSearch": 3
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://groups.inf.ed.ac.uk/ami/corpus/license.shtml",
+        "https://groups.inf.ed.ac.uk/ami/icsi/license.shtml",
+        "https://github.com/microsoft/NOTSOFAR1-Challenge",
+        "https://www.chimechallenge.org/challenges/chime8/task2/data",
+        "https://www.openslr.org/150/",
+        "https://arxiv.org/pdf/1909.13447",
+        "https://www.amazon.science/blog/amazon-releases-new-public-data-set-to-help-address-cocktail-party-problem",
+        "https://huggingface.co/datasets/huckiyang/DiPCo",
+        "https://www.ldc.upenn.edu/data-management/using/licensing"
+      ],
+      "answer_chars": 3838,
+      "links": {
+        "total": 9,
+        "ok": 8,
+        "dead": 0,
+        "blocked": 1,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 1,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 1.962917,
+      "seconds": 329.157,
+      "cost_with_judge_usd": 2.206870999999999,
+      "error": null,
+      "tokens": 479232,
+      "tools": {
+        "Skill": 1,
+        "Bash": 10,
+        "Read": 1
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://huggingface.co/datasets/mwalmsley/gz_desi",
+        "https://huggingface.co/datasets/mwalmsley/gz2",
+        "https://doi.org/10.1093/mnras/stt1458",
+        "https://huggingface.co/datasets/mwalmsley/gz_evo",
+        "https://zenodo.org/records/4573248",
+        "https://zenodo.org/records/3565489",
+        "https://data.galaxyzoo.org/",
+        "https://huggingface.co/datasets/mwalmsley/gz_euclid",
+        "https://zenodo.org/records/13357341",
+        "https://huggingface.co/datasets/mwalmsley/gz_hubble",
+        "https://zenodo.org/records/17200992",
+        "https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge",
+        "https://zenodo.org/records/8360385",
+        "https://zenodo.org/records/15106473",
+        "https://zenodo.org/records/3566991"
+      ],
+      "answer_chars": 8288,
+      "links": {
+        "total": 15,
+        "ok": 14,
+        "dead": 1,
+        "blocked": 0,
+        "dead_urls": [
+          "https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "with",
+      "run": 2,
+      "score": 1.0,
+      "graders": [
+        {
+          "name": "00-skill-fired",
+          "passed": true,
+          "scored": false,
+          "family": "other"
+        },
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": true,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 14,
+      "cost_usd": 1.7241004,
+      "seconds": 339.735,
+      "cost_with_judge_usd": 1.9758924,
+      "error": null,
+      "tokens": 524252,
+      "tools": {
+        "Skill": 1,
+        "Bash": 11
+      },
+      "skill_used": true,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://huggingface.co/datasets/mwalmsley/gz_evo",
+        "https://huggingface.co/datasets/mwalmsley/gz_desi",
+        "https://zenodo.org/records/4573248",
+        "https://zenodo.org/records/3565489",
+        "https://data.galaxyzoo.org/",
+        "https://huggingface.co/datasets/mwalmsley/gz2",
+        "https://zenodo.org/records/13357341",
+        "https://huggingface.co/datasets/mwalmsley/gz_hubble",
+        "https://zenodo.org/records/17200992",
+        "https://huggingface.co/datasets/mwalmsley/gz_candels",
+        "https://doi.org/10.1093/mnras/stab2093",
+        "https://doi.org/10.1093/mnras/stt1458",
+        "https://huggingface.co/datasets/mwalmsley/gz_euclid",
+        "https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge",
+        "https://zenodo.org/records/8360385",
+        "https://zenodo.org/records/15106473",
+        "https://zenodo.org/records/10845026",
+        "https://doi.org/10.6084/m9.figshare.90206.v1",
+        "https://doi.org/10.1088/0067-0049/186/2/427"
+      ],
+      "answer_chars": 7368,
+      "links": {
+        "total": 19,
+        "ok": 18,
+        "dead": 1,
+        "blocked": 0,
+        "dead_urls": [
+          "https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge"
+        ]
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 1,
+      "score": 0.7142857142857143,
+      "graders": [
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 9,
+      "cost_usd": 0.46052950000000004,
+      "seconds": 62.886,
+      "cost_with_judge_usd": 0.5505094999999998,
+      "error": null,
+      "tokens": 115579,
+      "tools": {
+        "ToolSearch": 1,
+        "WebFetch": 6,
+        "Bash": 1
+      },
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [
+        "https://github.com/mwalmsley/galaxy-datasets",
+        "https://zenodo.org/records/3565489",
+        "https://zenodo.org/records/4573248",
+        "https://huggingface.co/datasets/mwalmsley/gz_evo",
+        "https://huggingface.co/api/datasets?author=mwalmsley&limit=100"
+      ],
+      "answer_chars": 3103,
+      "links": {
+        "total": 5,
+        "ok": 5,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    },
+    {
+      "no_verdicts": false,
+      "case": "ho-o-04",
+      "stratum": "other fields",
+      "arm": "without",
+      "run": 2,
+      "score": 0.5714285714285714,
+      "graders": [
+        {
+          "name": "01-recall-galaxy-zoo-2",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "02-recall-galaxy-zoo-decals",
+          "passed": true,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "03-recall-galaxy-zoo-hubble",
+          "passed": false,
+          "scored": true,
+          "family": "recall"
+        },
+        {
+          "name": "04-access-gz2-free-download",
+          "passed": false,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "05-access-decals-zenodo",
+          "passed": true,
+          "scored": true,
+          "family": "access"
+        },
+        {
+          "name": "06-trap-galaxy10-too-small",
+          "passed": true,
+          "scored": true,
+          "family": "trap"
+        },
+        {
+          "name": "07-long-tail",
+          "passed": false,
+          "scored": true,
+          "family": "long tail"
+        }
+      ],
+      "turns": 1,
+      "cost_usd": 0.2623528,
+      "seconds": 27.874,
+      "cost_with_judge_usd": 0.3672367999999993,
+      "error": null,
+      "tokens": 20895,
+      "tools": {},
+      "skill_used": false,
+      "eval_reads": [],
+      "trace_found": true,
+      "urls": [],
+      "answer_chars": 2580,
+      "links": {
+        "total": 0,
+        "ok": 0,
+        "dead": 0,
+        "blocked": 0,
+        "dead_urls": []
+      }
+    }
+  ],
+  "families": {
+    "health / recall": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 26
+    },
+    "health / access": {
+      "with": 0.9545454545454546,
+      "without": 0.9090909090909091,
+      "n": 22
+    },
+    "health / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 8
+    },
+    "health / long tail": {
+      "with": 1.0,
+      "without": 0.625,
+      "n": 8
+    },
+    "other fields / recall": {
+      "with": 1.0,
+      "without": 0.8888888888888888,
+      "n": 18
+    },
+    "other fields / access": {
+      "with": 1.0,
+      "without": 0.9375,
+      "n": 16
+    },
+    "other fields / trap": {
+      "with": 1.0,
+      "without": 1.0,
+      "n": 6
+    },
+    "other fields / long tail": {
+      "with": 0.6666666666666666,
+      "without": 0.3333333333333333,
+      "n": 6
+    }
+  },
+  "links": {
+    "with": {
+      "total": 295,
+      "ok": 264,
+      "dead": 11,
+      "blocked": 20
+    },
+    "without": {
+      "total": 117,
+      "ok": 98,
+      "dead": 4,
+      "blocked": 15
+    }
+  },
+  "effort": {
+    "with": {
+      "turns": 26.714285714285715,
+      "seconds": 431.9374285714286,
+      "cost_usd": 3.657799321428571,
+      "tokens": 651745.2142857143
+    },
+    "without": {
+      "turns": 8.357142857142858,
+      "seconds": 83.30885714285715,
+      "cost_usd": 1.2559022071428572,
+      "tokens": 88485.0
+    }
+  },
+  "runs_without_verdicts": [],
+  "runs_never_started": {},
+  "partial": false,
+  "trigger_rate": 1.0,
+  "suspicious_reads": [],
+  "run_errors": []
+}

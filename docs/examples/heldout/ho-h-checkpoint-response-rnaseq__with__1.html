@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-RtmQHonwFqaDGk5tL289kcWS5HNEtCagDDu+RZngI8Y='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-qqo4xWeq2uWgdhhlaBJuRwOS6khg8c1gEhBpTpZyIO0='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="no-referrer">
-<meta name="generator" content="dataset-scout">
+<meta name="generator" content="dataset-shortlist">
 <title>Dataset shortlist: Cohorts of patients treated with checkpoint inhibitors with…</title>
 <style>
-/* dataset-scout report.
+/* dataset-shortlist report.
    Layout: the researcher's brief in one reading column, then a full-width
    comparison table and one dossier card per dataset; the plan bar stays at
    the bottom of the window.
@@ -848,7 +848,7 @@ input[type="checkbox"] {
     <div class="fine-print">
       <p id="checked-note"></p>
       <p>Fit is a judgement about the question as a whole; the requirement check on each card shows what it rests on. Links open in a new tab.</p>
-      <p>Made with dataset-scout. This page is a single file: it loads nothing from the network, and the datasets you tick stay in your browser.</p>
+      <p>Made with dataset-shortlist. This page is a single file: it loads nothing from the network, and the datasets you tick stay in your browser.</p>
     </div>
   </footer>
 </div>
@@ -1451,7 +1451,7 @@ input[type="checkbox"] {
     var chosen = model.datasets.filter(function (ds) { return wanted[ds.key] === true; });
     var lines = ['# Data access plan', ''];
     if (model.question) { lines.push('**Research question:** ' + mdText(model.question), ''); }
-    lines.push(plural(chosen.length, 'dataset') + ' chosen from the dataset-scout shortlist' +
+    lines.push(plural(chosen.length, 'dataset') + ' chosen from the dataset-shortlist shortlist' +
       (model.generatedLong ? ' of ' + mdText(model.generatedLong) : '') + '.');
     chosen.forEach(function (ds, index) {
       var lic = ds.licence;

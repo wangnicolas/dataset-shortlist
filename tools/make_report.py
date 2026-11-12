@@ -237,7 +237,7 @@ def main():
         second = load(os.path.join(args.second, "three_arms.json"))
         second_outcome = decide(second["per_case"], "without")
         out += ["## %d. The same comparison on a stronger model" % section, "",
-                "%s. The subset is three questions, too few for the rule; it is reported as it is." % args.second_label.rstrip("."), ""]
+                "%s. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description." % args.second_label.rstrip("."), ""]
         if second_outcome:
             out += ["Mean case score %.1f%% with the skill and %.1f%% without it (difference %+.1f points); higher on %d "
                     "questions, the same on %d, lower on %d." % (100 * second_outcome["with"], 100 * second_outcome["other"],

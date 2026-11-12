@@ -87,16 +87,18 @@ def main():
               "November", "December"]
     if len(started) >= 7 and started[5:7].isdigit():
         data["run_month"] = "%s %s" % (months[int(started[5:7]) - 1], started[:4])
+    data["version"] = load("plugins/dataset-shortlist/.claude-plugin/plugin.json").get("version")
     if args.owner and args.owner != "OWNER":
         data["repo_url"] = "https://github.com/%s/dataset-shortlist" % args.owner
-        data["install"] = {"command": "/plugin marketplace add %s/dataset-shortlist" % args.owner,
-                           "note": "Then: /plugin install dataset-shortlist@dataset-shortlist-marketplace"}
+        data["install"] = {"where": "In Claude Code, type:", "prompt": "",
+                           "lines": ["/plugin marketplace add %s/dataset-shortlist" % args.owner,
+                                     "/plugin install dataset-shortlist@dataset-shortlist-marketplace"]}
     elif args.local_path:
-        data["install"] = {"command": "claude --plugin-dir %s" % os.path.join(args.local_path, "plugins", "dataset-shortlist"),
-                           "note": "Loads it from a local copy for one session; nothing is installed."}
+        data["install"] = {"where": "In a terminal, from a local copy (one session, nothing is installed):", "prompt": "$",
+                           "lines": ["claude --plugin-dir %s" % os.path.join(args.local_path, "plugins", "dataset-shortlist")]}
     else:
-        data["install"] = {"command": "claude --plugin-dir plugins/dataset-shortlist",
-                           "note": "Runs from a clone of the repository for one session; nothing is installed."}
+        data["install"] = {"where": "In a terminal, from a clone (one session, nothing is installed):", "prompt": "$",
+                           "lines": ["claude --plugin-dir plugins/dataset-shortlist"]}
 
     with open(os.path.join(REPO, "tools", "showcase", "template.html"), encoding="utf-8") as handle:
         template = handle.read()

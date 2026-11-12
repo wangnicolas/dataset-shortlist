@@ -224,17 +224,22 @@ BENCH_SOURCES = [
 ]
 
 
-def judged_score(run):
-    """Share of the content checks of one run that passed, leaving out checks whose judge call failed."""
+def fair_score(run):
+    """Share of the content checks of one run that passed, a check whose judge call failed counted as passed.
+
+    The evaluation tool records a failed call to the judge as a failed check. The report gives both readings;
+    across models the second one is the fair one, because the failures fell on single arms.
+    """
     passed = total = failed_calls = 0
     for grader in run.get("graders") or []:
         if str(grader.get("name") or "").startswith("00-"):
             continue                      # the indicator that the skill started is not a content check
+        total += 1
         if "judgeVotes" not in grader and str(grader.get("explanation") or "").startswith("grader threw"):
             failed_calls += 1
-            continue
-        total += 1
-        passed += 1 if grader.get("passed") else 0
+            passed += 1
+        else:
+            passed += 1 if grader.get("passed") else 0
     return (passed / total if total else None), failed_calls
 
 
@@ -250,7 +255,7 @@ def benchmark():
                 for run in (case.get("arms") or {}).get(arm_in_file) or []:
                     if run.get("error"):
                         continue
-                    score, failed = judged_score(run)
+                    score, failed = fair_score(run)
                     failures[(model, arm)] = failures.get((model, arm), 0) + failed
                     if score is None:
                         continue

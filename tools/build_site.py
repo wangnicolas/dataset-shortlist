@@ -249,6 +249,22 @@ def results_section(arms_data, audit, label, preview):
                        '<thead><tr><th scope="col">Check</th>%s</tr></thead><tbody>%s</tbody></table></div></details>'
                        % (head, body))
 
+    # the access checks of both groups together, the figure the showcase page leads with
+    pooled_bits = []
+    for arm, name in (("with", "with the skill"), ("without", "without it")):
+        passed = total = 0
+        for stratum in strata:
+            key = "%s / access" % stratum
+            entry = arms_data.get("families", {}).get(key)
+            n = (arms_data.get("family_n") or {}).get(key) or 0
+            if entry and entry.get(arm) is not None:
+                passed += int(round(entry[arm] * n))
+                total += n
+        if total:
+            pooled_bits.append("%d of %d checks (%s) %s" % (passed, total, pct(passed / total), name))
+    if len(pooled_bits) == 2:
+        out.append('<p>Both groups together: access conditions were stated correctly in %s and in %s.</p>' % tuple(pooled_bits))
+
     # per question: always visible, with the difference written out
     per_case = arms_data.get("per_case", [])
     if per_case:
@@ -284,7 +300,7 @@ def results_section(arms_data, audit, label, preview):
             "n/a" if eff.get("cost_usd") is None else "$%.2f" % eff["cost_usd"]))
     out.append('<h4>Links, time and cost per answer</h4><div class="scroll"><table><thead><tr><th scope="col">Arm</th>'
                '<th scope="col">Links per answer</th><th scope="col">Links that resolve</th><th scope="col">Dead links</th>'
-               '<th scope="col">Refused the script</th>'
+               '<th scope="col">Site blocked the link checker</th>'
                '<th scope="col">Time</th><th scope="col">List-price cost</th></tr></thead><tbody>%s</tbody></table></div>'
                '<p class="small">Links were requested by a script after the runs; some sites refuse automated requests, and '
                'those links are counted apart, neither as working nor as dead. Cost is the list-price estimate reported by the '
@@ -333,7 +349,7 @@ def results_section(arms_data, audit, label, preview):
             if marks:
                 out.append('<h4>Are statements marked "checked today" more often right?</h4><div class="scroll"><table><thead><tr>'
                            '<th scope="col">Arm</th><th scope="col">Marked as checked today: correct</th>'
-                           '<th scope="col">Marked as recalled: correct</th><th scope="col">Not marked: correct</th></tr></thead>'
+                           '<th scope="col">Said to be recalled or from memory: correct</th><th scope="col">Not marked: correct</th></tr></thead>'
                            '<tbody>%s</tbody></table></div><p class="small">The skill marks each access statement as confirmed today '
                            'or recalled. The marking is only useful if the first kind is right more often. %s</p>'
                            % ("".join(marks), esc(marking_verdict(((audit.get("per_arm") or {}).get("with") or {}).get("by_mark"))[1])))
@@ -470,8 +486,7 @@ def second_model_section(data, label):
                     effort["without"]["cost_usd"], (links.get("with") or {}).get("per_answer") or 0,
                     (links.get("without") or {}).get("per_answer") or 0))
     return ('<h4>On a stronger model</h4><p class="runlabel">%s</p><p>%s The lift from a skill can shrink as the model '
-            'itself gets better, so the same comparison was repeated on a subset; three questions are too few for the rule, '
-            'and the table is reported as it is.</p>%s<div class="scroll"><table><thead><tr>'
+            'itself gets better, so the same comparison was repeated on a stronger model. Three of these questions were run as the protocol planned; the other seven were added after the result above was known. The rule was set for the main comparison only, so this is reported as a description.</p>%s<div class="scroll"><table><thead><tr>'
             '<th scope="col">Question</th><th scope="col">Stratum</th><th scope="col">With the skill</th>'
             '<th scope="col">No skill</th></tr></thead><tbody>%s</tbody></table></div>%s'
             % (esc(label), esc(summary), ('<p class="note">%s</p>' % esc(note)) if note else "", rows,
@@ -512,7 +527,9 @@ def pages_section(pages, result, prefix, shots):
     out = ['<p>When a run completes the workflow it writes one self-contained page: filter by access or licence, compare fit '
            'requirement by requirement, tick the datasets you want and take away the access plan. In the held-out run the '
            'page was written in %d of %d runs with the skill; the other answers say that it was not built. The pages below '
-           'are shown as they were written.</p>' % (len(written), len(with_runs))]
+           'are rendered by the current version from the data each run recorded; the pages as they were written at the '
+           'time, which showed "Unknown" for some access conditions the run had found, are in '
+           '<code>eval-runs/heldout-01/pages/</code>.</p>' % (len(written), len(with_runs))]
 
     def block(row, heading, why, shot_key):
         href = prefix + row["run"] + ".html"
@@ -670,7 +687,7 @@ def page(arms_data, audit, label, preview, verify_demo, shots, owner, second=Non
 
 <h2>Install</h2>
 %(install)s
-<p>Then ask your question in plain words. It needs Python 3.9 or newer and outbound HTTPS, no packages and no API keys. The skill follows the open Agent Skills format, so other agents that load <code>SKILL.md</code> folders can use it.</p>
+<p>Then ask your question in plain words. It needs Python 3.9 or newer and outbound HTTPS, no packages and no API keys. The skill follows the open Agent Skills format, so other agents that load <code>SKILL.md</code> folders should be able to use it; it has been tested only in Claude Code.</p>
 
 <h2>Limits</h2>
 <ul class="plain">
@@ -743,6 +760,12 @@ def main():
     trigger = load(args.trigger) if args.trigger and os.path.isfile(args.trigger) else None
     fragment = page(arms_data, audit, args.label, args.preview, demo, shots, args.owner, second, args.second_label, example,
                     args.local_path, pipeline, pages, result, trigger=trigger)
+    if args.owner and args.owner != "OWNER":
+        repo = "https://github.com/%s/dataset-shortlist" % args.owner
+        fragment = fragment.replace("<code>docs/EVAL_PROTOCOL.md</code>", '<a href="%s/blob/main/docs/EVAL_PROTOCOL.md"><code>docs/EVAL_PROTOCOL.md</code></a>' % repo)
+        fragment = fragment.replace("<code>tools/run_eval.sh</code>", '<a href="%s/blob/main/tools/run_eval.sh"><code>tools/run_eval.sh</code></a>' % repo)
+        fragment = fragment.replace("<code>eval-runs/heldout-01/pages/</code>", '<a href="%s/tree/main/eval-runs/heldout-01/pages"><code>eval-runs/heldout-01/pages/</code></a>' % repo)
+        fragment = fragment.replace("</footer>", '<p><a href="%s">Source on GitHub</a></p>\n</footer>' % repo, 1)
     if args.back:
         fragment = fragment.replace('<p class="eyebrow">An agent skill for Claude Code</p>',
                                     '<p class="eyebrow"><a href="%s">&larr; dataset-shortlist</a> &middot; every number</p>' % esc(args.back), 1)
